@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immobilien-Sniper – Mannheim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .badge { @apply inline-block px-2 py-0.5 rounded-full text-xs font-semibold; }
+    .tag   { @apply inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-indigo-900 text-indigo-200 mr-1 mb-1; }
+
+    /* Kauf-Score */
+    .score-strong_buy { border-left: 4px solid #16a34a; }
+    .score-watch      { border-left: 4px solid #ca8a04; }
+    .score-skip       { border-left: 4px solid #dc2626; }
+
+    /* Miete-Score */
+    .score-gut   { border-left: 4px solid #16a34a; }
+    .score-okay  { border-left: 4px solid #ca8a04; }
+    .score-teuer { border-left: 4px solid #dc2626; }
+
+    .deviation-gut   { background: #14532d; color: #86efac; }
+    .deviation-okay  { background: #713f12; color: #fde68a; }
+    .deviation-teuer { background: #7f1d1d; color: #fca5a5; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
+
+<!-- ═══════════════════════════════════════════════ HEADER ═══ -->
+<header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center gap-3">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🎯</span>
+      <h1 class="text-lg font-bold text-white">Immobilien-Sniper</h1>
+      <span class="text-xs text-gray-400">Mannheim Quadrate</span>
+    </div>
+
+    <!-- Stats Chips -->
+    <div id="stats" class="flex gap-2 ml-auto flex-wrap text-xs">
+      <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-200">
+        📊 Gesamt: <strong id="stat-total">–</strong>
+      </span>
+      <span class="px-3 py-1 rounded-full bg-blue-900 text-blue-200">
+        🏠 Kauf: <strong id="stat-kauf">–</strong>
+      </span>
+      <span class="px-3 py-1 rounded-full bg-purple-900 text-purple-200">
+        🔑 Miete: <strong id="stat-miete">–</strong>
+      </span>
+      <span class="px-3 py-1 rounded-full bg-green-900 text-green-200">
+        🟢 <strong id="stat-gut">–</strong>
+      </span>
+      <span class="px-3 py-1 rounded-full bg-yellow-900 text-yellow-200">
+        🟡 <strong id="stat-ok">–</strong>
+      </span>
+      <span class="px-3 py-1 rounded-full bg-red-900 text-red-200">
+        🔴 <strong id="stat-bad">–</strong>
+      </span>
+      <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-400" id="stat-last">
+        🕐 –
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ FILTER ═══ -->
+<div class="max-w-7xl mx-auto px-4 pt-5 pb-3">
+  <div class="flex flex-wrap gap-3 items-center">
+
+    <!-- Kauf / Miete Toggle -->
+    <div class="flex rounded-lg overflow-hidden border border-gray-700 text-sm font-medium">
+      <button onclick="setType('alle')"  id="btn-alle"  class="type-btn px-4 py-2 bg-indigo-600 text-white">Alle</button>
+      <button onclick="setType('kauf')"  id="btn-kauf"  class="type-btn px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700">🏠 Kauf</button>
+      <button onclick="setType('miete')" id="btn-miete" class="type-btn px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700">🔑 Miete / WG</button>
+    </div>
+
+    <!-- Score-Filter -->
+    <div class="flex gap-2 text-sm">
+      <button onclick="setScore('')"          id="sc-alle"       class="score-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white">Alle Scores</button>
+      <button onclick="setScore('strong_buy')" id="sc-strong_buy" class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟢 Strong Buy</button>
+      <button onclick="setScore('watch')"      id="sc-watch"      class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟡 Watch</button>
+      <button onclick="setScore('gut')"        id="sc-gut"        class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟢 Günstig</button>
+      <button onclick="setScore('okay')"       id="sc-okay"       class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟡 Okay</button>
+      <button onclick="setScore('skip')"       id="sc-skip"       class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🔴 Skip/Teuer</button>
+    </div>
+
+    <!-- Zimmer -->
+    <div class="flex items-center gap-2 text-sm ml-auto">
+      <label class="text-gray-400">Zimmer:</label>
+      <input id="zimmer-min" type="number" placeholder="min" min="1" max="10" step="0.5"
+        oninput="render()"
+        class="w-16 bg-gray-800 border border-gray-600 rounded px-2 py-1 text-center text-white" />
+      <span class="text-gray-500">–</span>
+      <input id="zimmer-max" type="number" placeholder="max" min="1" max="10" step="0.5"
+        oninput="render()"
+        class="w-16 bg-gray-800 border border-gray-600 rounded px-2 py-1 text-center text-white" />
+
+      <button onclick="loadData()"
+        class="ml-3 flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-medium transition-all">
+        ↻ Aktualisieren
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ CARDS ════ -->
+<main class="max-w-7xl mx-auto px-4 pb-12">
+  <div id="loading" class="text-center py-24 text-gray-500">
+    <p class="text-4xl mb-3">⏳</p>
+    <p class="text-lg">Deals werden geladen …</p>
+  </div>
+  <div id="empty" class="hidden text-center py-24 text-gray-600">
+    <p class="text-5xl mb-4">🔍</p>
+    <p class="text-xl font-semibold text-gray-400 mb-2">Noch keine Deals</p>
+    <p class="text-sm">Der GitHub Actions Scraper läuft 3× täglich automatisch.</p>
+  </div>
+  <div id="cards" class="grid gap-4"></div>
+</main>
+
+<!-- ═══════════════════════════════════════════════ TOAST ════ -->
+<div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl opacity-0 pointer-events-none z-50 transition-opacity duration-300"></div>
+
+<script>
+// ─── State ───────────────────────────────────────────────────────────────────
+let allDeals = [];
+let activeType  = 'alle';
+let activeScore = '';
+
+// ─── Laden ───────────────────────────────────────────────────────────────────
+async function loadData() {
+  document.getElementById('loading').classList.remove('hidden');
+  document.getElementById('cards').innerHTML = '';
+  document.getElementById('empty').classList.add('hidden');
+
+  try {
+    const res = await fetch('/data/deals.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    allDeals = data.deals || [];
+
+    // Stats-Leiste aktualisieren
+    const kauf  = allDeals.filter(d => d.listing_type === 'kauf');
+    const miete = allDeals.filter(d => d.listing_type === 'miete');
+    const gut   = allDeals.filter(d => ['strong_buy','gut'].includes(d.deal_score));
+    const ok    = allDeals.filter(d => ['watch','okay'].includes(d.deal_score));
+    const bad   = allDeals.filter(d => ['skip','teuer'].includes(d.deal_score));
+
+    document.getElementById('stat-total').textContent = allDeals.length;
+    document.getElementById('stat-kauf').textContent  = kauf.length;
+    document.getElementById('stat-miete').textContent = miete.length;
+    document.getElementById('stat-gut').textContent   = gut.length;
+    document.getElementById('stat-ok').textContent    = ok.length;
+    document.getElementById('stat-bad').textContent   = bad.length;
+
+    const last = data.last_updated;
+    document.getElementById('stat-last').textContent =
+      last ? '🕐 ' + last.slice(0,16).replace('T',' ') + ' UTC' : '🕐 Noch nie';
+
+    render();
+    showToast('✅ ' + allDeals.length + ' Deals geladen', 'success');
+  } catch (e) {
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('empty').classList.remove('hidden');
+    showToast('❌ Ladefehler: ' + e.message, 'error');
+  }
+}
+
+// ─── Filter ──────────────────────────────────────────────────────────────────
+function setType(t) {
+  activeType = t;
+  document.querySelectorAll('.type-btn').forEach(b => {
+    b.classList.remove('bg-indigo-600','text-white');
+    b.classList.add('bg-gray-800','text-gray-300');
+  });
+  const btn = document.getElementById('btn-' + t);
+  if (btn) { btn.classList.add('bg-indigo-600','text-white'); btn.classList.remove('bg-gray-800','text-gray-300'); }
+  render();
+}
+
+function setScore(s) {
+  activeScore = s;
+  document.querySelectorAll('.score-btn').forEach(b => {
+    b.classList.remove('bg-indigo-600','text-white');
+    b.classList.add('bg-gray-800','text-gray-300');
+  });
+  const key = s === '' ? 'sc-alle' : 'sc-' + s;
+  const btn = document.getElementById(key);
+  if (btn) { btn.classList.add('bg-indigo-600','text-white'); btn.classList.remove('bg-gray-800','text-gray-300'); }
+  render();
+}
+
+// ─── Render ──────────────────────────────────────────────────────────────────
+function render() {
+  document.getElementById('loading').classList.add('hidden');
+
+  const zimMin = parseFloat(document.getElementById('zimmer-min').value) || null;
+  const zimMax = parseFloat(document.getElementById('zimmer-max').value) || null;
+
+  let filtered = allDeals.filter(d => {
+    if (activeType !== 'alle' && d.listing_type !== activeType) return false;
+    if (activeScore) {
+      const s = d.deal_score || '';
+      if (activeScore === 'skip' && !['skip','teuer'].includes(s)) return false;
+      if (activeScore !== 'skip' && s !== activeScore) return false;
+    }
+    if (zimMin !== null && d.zimmer !== null && d.zimmer !== undefined && d.zimmer < zimMin) return false;
+    if (zimMax !== null && d.zimmer !== null && d.zimmer !== undefined && d.zimmer > zimMax) return false;
+    return true;
+  });
+
+  const container = document.getElementById('cards');
+  document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
+  container.innerHTML = filtered.map(renderCard).join('');
+}
+
+// ─── Card ─────────────────────────────────────────────────────────────────────
+function renderCard(d) {
+  const isKauf  = d.listing_type === 'kauf';
+  const isMiete = d.listing_type === 'miete';
+  const score   = d.deal_score || '';
+
+  // Score-Label & Farbe
+  const scoreLabels = {
+    strong_buy: ['🟢 Strong Buy', 'bg-green-900 text-green-200'],
+    watch:      ['🟡 Watch',      'bg-yellow-900 text-yellow-200'],
+    skip:       ['🔴 Skip',       'bg-red-900 text-red-200'],
+    gut:        ['🟢 Günstig',    'bg-green-900 text-green-200'],
+    okay:       ['🟡 Okay',       'bg-yellow-900 text-yellow-200'],
+    teuer:      ['🔴 Zu teuer',   'bg-red-900 text-red-200'],
+  };
+  const [scoreLabel, scoreCls] = scoreLabels[score] || ['⚪ Unklar', 'bg-gray-700 text-gray-400'];
+
+  // Typ-Badge
+  const typeBadge = isKauf
+    ? '<span class="badge bg-blue-900 text-blue-200">🏠 Kauf</span>'
+    : '<span class="badge bg-purple-900 text-purple-200">🔑 Miete</span>';
+
+  // Quelle
+  const srcColors = {
+    kleinanzeigen: 'bg-orange-900 text-orange-200',
+    wg_gesucht:    'bg-teal-900 text-teal-200',
+    immonet:       'bg-sky-900 text-sky-200',
+    immoscout24:   'bg-rose-900 text-rose-200',
+  };
+  const srcCls = srcColors[d.source] || 'bg-gray-700 text-gray-400';
+
+  // Quadrat
+  const quadratBadge = d.quadrat
+    ? `<span class="badge bg-indigo-900 text-indigo-200">📍 ${d.quadrat}</span>`
+    : '';
+
+  // Feature-Tags
+  const featureTags = (d.features || [])
+    .map(f => `<span class="tag">${f}</span>`).join('');
+
+  // Metazeile (Datum)
+  const firstSeen = d.first_seen ? d.first_seen.slice(0,10) : '–';
+
+  // ── Kauf-Kennzahlen ──────────────────────────────────────────────
+  let kennzahlen = '';
+  if (isKauf) {
+    const preis = d.kaufpreis ? fmtEuro(d.kaufpreis) : '–';
+    const miete = d.kaltmiete ? fmtEuro(d.kaltmiete) + '/Mo.' : '–';
+    const bank  = d.bankrate_monat ? fmtEuro(d.bankrate_monat) + '/Mo.' : '–';
+    const cf    = d.cashflow_monat !== undefined && d.cashflow_monat !== null
+      ? (d.cashflow_monat >= 0 ? '+' : '') + fmtEuro(d.cashflow_monat) + '/Mo.'
+      : '–';
+    const cfCls = d.cashflow_monat >= 0
+      ? 'text-green-400 font-bold' : d.cashflow_monat >= -150
+      ? 'text-yellow-400 font-bold' : 'text-red-400 font-bold';
+
+    kennzahlen = `
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
+        ${kz('Kaufpreis', preis)}
+        ${kz('Kaltmiete/Mo.', miete)}
+        ${kz('Bankrate/Mo.', bank)}
+        <div class="bg-gray-800 rounded-lg px-3 py-2 text-center">
+          <p class="text-gray-400 text-xs mb-0.5">Cashflow/Mo.</p>
+          <p class="${cfCls} text-sm">${cf}</p>
+        </div>
+      </div>`;
+
+    if (d.wohnflaeche_qm && d.kaufpreis) {
+      const qmPreis = Math.round(d.kaufpreis / d.wohnflaeche_qm);
+      kennzahlen += `<p class="text-xs text-gray-500 mt-2">🏠 ${d.wohnflaeche_qm} m² · ${qmPreis.toLocaleString('de')} €/m²
+        ${d.zimmer ? ' · ' + d.zimmer + ' Zi.' : ''}</p>`;
+    }
+  }
+
+  // ── Miete-Kennzahlen ─────────────────────────────────────────────
+  if (isMiete) {
+    const kalt  = d.kaltmiete  ? fmtEuro(d.kaltmiete)  + '/Mo.' : '–';
+    const nk    = d.nebenkosten ? fmtEuro(d.nebenkosten) + '/Mo.' : '–';
+    const warm  = d.warmmiete  ? fmtEuro(d.warmmiete)  + '/Mo.' : '–';
+    const qm    = d.kaltmiete_qm ? d.kaltmiete_qm.toFixed(2) + ' €/m²' : '–';
+    const markt = d.expected_market_qm ? d.expected_market_qm.toFixed(2) + ' €/m²' : '–';
+
+    let devBadge = '';
+    if (d.deal_deviation_pct !== undefined && d.deal_deviation_pct !== null) {
+      const dev = d.deal_deviation_pct;
+      const devCls = dev <= -10 ? 'deviation-gut' : dev <= 10 ? 'deviation-okay' : 'deviation-teuer';
+      const sign = dev > 0 ? '+' : '';
+      devBadge = `<span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${devCls}">${sign}${dev.toFixed(1)}% vs. Markt</span>`;
+    }
+
+    kennzahlen = `
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
+        ${kz('Kaltmiete', kalt)}
+        ${kz('Nebenkosten', nk)}
+        ${kz('Warmmiete', warm)}
+        ${kz('Preis/m²', qm)}
+      </div>
+      <div class="flex flex-wrap gap-2 mt-2 items-center text-xs text-gray-400">
+        <span>📊 Markt-Benchmark: <strong class="text-gray-300">${markt}</strong></span>
+        ${devBadge}
+        ${d.wohnflaeche_qm ? `· 🏠 ${d.wohnflaeche_qm} m²` : ''}
+        ${d.zimmer ? `· ${d.zimmer} Zi.` : ''}
+      </div>`;
+  }
+
+  // ── KI-Einschätzung ────────────────────────────────────────────────
+  const aiBlock = d.einschaetzung
+    ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">
+         🤖 ${d.einschaetzung}
+       </div>`
+    : '';
+
+  return `
+  <div class="bg-gray-900 rounded-xl p-5 score-${score} hover:bg-gray-800 transition-colors">
+    <div class="flex flex-wrap gap-2 items-center mb-2">
+      <span class="badge ${scoreCls}">${scoreLabel}</span>
+      ${typeBadge}
+      ${quadratBadge}
+      <span class="badge ${srcCls}">${d.source.replace('_',' ')}</span>
+      <span class="text-xs text-gray-500 ml-auto">📅 ${firstSeen}</span>
+    </div>
+
+    <a href="${d.url}" target="_blank" rel="noopener noreferrer"
+       class="text-white font-semibold text-sm hover:text-indigo-400 transition-colors line-clamp-2">
+      ${d.title}
+    </a>
+
+    ${featureTags ? `<div class="mt-2">${featureTags}</div>` : ''}
+    ${kennzahlen}
+    ${aiBlock}
+  </div>`;
+}
+
+// ─── Helfer ───────────────────────────────────────────────────────────────────
+function kz(label, value) {
+  return `<div class="bg-gray-800 rounded-lg px-3 py-2 text-center">
+    <p class="text-gray-400 text-xs mb-0.5">${label}</p>
+    <p class="text-white font-semibold text-sm">${value}</p>
+  </div>`;
+}
+
+function fmtEuro(n) {
+  return Math.round(n).toLocaleString('de-DE') + ' €';
+}
+
+function showToast(msg, type='success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl z-50 transition-opacity duration-300 ${
+    type === 'success' ? 'bg-green-700 text-white' : 'bg-red-700 text-white'
+  }`;
+  t.style.opacity = '1';
+  setTimeout(() => { t.style.opacity = '0'; }, 3500);
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+loadData();
+</script>
+</body>
+</html>
