@@ -1,0 +1,51 @@
+name: 🏠 Immobilien-Sniper
+
+on:
+  schedule:
+    - cron: "0 7 * * *"    # 09:00 CEST
+    - cron: "0 12 * * *"   # 14:00 CEST
+    - cron: "0 18 * * *"   # 20:00 CEST
+  workflow_dispatch:        # Manuell auslösbar via GitHub UI
+
+permissions:
+  contents: write           # Für git push der deals.json
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: 🎭 Playwright + Chromium installieren
+        run: playwright install chromium --with-deps
+
+      - name: 🔍 Scraper ausführen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scraper.py
+
+      - name: 💾 deals.json committen & pushen
+        run: |
+          git config user.name  "Immobilien-Sniper Bot"
+          git config user.email "bot@github-actions"
+          git add data/deals.json
+          if git diff --staged --quiet; then
+            echo "Keine neuen Deals – kein Commit nötig."
+          else
+            git commit -m "🏠 Update deals.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+          fi
