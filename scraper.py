@@ -16,7 +16,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types as genai_types
 from playwright.sync_api import Page, sync_playwright
 
 # ---------------------------------------------------------------------------
@@ -325,8 +326,7 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
         return None
 
     try:
-        genai.configure(api_key=GEMINI_API_KEY)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        client = genai.Client(api_key=GEMINI_API_KEY)
     except Exception as e:
         log.error(f"Gemini-Konfiguration fehlgeschlagen: {e}")
         return None
@@ -355,7 +355,10 @@ JSON-Format (alle Zahlen ohne Tausenderpunkte, als reine Zahl):
 
     for attempt in range(3):
         try:
-            resp = model.generate_content(prompt)
+            resp = client.models.generate_content(
+                model="gemini-1.5-flash",
+                contents=prompt,
+            )
             raw_resp = resp.text.strip()
 
             # Markdown-Fences + führenden/nachfolgenden Text entfernen
@@ -405,7 +408,8 @@ JSON-Format (alle Zahlen ohne Tausenderpunkte, als reine Zahl):
                 log.warning(f"   ⏳ Rate-Limit – warte {wait}s ...")
                 time.sleep(wait)
             elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
-                                          "api_key_invalid", "permission_denied")):
+                                          "api_key_invalid", "permission_denied",
+                                          "invalid api key", "api key not valid")):
                 log.error(
                     f"   ❌ GEMINI_API_KEY ungültig – alle weiteren KI-Aufrufe werden "
                     f"übersprungen. Bitte Key in GitHub Secrets aktualisieren. Fehler: {e}"
@@ -721,7 +725,4 @@ def run() -> None:
                     deal[k] = v
 
             # listing_type aus KI nur übernehmen wenn valide
-            if ai.get("listing_type") in ("kauf", "miete"):
-                deal["listing_type"] = ai["listing_type"]
-
-        # Finanzkennzahlen lokal berechnen (unabhängig von G
+            if ai.get("li
