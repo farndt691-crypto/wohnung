@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-21T21:55:40.079433+00:00",
+  "last_updated": "2026-05-21T22:09:31.539677+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -475,6 +475,76 @@
       "stadtteil": null,
       "adresse": null,
       "deal_score": "skip"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/zwischenmiete-mannheim-schwetzinger-vorstadt-moebiliert-miete/3413347155-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Zwischenmiete Mannheim Schwetzinger Vorstadt möbiliert Miete",
+      "first_seen": "2026-05-21T22:09:10.377238+00:00",
+      "last_seen": "2026-05-21T22:09:10.377238+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Möblierte 2,5-Zimmer-Altbauwohnung in zentraler Lage zur Zwischenmiete verfügbar.",
+      "zimmeranzahl": 2.5,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Schwetzinger Vorstadt",
+      "adresse": "Mannheim",
+      "quadratmeter": 84,
+      "warmmiete": 1350,
+      "deal_score": "okay"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-sanierung-moeblierte-1-zi-wohnung-mit-balkon-mannheim-oststadt/3400208769-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Erstbezug nach Sanierung: möblierte 1-Zi-Wohnung mit Balkon, Mannheim Oststadt",
+      "first_seen": "2026-05-21T22:09:10.377238+00:00",
+      "last_seen": "2026-05-21T22:09:10.377238+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "deal_score": "okay"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/zimmer-in-2-zimmer-wohnung-mannheim-innenstadt/3413152477-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Zimmer in 2 Zimmer Wohnung Mannheim Innenstadt",
+      "first_seen": "2026-05-21T22:09:10.377238+00:00",
+      "last_seen": "2026-05-21T22:09:10.377238+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "deal_score": "okay"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-direkt-an-der-uni-in-mannheim/3413007631-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1-Zimmer Wohnung direkt an der Uni in Mannheim",
+      "first_seen": "2026-05-21T22:09:10.377238+00:00",
+      "last_seen": "2026-05-21T22:09:10.377238+00:00",
+      "boni": [],
+      "kurz_bewertung": "1-Zimmer-Erdgeschosswohnung mit 20 m² Wohnfläche, direkt an der Uni Mannheim gelegen und fußläufig zum Jungbusch.",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68159 Mannheim",
+      "quadratmeter": 20,
+      "warmmiete": 430,
+      "deal_score": "okay"
     }
   ]
 }
