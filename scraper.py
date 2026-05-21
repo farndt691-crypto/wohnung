@@ -1,10 +1,5 @@
 """
-scraper.py – Immobilien-Sniper (GitHub Actions Edition)
-=======================================================
-Scrapt Kleinanzeigen + WG-Gesucht mit Playwright,
-oeffnet jede Detailseite fuer vollstaendigen Preistext,
-analysiert mit Google Gemini (gemini-1.5-flash, kostenlos),
-schreibt nach data/deals.json.
+scraper.py - Immobilien-Sniper (GitHub Actions Edition)
 """
 
 import json
@@ -20,9 +15,6 @@ from typing import Optional
 from google import genai
 from playwright.sync_api import Page, sync_playwright
 
-# ---------------------------------------------------------------------------
-# Logging
-# ---------------------------------------------------------------------------
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -31,9 +23,6 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
-# Konfiguration
-# ---------------------------------------------------------------------------
 GEMINI_API_KEY: str = os.environ.get("GEMINI_API_KEY", "")
 DEALS_PATH = Path("data/deals.json")
 MANNHEIM_BENCHMARK_QM = 14.50
@@ -47,7 +36,7 @@ NON_MANNHEIM_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
-KEYWORD_AUFSCHLAEGE: dict[str, float] = {
+KEYWORD_AUFSCHLAEGE: dict = {
     "EBK": 1.00, "Balkon": 0.50, "Terrasse": 0.50,
     "renoviert": 1.00, "moebliert": 3.00, "Neubau": 2.00,
     "Aufzug": 0.50, "Garage": 0.30,
@@ -71,13 +60,8 @@ SOURCES = [
     },
 ]
 
-# Globales Flag: True wenn API-Key als ungueltig erkannt
 _gemini_key_invalid = False
 
-
-# ---------------------------------------------------------------------------
-# deals.json lesen / schreiben
-# ---------------------------------------------------------------------------
 
 def load_deals() -> dict:
     DEALS_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -86,7 +70,7 @@ def load_deals() -> dict:
             with open(DEALS_PATH, encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
-            log.error(f"deals.json laden fehlgeschlagen: {e}")
+            log.error("deals.json laden fehlgeschlagen: %s", e)
     return {"last_updated": None, "deals": []}
 
 
@@ -94,16 +78,12 @@ def save_deals(data: dict) -> None:
     data["last_updated"] = datetime.now(timezone.utc).isoformat()
     with open(DEALS_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    log.info(f"Gespeichert: {len(data['deals'])} Deals -> {DEALS_PATH}")
+    log.info("Gespeichert: %d Deals -> %s", len(data["deals"]), DEALS_PATH)
 
 
 def get_existing_urls(data: dict) -> set:
     return {d["url"] for d in data.get("deals", [])}
 
-
-# ---------------------------------------------------------------------------
-# Finanzrechnung + Deal-Score
-# ---------------------------------------------------------------------------
 
 def berechne_scores(deal: dict) -> dict:
     if deal.get("listing_type") == "kauf":
@@ -127,7 +107,8 @@ def berechne_scores(deal: dict) -> dict:
                 "watch" if cashflow >= -150 else
                 "skip"
             )
-            log.info(f"   Kauf: {kaufpreis:,.0f}EUR | bank={bankrate:.0f} cf={cashflow:+.0f} -> {deal['deal_score']}")
+            log.info("   Kauf: %s EUR | bank=%.0f cf=%+.0f -> %s",
+                     kaufpreis, bankrate, cashflow, deal["deal_score"])
         else:
             deal.setdefault("deal_score", "skip")
 
@@ -148,15 +129,12 @@ def berechne_scores(deal: dict) -> dict:
                 "okay" if deviation <= 10 else
                 "teuer"
             )
-            log.info(f"   Miete: {kaltmiete:.0f}EUR | {kaltmiete_qm:.2f}EUR/m2 | abw={deviation:+.1f}% -> {deal['deal_score']}")
+            log.info("   Miete: %.0f EUR | %.2f EUR/m2 | abw=%+.1f%% -> %s",
+                     kaltmiete, kaltmiete_qm, deviation, deal["deal_score"])
         else:
             deal.setdefault("deal_score", "okay")
     return deal
 
-
-# ---------------------------------------------------------------------------
-# Detail-Seite scrapen
-# ---------------------------------------------------------------------------
 
 def scrape_detail(page: Page, url: str, source_name: str) -> str:
     try:
@@ -227,18 +205,14 @@ def scrape_detail(page: Page, url: str, source_name: str) -> str:
 
         combined = "\n\n".join(p for p in parts if p).strip()
         if combined:
-            log.info(f"   Detail: {len(combined)} Zeichen ({url[:55]})")
+            log.info("   Detail: %d Zeichen (%s)", len(combined), url[:55])
             return combined[:3000]
-        log.warning(f"   Detail: keine Selektoren, nutze Body ({url[:55]})")
+        log.warning("   Detail: keine Selektoren, nutze Body (%s)", url[:55])
         return page.inner_text("body")[:2000]
     except Exception as e:
-        log.error(f"   Detail-Fehler ({url[:55]}): {e}")
+        log.error("   Detail-Fehler (%s): %s", url[:55], e)
         return ""
 
-
-# ---------------------------------------------------------------------------
-# Gemini KI-Analyse (neues google-genai SDK)
-# ---------------------------------------------------------------------------
 
 def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Optional[dict]:
     global _gemini_key_invalid
@@ -246,22 +220,22 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
         return None
 
     if not GEMINI_API_KEY:
-        log.error("GEMINI_API_KEY fehlt! Bitte in GitHub Secrets hinterlegen.")
+        log.error("GEMINI_API_KEY fehlt!")
         _gemini_key_invalid = True
         return None
 
     try:
         client = genai.Client(api_key=GEMINI_API_KEY)
     except Exception as e:
-        log.error(f"Gemini Client-Init fehlgeschlagen: {e}")
+        log.error("Gemini Client-Init fehlgeschlagen: %s", e)
         return None
 
     prompt = (
         "Analysiere diese Immobilienanzeige. Extrahiere alle Zahlen exakt wie im Text.\n"
         "Antworte NUR mit einem gueltigen JSON-Objekt - kein Markdown, kein Kommentar.\n\n"
-        f"Typ-Hinweis: {listing_type_hint}\n"
-        f"Titel: {title[:300]}\n"
-        f"Text:\n{raw_text[:2500]}\n\n"
+        "Typ-Hinweis: " + listing_type_hint + "\n"
+        "Titel: " + title[:300] + "\n"
+        "Text:\n" + raw_text[:2500] + "\n\n"
         "JSON-Format (alle Zahlen ohne Tausenderpunkte, als reine Zahl):\n"
         "{\n"
         '  "listing_type": "miete" oder "kauf",\n'
@@ -270,7 +244,7 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
         '  "kaltmiete": Kaltmiete EUR/Monat als Zahl oder null,\n'
         '  "nebenkosten": Nebenkosten EUR/Monat als Zahl oder null,\n'
         '  "warmmiete": Warmmiete EUR/Monat als Zahl oder null,\n'
-        '  "kaufpreis": Kaufpreis in EUR als reine Zahl (z.B. 285000) oder null,\n'
+        '  "kaufpreis": Kaufpreis in EUR als reine Zahl oder null,\n'
         '  "quadrat": Mannheimer Quadrat z.B. "J2" oder null,\n'
         '  "features": Teilmenge von ["EBK","Balkon","Terrasse","renoviert","moebliert","Neubau","Aufzug","Garage"],\n'
         '  "einschaetzung": "1-2 Saetze Deal-Einschaetzung auf Deutsch"\n'
@@ -287,7 +261,7 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
             raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", raw_resp).strip()
             json_match = re.search(r"\{[\s\S]*\}", raw_resp)
             if not json_match:
-                log.warning(f"   Kein JSON in Antwort (Versuch {attempt+1}): {raw_resp[:80]!r}")
+                log.warning("   Kein JSON in Antwort (Versuch %d): %.80r", attempt + 1, raw_resp)
                 continue
 
             result = json.loads(json_match.group())
@@ -305,40 +279,33 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
                     except ValueError:
                         result[field] = None
 
-            log.info(
-                f"   Gemini OK: typ={result.get('listing_type')} "
-                f"kaufpreis={result.get('kaufpreis')} "
-                f"kaltmiete={result.get('kaltmiete')} "
-                f"qm={result.get('wohnflaeche_qm')} "
-                f"zi={result.get('zimmer')}"
-            )
+            log.info("   Gemini OK: typ=%s kaufpreis=%s kaltmiete=%s qm=%s zi=%s",
+                     result.get("listing_type"), result.get("kaufpreis"),
+                     result.get("kaltmiete"), result.get("wohnflaeche_qm"),
+                     result.get("zimmer"))
             return result
 
         except json.JSONDecodeError as e:
-            log.warning(f"   JSON-Parse-Fehler (Versuch {attempt+1}): {e}")
+            log.warning("   JSON-Parse-Fehler (Versuch %d): %s", attempt + 1, e)
         except Exception as e:
             err = str(e).lower()
             if any(x in err for x in ("quota", "rate", "429", "resource_exhausted")):
                 wait = 65 * (attempt + 1)
-                log.warning(f"   Rate-Limit - warte {wait}s ...")
+                log.warning("   Rate-Limit - warte %ds ...", wait)
                 time.sleep(wait)
             elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
                                         "api_key_invalid", "permission_denied",
                                         "invalid api key", "api key not valid")):
-                log.error(f"   GEMINI_API_KEY ungueltig - alle weiteren Aufrufe gestoppt: {e}")
+                log.error("   GEMINI_API_KEY ungueltig - alle weiteren Aufrufe gestoppt: %s", e)
                 _gemini_key_invalid = True
                 return None
             else:
-                log.error(f"   Gemini-Fehler (Versuch {attempt+1}): {e}")
+                log.error("   Gemini-Fehler (Versuch %d): %s", attempt + 1, e)
             if attempt == 2:
                 return None
 
     return None
 
-
-# ---------------------------------------------------------------------------
-# Scraper: Kleinanzeigen
-# ---------------------------------------------------------------------------
 
 def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
                          source: dict, existing_urls: set) -> list:
@@ -347,8 +314,8 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
     listing_type = source["listing_type"]
 
     for page_num in range(1, source["pages"] + 1):
-        url = base_url if page_num == 1 else f"{base_url}?pageNum={page_num}"
-        log.info(f"   Seite {page_num}: {url[:80]}")
+        url = base_url if page_num == 1 else base_url + "?pageNum=" + str(page_num)
+        log.info("   Seite %d: %s", page_num, url[:80])
         try:
             search_page.goto(url, wait_until="domcontentloaded", timeout=30000)
             search_page.wait_for_timeout(2000)
@@ -373,31 +340,27 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
                         continue
                     card_text = item.inner_text()
                     if NON_MANNHEIM_PATTERN.search(title + " " + card_text):
-                        log.info(f"   Uebersprungen (nicht Mannheim): {title[:50]}")
+                        log.info("   Uebersprungen (nicht Mannheim): %s", title[:50])
                         continue
                     raw.append({"url": href, "source": "kleinanzeigen",
                                 "listing_type": listing_type, "title": title[:400]})
                     existing_urls.add(href)
                     found += 1
                 except Exception as e:
-                    log.debug(f"   Item-Fehler: {e}")
-            log.info(f"   {found} neue Inserate auf Seite {page_num}")
+                    log.debug("   Item-Fehler: %s", e)
+            log.info("   %d neue Inserate auf Seite %d", found, page_num)
             if found == 0:
                 break
         except Exception as e:
-            log.error(f"   Seitenfehler: {e}")
+            log.error("   Seitenfehler: %s", e)
             break
 
-    log.info(f"   Oeffne {len(raw)} Detailseiten ...")
+    log.info("   Oeffne %d Detailseiten ...", len(raw))
     for entry in raw:
         entry["raw_text"] = scrape_detail(detail_page, entry["url"], "kleinanzeigen")
         time.sleep(1.5)
     return raw
 
-
-# ---------------------------------------------------------------------------
-# Scraper: WG-Gesucht
-# ---------------------------------------------------------------------------
 
 def scrape_wg_gesucht(search_page: Page, detail_page: Page,
                       source: dict, existing_urls: set) -> list:
@@ -415,21 +378,21 @@ def scrape_wg_gesucht(search_page: Page, detail_page: Page,
             except Exception:
                 pass
     except Exception as e:
-        log.error(f"   WG-Gesucht Startseite: {e}")
+        log.error("   WG-Gesucht Startseite: %s", e)
         return raw
 
     for page_num in range(1, source["pages"] + 1):
         if page_num > 1:
-            url = re.sub(r"\.0\.0\.html$", f".0.{page_num - 1}.html", base_url)
-            log.info(f"   Seite {page_num}: {url[:80]}")
+            url = re.sub(r"\.0\.0\.html$", ".0." + str(page_num - 1) + ".html", base_url)
+            log.info("   Seite %d: %s", page_num, url[:80])
             try:
                 search_page.goto(url, wait_until="domcontentloaded", timeout=30000)
                 search_page.wait_for_timeout(2000)
             except Exception as e:
-                log.error(f"   Seite {page_num} Fehler: {e}")
+                log.error("   Seite %d Fehler: %s", page_num, e)
                 break
         else:
-            log.info(f"   Seite 1: {base_url[:80]}")
+            log.info("   Seite 1: %s", base_url[:80])
 
         try:
             items = search_page.query_selector_all(".offer_list_item, [id^='liste-'], .wgg-card")
@@ -454,36 +417,32 @@ def scrape_wg_gesucht(search_page: Page, detail_page: Page,
                     existing_urls.add(href)
                     found += 1
                 except Exception as e:
-                    log.debug(f"   Item-Fehler: {e}")
-            log.info(f"   {found} neue Inserate auf Seite {page_num}")
+                    log.debug("   Item-Fehler: %s", e)
+            log.info("   %d neue Inserate auf Seite %d", found, page_num)
             if found == 0:
                 break
         except Exception as e:
-            log.error(f"   Seitenfehler: {e}")
+            log.error("   Seitenfehler: %s", e)
             break
 
-    log.info(f"   Oeffne {len(raw)} Detailseiten ...")
+    log.info("   Oeffne %d Detailseiten ...", len(raw))
     for entry in raw:
         entry["raw_text"] = scrape_detail(detail_page, entry["url"], "wg_gesucht")
         time.sleep(1.5)
     return raw
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
 def run() -> None:
     log.info("=" * 60)
     log.info("Immobilien-Sniper gestartet")
-    log.info(f"Zeit: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC")
-    log.info(f"GEMINI_API_KEY: {'gesetzt' if GEMINI_API_KEY else 'FEHLT!'}")
-    log.info(f"Zimmer-Default: {DEFAULT_ZIMMER}")
+    log.info("Zeit: %s UTC", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    log.info("GEMINI_API_KEY: %s", "gesetzt" if GEMINI_API_KEY else "FEHLT!")
+    log.info("Zimmer-Default: %s", DEFAULT_ZIMMER)
     log.info("=" * 60)
 
     data = load_deals()
     existing_urls = get_existing_urls(data)
-    log.info(f"Bestehende Deals: {len(existing_urls)}")
+    log.info("Bestehende Deals: %d", len(existing_urls))
 
     all_raw = []
 
@@ -509,7 +468,7 @@ def run() -> None:
         for source in SOURCES:
             if not source.get("enabled", True):
                 continue
-            log.info(f"\nQuelle: {source['name']}")
+            log.info("\nQuelle: %s", source["name"])
             try:
                 if source["scraper"] == "kleinanzeigen":
                     results = scrape_kleinanzeigen(search_page, detail_page, source, existing_urls)
@@ -517,24 +476,24 @@ def run() -> None:
                     results = scrape_wg_gesucht(search_page, detail_page, source, existing_urls)
                 else:
                     results = []
-                log.info(f"{len(results)} neue Inserate von {source['name']}")
+                log.info("%d neue Inserate von %s", len(results), source["name"])
                 all_raw.extend(results)
             except Exception as e:
-                log.error(f"Quelle {source['name']} fehlgeschlagen: {e}")
+                log.error("Quelle %s fehlgeschlagen: %s", source["name"], e)
 
         browser.close()
 
     if len(all_raw) > MAX_NEW_PER_RUN:
-        log.info(f"Begrenze auf {MAX_NEW_PER_RUN} (gefunden: {len(all_raw)})")
+        log.info("Begrenze auf %d (gefunden: %d)", MAX_NEW_PER_RUN, len(all_raw))
         all_raw = all_raw[:MAX_NEW_PER_RUN]
 
-    log.info(f"\nGemini analysiert {len(all_raw)} neue Inserate ...")
+    log.info("\nGemini analysiert %d neue Inserate ...", len(all_raw))
     now_iso = datetime.now(timezone.utc).isoformat()
     ai_ok = 0
     ai_fail = 0
 
     for i, raw in enumerate(all_raw, 1):
-        log.info(f"[{i:>3}/{len(all_raw)}] {raw['title'][:65]}")
+        log.info("[%3d/%d] %s", i, len(all_raw), raw["title"][:65])
 
         if _gemini_key_invalid:
             ai = None
@@ -571,19 +530,18 @@ def run() -> None:
         deal = berechne_scores(deal)
 
         if deal["listing_type"] == "kauf" and not deal.get("kaufpreis"):
-            log.warning(f"   kaufpreis fehlt -> skip: {raw['title'][:50]}")
+            log.warning("   kaufpreis fehlt -> skip: %s", raw["title"][:50])
         if deal["listing_type"] == "miete" and not deal.get("kaltmiete"):
-            log.warning(f"   kaltmiete fehlt: {raw['title'][:50]}")
+            log.warning("   kaltmiete fehlt: %s", raw["title"][:50])
 
         data["deals"].append(deal)
         time.sleep(4)
 
     log.info("=" * 60)
-    log.info(f"Fertig: {len(all_raw)} neue Deals | KI ok={ai_ok} fail={ai_fail}")
-    log.info(f"Gesamt in deals.json: {len(data['deals'])}")
+    log.info("Fertig: %d neue Deals | KI ok=%d fail=%d", len(all_raw), ai_ok, ai_fail)
+    log.info("Gesamt in deals.json: %d", len(data["deals"]))
     save_deals(data)
 
 
 if __name__ == "__main__":
     run()
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
