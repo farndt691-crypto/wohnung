@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Immobilien-Sniper – Mannheim</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Immobilien-Sniper</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .badge { display:inline-block; padding:2px 8px; border-radius:9999px; font-size:.7rem; font-weight:700; }
-    .tag   { display:inline-block; padding:2px 6px; border-radius:4px; font-size:.7rem; font-weight:500; background:#1e1b4b; color:#a5b4fc; margin-right:3px; margin-bottom:3px; }
-    .score-strong_buy { border-left:4px solid #16a34a; }
-    .score-watch      { border-left:4px solid #ca8a04; }
-    .score-skip       { border-left:4px solid #dc2626; }
-    .score-gut        { border-left:4px solid #16a34a; }
-    .score-okay       { border-left:4px solid #ca8a04; }
-    .score-teuer      { border-left:4px solid #dc2626; }
-    .deviation-gut    { background:#14532d; color:#86efac; }
-    .deviation-okay   { background:#713f12; color:#fde68a; }
-    .deviation-teuer  { background:#7f1d1d; color:#fca5a5; }
-    select { background:#1f2937; color:#f3f4f6; border:1px solid #4b5563; border-radius:6px; padding:6px 10px; font-size:.875rem; }
-    select option { background:#1f2937; }
+    .badge{display:inline-block;padding:2px 8px;border-radius:9999px;font-size:.7rem;font-weight:700}
+    .tag{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.7rem;font-weight:500;background:#1e1b4b;color:#a5b4fc;margin-right:3px;margin-bottom:3px}
+    .score-strong_buy{border-left:4px solid #16a34a}
+    .score-watch{border-left:4px solid #ca8a04}
+    .score-skip{border-left:4px solid #dc2626}
+    .score-gut{border-left:4px solid #16a34a}
+    .score-okay{border-left:4px solid #ca8a04}
+    .score-teuer{border-left:4px solid #dc2626}
+    .dev-gut{background:#14532d;color:#86efac}
+    .dev-okay{background:#713f12;color:#fde68a}
+    .dev-teuer{background:#7f1d1d;color:#fca5a5}
+    .dist-close{background:#1e3a5f;color:#93c5fd}
+    .dist-mid{background:#2d3748;color:#cbd5e0}
+    .dist-far{background:#3b2a2a;color:#fc8181}
+    select,input[type=number]{background:#1f2937;color:#f3f4f6;border:1px solid #4b5563;border-radius:6px;padding:6px 10px;font-size:.875rem}
+    select option{background:#1f2937}
   </style>
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
@@ -29,9 +32,9 @@
     <div class="flex items-center gap-2">
       <span class="text-2xl">🎯</span>
       <h1 class="text-lg font-bold text-white">Immobilien-Sniper</h1>
-      <span class="text-xs text-gray-400">Mannheim</span>
+      <span id="city-label" class="text-xs text-gray-400">Mannheim</span>
     </div>
-    <div id="stats" class="flex gap-2 ml-auto flex-wrap text-xs">
+    <div class="flex gap-2 ml-auto flex-wrap text-xs">
       <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-200">📊 Gesamt: <strong id="stat-total">–</strong></span>
       <span class="px-3 py-1 rounded-full bg-blue-900 text-blue-200">🏠 Kauf: <strong id="stat-kauf">–</strong></span>
       <span class="px-3 py-1 rounded-full bg-purple-900 text-purple-200">🔑 Miete: <strong id="stat-miete">–</strong></span>
@@ -63,80 +66,60 @@
     </div>
   </div>
 
-  <!-- Row 2: Location + Zimmer + Refresh -->
+  <!-- Row 2: POI + Radius + Zimmer + Reset -->
   <div class="flex flex-wrap gap-3 items-center">
 
-    <!-- Stadtteil Filter -->
     <div class="flex items-center gap-2">
-      <label class="text-gray-400 text-sm whitespace-nowrap">📍 Lage:</label>
-      <select id="stadtteil-filter" onchange="render()" class="min-w-[180px]">
-        <option value="">Alle Stadtteile</option>
-        <optgroup label="— Innenstadt —">
-          <option value="Quadrate">Quadrate / Innenstadt</option>
-          <option value="Jungbusch">Jungbusch</option>
-          <option value="Oststadt">Oststadt</option>
-          <option value="Schwetzingerstadt">Schwetzingerstadt</option>
-        </optgroup>
-        <optgroup label="— Beliebt —">
-          <option value="Lindenhof">Lindenhof</option>
-          <option value="Neckarstadt-West">Neckarstadt-West</option>
-          <option value="Neckarstadt-Ost">Neckarstadt-Ost</option>
-          <option value="Almenhof">Almenhof</option>
-          <option value="Neuostheim">Neuostheim</option>
-          <option value="Gartenstadt">Gartenstadt</option>
-        </optgroup>
-        <optgroup label="— Weitere —">
-          <option value="Rheinau">Rheinau</option>
-          <option value="Feudenheim">Feudenheim</option>
-          <option value="Kaefertal">Käfertal</option>
-          <option value="Vogelstang">Vogelstang</option>
-          <option value="Seckenheim">Seckenheim</option>
-          <option value="Friedrichsfeld">Friedrichsfeld</option>
-          <option value="Waldhof">Waldhof</option>
-          <option value="Sandhofen">Sandhofen</option>
-          <option value="Schoenau">Schönau</option>
-          <option value="Wallstadt">Wallstadt</option>
-        </optgroup>
+      <label class="text-gray-400 text-sm whitespace-nowrap">📍 POI:</label>
+      <select id="poi-select" onchange="onPoiChange()" class="min-w-[200px]">
+        <option value="">— Kein Radar —</option>
       </select>
     </div>
 
-    <!-- Zimmer Filter -->
+    <div class="flex items-center gap-2">
+      <label class="text-gray-400 text-sm whitespace-nowrap">Radius:</label>
+      <select id="radius-select" onchange="render()" class="w-28">
+        <option value="0">Alle</option>
+        <option value="500">500 m</option>
+        <option value="1000">1 km</option>
+        <option value="2000">2 km</option>
+        <option value="5000">5 km</option>
+        <option value="10000">10 km</option>
+      </select>
+    </div>
+
     <div class="flex items-center gap-2 text-sm">
       <label class="text-gray-400 whitespace-nowrap">🛏 Zimmer:</label>
       <input id="zimmer-min" type="number" value="2.5" min="1" max="10" step="0.5"
-        oninput="render()"
-        class="w-16 bg-gray-800 border border-gray-600 rounded px-2 py-1.5 text-center text-white text-sm" />
+        oninput="render()" class="w-16 text-center"/>
       <span class="text-gray-500">–</span>
       <input id="zimmer-max" type="number" placeholder="max" min="1" max="10" step="0.5"
-        oninput="render()"
-        class="w-16 bg-gray-800 border border-gray-600 rounded px-2 py-1.5 text-center text-white text-sm" />
+        oninput="render()" class="w-16 text-center"/>
     </div>
 
     <button onclick="resetFilters()"
-      class="px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm transition-all">
+      class="px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm">
       ✕ Reset
     </button>
-
     <button onclick="loadData()"
-      class="ml-auto flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-medium transition-all">
+      class="ml-auto px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-medium">
       ↻ Aktualisieren
     </button>
   </div>
 
-  <!-- Active filter summary -->
-  <div id="filter-summary" class="text-xs text-gray-500 hidden"></div>
+  <!-- Filter summary -->
+  <div id="filter-summary" class="text-xs text-gray-500"></div>
 </div>
 
 <!-- CARDS -->
 <main class="max-w-7xl mx-auto px-4 pb-12">
   <div id="loading" class="text-center py-24 text-gray-500">
-    <p class="text-4xl mb-3">⏳</p>
-    <p class="text-lg">Deals werden geladen …</p>
+    <p class="text-4xl mb-3">⏳</p><p class="text-lg">Deals werden geladen …</p>
   </div>
   <div id="empty" class="hidden text-center py-24 text-gray-600">
     <p class="text-5xl mb-4">🔍</p>
     <p class="text-xl font-semibold text-gray-400 mb-2">Keine Deals gefunden</p>
-    <p class="text-sm">Filter anpassen oder warten bis der Scraper neue Inserate findet (3× täglich).</p>
+    <p class="text-sm">Filter anpassen oder warten – Scraper läuft 3× täglich.</p>
   </div>
   <div id="cards" class="grid gap-4"></div>
 </main>
@@ -144,20 +127,52 @@
 <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl opacity-0 pointer-events-none z-50 transition-opacity duration-300"></div>
 
 <script>
-let allDeals = [];
+// ── State ─────────────────────────────────────────────────────────────────────
+let allDeals  = [];
+let config    = {};
 let activeType  = 'alle';
 let activeScore = '';
+let activePoi   = null;   // {name, latitude, longitude}
 
+// ── Haversine ─────────────────────────────────────────────────────────────────
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371000;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) *
+            Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function fmtDist(m) {
+  return m < 1000 ? Math.round(m) + ' m' : (m/1000).toFixed(1) + ' km';
+}
+
+// ── Load ──────────────────────────────────────────────────────────────────────
 async function loadData() {
   document.getElementById('loading').classList.remove('hidden');
   document.getElementById('cards').innerHTML = '';
   document.getElementById('empty').classList.add('hidden');
+
   try {
-    const res = await fetch('data/deals.json?t=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    // Load config + deals in parallel
+    const [cfgRes, dataRes] = await Promise.all([
+      fetch('config.json?t=' + Date.now()),
+      fetch('data/deals.json?t=' + Date.now())
+    ]);
+    config   = await cfgRes.json();
+    const data = await dataRes.json();
     allDeals = data.deals || [];
 
+    // Update city label
+    document.getElementById('city-label').textContent =
+      config.target_city || 'Mannheim';
+
+    // Build POI dropdown
+    buildPoiDropdown();
+
+    // Stats
     const kauf  = allDeals.filter(d => d.listing_type === 'kauf');
     const miete = allDeals.filter(d => d.listing_type === 'miete');
     const gut   = allDeals.filter(d => ['strong_buy','gut'].includes(d.deal_score));
@@ -175,32 +190,49 @@ async function loadData() {
     document.getElementById('stat-last').textContent =
       last ? '🕐 ' + last.slice(0,16).replace('T',' ') + ' UTC' : '🕐 Noch nie';
 
-    // Populate stadtteil options dynamically from data
-    populateStadtteilOptions();
     render();
     showToast('✅ ' + allDeals.length + ' Deals geladen', 'success');
-  } catch (e) {
+  } catch(e) {
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('empty').classList.remove('hidden');
     showToast('❌ Ladefehler: ' + e.message, 'error');
   }
 }
 
-function populateStadtteilOptions() {
-  // Add any stadtteile from data that aren't already in the select
-  const sel = document.getElementById('stadtteil-filter');
-  const existing = new Set([...sel.options].map(o => o.value.toLowerCase()));
-  const fromData = [...new Set(allDeals.map(d => d.stadtteil).filter(Boolean))];
-  fromData.forEach(st => {
-    if (!existing.has(st.toLowerCase())) {
-      const opt = document.createElement('option');
-      opt.value = st;
-      opt.textContent = st;
-      sel.appendChild(opt);
-    }
+function buildPoiDropdown() {
+  const sel = document.getElementById('poi-select');
+  sel.innerHTML = '<option value="">— Kein Radar —</option>';
+
+  const pois = [];
+  if (config.default_poi) pois.push(config.default_poi);
+  (config.alternative_pois || []).forEach(p => pois.push(p));
+
+  pois.forEach((poi, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = poi.name;
+    sel.appendChild(opt);
   });
 }
 
+function getAllPois() {
+  const pois = [];
+  if (config.default_poi) pois.push(config.default_poi);
+  (config.alternative_pois || []).forEach(p => pois.push(p));
+  return pois;
+}
+
+function onPoiChange() {
+  const val = document.getElementById('poi-select').value;
+  if (val === '') {
+    activePoi = null;
+  } else {
+    activePoi = getAllPois()[parseInt(val)] || null;
+  }
+  render();
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────────
 function setType(t) {
   activeType = t;
   document.querySelectorAll('.type-btn').forEach(b => {
@@ -227,60 +259,71 @@ function setScore(s) {
 function resetFilters() {
   activeType  = 'alle';
   activeScore = '';
-  document.getElementById('stadtteil-filter').value = '';
-  document.getElementById('zimmer-min').value = '2.5';
-  document.getElementById('zimmer-max').value = '';
+  activePoi   = null;
+  document.getElementById('poi-select').value    = '';
+  document.getElementById('radius-select').value = '0';
+  document.getElementById('zimmer-min').value    = '2.5';
+  document.getElementById('zimmer-max').value    = '';
   setType('alle');
   setScore('');
 }
 
+// ── Render ────────────────────────────────────────────────────────────────────
 function render() {
   document.getElementById('loading').classList.add('hidden');
 
-  const zimMin = parseFloat(document.getElementById('zimmer-min').value) || null;
-  const zimMax = parseFloat(document.getElementById('zimmer-max').value) || null;
-  const stadtteil = document.getElementById('stadtteil-filter').value.toLowerCase();
+  const zimMin   = parseFloat(document.getElementById('zimmer-min').value) || null;
+  const zimMax   = parseFloat(document.getElementById('zimmer-max').value) || null;
+  const maxDist  = parseInt(document.getElementById('radius-select').value) || 0;
 
-  let filtered = allDeals.filter(d => {
+  let filtered = allDeals.map(d => {
+    // Calculate distance to active POI
+    let dist = null;
+    if (activePoi && d.latitude != null && d.longitude != null) {
+      dist = haversine(activePoi.latitude, activePoi.longitude, d.latitude, d.longitude);
+    }
+    return { ...d, _dist: dist };
+  }).filter(d => {
     if (activeType !== 'alle' && d.listing_type !== activeType) return false;
     if (activeScore) {
       const s = d.deal_score || '';
       if (activeScore === 'skip' && !['skip','teuer'].includes(s)) return false;
       if (activeScore !== 'skip' && s !== activeScore) return false;
     }
-    const zi = d.zimmer;
-    if (zimMin !== null && zi !== null && zi !== undefined && zi < zimMin) return false;
-    if (zimMax !== null && zi !== null && zi !== undefined && zi > zimMax) return false;
-    if (stadtteil && !(d.stadtteil || '').toLowerCase().includes(stadtteil) &&
-        !(d.quadrat || '').toLowerCase().includes(stadtteil) &&
-        !(d.title || '').toLowerCase().includes(stadtteil)) return false;
+    const zi = d.zimmeranzahl;
+    if (zimMin !== null && zi != null && zi < zimMin) return false;
+    if (zimMax !== null && zi != null && zi > zimMax) return false;
+    if (maxDist > 0 && activePoi) {
+      if (d._dist === null) return false;  // no coords = hide when radius active
+      if (d._dist > maxDist) return false;
+    }
     return true;
   });
 
-  // Update filter summary
-  const summary = document.getElementById('filter-summary');
+  // Sort: by distance if POI active, else by score
+  if (activePoi) {
+    filtered.sort((a, b) => (a._dist || 999999) - (b._dist || 999999));
+  }
+
+  // Summary
   const parts = [];
   if (activeType !== 'alle') parts.push(activeType === 'kauf' ? '🏠 Kauf' : '🔑 Miete');
   if (activeScore) parts.push('Score: ' + activeScore);
-  if (stadtteil) parts.push('📍 ' + document.getElementById('stadtteil-filter').options[document.getElementById('stadtteil-filter').selectedIndex].text);
+  if (activePoi) parts.push('📍 ' + activePoi.name + (maxDist > 0 ? ' ≤ ' + fmtDist(maxDist) : ''));
   if (zimMin) parts.push('ab ' + zimMin + ' Zi.');
-  if (zimMax) parts.push('bis ' + zimMax + ' Zi.');
-  if (parts.length) {
-    summary.textContent = 'Filter: ' + parts.join(' · ') + ' → ' + filtered.length + ' Ergebnis' + (filtered.length !== 1 ? 'se' : '');
-    summary.classList.remove('hidden');
-  } else {
-    summary.textContent = filtered.length + ' Deals insgesamt';
-    summary.classList.remove('hidden');
-  }
+  const summary = document.getElementById('filter-summary');
+  summary.textContent = (parts.length ? 'Filter: ' + parts.join(' · ') + ' → ' : '') +
+    filtered.length + ' Ergebnis' + (filtered.length !== 1 ? 'se' : '');
 
   const container = document.getElementById('cards');
   document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
-  container.innerHTML = filtered.map(renderCard).join('');
+  container.innerHTML = filtered.map(d => renderCard(d, activePoi)).join('');
 }
 
-function renderCard(d) {
-  const isKauf  = d.listing_type === 'kauf';
-  const score   = d.deal_score || '';
+// ── Card ──────────────────────────────────────────────────────────────────────
+function renderCard(d, poi) {
+  const isKauf = d.listing_type === 'kauf';
+  const score  = d.deal_score || '';
 
   const scoreLabels = {
     strong_buy: ['🟢 Strong Buy', 'bg-green-900 text-green-200'],
@@ -296,29 +339,36 @@ function renderCard(d) {
     ? '<span class="badge bg-blue-900 text-blue-200">🏠 Kauf</span>'
     : '<span class="badge bg-purple-900 text-purple-200">🔑 Miete</span>';
 
-  const srcColors = { kleinanzeigen: 'bg-orange-900 text-orange-200', wg_gesucht: 'bg-teal-900 text-teal-200' };
-  const srcCls = srcColors[d.source] || 'bg-gray-700 text-gray-400';
+  // Distance badge
+  let distBadge = '';
+  if (d._dist !== null && poi) {
+    const m = d._dist;
+    const cls = m < 1000 ? 'dist-close' : m < 3000 ? 'dist-mid' : 'dist-far';
+    distBadge = `<span class="badge ${cls}">📡 ${fmtDist(m)} bis ${poi.name}</span>`;
+  } else if (d.latitude == null && poi) {
+    distBadge = '<span class="badge bg-gray-800 text-gray-500">📡 Kein GPS</span>';
+  }
 
   // Location badges
   let locBadges = '';
   if (d.quadrat)   locBadges += `<span class="badge bg-indigo-900 text-indigo-200">📍 ${d.quadrat}</span>`;
   if (d.stadtteil) locBadges += `<span class="badge bg-indigo-800 text-indigo-200">🏘 ${d.stadtteil}</span>`;
 
-  // Zimmer badge
-  const zimBadge = d.zimmer
-    ? `<span class="badge bg-gray-700 text-gray-200">🛏 ${d.zimmer} Zi.</span>`
-    : '';
+  const zimBadge = d.zimmeranzahl != null
+    ? `<span class="badge bg-gray-700 text-gray-200">🛏 ${d.zimmeranzahl} Zi.</span>` : '';
 
-  const featureTags = (d.features || []).map(f => `<span class="tag">${f}</span>`).join('');
+  const boniTags = (d.boni || []).map(b => `<span class="tag">${b}</span>`).join('');
+  const srcColors = { kleinanzeigen: 'bg-orange-900 text-orange-200' };
+  const srcCls = srcColors[d.source] || 'bg-gray-700 text-gray-400';
   const firstSeen = d.first_seen ? d.first_seen.slice(0,10) : '–';
 
+  // Kennzahlen
   let kennzahlen = '';
-
   if (isKauf) {
-    const preis = d.kaufpreis ? fmtEuro(d.kaufpreis) : '–';
-    const miete = d.kaltmiete ? fmtEuro(d.kaltmiete) + '/Mo.' : '–';
-    const bank  = d.bankrate_monat ? fmtEuro(d.bankrate_monat) + '/Mo.' : '–';
-    const cf    = d.cashflow_monat !== undefined && d.cashflow_monat !== null
+    const preis = d.kaufpreis        ? fmtEuro(d.kaufpreis) : '–';
+    const miete = d.kaltmiete        ? fmtEuro(d.kaltmiete) + '/Mo.' : '–';
+    const bank  = d.bankrate_monat   ? fmtEuro(d.bankrate_monat) + '/Mo.' : '–';
+    const cf    = d.cashflow_monat != null
       ? (d.cashflow_monat >= 0 ? '+' : '') + fmtEuro(d.cashflow_monat) + '/Mo.' : '–';
     const cfCls = d.cashflow_monat >= 0 ? 'text-green-400 font-bold'
       : d.cashflow_monat >= -150 ? 'text-yellow-400 font-bold' : 'text-red-400 font-bold';
@@ -333,20 +383,20 @@ function renderCard(d) {
           <p class="${cfCls} text-sm">${cf}</p>
         </div>
       </div>`;
-    if (d.wohnflaeche_qm && d.kaufpreis) {
-      kennzahlen += `<p class="text-xs text-gray-500 mt-2">🏠 ${d.wohnflaeche_qm} m² · ${Math.round(d.kaufpreis/d.wohnflaeche_qm).toLocaleString('de')} €/m²</p>`;
+    if (d.quadratmeter && d.kaufpreis) {
+      kennzahlen += `<p class="text-xs text-gray-500 mt-2">🏠 ${d.quadratmeter} m² · ${Math.round(d.kaufpreis/d.quadratmeter).toLocaleString('de')} €/m²</p>`;
     }
   } else {
-    const kalt = d.kaltmiete  ? fmtEuro(d.kaltmiete)  + '/Mo.' : '–';
-    const nk   = d.nebenkosten ? fmtEuro(d.nebenkosten) + '/Mo.' : '–';
-    const warm = d.warmmiete  ? fmtEuro(d.warmmiete)  + '/Mo.' : '–';
+    const kalt = d.kaltmiete    ? fmtEuro(d.kaltmiete)   + '/Mo.' : '–';
+    const nk   = d.nebenkosten  ? fmtEuro(d.nebenkosten)  + '/Mo.' : '–';
+    const warm = d.warmmiete    ? fmtEuro(d.warmmiete)    + '/Mo.' : '–';
     const qm   = d.kaltmiete_qm ? d.kaltmiete_qm.toFixed(2) + ' €/m²' : '–';
 
     let devBadge = '';
-    if (d.deal_deviation_pct !== undefined && d.deal_deviation_pct !== null) {
+    if (d.deal_deviation_pct != null) {
       const dev = d.deal_deviation_pct;
-      const devCls = dev <= -10 ? 'deviation-gut' : dev <= 10 ? 'deviation-okay' : 'deviation-teuer';
-      devBadge = `<span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${devCls}">${dev>0?'+':''}${dev.toFixed(1)}% vs. Markt</span>`;
+      const cls = dev <= -10 ? 'dev-gut' : dev <= 10 ? 'dev-okay' : 'dev-teuer';
+      devBadge = `<span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${cls}">${dev>0?'+':''}${dev.toFixed(1)}% vs. Markt</span>`;
     }
 
     kennzahlen = `
@@ -357,14 +407,14 @@ function renderCard(d) {
         ${kz('Preis/m²', qm)}
       </div>
       <div class="flex flex-wrap gap-2 mt-2 items-center text-xs text-gray-400">
-        ${d.expected_market_qm ? `<span>📊 Markt-Benchmark: <strong class="text-gray-300">${d.expected_market_qm.toFixed(2)} €/m²</strong></span>` : ''}
+        ${d.expected_market_qm ? `<span>📊 Markt: <strong class="text-gray-300">${d.expected_market_qm.toFixed(2)} €/m²</strong></span>` : ''}
         ${devBadge}
-        ${d.wohnflaeche_qm ? `<span>· 🏠 ${d.wohnflaeche_qm} m²</span>` : ''}
+        ${d.quadratmeter ? `<span>· 🏠 ${d.quadratmeter} m²</span>` : ''}
       </div>`;
   }
 
-  const aiBlock = d.einschaetzung
-    ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">🤖 ${d.einschaetzung}</div>`
+  const aiBlock = d.kurz_bewertung
+    ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">🤖 ${d.kurz_bewertung}</div>`
     : '';
 
   return `
@@ -373,6 +423,7 @@ function renderCard(d) {
       <span class="badge ${scoreCls}">${scoreLabel}</span>
       ${typeBadge}
       ${zimBadge}
+      ${distBadge}
       ${locBadges}
       <span class="badge ${srcCls}">${d.source.replace('_',' ')}</span>
       <span class="text-xs text-gray-500 ml-auto">📅 ${firstSeen}</span>
@@ -381,7 +432,8 @@ function renderCard(d) {
        class="text-white font-semibold text-sm hover:text-indigo-400 transition-colors line-clamp-2">
       ${d.title}
     </a>
-    ${featureTags ? `<div class="mt-2">${featureTags}</div>` : ''}
+    ${boniTags ? `<div class="mt-2">${boniTags}</div>` : ''}
+    ${d.adresse ? `<p class="text-xs text-gray-500 mt-1">📌 ${d.adresse}</p>` : ''}
     ${kennzahlen}
     ${aiBlock}
   </div>`;
@@ -400,7 +452,7 @@ function showToast(msg, type='success') {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.className = `fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl z-50 transition-opacity duration-300 ${
-    type==='success' ? 'bg-green-700 text-white' : 'bg-red-700 text-white'}`;
+    type==='success'?'bg-green-700 text-white':'bg-red-700 text-white'}`;
   t.style.opacity = '1';
   setTimeout(() => { t.style.opacity = '0'; }, 3500);
 }
