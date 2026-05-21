@@ -1,7 +1,7 @@
 """
-scraper.py - Immobilien-Sniper v3.0
+scraper.py - Immobilien-Sniper v3.1
 Parallel: 4 concurrent detail pages + parallel Gemini calls via asyncio.
-~3-4x faster than v2.1 sequential approach.
+Fix: gemini-2.0-flash, precise rate-limit error check.
 """
 
 import asyncio
@@ -26,15 +26,15 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-GEMINI_API_KEY: str = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 CONFIG_PATH = Path("config.json")
 DEALS_PATH  = Path("data/deals.json")
 MAX_NEW_PER_RUN   = 20
 PAGE_TIMEOUT_MS   = 12000
 DETAIL_WAIT_MS    = 500
-MAX_RUNTIME_SECS  = 1500   # 25 min hard limit (workflow: 45 min)
-DETAIL_WORKERS    = 4      # parallel Playwright detail pages
-GEMINI_WORKERS    = 4      # parallel Gemini threads (stay under 15 RPM free tier)
+MAX_RUNTIME_SECS  = 1500
+DETAIL_WORKERS    = 4
+GEMINI_WORKERS    = 4
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
 MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.65
@@ -53,9 +53,7 @@ _gemini_key_invalid = False
 _start_time = None
 
 
-# ─── Config / data helpers ────────────────────────────────────────────────────
-
-def load_config() -> dict:
+def load_config():
     if not CONFIG_PATH.exists():
         log.error("config.json nicht gefunden!")
         sys.exit(1)
@@ -65,7 +63,7 @@ def load_config() -> dict:
     return cfg
 
 
-def load_deals() -> dict:
+def load_deals():
     DEALS_PATH.parent.mkdir(parents=True, exist_ok=True)
     if DEALS_PATH.exists():
         try:
@@ -76,29 +74,29 @@ def load_deals() -> dict:
     return {"last_updated": None, "deals": []}
 
 
-def save_deals(data: dict) -> None:
+def save_deals(data):
     data["last_updated"] = datetime.now(timezone.utc).isoformat()
     with open(DEALS_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     log.info("Gespeichert: %d Deals", len(data["deals"]))
 
 
-def get_existing_urls(data: dict) -> set:
+def get_existing_urls(data):
     return {d["url"] for d in data.get("deals", [])}
 
 
-def time_ok() -> bool:
+def time_ok():
     return (time.time() - _start_time) < MAX_RUNTIME_SECS
 
 
-def is_mannheim(title: str, raw_text: str) -> bool:
+def is_mannheim(title, raw_text):
     combined = title + " " + raw_text
     if NON_MANNHEIM_RE.search(combined):
         return False
     return bool(MANNHEIM_RE.search(combined))
 
 
-def valid_mannheim_coords(lat, lon) -> bool:
+def valid_mannheim_coords(lat, lon):
     if lat is None or lon is None:
         return False
     try:
@@ -107,9 +105,7 @@ def valid_mannheim_coords(lat, lon) -> bool:
         return False
 
 
-# ─── Score calculation ────────────────────────────────────────────────────────
-
-def berechne_scores(deal: dict, cfg: dict) -> dict:
+def berechne_scores(deal, cfg):
     fin      = cfg.get("financing", {})
     base     = cfg.get("base_rent_per_sqm", 14.50)
     boni_map = cfg.get("rent_bonuses", {})
@@ -163,7 +159,7 @@ def berechne_scores(deal: dict, cfg: dict) -> dict:
     return deal
 
 
-def build_deal(raw: dict, ai: Optional[dict], now_iso: str, cfg: dict) -> dict:
+def build_deal(raw, ai, now_iso, cfg):
     deal = {
         "url":            raw["url"],
         "source":         raw["source"],
@@ -191,10 +187,7 @@ def build_deal(raw: dict, ai: Optional[dict], now_iso: str, cfg: dict) -> dict:
     return berechne_scores(deal, cfg)
 
 
-# ─── Async detail scraping ────────────────────────────────────────────────────
-
-async def scrape_detail_async(ctx: BrowserContext, url: str,
-                               sem: asyncio.Semaphore) -> str:
+async def scrape_detail_async(ctx, url, sem):
     async with sem:
         page = await ctx.new_page()
         try:
@@ -249,10 +242,7 @@ async def scrape_detail_async(ctx: BrowserContext, url: str,
             await page.close()
 
 
-# ─── Gemini (sync, runs in thread pool) ──────────────────────────────────────
-
-def _gemini_call_sync(title: str, raw_text: str,
-                      listing_type_hint: str, cfg: dict) -> Optional[dict]:
+def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
     global _gemini_key_invalid
     if _gemini_key_invalid or not time_ok():
         return None
@@ -328,7 +318,7 @@ def _gemini_call_sync(title: str, raw_text: str,
                 result["latitude"]  = None
                 result["longitude"] = None
 
-            log.info("   Gemini: typ=%s kauf=%s miete=%s qm=%s lat=%s",
+            log.info("   Gemini OK: typ=%s kauf=%s miete=%s qm=%s lat=%s",
                      result.get("listing_type"), result.get("kaufpreis"),
                      result.get("kaltmiete"), result.get("quadratmeter"),
                      "%.4f" % result["latitude"] if result.get("latitude") else "null")
@@ -342,10 +332,10 @@ def _gemini_call_sync(title: str, raw_text: str,
                                       "resource_exhausted", "too many requests")):
                 log.warning("   Rate-Limit 30s ...")
                 time.sleep(30)
-            elif any(x in err for x in ("not found", "404", "model not found",
-                                        "deprecated", "not supported")):
-                log.error("   Modell nicht gefunden (404): %s", e)
-                return None   # Kein Retry bei 404
+            elif any(x in err for x in ("not found", "404", "not supported",
+                                        "deprecated", "model not found")):
+                log.error("   Modell nicht gefunden: %s", e)
+                return None
             elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
                                         "api_key_invalid", "permission_denied")):
                 log.error("   API-Key ungueltig: %s", e)
@@ -356,24 +346,17 @@ def _gemini_call_sync(title: str, raw_text: str,
     return None
 
 
-async def analyse_mit_gemini_async(title: str, raw_text: str,
-                                    listing_type_hint: str, cfg: dict,
-                                    sem: asyncio.Semaphore) -> Optional[dict]:
-    """Non-blocking Gemini call: runs sync function in thread pool."""
+async def analyse_mit_gemini_async(title, raw_text, listing_type_hint, cfg, sem):
     async with sem:
         return await asyncio.to_thread(
             _gemini_call_sync, title, raw_text, listing_type_hint, cfg)
 
 
-# ─── Main scraper logic ───────────────────────────────────────────────────────
-
-async def scrape_kleinanzeigen_async(ctx: BrowserContext, source: dict,
-                                      existing_urls: set, cfg: dict) -> list:
+async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
     raw      = []
     base_url = source["url"]
     lst_type = source["listing_type"]
 
-    # Phase 1: Collect candidate URLs (sequential search pages)
     search_page = await ctx.new_page()
     try:
         for page_num in range(1, source.get("pages", 1) + 1):
@@ -428,7 +411,6 @@ async def scrape_kleinanzeigen_async(ctx: BrowserContext, source: dict,
     if not raw:
         return []
 
-    # Phase 2: Parallel detail scraping (DETAIL_WORKERS concurrent pages)
     log.info("   %d Detailseiten parallel (%d gleichzeitig)...", len(raw), DETAIL_WORKERS)
     sem = asyncio.Semaphore(DETAIL_WORKERS)
     detail_tasks = [scrape_detail_async(ctx, entry["url"], sem) for entry in raw]
@@ -448,14 +430,12 @@ async def scrape_kleinanzeigen_async(ctx: BrowserContext, source: dict,
     return verified
 
 
-# ─── Entry point ──────────────────────────────────────────────────────────────
-
-async def main() -> None:
+async def main():
     global _start_time
     _start_time = time.time()
 
     log.info("=" * 55)
-    log.info("Immobilien-Sniper v3.0 (parallel async)")
+    log.info("Immobilien-Sniper v3.1")
     log.info("Zeit: %s UTC | MaxRun: %ds | Details: %dx | Gemini: %dx",
              datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
              MAX_RUNTIME_SECS, DETAIL_WORKERS, GEMINI_WORKERS)
@@ -507,7 +487,6 @@ async def main() -> None:
     ai_ok = ai_fail = 0
 
     if all_raw and not _gemini_key_invalid and time_ok():
-        # Parallel Gemini calls (semaphore-limited to GEMINI_WORKERS)
         gemini_sem = asyncio.Semaphore(GEMINI_WORKERS)
         gemini_tasks = [
             analyse_mit_gemini_async(
@@ -536,4 +515,13 @@ async def main() -> None:
 
         if i % 5 == 0:
             save_deals(data)
-            log.info("
+
+    elapsed = int(time.time() - _start_time)
+    log.info("=" * 55)
+    log.info("Fertig in %ds | neu=%d KI ok=%d fail=%d | gesamt=%d",
+             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
+    save_deals(data)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
