@@ -39,7 +39,7 @@
       "scraper": "kleinanzeigen",
       "listing_type": "miete",
       "enabled": true,
-      "pages": 2,
+      "pages": 4,
       "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/k0c203"
     },
     {
@@ -47,7 +47,7 @@
       "scraper": "kleinanzeigen",
       "listing_type": "kauf",
       "enabled": true,
-      "pages": 2,
+      "pages": 4,
       "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/mannheim/k0c196"
     }
   ]
