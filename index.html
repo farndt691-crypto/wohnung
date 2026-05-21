@@ -90,7 +90,7 @@
 
     <div class="flex items-center gap-2 text-sm">
       <label class="text-gray-400 whitespace-nowrap">🛏 Zimmer:</label>
-      <input id="zimmer-min" type="number" value="2.5" min="1" max="10" step="0.5"
+      <input id="zimmer-min" type="number" value="1" min="1" max="10" step="0.5"
         oninput="render()" class="w-16 text-center"/>
       <span class="text-gray-500">–</span>
       <input id="zimmer-max" type="number" placeholder="max" min="1" max="10" step="0.5"
@@ -262,7 +262,7 @@ function resetFilters() {
   activePoi   = null;
   document.getElementById('poi-select').value    = '';
   document.getElementById('radius-select').value = '0';
-  document.getElementById('zimmer-min').value    = '2.5';
+  document.getElementById('zimmer-min').value    = '1';
   document.getElementById('zimmer-max').value    = '';
   setType('alle');
   setScore('');
@@ -461,3 +461,4 @@ loadData();
 </script>
 </body>
 </html>
+    
