@@ -40,7 +40,7 @@
       "listing_type": "miete",
       "enabled": true,
       "pages": 2,
-      "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/c203l9409r10"
+      "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/k0c203"
     },
     {
       "name": "kleinanzeigen_kauf",
@@ -48,7 +48,7 @@
       "listing_type": "kauf",
       "enabled": true,
       "pages": 2,
-      "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/mannheim/c196l9409r10"
+      "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/mannheim/k0c196"
     }
   ]
 }
