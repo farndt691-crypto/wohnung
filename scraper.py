@@ -1,7 +1,6 @@
 """
-scraper.py - Immobilien-Sniper v3.1
-Parallel: 4 concurrent detail pages + parallel Gemini calls via asyncio.
-Fix: gemini-2.0-flash, precise rate-limit error check.
+scraper.py - Immobilien-Sniper v3.2
+Parallel detail pages + rate-limited Gemini calls (max 13 RPM, free tier safe).
 """
 
 import asyncio
@@ -29,12 +28,12 @@ log = logging.getLogger(__name__)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 CONFIG_PATH = Path("config.json")
 DEALS_PATH  = Path("data/deals.json")
-MAX_NEW_PER_RUN   = 20
-PAGE_TIMEOUT_MS   = 12000
-DETAIL_WAIT_MS    = 500
-MAX_RUNTIME_SECS  = 1500
-DETAIL_WORKERS    = 4
-GEMINI_WORKERS    = 4
+MAX_NEW_PER_RUN      = 20
+PAGE_TIMEOUT_MS      = 12000
+DETAIL_WAIT_MS       = 500
+MAX_RUNTIME_SECS     = 1500
+DETAIL_WORKERS       = 4
+GEMINI_MIN_INTERVAL  = 4.5   # seconds between calls => ~13 RPM (free tier: 15 RPM)
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
 MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.65
@@ -51,6 +50,8 @@ NON_MANNHEIM_RE = re.compile(
 
 _gemini_key_invalid = False
 _start_time = None
+_gemini_last_call = 0.0
+_gemini_rate_lock = None   # initialized in main() after event loop starts
 
 
 def load_config():
@@ -293,7 +294,7 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
 
     for attempt in range(2):
         try:
-            resp     = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+            resp     = client.models.generate_content(model="gemini-2.5-flash-lite", contents=prompt)
             raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", resp.text.strip()).strip()
             m        = re.search(r"\{[\s\S]*\}", raw_resp)
             if not m:
@@ -318,9 +319,9 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
                 result["latitude"]  = None
                 result["longitude"] = None
 
-            log.info("   Gemini OK: typ=%s kauf=%s miete=%s qm=%s lat=%s",
-                     result.get("listing_type"), result.get("kaufpreis"),
-                     result.get("kaltmiete"), result.get("quadratmeter"),
+            log.info("   Gemini OK: typ=%s miete=%s kaufpreis=%s qm=%s lat=%s",
+                     result.get("listing_type"), result.get("kaltmiete"),
+                     result.get("kaufpreis"), result.get("quadratmeter"),
                      "%.4f" % result["latitude"] if result.get("latitude") else "null")
             return result
 
@@ -328,12 +329,7 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
             log.warning("   JSON-Fehler Versuch %d", attempt + 1)
         except Exception as e:
             err = str(e).lower()
-            if any(x in err for x in ("quota exceeded", "rate limit", "429",
-                                      "resource_exhausted", "too many requests")):
-                log.warning("   Rate-Limit 30s ...")
-                time.sleep(30)
-            elif any(x in err for x in ("not found", "404", "not supported",
-                                        "deprecated", "model not found")):
+            if any(x in err for x in ("not found", "404", "not supported", "deprecated")):
                 log.error("   Modell nicht gefunden: %s", e)
                 return None
             elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
@@ -346,10 +342,21 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
     return None
 
 
-async def analyse_mit_gemini_async(title, raw_text, listing_type_hint, cfg, sem):
-    async with sem:
-        return await asyncio.to_thread(
-            _gemini_call_sync, title, raw_text, listing_type_hint, cfg)
+async def analyse_mit_gemini_async(title, raw_text, listing_type_hint, cfg):
+    """Rate-limited Gemini call: max 1 per GEMINI_MIN_INTERVAL seconds."""
+    global _gemini_last_call
+
+    # Acquire rate-limit slot: wait until enough time has passed since last call
+    async with _gemini_rate_lock:
+        now = asyncio.get_event_loop().time()
+        wait = _gemini_last_call + GEMINI_MIN_INTERVAL - now
+        if wait > 0:
+            log.info("   Rate-Limiter: warte %.1fs ...", wait)
+            await asyncio.sleep(wait)
+        _gemini_last_call = asyncio.get_event_loop().time()
+
+    # Run the actual API call in a thread (non-blocking)
+    return await asyncio.to_thread(_gemini_call_sync, title, raw_text, listing_type_hint, cfg)
 
 
 async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
@@ -412,8 +419,8 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
         return []
 
     log.info("   %d Detailseiten parallel (%d gleichzeitig)...", len(raw), DETAIL_WORKERS)
-    sem = asyncio.Semaphore(DETAIL_WORKERS)
-    detail_tasks = [scrape_detail_async(ctx, entry["url"], sem) for entry in raw]
+    det_sem = asyncio.Semaphore(DETAIL_WORKERS)
+    detail_tasks = [scrape_detail_async(ctx, entry["url"], det_sem) for entry in raw]
     detail_results = await asyncio.gather(*detail_tasks, return_exceptions=True)
 
     verified = []
@@ -431,14 +438,15 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
 
 
 async def main():
-    global _start_time
+    global _start_time, _gemini_rate_lock
     _start_time = time.time()
+    _gemini_rate_lock = asyncio.Lock()
 
     log.info("=" * 55)
-    log.info("Immobilien-Sniper v3.1")
-    log.info("Zeit: %s UTC | MaxRun: %ds | Details: %dx | Gemini: %dx",
+    log.info("Immobilien-Sniper v3.2")
+    log.info("Zeit: %s UTC | MaxRun: %ds | Details: %dx | Gemini: %.1fs/Call",
              datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-             MAX_RUNTIME_SECS, DETAIL_WORKERS, GEMINI_WORKERS)
+             MAX_RUNTIME_SECS, DETAIL_WORKERS, GEMINI_MIN_INTERVAL)
     log.info("API-Key: %s", "OK" if GEMINI_API_KEY else "FEHLT!")
     log.info("=" * 55)
 
@@ -482,21 +490,23 @@ async def main():
         await browser.close()
 
     all_raw = all_raw[:MAX_NEW_PER_RUN]
-    log.info("\nGemini: %d Inserate parallel analysieren...", len(all_raw))
     now_iso = datetime.now(timezone.utc).isoformat()
     ai_ok = ai_fail = 0
 
     if all_raw and not _gemini_key_invalid and time_ok():
-        gemini_sem = asyncio.Semaphore(GEMINI_WORKERS)
+        # Rate-limited parallel Gemini calls (Lock ensures max 1/GEMINI_MIN_INTERVAL sec)
+        estimated_secs = len(all_raw) * GEMINI_MIN_INTERVAL
+        log.info("\nGemini: %d Inserate analysieren (~%.0fs, rate-limited)...",
+                 len(all_raw), estimated_secs)
         gemini_tasks = [
             analyse_mit_gemini_async(
-                r["title"], r.get("raw_text", ""), r["listing_type"], cfg, gemini_sem)
+                r["title"], r.get("raw_text", ""), r["listing_type"], cfg)
             for r in all_raw
         ]
-        log.info("   Starte %d parallele Gemini-Calls (max %d gleichzeitig)...",
-                 len(gemini_tasks), GEMINI_WORKERS)
         ai_results = await asyncio.gather(*gemini_tasks, return_exceptions=True)
     else:
+        log.warning("Gemini uebersprungen (key_invalid=%s time_ok=%s items=%d)",
+                    _gemini_key_invalid, time_ok(), len(all_raw))
         ai_results = [None] * len(all_raw)
 
     for i, (raw, ai) in enumerate(zip(all_raw, ai_results), 1):
