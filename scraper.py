@@ -303,7 +303,7 @@ def _gemini_call_sync(title: str, raw_text: str,
 
     for attempt in range(2):
         try:
-            resp     = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
+            resp     = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
             raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", resp.text.strip()).strip()
             m        = re.search(r"\{[\s\S]*\}", raw_resp)
             if not m:
@@ -338,9 +338,14 @@ def _gemini_call_sync(title: str, raw_text: str,
             log.warning("   JSON-Fehler Versuch %d", attempt + 1)
         except Exception as e:
             err = str(e).lower()
-            if any(x in err for x in ("quota", "rate", "429", "resource_exhausted")):
+            if any(x in err for x in ("quota exceeded", "rate limit", "429",
+                                      "resource_exhausted", "too many requests")):
                 log.warning("   Rate-Limit 30s ...")
                 time.sleep(30)
+            elif any(x in err for x in ("not found", "404", "model not found",
+                                        "deprecated", "not supported")):
+                log.error("   Modell nicht gefunden (404): %s", e)
+                return None   # Kein Retry bei 404
             elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
                                         "api_key_invalid", "permission_denied")):
                 log.error("   API-Key ungueltig: %s", e)
@@ -531,14 +536,4 @@ async def main() -> None:
 
         if i % 5 == 0:
             save_deals(data)
-            log.info("   [Zwischenspeicherung nach %d Deals]", len(data["deals"]))
-
-    elapsed = int(time.time() - _start_time)
-    log.info("=" * 55)
-    log.info("Fertig in %ds | neu=%d KI ok=%d fail=%d | gesamt=%d",
-             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
-    save_deals(data)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+            log.info("
