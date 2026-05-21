@@ -28,11 +28,12 @@ log = logging.getLogger(__name__)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 CONFIG_PATH = Path("config.json")
 DEALS_PATH  = Path("data/deals.json")
-MAX_NEW_PER_RUN      = 20
+MAX_NEW_PER_RUN      = 60   # total per run (30 miete + 30 kauf)
+MAX_PER_SOURCE       = 30   # max candidates per source
 PAGE_TIMEOUT_MS      = 12000
 DETAIL_WAIT_MS       = 500
-MAX_RUNTIME_SECS     = 1500
-DETAIL_WORKERS       = 4
+MAX_RUNTIME_SECS     = 2400  # 40 min hard limit (60 deals × 4.5s = ~5 min Gemini)
+DETAIL_WORKERS       = 5
 GEMINI_MIN_INTERVAL  = 4.5   # seconds between calls => ~13 RPM (free tier: 15 RPM)
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
@@ -367,7 +368,7 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
     search_page = await ctx.new_page()
     try:
         for page_num in range(1, source.get("pages", 1) + 1):
-            if len(raw) >= MAX_NEW_PER_RUN or not time_ok():
+            if len(raw) >= MAX_PER_SOURCE or not time_ok():
                 break
             url = base_url if page_num == 1 else base_url + "?pageNum=" + str(page_num)
             log.info("   Seite %d: %s", page_num, url[-50:])
@@ -382,7 +383,7 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
                     break
                 found = 0
                 for item in items:
-                    if len(raw) >= MAX_NEW_PER_RUN:
+                    if len(raw) >= MAX_PER_SOURCE:
                         break
                     try:
                         link_el = await item.query_selector(
@@ -528,10 +529,4 @@ async def main():
 
     elapsed = int(time.time() - _start_time)
     log.info("=" * 55)
-    log.info("Fertig in %ds | neu=%d KI ok=%d fail=%d | gesamt=%d",
-             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
-    save_deals(data)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+    log.info("Fertig in %ds | neu=%d KI ok=%d fail=%d | gesamt=%
