@@ -1,5 +1,6 @@
 """
 scraper.py - Immobilien-Sniper (GitHub Actions Edition)
+Kleinanzeigen only, Mannheim strict, with stadtteil extraction
 """
 
 import json
@@ -29,12 +30,19 @@ MANNHEIM_BENCHMARK_QM = 14.50
 MAX_NEW_PER_RUN = 20
 DEFAULT_ZIMMER = 2.5
 PAGE_TIMEOUT_MS = 20000
-DETAIL_WAIT_MS = 800
+DETAIL_WAIT_MS = 1000
 
+# Require "Mannheim" to appear somewhere in title or detail text
+MANNHEIM_RE = re.compile(r'\bMannheim\b', re.IGNORECASE)
+
+# Block obvious non-Mannheim cities
 NON_MANNHEIM_PATTERN = re.compile(
-    r"\b(Hamburg|Berlin|Muenchen|Frankfurt am Main|Stuttgart|Koeln|Duesseldorf|"
-    r"Dortmund|Essen|Leipzig|Dresden|Hannover|Nuernberg|Bremen|Duisburg|"
-    r"Bochum|Wuppertal|Bielefeld|Bonn|Muenster|Freiburg)\b",
+    r'\b(Hamburg|Berlin|Muenchen|Frankfurt am Main|Stuttgart|Koeln|Duesseldorf|'
+    r'Dortmund|Essen|Leipzig|Dresden|Hannover|Nuernberg|Bremen|Duisburg|'
+    r'Bochum|Wuppertal|Bielefeld|Bonn|Muenster|Freiburg|HafenCity|'
+    r'Buxtehude|Harburg|Altona|Wandsbek|Eilbek|Barmbek|Bergedorf|'
+    r'Pankow|Mitte|Kreuzberg|Friedrichshain|Prenzlauer|Schoeneberg|'
+    r'Karlsruhe|Heidelberg|Ludwigshafen)\b',
     re.IGNORECASE,
 )
 
@@ -43,6 +51,15 @@ KEYWORD_AUFSCHLAEGE: dict = {
     "renoviert": 1.00, "moebliert": 3.00, "Neubau": 2.00,
     "Aufzug": 0.50, "Garage": 0.30,
 }
+
+# All Mannheim districts for Gemini guidance
+MANNHEIM_STADTTEILE = (
+    "Quadrate/Innenstadt, Jungbusch, Neckarstadt-West, Neckarstadt-Ost, "
+    "Schwetzingerstadt, Oststadt, Lindenhof, Rheinau, Gartenstadt, "
+    "Neuostheim, Neuhermsheim, Kaefer tal, Vogelstang, Waldhof, "
+    "Seckenheim, Friedrichsfeld, Sandhofen, Schoenau, Feudenheim, "
+    "Wallstadt, Almenhof, Niederfeld"
+)
 
 SOURCES = [
     {
@@ -54,11 +71,6 @@ SOURCES = [
         "name": "kleinanzeigen_miete", "scraper": "kleinanzeigen",
         "listing_type": "miete", "enabled": True, "pages": 2,
         "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/c203l9409r10",
-    },
-    {
-        "name": "wg_gesucht", "scraper": "wg_gesucht",
-        "listing_type": "miete", "enabled": False, "pages": 1,
-        "url": "https://www.wg-gesucht.de/wohnungen-in-Mannheim.124.2.0.0.html",
     },
 ]
 
@@ -85,6 +97,13 @@ def save_deals(data: dict) -> None:
 
 def get_existing_urls(data: dict) -> set:
     return {d["url"] for d in data.get("deals", [])}
+
+
+def is_mannheim(title: str, raw_text: str) -> bool:
+    combined = title + " " + raw_text
+    if NON_MANNHEIM_PATTERN.search(combined):
+        return False
+    return bool(MANNHEIM_RE.search(combined))
 
 
 def berechne_scores(deal: dict) -> dict:
@@ -144,53 +163,68 @@ def scrape_detail(page: Page, url: str) -> str:
         page.wait_for_timeout(DETAIL_WAIT_MS)
         parts = []
 
-        if "kleinanzeigen.de" in url:
-            for sel in ["#viewad-price", "[data-testid='price-amount']",
-                        ".boxedarticle--details--price"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append("Preis: " + txt)
-                        break
-            for sel in ["#viewad-locality", "#viewad-address"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append("Ort: " + txt)
-                        break
-            for sel in ["#viewad-details", ".boxedarticle--details"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append(txt)
-                        break
-            for sel in ["#viewad-description-text", "#viewad-description"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append(txt)
-                        break
+        # Try price selectors
+        for sel in [
+            "#viewad-price",
+            "[data-testid='price-amount']",
+            ".boxedarticle--details--price",
+            ".addetailsview--detail--price",
+        ]:
+            el = page.query_selector(sel)
+            if el:
+                txt = el.inner_text().strip()
+                if txt:
+                    parts.append("Preis: " + txt)
+                    break
 
-        elif "wg-gesucht.de" in url:
-            for sel in [".headline-title", "h1.headline", ".cost-overview",
-                        ".row.print_overview", "#freitext"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append(txt)
+        # Try location
+        for sel in ["#viewad-locality", "#viewad-address", ".addetailsview--detail--address"]:
+            el = page.query_selector(sel)
+            if el:
+                txt = el.inner_text().strip()
+                if txt:
+                    parts.append("Ort: " + txt)
+                    break
+
+        # Try details table (contains zimmer, qm, etc.)
+        for sel in [
+            "#viewad-details",
+            ".boxedarticle--details",
+            ".addetailsview--detail--keyfeature",
+            "[data-testid='ad-detail-attributes']",
+        ]:
+            el = page.query_selector(sel)
+            if el:
+                txt = el.inner_text().strip()
+                if txt:
+                    parts.append(txt)
+                    break
+
+        # Try description
+        for sel in [
+            "#viewad-description-text",
+            "#viewad-description",
+            ".addetailsview--detail--description",
+        ]:
+            el = page.query_selector(sel)
+            if el:
+                txt = el.inner_text().strip()
+                if txt and len(txt) > 20:
+                    parts.append(txt[:1500])
+                    break
 
         combined = "\n\n".join(p for p in parts if p).strip()
         if combined:
-            log.info("   Detail: %d Zeichen (%s)", len(combined), url[:55])
+            log.info("   Detail: %d Zeichen (%s)", len(combined), url[:60])
             return combined[:3000]
-        return page.inner_text("body")[:1500]
+
+        # Fallback: body text
+        body = page.inner_text("body")
+        log.warning("   Detail Fallback (body): %d Zeichen", len(body))
+        return body[:2000]
+
     except Exception as e:
-        log.error("   Detail-Fehler (%s): %s", url[:55], e)
+        log.error("   Detail-Fehler (%s): %s", url[:60], e)
         return ""
 
 
@@ -198,7 +232,6 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
     global _gemini_key_invalid
     if _gemini_key_invalid:
         return None
-
     if not GEMINI_API_KEY:
         log.error("GEMINI_API_KEY fehlt!")
         _gemini_key_invalid = True
@@ -211,23 +244,25 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
         return None
 
     prompt = (
-        "Analysiere diese Immobilienanzeige. Extrahiere alle Zahlen exakt wie im Text.\n"
+        "Analysiere diese Immobilienanzeige aus Mannheim. Extrahiere alle Zahlen exakt.\n"
         "Antworte NUR mit einem gueltigen JSON-Objekt - kein Markdown, kein Kommentar.\n\n"
         "Typ-Hinweis: " + listing_type_hint + "\n"
         "Titel: " + title[:300] + "\n"
         "Text:\n" + raw_text[:2500] + "\n\n"
-        "JSON-Format (alle Zahlen ohne Tausenderpunkte, als reine Zahl):\n"
+        "Moegliche Mannheimer Stadtteile: " + MANNHEIM_STADTTEILE + "\n\n"
+        "JSON-Format (Zahlen IMMER als reine Zahl, keine Tausenderpunkte, z.B. 285000 nicht 285.000):\n"
         "{\n"
         '  "listing_type": "miete" oder "kauf",\n'
         '  "zimmer": Zimmeranzahl z.B. 2.5 oder null,\n'
-        '  "wohnflaeche_qm": m2 als Zahl oder null,\n'
+        '  "wohnflaeche_qm": Quadratmeter als Zahl oder null,\n'
         '  "kaltmiete": Kaltmiete EUR/Monat als Zahl oder null,\n'
         '  "nebenkosten": Nebenkosten EUR/Monat als Zahl oder null,\n'
         '  "warmmiete": Warmmiete EUR/Monat als Zahl oder null,\n'
-        '  "kaufpreis": Kaufpreis in EUR als reine Zahl oder null,\n'
+        '  "kaufpreis": Kaufpreis als reine Zahl z.B. 285000 oder null,\n'
         '  "quadrat": Mannheimer Quadrat z.B. "J2" oder null,\n'
-        '  "features": Teilmenge von ["EBK","Balkon","Terrasse","renoviert","moebliert","Neubau","Aufzug","Garage"],\n'
-        '  "einschaetzung": "1-2 Saetze Deal-Einschaetzung auf Deutsch"\n'
+        '  "stadtteil": Mannheimer Stadtteil z.B. "Lindenhof" oder null,\n'
+        '  "features": Array aus ["EBK","Balkon","Terrasse","renoviert","moebliert","Neubau","Aufzug","Garage"],\n'
+        '  "einschaetzung": "1-2 Saetze Einschaetzung auf Deutsch"\n'
         "}"
     )
 
@@ -241,7 +276,7 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
             raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", raw_resp).strip()
             json_match = re.search(r"\{[\s\S]*\}", raw_resp)
             if not json_match:
-                log.warning("   Kein JSON (Versuch %d)", attempt + 1)
+                log.warning("   Kein JSON (Versuch %d): %.80r", attempt + 1, raw_resp)
                 continue
 
             result = json.loads(json_match.group())
@@ -259,10 +294,10 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
                     except ValueError:
                         result[field] = None
 
-            log.info("   Gemini OK: typ=%s kauf=%s miete=%s qm=%s zi=%s",
+            log.info("   Gemini OK: typ=%s kauf=%s miete=%s qm=%s zi=%s stadtteil=%s",
                      result.get("listing_type"), result.get("kaufpreis"),
                      result.get("kaltmiete"), result.get("wohnflaeche_qm"),
-                     result.get("zimmer"))
+                     result.get("zimmer"), result.get("stadtteil"))
             return result
 
         except json.JSONDecodeError as e:
@@ -280,8 +315,6 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
                 return None
             else:
                 log.error("   Gemini-Fehler (Versuch %d): %s", attempt + 1, e)
-            if attempt == 1:
-                return None
 
     return None
 
@@ -299,7 +332,7 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
         log.info("   Seite %d: %s", page_num, url[:80])
         try:
             search_page.goto(url, wait_until="domcontentloaded", timeout=PAGE_TIMEOUT_MS)
-            search_page.wait_for_timeout(1000)
+            search_page.wait_for_timeout(1200)
             items = search_page.query_selector_all("article.aditem, li.ad-listitem[data-adid]")
             if not items:
                 log.info("   Keine Eintraege - stoppe")
@@ -319,9 +352,9 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
                     title = (title_el.inner_text().strip() if title_el else "").strip()
                     if not title:
                         continue
-                    card_text = item.inner_text()
-                    if NON_MANNHEIM_PATTERN.search(title + " " + card_text):
-                        log.info("   Skip (nicht Mannheim): %s", title[:50])
+                    # Early title check: skip obvious non-Mannheim
+                    if NON_MANNHEIM_PATTERN.search(title):
+                        log.info("   Skip (Titel nicht Mannheim): %s", title[:60])
                         continue
                     raw.append({"url": href, "source": "kleinanzeigen",
                                 "listing_type": listing_type, "title": title[:400]})
@@ -329,18 +362,26 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
                     found += 1
                 except Exception as e:
                     log.debug("   Item-Fehler: %s", e)
-            log.info("   %d neue Inserate auf Seite %d", found, page_num)
+            log.info("   %d neue Kandidaten auf Seite %d", found, page_num)
             if found == 0:
                 break
         except Exception as e:
             log.error("   Seitenfehler: %s", e)
             break
 
-    log.info("   Oeffne %d Detailseiten ...", len(raw))
+    # Scrape detail pages + Mannheim check
+    log.info("   Oeffne %d Detailseiten (Mannheim-Filter danach) ...", len(raw))
+    verified = []
     for entry in raw:
         entry["raw_text"] = scrape_detail(detail_page, entry["url"])
+        if not is_mannheim(entry["title"], entry["raw_text"]):
+            log.info("   SKIP nach Detail (kein Mannheim-Bezug): %s", entry["title"][:60])
+            continue
+        verified.append(entry)
         time.sleep(0.8)
-    return raw
+
+    log.info("   %d von %d Inserate nach Mannheim-Filter", len(verified), len(raw))
+    return verified
 
 
 def run() -> None:
@@ -348,7 +389,6 @@ def run() -> None:
     log.info("Immobilien-Sniper gestartet")
     log.info("Zeit: %s UTC", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     log.info("GEMINI_API_KEY: %s", "gesetzt" if GEMINI_API_KEY else "FEHLT!")
-    log.info("MAX_NEW_PER_RUN: %d", MAX_NEW_PER_RUN)
     log.info("=" * 60)
 
     data = load_deals()
@@ -378,15 +418,11 @@ def run() -> None:
 
         for source in SOURCES:
             if not source.get("enabled", True):
-                log.info("Quelle %s deaktiviert - ueberspringe", source["name"])
                 continue
             log.info("\nQuelle: %s", source["name"])
             try:
-                if source["scraper"] == "kleinanzeigen":
-                    results = scrape_kleinanzeigen(search_page, detail_page, source, existing_urls)
-                else:
-                    results = []
-                log.info("%d neue Inserate von %s", len(results), source["name"])
+                results = scrape_kleinanzeigen(search_page, detail_page, source, existing_urls)
+                log.info("%d verifizierte Inserate von %s", len(results), source["name"])
                 all_raw.extend(results)
                 if len(all_raw) >= MAX_NEW_PER_RUN:
                     break
@@ -396,7 +432,7 @@ def run() -> None:
         browser.close()
 
     all_raw = all_raw[:MAX_NEW_PER_RUN]
-    log.info("\nGemini analysiert %d neue Inserate ...", len(all_raw))
+    log.info("\nGemini analysiert %d Inserate ...", len(all_raw))
     now_iso = datetime.now(timezone.utc).isoformat()
     ai_ok = 0
     ai_fail = 0
@@ -424,6 +460,7 @@ def run() -> None:
             "features": [],
             "einschaetzung": "",
             "zimmer": DEFAULT_ZIMMER,
+            "stadtteil": None,
         }
 
         if ai:
