@@ -1,6 +1,6 @@
 """
-scraper.py - Immobilien-Sniper v3.2
-Parallel detail pages + rate-limited Gemini calls (max 13 RPM, free tier safe).
+scraper.py - Immobilien-Sniper v3.3
+60 deals/run: 30 miete + 30 kauf, 4 pages each, parallel async.
 """
 
 import asyncio
@@ -32,9 +32,9 @@ MAX_NEW_PER_RUN      = 60   # total per run (30 miete + 30 kauf)
 MAX_PER_SOURCE       = 30   # max candidates per source
 PAGE_TIMEOUT_MS      = 12000
 DETAIL_WAIT_MS       = 500
-MAX_RUNTIME_SECS     = 2400  # 40 min hard limit (60 deals × 4.5s = ~5 min Gemini)
+MAX_RUNTIME_SECS     = 2400  # 40 min hard limit
 DETAIL_WORKERS       = 5
-GEMINI_MIN_INTERVAL  = 4.5   # seconds between calls => ~13 RPM (free tier: 15 RPM)
+GEMINI_MIN_INTERVAL  = 4.5   # ~13 RPM (free tier: 15 RPM)
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
 MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.65
@@ -52,7 +52,7 @@ NON_MANNHEIM_RE = re.compile(
 _gemini_key_invalid = False
 _start_time = None
 _gemini_last_call = 0.0
-_gemini_rate_lock = None   # initialized in main() after event loop starts
+_gemini_rate_lock = None
 
 
 def load_config():
@@ -171,7 +171,7 @@ def build_deal(raw, ai, now_iso, cfg):
         "last_seen":      now_iso,
         "boni":           [],
         "kurz_bewertung": "",
-        "zimmeranzahl":   cfg.get("min_rooms", 2.5),
+        "zimmeranzahl":   None,
         "latitude":       None,
         "longitude":      None,
         "stadtteil":      None,
@@ -238,7 +238,7 @@ async def scrape_detail_async(ctx, url, sem):
             return (await page.inner_text("body"))[:1500]
 
         except Exception as e:
-            log.warning("   Detail timeout/fehler (%s): %s", url[35:75], e)
+            log.warning("   Detail fehler (%s): %s", url[35:75], e)
             return ""
         finally:
             await page.close()
@@ -320,10 +320,10 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
                 result["latitude"]  = None
                 result["longitude"] = None
 
-            log.info("   Gemini OK: typ=%s miete=%s kaufpreis=%s qm=%s lat=%s",
+            log.info("   Gemini OK: typ=%s miete=%s kauf=%s qm=%s zi=%s",
                      result.get("listing_type"), result.get("kaltmiete"),
                      result.get("kaufpreis"), result.get("quadratmeter"),
-                     "%.4f" % result["latitude"] if result.get("latitude") else "null")
+                     result.get("zimmeranzahl"))
             return result
 
         except json.JSONDecodeError:
@@ -344,19 +344,13 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
 
 
 async def analyse_mit_gemini_async(title, raw_text, listing_type_hint, cfg):
-    """Rate-limited Gemini call: max 1 per GEMINI_MIN_INTERVAL seconds."""
     global _gemini_last_call
-
-    # Acquire rate-limit slot: wait until enough time has passed since last call
     async with _gemini_rate_lock:
         now = asyncio.get_event_loop().time()
         wait = _gemini_last_call + GEMINI_MIN_INTERVAL - now
         if wait > 0:
-            log.info("   Rate-Limiter: warte %.1fs ...", wait)
             await asyncio.sleep(wait)
         _gemini_last_call = asyncio.get_event_loop().time()
-
-    # Run the actual API call in a thread (non-blocking)
     return await asyncio.to_thread(_gemini_call_sync, title, raw_text, listing_type_hint, cfg)
 
 
@@ -419,10 +413,12 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
     if not raw:
         return []
 
-    log.info("   %d Detailseiten parallel (%d gleichzeitig)...", len(raw), DETAIL_WORKERS)
+    log.info("   %d Detailseiten parallel (%dx)...", len(raw), DETAIL_WORKERS)
     det_sem = asyncio.Semaphore(DETAIL_WORKERS)
-    detail_tasks = [scrape_detail_async(ctx, entry["url"], det_sem) for entry in raw]
-    detail_results = await asyncio.gather(*detail_tasks, return_exceptions=True)
+    detail_results = await asyncio.gather(
+        *[scrape_detail_async(ctx, e["url"], det_sem) for e in raw],
+        return_exceptions=True
+    )
 
     verified = []
     for entry, raw_text in zip(raw, detail_results):
@@ -443,13 +439,13 @@ async def main():
     _start_time = time.time()
     _gemini_rate_lock = asyncio.Lock()
 
-    log.info("=" * 55)
-    log.info("Immobilien-Sniper v3.2")
-    log.info("Zeit: %s UTC | MaxRun: %ds | Details: %dx | Gemini: %.1fs/Call",
-             datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    log.info("=" * 58)
+    log.info("Immobilien-Sniper v3.3 | MAX=%d | PRO_QUELLE=%d | PAGES=4",
+             MAX_NEW_PER_RUN, MAX_PER_SOURCE)
+    log.info("MaxRun=%ds | Details=%dx | Gemini=%.1fs/Call",
              MAX_RUNTIME_SECS, DETAIL_WORKERS, GEMINI_MIN_INTERVAL)
     log.info("API-Key: %s", "OK" if GEMINI_API_KEY else "FEHLT!")
-    log.info("=" * 55)
+    log.info("=" * 58)
 
     cfg  = load_config()
     data = load_deals()
@@ -495,38 +491,37 @@ async def main():
     ai_ok = ai_fail = 0
 
     if all_raw and not _gemini_key_invalid and time_ok():
-        # Rate-limited parallel Gemini calls (Lock ensures max 1/GEMINI_MIN_INTERVAL sec)
-        estimated_secs = len(all_raw) * GEMINI_MIN_INTERVAL
-        log.info("\nGemini: %d Inserate analysieren (~%.0fs, rate-limited)...",
-                 len(all_raw), estimated_secs)
-        gemini_tasks = [
-            analyse_mit_gemini_async(
+        est = len(all_raw) * GEMINI_MIN_INTERVAL
+        log.info("\nGemini: %d Inserate (~%.0fs)...", len(all_raw), est)
+        ai_results = await asyncio.gather(
+            *[analyse_mit_gemini_async(
                 r["title"], r.get("raw_text", ""), r["listing_type"], cfg)
-            for r in all_raw
-        ]
-        ai_results = await asyncio.gather(*gemini_tasks, return_exceptions=True)
+              for r in all_raw],
+            return_exceptions=True
+        )
     else:
-        log.warning("Gemini uebersprungen (key_invalid=%s time_ok=%s items=%d)",
-                    _gemini_key_invalid, time_ok(), len(all_raw))
         ai_results = [None] * len(all_raw)
 
     for i, (raw, ai) in enumerate(zip(all_raw, ai_results), 1):
         if isinstance(ai, Exception):
-            log.warning("   Gemini Exception [%d]: %s", i, ai)
             ai = None
             ai_fail += 1
         elif ai is not None:
             ai_ok += 1
         else:
             ai_fail += 1
-
         log.info("[%2d/%d] %s", i, len(all_raw), raw["title"][:60])
         deal = build_deal(raw, ai, now_iso, cfg)
         data["deals"].append(deal)
-
-        if i % 5 == 0:
+        if i % 10 == 0:
             save_deals(data)
 
     elapsed = int(time.time() - _start_time)
-    log.info("=" * 55)
-    log.info("Fertig in %ds | neu=%d KI ok=%d fail=%d | gesamt=%
+    log.info("=" * 58)
+    log.info("Fertig: %ds | neu=%d | KI ok=%d fail=%d | gesamt=%d",
+             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
+    save_deals(data)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
