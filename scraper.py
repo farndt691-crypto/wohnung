@@ -307,12 +307,21 @@ def scrape_detail(page: Page, url: str, source_name: str) -> str:
 # Gemini KI-Analyse
 # ---------------------------------------------------------------------------
 
+# Globales Flag: wird True gesetzt sobald Key als ungültig erkannt
+_gemini_key_invalid = False
+
+
 def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Optional[dict]:
+    global _gemini_key_invalid
+    if _gemini_key_invalid:
+        return None   # Key bereits als ungültig markiert – nicht nochmal versuchen
+
     if not GEMINI_API_KEY:
         log.error(
             "GEMINI_API_KEY ist nicht gesetzt! "
             "Bitte in GitHub → Settings → Secrets → Actions als GEMINI_API_KEY hinterlegen."
         )
+        _gemini_key_invalid = True
         return None
 
     try:
@@ -395,8 +404,13 @@ JSON-Format (alle Zahlen ohne Tausenderpunkte, als reine Zahl):
                 wait = 65 * (attempt + 1)
                 log.warning(f"   ⏳ Rate-Limit – warte {wait}s ...")
                 time.sleep(wait)
-            elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated")):
-                log.error(f"   ❌ Ungültiger GEMINI_API_KEY: {e}")
+            elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
+                                          "api_key_invalid", "permission_denied")):
+                log.error(
+                    f"   ❌ GEMINI_API_KEY ungültig – alle weiteren KI-Aufrufe werden "
+                    f"übersprungen. Bitte Key in GitHub Secrets aktualisieren. Fehler: {e}"
+                )
+                _gemini_key_invalid = True
                 return None
             else:
                 log.error(f"   ❌ Gemini-Fehler (Versuch {attempt+1}): {e}")
@@ -669,15 +683,20 @@ def run() -> None:
     for i, raw in enumerate(all_raw, 1):
         log.info(f"\n   [{i:>3}/{len(all_raw)}] {raw['title'][:65]}")
 
-        ai = analyse_mit_gemini(
-            raw["title"],
-            raw.get("raw_text", ""),
-            raw["listing_type"],
-        )
-        if ai:
-            ai_ok += 1
-        else:
+        if _gemini_key_invalid:
+            log.warning("   ⏭  Gemini-Key ungültig – restliche Inserate ohne KI-Analyse")
+            ai = None
             ai_fail += 1
+        else:
+            ai = analyse_mit_gemini(
+                raw["title"],
+                raw.get("raw_text", ""),
+                raw["listing_type"],
+            )
+            if ai:
+                ai_ok += 1
+            else:
+                ai_fail += 1
 
         # Basis-Deal mit sicheren Defaults
         deal: dict = {
@@ -705,24 +724,4 @@ def run() -> None:
             if ai.get("listing_type") in ("kauf", "miete"):
                 deal["listing_type"] = ai["listing_type"]
 
-        # Finanzkennzahlen lokal berechnen (unabhängig von Gemini)
-        deal = berechne_scores(deal)
-
-        # Schema-Check: Pflichtfelder loggen
-        if deal["listing_type"] == "kauf" and not deal.get("kaufpreis"):
-            log.warning(f"   ⚠️  kaufpreis=None → Deal wird als 'skip' markiert")
-        if deal["listing_type"] == "miete" and not deal.get("kaltmiete"):
-            log.warning(f"   ⚠️  kaltmiete=None → kein €/m² berechenbar")
-
-        data["deals"].append(deal)
-        time.sleep(4)   # Gemini Free-Tier: max 15 req/min
-
-    log.info(f"\n{'='*65}")
-    log.info(f"✅  {len(all_raw)} neue Deals verarbeitet")
-    log.info(f"   KI erfolgreich: {ai_ok} | KI fehlgeschlagen: {ai_fail}")
-    log.info(f"   Gesamt in deals.json: {len(data['deals'])}")
-    save_deals(data)
-
-
-if __name__ == "__main__":
-    run()
+        # Finanzkennzahlen lokal berechnen (unabhängig von G
