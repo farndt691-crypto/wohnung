@@ -132,7 +132,7 @@ async function loadData() {
   document.getElementById('empty').classList.add('hidden');
 
   try {
-    const res = await fetch('/data/deals.json?t=' + Date.now());
+    const res = await fetch('data/deals.json?t=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     allDeals = data.deals || [];
@@ -372,3 +372,4 @@ loadData();
 </script>
 </body>
 </html>
+ 
