@@ -26,8 +26,10 @@ log = logging.getLogger(__name__)
 GEMINI_API_KEY: str = os.environ.get("GEMINI_API_KEY", "")
 DEALS_PATH = Path("data/deals.json")
 MANNHEIM_BENCHMARK_QM = 14.50
-MAX_NEW_PER_RUN = 40
+MAX_NEW_PER_RUN = 20
 DEFAULT_ZIMMER = 2.5
+PAGE_TIMEOUT_MS = 20000
+DETAIL_WAIT_MS = 800
 
 NON_MANNHEIM_PATTERN = re.compile(
     r"\b(Hamburg|Berlin|Muenchen|Frankfurt am Main|Stuttgart|Koeln|Duesseldorf|"
@@ -45,17 +47,17 @@ KEYWORD_AUFSCHLAEGE: dict = {
 SOURCES = [
     {
         "name": "kleinanzeigen_kauf", "scraper": "kleinanzeigen",
-        "listing_type": "kauf", "enabled": True, "pages": 3,
+        "listing_type": "kauf", "enabled": True, "pages": 2,
         "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/mannheim/c196l9409r10",
     },
     {
         "name": "kleinanzeigen_miete", "scraper": "kleinanzeigen",
-        "listing_type": "miete", "enabled": True, "pages": 3,
+        "listing_type": "miete", "enabled": True, "pages": 2,
         "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/c203l9409r10",
     },
     {
         "name": "wg_gesucht", "scraper": "wg_gesucht",
-        "listing_type": "miete", "enabled": True, "pages": 3,
+        "listing_type": "miete", "enabled": False, "pages": 1,
         "url": "https://www.wg-gesucht.de/wohnungen-in-Mannheim.124.2.0.0.html",
     },
 ]
@@ -136,38 +138,36 @@ def berechne_scores(deal: dict) -> dict:
     return deal
 
 
-def scrape_detail(page: Page, url: str, source_name: str) -> str:
+def scrape_detail(page: Page, url: str) -> str:
     try:
-        page.goto(url, wait_until="domcontentloaded", timeout=35000)
-        page.wait_for_timeout(2000)
+        page.goto(url, wait_until="domcontentloaded", timeout=PAGE_TIMEOUT_MS)
+        page.wait_for_timeout(DETAIL_WAIT_MS)
         parts = []
 
         if "kleinanzeigen.de" in url:
-            for sel in ["#viewad-price", ".addetailsview--detail--price",
-                        "[data-testid='price-amount']", ".boxedarticle--details--price"]:
+            for sel in ["#viewad-price", "[data-testid='price-amount']",
+                        ".boxedarticle--details--price"]:
                 el = page.query_selector(sel)
                 if el:
                     txt = el.inner_text().strip()
                     if txt:
                         parts.append("Preis: " + txt)
                         break
-            for sel in ["#viewad-locality", ".addetailsview--detail--address", "#viewad-address"]:
+            for sel in ["#viewad-locality", "#viewad-address"]:
                 el = page.query_selector(sel)
                 if el:
                     txt = el.inner_text().strip()
                     if txt:
                         parts.append("Ort: " + txt)
                         break
-            for sel in ["#viewad-details", ".addetailsview--detail--keyfeature",
-                        ".boxedarticle--details"]:
+            for sel in ["#viewad-details", ".boxedarticle--details"]:
                 el = page.query_selector(sel)
                 if el:
                     txt = el.inner_text().strip()
                     if txt:
                         parts.append(txt)
                         break
-            for sel in ["#viewad-description-text", ".addetailsview--detail--description",
-                        "#viewad-description"]:
+            for sel in ["#viewad-description-text", "#viewad-description"]:
                 el = page.query_selector(sel)
                 if el:
                     txt = el.inner_text().strip()
@@ -176,39 +176,19 @@ def scrape_detail(page: Page, url: str, source_name: str) -> str:
                         break
 
         elif "wg-gesucht.de" in url:
-            for btn in ["button:has-text('Akzeptieren')", "#cmpwelcomebtnyes"]:
-                try:
-                    page.click(btn, timeout=2000)
-                    page.wait_for_timeout(400)
-                    break
-                except Exception:
-                    pass
-            for sel in [".headline-title", ".kaltmiete", "h1.headline", ".cost-overview"]:
+            for sel in [".headline-title", "h1.headline", ".cost-overview",
+                        ".row.print_overview", "#freitext"]:
                 el = page.query_selector(sel)
                 if el:
                     txt = el.inner_text().strip()
                     if txt:
                         parts.append(txt)
-            for sel in [".row.print_overview", ".listing-details", "#ad_details"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append(txt)
-            for sel in ["#freitext", ".panel-body p", "#ad_description_text"]:
-                el = page.query_selector(sel)
-                if el:
-                    txt = el.inner_text().strip()
-                    if txt:
-                        parts.append(txt)
-                        break
 
         combined = "\n\n".join(p for p in parts if p).strip()
         if combined:
             log.info("   Detail: %d Zeichen (%s)", len(combined), url[:55])
             return combined[:3000]
-        log.warning("   Detail: keine Selektoren, nutze Body (%s)", url[:55])
-        return page.inner_text("body")[:2000]
+        return page.inner_text("body")[:1500]
     except Exception as e:
         log.error("   Detail-Fehler (%s): %s", url[:55], e)
         return ""
@@ -251,7 +231,7 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
         "}"
     )
 
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             resp = client.models.generate_content(
                 model="gemini-1.5-flash",
@@ -261,7 +241,7 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
             raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", raw_resp).strip()
             json_match = re.search(r"\{[\s\S]*\}", raw_resp)
             if not json_match:
-                log.warning("   Kein JSON in Antwort (Versuch %d): %.80r", attempt + 1, raw_resp)
+                log.warning("   Kein JSON (Versuch %d)", attempt + 1)
                 continue
 
             result = json.loads(json_match.group())
@@ -279,29 +259,28 @@ def analyse_mit_gemini(title: str, raw_text: str, listing_type_hint: str) -> Opt
                     except ValueError:
                         result[field] = None
 
-            log.info("   Gemini OK: typ=%s kaufpreis=%s kaltmiete=%s qm=%s zi=%s",
+            log.info("   Gemini OK: typ=%s kauf=%s miete=%s qm=%s zi=%s",
                      result.get("listing_type"), result.get("kaufpreis"),
                      result.get("kaltmiete"), result.get("wohnflaeche_qm"),
                      result.get("zimmer"))
             return result
 
         except json.JSONDecodeError as e:
-            log.warning("   JSON-Parse-Fehler (Versuch %d): %s", attempt + 1, e)
+            log.warning("   JSON-Fehler (Versuch %d): %s", attempt + 1, e)
         except Exception as e:
             err = str(e).lower()
             if any(x in err for x in ("quota", "rate", "429", "resource_exhausted")):
-                wait = 65 * (attempt + 1)
-                log.warning("   Rate-Limit - warte %ds ...", wait)
-                time.sleep(wait)
+                log.warning("   Rate-Limit - warte 60s ...")
+                time.sleep(60)
             elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
                                         "api_key_invalid", "permission_denied",
                                         "invalid api key", "api key not valid")):
-                log.error("   GEMINI_API_KEY ungueltig - alle weiteren Aufrufe gestoppt: %s", e)
+                log.error("   GEMINI_API_KEY ungueltig: %s", e)
                 _gemini_key_invalid = True
                 return None
             else:
                 log.error("   Gemini-Fehler (Versuch %d): %s", attempt + 1, e)
-            if attempt == 2:
+            if attempt == 1:
                 return None
 
     return None
@@ -314,11 +293,13 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
     listing_type = source["listing_type"]
 
     for page_num in range(1, source["pages"] + 1):
+        if len(raw) >= MAX_NEW_PER_RUN:
+            break
         url = base_url if page_num == 1 else base_url + "?pageNum=" + str(page_num)
         log.info("   Seite %d: %s", page_num, url[:80])
         try:
-            search_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            search_page.wait_for_timeout(2000)
+            search_page.goto(url, wait_until="domcontentloaded", timeout=PAGE_TIMEOUT_MS)
+            search_page.wait_for_timeout(1000)
             items = search_page.query_selector_all("article.aditem, li.ad-listitem[data-adid]")
             if not items:
                 log.info("   Keine Eintraege - stoppe")
@@ -340,7 +321,7 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
                         continue
                     card_text = item.inner_text()
                     if NON_MANNHEIM_PATTERN.search(title + " " + card_text):
-                        log.info("   Uebersprungen (nicht Mannheim): %s", title[:50])
+                        log.info("   Skip (nicht Mannheim): %s", title[:50])
                         continue
                     raw.append({"url": href, "source": "kleinanzeigen",
                                 "listing_type": listing_type, "title": title[:400]})
@@ -357,78 +338,8 @@ def scrape_kleinanzeigen(search_page: Page, detail_page: Page,
 
     log.info("   Oeffne %d Detailseiten ...", len(raw))
     for entry in raw:
-        entry["raw_text"] = scrape_detail(detail_page, entry["url"], "kleinanzeigen")
-        time.sleep(1.5)
-    return raw
-
-
-def scrape_wg_gesucht(search_page: Page, detail_page: Page,
-                      source: dict, existing_urls: set) -> list:
-    raw = []
-    base_url = source["url"]
-
-    try:
-        search_page.goto(base_url, wait_until="domcontentloaded", timeout=30000)
-        search_page.wait_for_timeout(2000)
-        for btn in ["button:has-text('Akzeptieren')", "#cmpwelcomebtnyes"]:
-            try:
-                search_page.click(btn, timeout=3000)
-                search_page.wait_for_timeout(600)
-                break
-            except Exception:
-                pass
-    except Exception as e:
-        log.error("   WG-Gesucht Startseite: %s", e)
-        return raw
-
-    for page_num in range(1, source["pages"] + 1):
-        if page_num > 1:
-            url = re.sub(r"\.0\.0\.html$", ".0." + str(page_num - 1) + ".html", base_url)
-            log.info("   Seite %d: %s", page_num, url[:80])
-            try:
-                search_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                search_page.wait_for_timeout(2000)
-            except Exception as e:
-                log.error("   Seite %d Fehler: %s", page_num, e)
-                break
-        else:
-            log.info("   Seite 1: %s", base_url[:80])
-
-        try:
-            items = search_page.query_selector_all(".offer_list_item, [id^='liste-'], .wgg-card")
-            if not items:
-                log.info("   Keine Eintraege - stoppe")
-                break
-            found = 0
-            for item in items:
-                try:
-                    link_el = item.query_selector("a[href*='/wohnungen-in-'], h3 a, .headline a, h2 a")
-                    href = (link_el.get_attribute("href") or "") if link_el else ""
-                    if not href or href in existing_urls:
-                        continue
-                    if href.startswith("/"):
-                        href = "https://www.wg-gesucht.de" + href
-                    title_el = item.query_selector(".truncate_title, h3, .headline, h2")
-                    title = (title_el.inner_text().strip() if title_el else "").strip()
-                    if not title:
-                        continue
-                    raw.append({"url": href, "source": "wg_gesucht",
-                                "listing_type": "miete", "title": title[:400]})
-                    existing_urls.add(href)
-                    found += 1
-                except Exception as e:
-                    log.debug("   Item-Fehler: %s", e)
-            log.info("   %d neue Inserate auf Seite %d", found, page_num)
-            if found == 0:
-                break
-        except Exception as e:
-            log.error("   Seitenfehler: %s", e)
-            break
-
-    log.info("   Oeffne %d Detailseiten ...", len(raw))
-    for entry in raw:
-        entry["raw_text"] = scrape_detail(detail_page, entry["url"], "wg_gesucht")
-        time.sleep(1.5)
+        entry["raw_text"] = scrape_detail(detail_page, entry["url"])
+        time.sleep(0.8)
     return raw
 
 
@@ -437,7 +348,7 @@ def run() -> None:
     log.info("Immobilien-Sniper gestartet")
     log.info("Zeit: %s UTC", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     log.info("GEMINI_API_KEY: %s", "gesetzt" if GEMINI_API_KEY else "FEHLT!")
-    log.info("Zimmer-Default: %s", DEFAULT_ZIMMER)
+    log.info("MAX_NEW_PER_RUN: %d", MAX_NEW_PER_RUN)
     log.info("=" * 60)
 
     data = load_deals()
@@ -467,33 +378,31 @@ def run() -> None:
 
         for source in SOURCES:
             if not source.get("enabled", True):
+                log.info("Quelle %s deaktiviert - ueberspringe", source["name"])
                 continue
             log.info("\nQuelle: %s", source["name"])
             try:
                 if source["scraper"] == "kleinanzeigen":
                     results = scrape_kleinanzeigen(search_page, detail_page, source, existing_urls)
-                elif source["scraper"] == "wg_gesucht":
-                    results = scrape_wg_gesucht(search_page, detail_page, source, existing_urls)
                 else:
                     results = []
                 log.info("%d neue Inserate von %s", len(results), source["name"])
                 all_raw.extend(results)
+                if len(all_raw) >= MAX_NEW_PER_RUN:
+                    break
             except Exception as e:
                 log.error("Quelle %s fehlgeschlagen: %s", source["name"], e)
 
         browser.close()
 
-    if len(all_raw) > MAX_NEW_PER_RUN:
-        log.info("Begrenze auf %d (gefunden: %d)", MAX_NEW_PER_RUN, len(all_raw))
-        all_raw = all_raw[:MAX_NEW_PER_RUN]
-
+    all_raw = all_raw[:MAX_NEW_PER_RUN]
     log.info("\nGemini analysiert %d neue Inserate ...", len(all_raw))
     now_iso = datetime.now(timezone.utc).isoformat()
     ai_ok = 0
     ai_fail = 0
 
     for i, raw in enumerate(all_raw, 1):
-        log.info("[%3d/%d] %s", i, len(all_raw), raw["title"][:65])
+        log.info("[%2d/%d] %s", i, len(all_raw), raw["title"][:65])
 
         if _gemini_key_invalid:
             ai = None
@@ -528,14 +437,8 @@ def run() -> None:
                 deal["listing_type"] = ai["listing_type"]
 
         deal = berechne_scores(deal)
-
-        if deal["listing_type"] == "kauf" and not deal.get("kaufpreis"):
-            log.warning("   kaufpreis fehlt -> skip: %s", raw["title"][:50])
-        if deal["listing_type"] == "miete" and not deal.get("kaltmiete"):
-            log.warning("   kaltmiete fehlt: %s", raw["title"][:50])
-
         data["deals"].append(deal)
-        time.sleep(4)
+        time.sleep(2)
 
     log.info("=" * 60)
     log.info("Fertig: %d neue Deals | KI ok=%d fail=%d", len(all_raw), ai_ok, ai_fail)
