@@ -691,4 +691,15 @@ async def main():
         log.info("[%2d/%d] %s", i, len(all_raw), raw_entry["title"][:60])
         deal = build_deal(raw_entry, ai, now_iso, cfg)
         data["deals"].append(deal)
-       
+        if i % 10 == 0:
+            save_deals(data)
+
+    elapsed = int(time.time() - _start_time)
+    log.info("=" * 58)
+    log.info("Fertig: %ds | neu=%d | AI ok=%d fail=%d | gesamt=%d",
+             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
+    save_deals(data)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
