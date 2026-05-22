@@ -22,6 +22,15 @@
     .dist-far{background:#3b2a2a;color:#fc8181}
     select,input[type=number]{background:#1f2937;color:#f3f4f6;border:1px solid #4b5563;border-radius:6px;padding:6px 10px;font-size:.875rem}
     select option{background:#1f2937}
+    details.umfeld summary{cursor:pointer;list-style:none;user-select:none}
+    details.umfeld summary::-webkit-details-marker{display:none}
+    details.umfeld summary::before{content:"▶ ";font-size:.65rem;transition:transform .2s}
+    details.umfeld[open] summary::before{content:"▼ "}
+    .umfeld-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+    @media(max-width:640px){.umfeld-row{grid-template-columns:1fr}}
+    .umfeld-box{background:#111827;border:1px solid #1f2937;border-radius:8px;padding:10px 12px}
+    .umfeld-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;margin-bottom:3px}
+    .umfeld-text{font-size:.78rem;color:#d1d5db;line-height:1.4}
   </style>
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
@@ -417,48 +426,19 @@ function renderCard(d, poi) {
     ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">🤖 ${d.kurz_bewertung}</div>`
     : '';
 
-  return `
-  <div class="bg-gray-900 rounded-xl p-5 score-${score} hover:bg-gray-800 transition-colors">
-    <div class="flex flex-wrap gap-2 items-center mb-2">
-      <span class="badge ${scoreCls}">${scoreLabel}</span>
-      ${typeBadge}
-      ${zimBadge}
-      ${distBadge}
-      ${locBadges}
-      <span class="badge ${srcCls}">${d.source.replace('_',' ')}</span>
-      <span class="text-xs text-gray-500 ml-auto">📅 ${firstSeen}</span>
-    </div>
-    <a href="${d.url}" target="_blank" rel="noopener noreferrer"
-       class="text-white font-semibold text-sm hover:text-indigo-400 transition-colors line-clamp-2">
-      ${d.title}
-    </a>
-    ${boniTags ? `<div class="mt-2">${boniTags}</div>` : ''}
-    ${d.adresse ? `<p class="text-xs text-gray-500 mt-1">📌 ${d.adresse}</p>` : ''}
-    ${kennzahlen}
-    ${aiBlock}
-  </div>`;
-}
+  // ── Umfeld-Analyse Accordion ──────────────────────────────────────────────
+  let umfeldBlock = '';
+  const ua = d.umfeld_analyse;
+  if (ua && (ua.demografie || ua.vibe_sicherheit || ua.einschaetzung_student || ua.einschaetzung_investor)) {
+    const uRow = (icon, label, text) => text ? `
+      <div class="umfeld-box">
+        <div class="umfeld-label">${icon} ${label}</div>
+        <div class="umfeld-text">${text}</div>
+      </div>` : '';
 
-function kz(label, value) {
-  return `<div class="bg-gray-800 rounded-lg px-3 py-2 text-center">
-    <p class="text-gray-400 text-xs mb-0.5">${label}</p>
-    <p class="text-white font-semibold text-sm">${value}</p>
-  </div>`;
-}
-
-function fmtEuro(n) { return Math.round(n).toLocaleString('de-DE') + ' €'; }
-
-function showToast(msg, type='success') {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = `fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl z-50 transition-opacity duration-300 ${
-    type==='success'?'bg-green-700 text-white':'bg-red-700 text-white'}`;
-  t.style.opacity = '1';
-  setTimeout(() => { t.style.opacity = '0'; }, 3500);
-}
-
-loadData();
-</script>
-</body>
-</html>
-    
+    umfeldBlock = `
+    <details class="umfeld mt-3 border border-gray-700 rounded-lg overflow-hidden">
+      <summary class="px-4 py-2.5 bg-gray-800 text-xs font-semibold text-indigo-300 hover:bg-gray-700 transition-colors">
+        📍 Umfeld- &amp; Lageanalyse
+      </summary>
+      <div class="px-4 pb-4 pt
