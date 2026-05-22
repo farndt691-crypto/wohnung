@@ -694,4 +694,8 @@ async def main():
     log.info("=" * 58)
     log.info("Fertig: %ds | neu=%d | AI ok=%d fail=%d | gesamt=%d",
              elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
-    save_deals
+    save_deals(data)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
