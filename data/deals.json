@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22T18:25:01.417382+00:00",
+  "last_updated": "2026-05-22T21:48:52.326435+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -3530,6 +3530,67 @@
       "bankrate_monat": 1191.67,
       "cashflow_monat": -1041.67,
       "deal_score": "skip"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wg-neugruendung-3-zimmer-wohnung-in-mannheim-neckarau/3415605859-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "WG-Neugründung: 3-Zimmer-Wohnung in Mannheim Neckarau",
+      "first_seen": "2026-05-22T21:48:46.961831+00:00",
+      "last_seen": "2026-05-22T21:48:46.961831+00:00",
+      "boni": [
+        "moebliert",
+        "Balkon"
+      ],
+      "kurz_bewertung": "Voll möblierte 3-Zimmer-Wohnung in Neckarau",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "68199 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, gute Anbindung Uni Mannheim, gute ÖPNV-Anbindung",
+        "einschaetzung_investor": "Mietnomaden-Risiko, geringes Aufwertungspotenzial, gute Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 70.0,
+      "kaltmiete": 120.0,
+      "nebenkosten": 170,
+      "warmmiete": 1290,
+      "kaltmiete_qm": 1.71,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": -90.5,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-im-b7-17-quadrat-mannheim/3415600382-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 Zimmer Wohnung im B7, 17 Quadrat Mannheim",
+      "first_seen": "2026-05-22T21:48:46.961831+00:00",
+      "last_seen": "2026-05-22T21:48:46.961831+00:00",
+      "boni": [],
+      "kurz_bewertung": "Perfekt für Studenten geeignet",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten: Lernruhe, Anbindung Uni Mannheim, ÖPNV",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 23.0,
+      "kaltmiete": 250.0,
+      "warmmiete": 720,
+      "quadrat": "B7",
+      "kaltmiete_qm": 10.87,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -25.0,
+      "deal_score": "gut"
     }
   ]
 }
