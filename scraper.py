@@ -1,7 +1,8 @@
 """
-scraper.py - Immobilien-Sniper v3.4
+scraper.py - Immobilien-Sniper v3.6
 60 deals/run: 30 miete + 30 kauf, 4 pages each, parallel async.
-Regex extraction first, Gemini only as fallback for missing prices.
+Regex → Preise (kein Quota). Groq/Llama3 → GPS, Umfeld-Analyse, Enrichment.
+Groq Free-Tier: ~14.400 Req/Tag, 30 RPM – kein Limit-Problem mehr.
 """
 
 import asyncio
@@ -14,8 +15,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from google import genai
-from playwright.async_api import async_playwright, BrowserContext
+from groq import Groq
+from playwright.async_api import async_playwright
 
 logging.basicConfig(
     level=logging.INFO,
@@ -25,16 +26,16 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-CONFIG_PATH = Path("config.json")
-DEALS_PATH  = Path("data/deals.json")
-MAX_NEW_PER_RUN      = 60   # total per run (30 miete + 30 kauf)
-MAX_PER_SOURCE       = 30   # max candidates per source
+GROQ_API_KEY  = os.environ.get("GROQ_API_KEY", "")
+CONFIG_PATH   = Path("config.json")
+DEALS_PATH    = Path("data/deals.json")
+MAX_NEW_PER_RUN      = 60
+MAX_PER_SOURCE       = 30
 PAGE_TIMEOUT_MS      = 12000
 DETAIL_WAIT_MS       = 500
-MAX_RUNTIME_SECS     = 2400  # 40 min hard limit
+MAX_RUNTIME_SECS     = 2400
 DETAIL_WORKERS       = 3
-GEMINI_MIN_INTERVAL  = 4.5   # ~13 RPM (free tier: 15 RPM)
+GROQ_SLEEP_SECS      = 2.0   # safety buffer under 30 RPM free-tier limit
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
 MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.65
@@ -49,11 +50,12 @@ NON_MANNHEIM_RE = re.compile(
     re.IGNORECASE,
 )
 
-_gemini_key_invalid = False
+_groq_key_invalid = False
 _start_time = None
-_gemini_last_call = 0.0
-_gemini_rate_lock = None
+_groq_lock  = None   # serialises Groq calls to respect RPM limit
 
+
+# ── Config / Data helpers ────────────────────────────────────────────────────
 
 def load_config():
     if not CONFIG_PATH.exists():
@@ -106,6 +108,8 @@ def valid_mannheim_coords(lat, lon):
     except (TypeError, ValueError):
         return False
 
+
+# ── Scoring ──────────────────────────────────────────────────────────────────
 
 def berechne_scores(deal, cfg):
     fin      = cfg.get("financing", {})
@@ -176,10 +180,14 @@ def build_deal(raw, ai, now_iso, cfg):
         "longitude":      None,
         "stadtteil":      None,
         "adresse":        None,
+        "umfeld_analyse": None,
     }
     if ai:
         for k, v in ai.items():
-            if k in ("boni", "kurz_bewertung"):
+            if k == "umfeld_analyse":
+                if isinstance(v, dict) and any(v.values()):
+                    deal[k] = v
+            elif k in ("boni", "kurz_bewertung"):
                 if v:
                     deal[k] = v
             elif v is not None:
@@ -188,6 +196,8 @@ def build_deal(raw, ai, now_iso, cfg):
             deal["listing_type"] = ai["listing_type"]
     return berechne_scores(deal, cfg)
 
+
+# ── Detail scraper ───────────────────────────────────────────────────────────
 
 async def scrape_detail_async(ctx, url, sem):
     async with sem:
@@ -244,8 +254,10 @@ async def scrape_detail_async(ctx, url, sem):
             await page.close()
 
 
+# ── Regex extraction (no API quota) ─────────────────────────────────────────
+
 def extract_by_regex(title, raw_text, listing_type_hint, cfg):
-    """Fast regex extraction - no API quota needed. Returns partial dict."""
+    """Fast regex extraction for prices/rooms/sqm. No API quota needed."""
     text = (title + " " + raw_text).replace("\n", " ")
     result = {"listing_type": listing_type_hint}
 
@@ -284,7 +296,6 @@ def extract_by_regex(title, raw_text, listing_type_hint, cfg):
         buy_prices = [p for p in prices if p > 30_000]
         if buy_prices:
             result["kaufpreis"] = max(buy_prices)
-        # Kaltmiete hint in kauf listing (for rental yield calc)
         rent_m = re.search(
             r'(?:Kalt|Warm|Miete)[^\d]{0,20}(\d{3,5})'
             r'|(\d{3,5})\s*(?:€|EUR)?\s*/\s*(?:Mon|Mo\.)',
@@ -296,7 +307,7 @@ def extract_by_regex(title, raw_text, listing_type_hint, cfg):
                 result["kaltmiete"] = float(val)
             except ValueError:
                 pass
-    else:  # miete
+    else:
         rent_prices = [p for p in prices if 100 < p < 8_000]
         if rent_prices:
             result["kaltmiete"] = min(rent_prices)
@@ -326,13 +337,24 @@ def extract_by_regex(title, raw_text, listing_type_hint, cfg):
     return result
 
 
-def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
-    global _gemini_key_invalid
-    if _gemini_key_invalid or not time_ok():
+# ── Groq/Llama3 (GPS + Umfeld-Analyse + Enrichment) ─────────────────────────
+
+SYSTEM_PROMPT = (
+    "Du bist ein JSON-Extraktions- und Analyse-Assistent für Immobilien. "
+    "Antworte IMMER und AUSSCHLIESSLICH mit einem einzigen validen JSON-Objekt. "
+    "KEIN Markdown, KEINE Code-Blöcke, KEINE Erklärungen, KEIN Text außerhalb des JSON. "
+    "Zahlen als reine Integers/Floats ohne Punkte oder Kommas als Tausendertrenner "
+    "(285000 nicht 285.000)."
+)
+
+
+def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
+    global _groq_key_invalid
+    if _groq_key_invalid or not time_ok():
         return None
-    if not GEMINI_API_KEY:
-        log.error("GEMINI_API_KEY fehlt!")
-        _gemini_key_invalid = True
+    if not GROQ_API_KEY:
+        log.error("GROQ_API_KEY fehlt!")
+        _groq_key_invalid = True
         return None
 
     city      = cfg.get("target_city", "Mannheim")
@@ -343,128 +365,143 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
         for p in all_pois[:4] if p.get("latitude")
     )
 
-    prompt = (
-        "Analysiere diese Immobilienanzeige aus " + city + ". "
-        "Extrahiere alle Zahlen exakt. "
-        "Antworte NUR mit validem JSON - kein Markdown.\n\n"
-        "Typ: " + listing_type_hint + "\n"
+    user_prompt = (
+        "Analysiere diese Immobilienanzeige aus " + city + ".\n\n"
+        "AUFGABE 1 – Zahlenextraktion: Lies alle Kennzahlen exakt aus dem Text.\n"
+        "AUFGABE 2 – Umfeldanalyse: Nutze dein Weltwissen über den erkannten Stadtteil "
+        "in " + city + ", um eine UNGESCHÖNTE und KRITISCHE Lageanalyse zu liefern. "
+        "Sei realistisch – nicht beschönigend!\n\n"
+        "Anzeigentyp: " + listing_type_hint + "\n"
         "Titel: " + title[:250] + "\n"
-        "Text:\n" + raw_text[:2000] + "\n\n"
-        "GPS-Referenzen " + city + ": " + poi_hints + "\n\n"
-        "JSON (Zahlen rein, z.B. 285000 nicht 285.000):\n"
-        '{"listing_type":"miete" oder "kauf",'
-        '"zimmeranzahl":Zahl oder null,'
-        '"quadratmeter":Zahl oder null,'
-        '"kaltmiete":EUR/Mo oder null,'
-        '"nebenkosten":EUR/Mo oder null,'
-        '"warmmiete":EUR/Mo oder null,'
-        '"kaufpreis":EUR oder null,'
-        '"adresse":"Strasse/Stadtteil" oder null,'
-        '"stadtteil":"' + city + ' Stadtteil" oder null,'
-        '"quadrat":"Mannheimer Quadrat z.B. J2" oder null,'
-        '"latitude":GPS-Lat geschaetzt oder null,'
-        '"longitude":GPS-Lon geschaetzt oder null,'
-        '"boni":' + str(boni_keys) + ' nur positiv bestaetigte,'
-        '"kurz_bewertung":"1 Satz auf Deutsch"'
+        "Anzeigentext:\n" + raw_text[:2000] + "\n\n"
+        "GPS-Referenzpunkte " + city + ": " + poi_hints + "\n\n"
+        "Gib exakt dieses JSON zurück (null wenn unbekannt):\n"
+        "{\n"
+        '  "listing_type": "' + listing_type_hint + '",\n'
+        '  "zimmeranzahl": <Zahl oder null>,\n'
+        '  "quadratmeter": <Zahl oder null>,\n'
+        '  "kaltmiete": <EUR/Monat oder null>,\n'
+        '  "nebenkosten": <EUR/Monat oder null>,\n'
+        '  "warmmiete": <EUR/Monat oder null>,\n'
+        '  "kaufpreis": <EUR oder null>,\n'
+        '  "adresse": <"Straße Hausnummer" oder null>,\n'
+        '  "stadtteil": <"' + city + ' Stadtteilname" oder null>,\n'
+        '  "quadrat": <"Mannheimer Quadrat z.B. C3" oder null>,\n'
+        '  "latitude": <GPS-Breitengrad geschätzt oder null>,\n'
+        '  "longitude": <GPS-Längengrad geschätzt oder null>,\n'
+        '  "boni": <Liste aus ' + json.dumps(boni_keys) + ' nur klar bestätigte>,\n'
+        '  "kurz_bewertung": <"1 prägnanter Satz zur Immobilie auf Deutsch">,\n'
+        '  "umfeld_analyse": {\n'
+        '    "demografie": <"Wer wohnt hier hauptsächlich? Ungeschönt – z.B. Studentenviertel, Arbeiterklasse, Aufwertungsviertel, sozialer Brennpunkt">,\n'
+        '    "vibe_sicherheit": <"Wie ist die Atmosphäre? z.B. Ruhig und bürgerlich / Lautes Ausgehviertel nachts unruhig / Eher meidungswürdig">,\n'
+        '    "einschaetzung_student": <"Eignung für Informatikstudenten: Lernruhe, Anbindung Uni Mannheim/Heidelberg, ÖPNV – kurzes Fazit">,\n'
+        '    "einschaetzung_investor": <"Eignung als Kapitalanlage: Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit – kurzes Fazit">\n'
+        '  }\n'
         "}"
     )
 
     try:
-        client = genai.Client(api_key=GEMINI_API_KEY)
+        client = Groq(api_key=GROQ_API_KEY)
+        response = client.chat.completions.create(
+            model="llama3-8b-8192",
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user",   "content": user_prompt},
+            ],
+            temperature=0.1,
+            max_tokens=1024,
+        )
+        raw_resp = response.choices[0].message.content.strip()
+
+        # Strip any accidental markdown fences
+        raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", raw_resp).strip()
+        m = re.search(r"\{[\s\S]*\}", raw_resp)
+        if not m:
+            log.warning("   Groq: kein JSON in Antwort")
+            return None
+
+        result = json.loads(m.group())
+
+        # Sanitize numeric fields
+        for field in ("kaufpreis", "kaltmiete", "nebenkosten", "warmmiete",
+                      "quadratmeter", "zimmeranzahl", "latitude", "longitude"):
+            val = result.get(field)
+            if isinstance(val, str):
+                cleaned = re.sub(r"[^\d,.]", "", val)
+                if cleaned.count(".") > 1:
+                    cleaned = cleaned.replace(".", "", cleaned.count(".") - 1)
+                cleaned = cleaned.replace(",", ".")
+                try:
+                    result[field] = float(cleaned) if cleaned else None
+                except ValueError:
+                    result[field] = None
+
+        if not valid_mannheim_coords(result.get("latitude"), result.get("longitude")):
+            result["latitude"]  = None
+            result["longitude"] = None
+
+        ua = result.get("umfeld_analyse")
+        if not isinstance(ua, dict):
+            result["umfeld_analyse"] = None
+
+        log.info("   Groq OK: typ=%s kauf=%s miete=%s umfeld=%s",
+                 result.get("listing_type"), result.get("kaufpreis"),
+                 result.get("kaltmiete"),
+                 "ja" if result.get("umfeld_analyse") else "nein")
+
+        time.sleep(GROQ_SLEEP_SECS)  # stay well under 30 RPM
+        return result
+
+    except json.JSONDecodeError as e:
+        log.warning("   Groq JSON-Fehler: %s", e)
     except Exception as e:
-        log.error("Gemini init fehler: %s", e)
-        return None
-
-    for attempt in range(2):
-        try:
-            resp     = client.models.generate_content(model="gemini-2.5-flash-lite", contents=prompt)
-            raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", resp.text.strip()).strip()
-            m        = re.search(r"\{[\s\S]*\}", raw_resp)
-            if not m:
-                continue
-
-            result = json.loads(m.group())
-
-            for field in ("kaufpreis", "kaltmiete", "nebenkosten", "warmmiete",
-                          "quadratmeter", "zimmeranzahl", "latitude", "longitude"):
-                val = result.get(field)
-                if isinstance(val, str):
-                    cleaned = re.sub(r"[^\d,.]", "", val)
-                    if cleaned.count(".") > 1:
-                        cleaned = cleaned.replace(".", "", cleaned.count(".") - 1)
-                    cleaned = cleaned.replace(",", ".")
-                    try:
-                        result[field] = float(cleaned) if cleaned else None
-                    except ValueError:
-                        result[field] = None
-
-            if not valid_mannheim_coords(result.get("latitude"), result.get("longitude")):
-                result["latitude"]  = None
-                result["longitude"] = None
-
-            log.info("   Gemini OK: typ=%s miete=%s kauf=%s qm=%s zi=%s",
-                     result.get("listing_type"), result.get("kaltmiete"),
-                     result.get("kaufpreis"), result.get("quadratmeter"),
-                     result.get("zimmeranzahl"))
-            return result
-
-        except json.JSONDecodeError:
-            log.warning("   JSON-Fehler Versuch %d", attempt + 1)
-        except Exception as e:
-            err = str(e).lower()
-            if any(x in err for x in ("not found", "404", "not supported", "deprecated")):
-                log.error("   Modell nicht gefunden: %s", e)
-                return None
-            elif any(x in err for x in ("api_key", "invalid_argument", "unauthenticated",
-                                        "api_key_invalid", "permission_denied")):
-                log.error("   API-Key ungueltig: %s", e)
-                _gemini_key_invalid = True
-                return None
-            elif any(x in err for x in ("429", "resource_exhausted", "quota exceeded",
-                                        "rate limit")):
-                log.warning("   Gemini Quota: %s", str(e)[:120])
-                _gemini_key_invalid = True  # stop trying for this run
-                return None
-            else:
-                log.error("   Gemini Versuch %d: %s", attempt + 1, str(e)[:120])
+        err = str(e).lower()
+        if any(x in err for x in ("api_key", "invalid_api_key", "authentication",
+                                   "unauthorized", "403")):
+            log.error("   Groq API-Key ungueltig: %s", e)
+            _groq_key_invalid = True
+        elif any(x in err for x in ("429", "rate_limit", "rate limit",
+                                     "too many requests")):
+            log.warning("   Groq Rate-Limit – 10s Pause")
+            time.sleep(10)
+        else:
+            log.error("   Groq Fehler: %s", str(e)[:150])
     return None
 
 
-async def analyse_mit_gemini_async(title, raw_text, listing_type_hint, cfg):
-    """Regex first; Gemini only if key price field is still missing."""
-    global _gemini_last_call
+async def analyse_async(title, raw_text, listing_type_hint, cfg):
+    """Regex für Preise (kein Quota), Groq für Umfeldanalyse + GPS + Enrichment."""
+    global _groq_lock
 
+    # Step 1: Regex – blitzschnell, kein API-Limit
     regex_result = extract_by_regex(title, raw_text, listing_type_hint, cfg)
 
-    # Check whether regex already found the key price
-    has_price = (
-        regex_result.get("kaufpreis") if listing_type_hint == "kauf"
-        else regex_result.get("kaltmiete")
-    )
-
-    if has_price or _gemini_key_invalid or not GEMINI_API_KEY or not time_ok():
+    # Step 2: Groq – serialisiert für RPM-Sicherheit, liefert umfeld_analyse
+    if _groq_key_invalid or not GROQ_API_KEY or not time_ok():
         return regex_result
 
-    # Gemini as enrichment for listings where regex found no price
-    async with _gemini_rate_lock:
-        now = asyncio.get_event_loop().time()
-        wait = _gemini_last_call + GEMINI_MIN_INTERVAL - now
-        if wait > 0:
-            await asyncio.sleep(wait)
-        _gemini_last_call = asyncio.get_event_loop().time()
+    async with _groq_lock:
+        groq_result = await asyncio.to_thread(
+            _groq_call_sync, title, raw_text, listing_type_hint, cfg
+        )
 
-    gemini_result = await asyncio.to_thread(
-        _gemini_call_sync, title, raw_text, listing_type_hint, cfg
-    )
-
-    if gemini_result:
-        # Merge: Gemini fills gaps left by regex
-        for k, v in gemini_result.items():
-            if v is not None and regex_result.get(k) is None:
+    if groq_result:
+        for k, v in groq_result.items():
+            if k == "umfeld_analyse":
+                if isinstance(v, dict) and any(v.values()):
+                    regex_result[k] = v
+            elif k == "boni":
+                existing = set(regex_result.get(k) or [])
+                merged   = list(existing | set(v or []))
+                if merged:
+                    regex_result[k] = merged
+            elif v is not None and regex_result.get(k) is None:
                 regex_result[k] = v
 
     return regex_result
 
+
+# ── Kleinanzeigen scraper ────────────────────────────────────────────────────
 
 async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
     raw      = []
@@ -507,7 +544,6 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
                                  if title_el else "").strip()
                         if not title or NON_MANNHEIM_RE.search(title):
                             continue
-                        # Capture price + snippet from search card as fallback
                         card_parts = []
                         for psel in [".aditem-main--middle--price-shipping",
                                      ".price-tile__price", "[data-testid='price']",
@@ -558,4 +594,104 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
         if isinstance(raw_text, Exception):
             raw_text = ""
         detail = str(raw_text) if raw_text else ""
-        card   = e
+        card   = entry.get("card_text", "")
+        if not detail:
+            log.info("   Detail leer - nutze Karte: %s", entry["title"][:50])
+        entry["raw_text"] = (detail + "\n\n" + card).strip() if detail else card
+        if not is_mannheim(entry["title"], entry["raw_text"] + " " + card):
+            log.info("   SKIP (kein Mannheim): %s", entry["title"][:55])
+            continue
+        verified.append(entry)
+
+    log.info("   %d/%d nach Mannheim-Filter", len(verified), len(raw))
+    return verified
+
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+
+async def main():
+    global _start_time, _groq_lock
+    _start_time = time.time()
+    _groq_lock  = asyncio.Lock()
+
+    log.info("=" * 58)
+    log.info("Immobilien-Sniper v3.6 | MAX=%d | PRO_QUELLE=%d | PAGES=4",
+             MAX_NEW_PER_RUN, MAX_PER_SOURCE)
+    log.info("MaxRun=%ds | Details=%dx | Groq sleep=%.1fs",
+             MAX_RUNTIME_SECS, DETAIL_WORKERS, GROQ_SLEEP_SECS)
+    log.info("Groq-Key: %s", "OK" if GROQ_API_KEY else "FEHLT!")
+    log.info("=" * 58)
+
+    cfg  = load_config()
+    data = load_deals()
+    existing_urls = get_existing_urls(data)
+    log.info("Bestehende Deals: %d", len(existing_urls))
+
+    all_raw = []
+
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu",
+                  "--disable-blink-features=AutomationControlled"],
+        )
+        ctx = await browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            viewport={"width": 1280, "height": 900},
+            locale="de-DE",
+            extra_http_headers={"Accept-Language": "de-DE,de;q=0.9"},
+        )
+
+        for source in cfg.get("sources", []):
+            if not source.get("enabled", True) or not time_ok():
+                continue
+            log.info("\nQuelle: %s", source["name"])
+            try:
+                results = await scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg)
+                log.info("%d verifiziert von %s", len(results), source["name"])
+                all_raw.extend(results)
+                if len(all_raw) >= MAX_NEW_PER_RUN:
+                    break
+                log.info("Pause 15s zwischen Quellen (Anti-Bot)...")
+                await asyncio.sleep(15)
+            except Exception as e:
+                log.error("Quelle %s fehler: %s", source["name"], e)
+
+        await browser.close()
+
+    all_raw = all_raw[:MAX_NEW_PER_RUN]
+    now_iso = datetime.now(timezone.utc).isoformat()
+    ai_ok = ai_fail = 0
+
+    log.info("\nAnalyse: %d Inserate (Regex + Groq/Llama3)...", len(all_raw))
+    # Groq calls serialised via _groq_lock, but I/O and regex run concurrently
+    ai_results = await asyncio.gather(
+        *[analyse_async(
+            r["title"], r.get("raw_text", ""), r["listing_type"], cfg)
+          for r in all_raw],
+        return_exceptions=True
+    )
+
+    for i, (raw_entry, ai) in enumerate(zip(all_raw, ai_results), 1):
+        if isinstance(ai, Exception):
+            ai = None
+            ai_fail += 1
+        elif ai is not None:
+            ai_ok += 1
+        else:
+            ai_fail += 1
+        log.info("[%2d/%d] %s", i, len(all_raw), raw_entry["title"][:60])
+        deal = build_deal(raw_entry, ai, now_iso, cfg)
+        data["deals"].append(deal)
+        if i % 10 == 0:
+            save_deals(data)
+
+    elapsed = int(time.time() - _start_time)
+    log.info("=" * 58)
+    log.info("Fertig: %ds | neu=%d | AI ok=%d fail=%d | gesamt=%d",
+             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
+    save_deals
