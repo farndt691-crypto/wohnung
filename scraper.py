@@ -1,6 +1,7 @@
 """
-scraper.py - Immobilien-Sniper v3.3
+scraper.py - Immobilien-Sniper v3.4
 60 deals/run: 30 miete + 30 kauf, 4 pages each, parallel async.
+Regex extraction first, Gemini only as fallback for missing prices.
 """
 
 import asyncio
@@ -12,7 +13,6 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
 
 from google import genai
 from playwright.async_api import async_playwright, BrowserContext
@@ -244,6 +244,88 @@ async def scrape_detail_async(ctx, url, sem):
             await page.close()
 
 
+def extract_by_regex(title, raw_text, listing_type_hint, cfg):
+    """Fast regex extraction - no API quota needed. Returns partial dict."""
+    text = (title + " " + raw_text).replace("\n", " ")
+    result = {"listing_type": listing_type_hint}
+
+    # Zimmer
+    m = re.search(r'(\d[,.]?\d?)\s*[-–]?\s*Zimmer', text, re.IGNORECASE)
+    if not m:
+        m = re.search(r'(\d[,.]?\d?)\s*Zi\.', text, re.IGNORECASE)
+    if m:
+        try:
+            result["zimmeranzahl"] = float(m.group(1).replace(",", "."))
+        except ValueError:
+            pass
+
+    # Quadratmeter
+    m = re.search(r'(\d{2,4}(?:[,\.]\d{1,2})?)\s*m[2²]', text)
+    if m:
+        try:
+            result["quadratmeter"] = float(m.group(1).replace(",", "."))
+        except ValueError:
+            pass
+
+    # Preise: "275.000 EUR", "275.000,00 €", "275000€"
+    price_re = re.compile(
+        r'(\d{2,3}(?:[.\s]\d{3})*(?:,\d{2})?)\s*(?:€|EUR|Euro)',
+        re.IGNORECASE
+    )
+    prices = []
+    for pm in price_re.finditer(text):
+        raw_p = pm.group(1).replace(" ", "").replace(".", "").replace(",", ".")
+        try:
+            prices.append(float(raw_p))
+        except ValueError:
+            pass
+
+    if listing_type_hint == "kauf":
+        buy_prices = [p for p in prices if p > 30_000]
+        if buy_prices:
+            result["kaufpreis"] = max(buy_prices)
+        # Kaltmiete hint in kauf listing (for rental yield calc)
+        rent_m = re.search(
+            r'(?:Kalt|Warm|Miete)[^\d]{0,20}(\d{3,5})'
+            r'|(\d{3,5})\s*(?:€|EUR)?\s*/\s*(?:Mon|Mo\.)',
+            text, re.IGNORECASE
+        )
+        if rent_m:
+            val = rent_m.group(1) or rent_m.group(2)
+            try:
+                result["kaltmiete"] = float(val)
+            except ValueError:
+                pass
+    else:  # miete
+        rent_prices = [p for p in prices if 100 < p < 8_000]
+        if rent_prices:
+            result["kaltmiete"] = min(rent_prices)
+
+    # Stadtteil
+    stadtteile = [
+        "Lindenhof", "Neckarstadt", "Schwetzingerstadt", "Jungbusch",
+        "Feudenheim", "Kaefertal", "Waldhof", "Sandhofen", "Rheinau",
+        "Seckenheim", "Friedrichsfeld", "Vogelstang", "Hochstaett",
+        "Oststadt", "Weststadt", "Innenstadt", "Almenhof",
+    ]
+    for st in stadtteile:
+        if st.lower() in text.lower():
+            result["stadtteil"] = "Mannheim " + st
+            break
+
+    # Boni
+    boni_keys = list(cfg.get("rent_bonuses", {}).keys())
+    found_boni = [b for b in boni_keys if b.lower() in text.lower()]
+    if found_boni:
+        result["boni"] = found_boni
+
+    log.info("   Regex: typ=%s miete=%s kauf=%s qm=%s zi=%s",
+             result.get("listing_type"), result.get("kaltmiete"),
+             result.get("kaufpreis"), result.get("quadratmeter"),
+             result.get("zimmeranzahl"))
+    return result
+
+
 def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
     global _gemini_key_invalid
     if _gemini_key_invalid or not time_ok():
@@ -338,20 +420,50 @@ def _gemini_call_sync(title, raw_text, listing_type_hint, cfg):
                 log.error("   API-Key ungueltig: %s", e)
                 _gemini_key_invalid = True
                 return None
+            elif any(x in err for x in ("429", "resource_exhausted", "quota exceeded",
+                                        "rate limit")):
+                log.warning("   Gemini Quota: %s", str(e)[:120])
+                _gemini_key_invalid = True  # stop trying for this run
+                return None
             else:
-                log.error("   Gemini Versuch %d: %s", attempt + 1, e)
+                log.error("   Gemini Versuch %d: %s", attempt + 1, str(e)[:120])
     return None
 
 
 async def analyse_mit_gemini_async(title, raw_text, listing_type_hint, cfg):
+    """Regex first; Gemini only if key price field is still missing."""
     global _gemini_last_call
+
+    regex_result = extract_by_regex(title, raw_text, listing_type_hint, cfg)
+
+    # Check whether regex already found the key price
+    has_price = (
+        regex_result.get("kaufpreis") if listing_type_hint == "kauf"
+        else regex_result.get("kaltmiete")
+    )
+
+    if has_price or _gemini_key_invalid or not GEMINI_API_KEY or not time_ok():
+        return regex_result
+
+    # Gemini as enrichment for listings where regex found no price
     async with _gemini_rate_lock:
         now = asyncio.get_event_loop().time()
         wait = _gemini_last_call + GEMINI_MIN_INTERVAL - now
         if wait > 0:
             await asyncio.sleep(wait)
         _gemini_last_call = asyncio.get_event_loop().time()
-    return await asyncio.to_thread(_gemini_call_sync, title, raw_text, listing_type_hint, cfg)
+
+    gemini_result = await asyncio.to_thread(
+        _gemini_call_sync, title, raw_text, listing_type_hint, cfg
+    )
+
+    if gemini_result:
+        # Merge: Gemini fills gaps left by regex
+        for k, v in gemini_result.items():
+            if v is not None and regex_result.get(k) is None:
+                regex_result[k] = v
+
+    return regex_result
 
 
 async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
@@ -446,110 +558,4 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
         if isinstance(raw_text, Exception):
             raw_text = ""
         detail = str(raw_text) if raw_text else ""
-        card   = entry.get("card_text", "")
-        if not detail:
-            log.info("   Detail leer - nutze Karte: %s", entry["title"][:50])
-        # Combine detail + card text for Gemini (detail first, card as supplement)
-        entry["raw_text"] = (detail + "\n\n" + card).strip() if detail else card
-        if not is_mannheim(entry["title"], entry["raw_text"] + " " + card):
-            log.info("   SKIP (kein Mannheim): %s", entry["title"][:55])
-            continue
-        verified.append(entry)
-
-    log.info("   %d/%d nach Mannheim-Filter", len(verified), len(raw))
-    return verified
-
-
-async def main():
-    global _start_time, _gemini_rate_lock
-    _start_time = time.time()
-    _gemini_rate_lock = asyncio.Lock()
-
-    log.info("=" * 58)
-    log.info("Immobilien-Sniper v3.3 | MAX=%d | PRO_QUELLE=%d | PAGES=4",
-             MAX_NEW_PER_RUN, MAX_PER_SOURCE)
-    log.info("MaxRun=%ds | Details=%dx | Gemini=%.1fs/Call",
-             MAX_RUNTIME_SECS, DETAIL_WORKERS, GEMINI_MIN_INTERVAL)
-    log.info("API-Key: %s", "OK" if GEMINI_API_KEY else "FEHLT!")
-    log.info("=" * 58)
-
-    cfg  = load_config()
-    data = load_deals()
-    existing_urls = get_existing_urls(data)
-    log.info("Bestehende Deals: %d", len(existing_urls))
-
-    all_raw = []
-
-    async with async_playwright() as pw:
-        browser = await pw.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu",
-                  "--disable-blink-features=AutomationControlled"],
-        )
-        ctx = await browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0.0.0 Safari/537.36"
-            ),
-            viewport={"width": 1280, "height": 900},
-            locale="de-DE",
-            extra_http_headers={"Accept-Language": "de-DE,de;q=0.9"},
-        )
-
-        for source in cfg.get("sources", []):
-            if not source.get("enabled", True) or not time_ok():
-                continue
-            log.info("\nQuelle: %s", source["name"])
-            try:
-                results = await scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg)
-                log.info("%d verifiziert von %s", len(results), source["name"])
-                all_raw.extend(results)
-                if len(all_raw) >= MAX_NEW_PER_RUN:
-                    break
-                log.info("Pause 15s zwischen Quellen (Anti-Bot)...")
-                await asyncio.sleep(15)
-            except Exception as e:
-                log.error("Quelle %s fehler: %s", source["name"], e)
-
-        await browser.close()
-
-    all_raw = all_raw[:MAX_NEW_PER_RUN]
-    now_iso = datetime.now(timezone.utc).isoformat()
-    ai_ok = ai_fail = 0
-
-    if all_raw and not _gemini_key_invalid and time_ok():
-        est = len(all_raw) * GEMINI_MIN_INTERVAL
-        log.info("\nGemini: %d Inserate (~%.0fs)...", len(all_raw), est)
-        ai_results = await asyncio.gather(
-            *[analyse_mit_gemini_async(
-                r["title"], r.get("raw_text", ""), r["listing_type"], cfg)
-              for r in all_raw],
-            return_exceptions=True
-        )
-    else:
-        ai_results = [None] * len(all_raw)
-
-    for i, (raw, ai) in enumerate(zip(all_raw, ai_results), 1):
-        if isinstance(ai, Exception):
-            ai = None
-            ai_fail += 1
-        elif ai is not None:
-            ai_ok += 1
-        else:
-            ai_fail += 1
-        log.info("[%2d/%d] %s", i, len(all_raw), raw["title"][:60])
-        deal = build_deal(raw, ai, now_iso, cfg)
-        data["deals"].append(deal)
-        if i % 10 == 0:
-            save_deals(data)
-
-    elapsed = int(time.time() - _start_time)
-    log.info("=" * 58)
-    log.info("Fertig: %ds | neu=%d | KI ok=%d fail=%d | gesamt=%d",
-             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
-    save_deals(data)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+        card   = e
