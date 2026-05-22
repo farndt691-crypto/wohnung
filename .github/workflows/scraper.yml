@@ -35,7 +35,7 @@ jobs:
 
       - name: 🔍 Scraper ausführen
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scraper.py
 
       - name: 💾 deals.json committen & pushen
@@ -46,7 +46,8 @@ jobs:
           if git diff --staged --quiet; then
             echo "Keine neuen Deals – kein Commit nötig."
           else
-            git commit -m "🏠 Update deals.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git commit -m "🏠 Update deals.json [$(date -u '%Y-%m-%d %H:%M UTC')]"
             git pull --rebase origin main
             git push
           fi
+
