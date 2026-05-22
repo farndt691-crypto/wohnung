@@ -403,7 +403,7 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
     try:
         client = Groq(api_key=GROQ_API_KEY)
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": user_prompt},
@@ -460,6 +460,10 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
                                    "unauthorized", "403")):
             log.error("   Groq API-Key ungueltig: %s", e)
             _groq_key_invalid = True
+        elif any(x in err for x in ("decommissioned", "no longer supported",
+                                     "model_not_found", "model not found")):
+            log.error("   Groq Modell abgeschaltet – deaktiviere Groq: %s", str(e)[:120])
+            _groq_key_invalid = True  # stop all further Groq calls this run
         elif any(x in err for x in ("429", "rate_limit", "rate limit",
                                      "too many requests")):
             log.warning("   Groq Rate-Limit – 10s Pause")
@@ -687,15 +691,4 @@ async def main():
         log.info("[%2d/%d] %s", i, len(all_raw), raw_entry["title"][:60])
         deal = build_deal(raw_entry, ai, now_iso, cfg)
         data["deals"].append(deal)
-        if i % 10 == 0:
-            save_deals(data)
-
-    elapsed = int(time.time() - _start_time)
-    log.info("=" * 58)
-    log.info("Fertig: %ds | neu=%d | AI ok=%d fail=%d | gesamt=%d",
-             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
-    save_deals(data)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+       
