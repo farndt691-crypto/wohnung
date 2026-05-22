@@ -33,7 +33,7 @@ MAX_PER_SOURCE       = 30   # max candidates per source
 PAGE_TIMEOUT_MS      = 12000
 DETAIL_WAIT_MS       = 500
 MAX_RUNTIME_SECS     = 2400  # 40 min hard limit
-DETAIL_WORKERS       = 5
+DETAIL_WORKERS       = 3
 GEMINI_MIN_INTERVAL  = 4.5   # ~13 RPM (free tier: 15 RPM)
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
@@ -395,8 +395,29 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
                                  if title_el else "").strip()
                         if not title or NON_MANNHEIM_RE.search(title):
                             continue
+                        # Capture price + snippet from search card as fallback
+                        card_parts = []
+                        for psel in [".aditem-main--middle--price-shipping",
+                                     ".price-tile__price", "[data-testid='price']",
+                                     ".aditem-main--bottom"]:
+                            pel = await item.query_selector(psel)
+                            if pel:
+                                pt = (await pel.inner_text()).strip()
+                                if pt:
+                                    card_parts.append(pt)
+                                    break
+                        for dsel in [".aditem-main--middle--description",
+                                     ".text-module-begin"]:
+                            del_ = await item.query_selector(dsel)
+                            if del_:
+                                dt = (await del_.inner_text()).strip()
+                                if dt:
+                                    card_parts.append(dt)
+                                    break
+                        card_text = " | ".join(card_parts)
                         raw.append({"url": href, "source": "kleinanzeigen",
-                                    "listing_type": lst_type, "title": title[:400]})
+                                    "listing_type": lst_type, "title": title[:400],
+                                    "card_text": card_text})
                         existing_urls.add(href)
                         found += 1
                     except Exception:
@@ -424,8 +445,13 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
     for entry, raw_text in zip(raw, detail_results):
         if isinstance(raw_text, Exception):
             raw_text = ""
-        entry["raw_text"] = str(raw_text) if raw_text else ""
-        if not is_mannheim(entry["title"], entry["raw_text"]):
+        detail = str(raw_text) if raw_text else ""
+        card   = entry.get("card_text", "")
+        if not detail:
+            log.info("   Detail leer - nutze Karte: %s", entry["title"][:50])
+        # Combine detail + card text for Gemini (detail first, card as supplement)
+        entry["raw_text"] = (detail + "\n\n" + card).strip() if detail else card
+        if not is_mannheim(entry["title"], entry["raw_text"] + " " + card):
             log.info("   SKIP (kein Mannheim): %s", entry["title"][:55])
             continue
         verified.append(entry)
@@ -479,49 +505,3 @@ async def main():
                 results = await scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg)
                 log.info("%d verifiziert von %s", len(results), source["name"])
                 all_raw.extend(results)
-                if len(all_raw) >= MAX_NEW_PER_RUN:
-                    break
-            except Exception as e:
-                log.error("Quelle %s fehler: %s", source["name"], e)
-
-        await browser.close()
-
-    all_raw = all_raw[:MAX_NEW_PER_RUN]
-    now_iso = datetime.now(timezone.utc).isoformat()
-    ai_ok = ai_fail = 0
-
-    if all_raw and not _gemini_key_invalid and time_ok():
-        est = len(all_raw) * GEMINI_MIN_INTERVAL
-        log.info("\nGemini: %d Inserate (~%.0fs)...", len(all_raw), est)
-        ai_results = await asyncio.gather(
-            *[analyse_mit_gemini_async(
-                r["title"], r.get("raw_text", ""), r["listing_type"], cfg)
-              for r in all_raw],
-            return_exceptions=True
-        )
-    else:
-        ai_results = [None] * len(all_raw)
-
-    for i, (raw, ai) in enumerate(zip(all_raw, ai_results), 1):
-        if isinstance(ai, Exception):
-            ai = None
-            ai_fail += 1
-        elif ai is not None:
-            ai_ok += 1
-        else:
-            ai_fail += 1
-        log.info("[%2d/%d] %s", i, len(all_raw), raw["title"][:60])
-        deal = build_deal(raw, ai, now_iso, cfg)
-        data["deals"].append(deal)
-        if i % 10 == 0:
-            save_deals(data)
-
-    elapsed = int(time.time() - _start_time)
-    log.info("=" * 58)
-    log.info("Fertig: %ds | neu=%d | KI ok=%d fail=%d | gesamt=%d",
-             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
-    save_deals(data)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
