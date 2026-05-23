@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-23T15:53:23.864372+00:00",
+  "last_updated": "2026-05-23T20:36:14.266744+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -4109,6 +4109,36 @@
       },
       "quadratmeter": 4,
       "deal_score": "skip"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zkb-stadtmitte-mannheim-schwetzinger-stadt/3416221452-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2 ZKB Stadtmitte Mannheim Schwetzinger Stadt",
+      "first_seen": "2026-05-23T20:36:11.688611+00:00",
+      "last_seen": "2026-05-23T20:36:11.688611+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Optimale Lage: Einkaufsmöglichkeiten, Restaurants und Cafés, Hauptbahnhof fußläufig erreichbar",
+      "zimmeranzahl": 2,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68165 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Anbindung an die Uni Mannheim, ruhige Lage, gute ÖPNV-Anbindung",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber gute Aufwertungspotenzial"
+      },
+      "quadratmeter": 70.0,
+      "kaltmiete": 250.0,
+      "warmmiete": 990,
+      "kaltmiete_qm": 3.57,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -76.2,
+      "deal_score": "gut"
     }
   ]
 }
