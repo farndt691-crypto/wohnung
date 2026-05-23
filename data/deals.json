@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22T21:48:52.326435+00:00",
+  "last_updated": "2026-05-23T11:39:33.083613+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -3591,6 +3591,38 @@
       "expected_market_qm": 14.5,
       "deal_deviation_pct": -25.0,
       "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-zimmer-zur-untermiete-1-monate-mannheim-innen/3415887784-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Möbliertes Zimmer zur Untermiete (1 Monate) – Mannheim Innen",
+      "first_seen": "2026-05-23T11:39:30.155049+00:00",
+      "last_seen": "2026-05-23T11:39:30.155049+00:00",
+      "boni": [
+        "Aufzug",
+        "moebliert"
+      ],
+      "kurz_bewertung": "Zentral gelegenes, möbliertes Zimmer in einer Etagenwohnung für einen kurzfristigen Aufenthalt.",
+      "zimmeranzahl": 1,
+      "latitude": 49.4794,
+      "longitude": 8.4698,
+      "stadtteil": "Mannheim Innen",
+      "adresse": "68161 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Anbindung an die Uni Mannheim, ruhige Umgebung, aber möglicherweise nicht ideal für Informatikstudenten.",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber potenziell gute Mieterzuverlässigkeit, da es sich um ein Studentenviertel handelt."
+      },
+      "quadratmeter": 21.0,
+      "kaltmiete": 350.0,
+      "warmmiete": 350,
+      "quadrat": "L11",
+      "kaltmiete_qm": 16.67,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": -7.4,
+      "deal_score": "okay"
     }
   ]
 }
