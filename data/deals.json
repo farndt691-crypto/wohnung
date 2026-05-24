@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-23T20:36:14.266744+00:00",
+  "last_updated": "2026-05-24T11:52:26.255549+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -4138,6 +4138,99 @@
       "kaltmiete_qm": 3.57,
       "expected_market_qm": 15.0,
       "deal_deviation_pct": -76.2,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/-4-zkb-lichtdurchflutete-gutgeschnittene-studenten-wohnung-in-mannheim-neckarstadt-west-/3416658242-203-7980",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "4 ZKB-lichtdurchflutete gutgeschnittene Studenten-Wohnung in Mannheim Neckarstadt West",
+      "first_seen": "2026-05-24T11:52:17.821373+00:00",
+      "last_seen": "2026-05-24T11:52:17.821373+00:00",
+      "boni": [],
+      "kurz_bewertung": "Die Wohnung eignet sich hervorragend als Studenten-WG aufgrund ihrer guten Anbindung an den öffentlichen Nahverkehr und ihrer hellen Wohnräume.",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "68169 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten aufgrund der guten Anbindung an die Uni Mannheim und der ruhigen Atmosphäre.",
+        "einschaetzung_investor": "Mietnomaden-Risiko und Leerstand sind ein Problem, aber das Viertel hat Aufwertungspotenzial."
+      },
+      "quadratmeter": 120.0,
+      "kaltmiete": 320.0,
+      "kaltmiete_qm": 2.67,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -81.6,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/neu-renovierte-wohnung-in-toplage-mannheim-zu-vermieten-/3416779535-203-4765",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Neu renovierte Wohnung in Toplage Mannheim zu vermieten!",
+      "first_seen": "2026-05-24T11:52:17.821373+00:00",
+      "last_seen": "2026-05-24T11:52:17.821373+00:00",
+      "boni": [
+        "EBK",
+        "Garage",
+        "Balkon",
+        "renoviert",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Die helle Wohnung überzeugt durch ihren großen Balkon mit viel Sonne über den Tag hinweg sowie eine ruhige Wohnlage trotz hervorragender Anbindung.",
+      "zimmeranzahl": 2,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Ilvesheim",
+      "adresse": "Ilvesheim",
+      "umfeld_analyse": {
+        "demografie": "Aufwertungsviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Anbindung Uni Mannheim, ruhige Wohnlage, aber keine direkte Nähe zur Uni.",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber gute Anbindung und Aufwertungspotenzial."
+      },
+      "quadratmeter": 64.0,
+      "kaltmiete": 250.0,
+      "nebenkosten": 250,
+      "warmmiete": 1250,
+      "kaltmiete_qm": 3.91,
+      "expected_market_qm": 17.8,
+      "deal_deviation_pct": -78.0,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moeblierte-wohnung-in-mannheim-innenstadt-5-monate-/3414399287-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Möblierte Wohnung in Mannheim-Innenstadt (5 Monate)",
+      "first_seen": "2026-05-24T11:52:17.821373+00:00",
+      "last_seen": "2026-05-24T11:52:17.821373+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Möblierte Wohnung in der Innenstadt von Mannheim für 5 Monate",
+      "zimmeranzahl": 1.5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, gute Anbindung Uni Mannheim, gute ÖPNV-Anbindung",
+        "einschaetzung_investor": "Hoher Mietnomaden-Risiko, geringes Aufwertungspotenzial, schlechte Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 28.0,
+      "kaltmiete": 130.0,
+      "nebenkosten": 130,
+      "warmmiete": 660,
+      "kaltmiete_qm": 4.64,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -73.5,
       "deal_score": "gut"
     }
   ]
