@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-24T11:52:26.255549+00:00",
+  "last_updated": "2026-05-24T15:50:22.956662+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -4231,6 +4231,41 @@
       "kaltmiete_qm": 4.64,
       "expected_market_qm": 17.5,
       "deal_deviation_pct": -73.5,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/neu-renovierte-wohnung-in-toplage-mannheim-zu-vermieten-/3416779535-203-7979",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Neu renovierte Wohnung in Toplage Mannheim zu vermieten!",
+      "first_seen": "2026-05-24T15:50:20.260586+00:00",
+      "last_seen": "2026-05-24T15:50:20.260586+00:00",
+      "boni": [
+        "Balkon",
+        "Aufzug",
+        "renoviert",
+        "Garage",
+        "EBK"
+      ],
+      "kurz_bewertung": "Die helle Wohnung überzeugt durch ihren großen Balkon mit viel Sonne über den Tag hinweg sowie eine ruhige Wohnlage trotz hervorragender Anbindung.",
+      "zimmeranzahl": 2,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68167 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Aufwertungsviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Anbindung Uni Mannheim, ruhige Wohnlage, aber keine direkte Nähe.",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber gute Anbindung und Aufwertungspotenzial."
+      },
+      "quadratmeter": 64.0,
+      "kaltmiete": 250.0,
+      "nebenkosten": 250,
+      "warmmiete": 1250,
+      "kaltmiete_qm": 3.91,
+      "expected_market_qm": 17.8,
+      "deal_deviation_pct": -78.0,
       "deal_score": "gut"
     }
   ]
