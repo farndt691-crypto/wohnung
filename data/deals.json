@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-24T21:22:42.553920+00:00",
+  "last_updated": "2026-05-25T16:12:07.747852+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -5071,6 +5071,194 @@
       "kaltmiete_qm": 3.11,
       "expected_market_qm": 14.5,
       "deal_deviation_pct": -78.6,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-schoenes-1-zimmer-apartment-in-mannheim-ab-15/3417721411-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Nachmieter gesucht – schönes 1-Zimmer-Apartment in Mannheim ab 15",
+      "first_seen": "2026-05-25T16:11:06.105237+00:00",
+      "last_seen": "2026-05-25T16:11:06.105237+00:00",
+      "boni": [
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Gemütliche 1-Zimmer-Wohnung in super Lage in Mannheim",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Jungbusch",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten: Lernruhe, Anbindung Uni Mannheim, kurze ÖPNV-Verbindungen",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial durch Nähe zur Uni und Innenstadt"
+      },
+      "quadratmeter": 21.0,
+      "kaltmiete": 105.0,
+      "nebenkosten": 105,
+      "warmmiete": 450,
+      "kaltmiete_qm": 5.0,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -66.7,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-3-zimmer-wohnung-in-mannheim/3363979273-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Moderne 3-Zimmer-Wohnung in Mannheim",
+      "first_seen": "2026-05-25T16:11:06.105237+00:00",
+      "last_seen": "2026-05-25T16:11:06.105237+00:00",
+      "boni": [
+        "Garage",
+        "EBK"
+      ],
+      "kurz_bewertung": "Diese großzügig geschnittene 3-Zimmer-Wohnung mit EBK sucht neue Mieter!",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, gute Anbindung Uni Mannheim, gute ÖPNV-Anbindung",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 90.5,
+      "kaltmiete": 115.0,
+      "nebenkosten": 304,
+      "warmmiete": 1328,
+      "kaltmiete_qm": 1.27,
+      "expected_market_qm": 15.8,
+      "deal_deviation_pct": -92.0,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-im-mannheim-seckenheim-68239-/3417498539-203-9401",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "3 Zimmer Wohnung im Mannheim Seckenheim(68239)",
+      "first_seen": "2026-05-25T16:11:06.105237+00:00",
+      "last_seen": "2026-05-25T16:11:06.105237+00:00",
+      "boni": [],
+      "kurz_bewertung": "Attraktive 3-Zimmer-Wohnung in gefragter Lage von Seckenheim.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Seckenheim",
+      "adresse": "78266 Baden-Württemberg - Büsingen am Hochrhein",
+      "umfeld_analyse": {
+        "demografie": "Mittelständische Wohngegend mit Familien und älteren Menschen.",
+        "vibe_sicherheit": "Ruhig und bürgerlich.",
+        "einschaetzung_student": "Ungeeignet für Informatikstudenten, da die Anbindung an die Uni Mannheim und Heidelberg nicht optimal ist.",
+        "einschaetzung_investor": "Ungeeignet als Kapitalanlage, da das Mietnomaden-Risiko hoch ist und das Aufwertungspotenzial gering ist."
+      },
+      "quadratmeter": 80.0,
+      "kaltmiete": 350.0,
+      "nebenkosten": 350,
+      "warmmiete": 1350,
+      "kaltmiete_qm": 4.38,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -69.8,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-3-zimmer-wohnung-in-mannheim-lindenhof-am-gluecksteinpark/3417484288-203-7982",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Moderne 3-Zimmer-Wohnung in Mannheim Lindenhof am Glücksteinpark",
+      "first_seen": "2026-05-25T16:11:06.105237+00:00",
+      "last_seen": "2026-05-25T16:11:06.105237+00:00",
+      "boni": [
+        "Garage",
+        "Terrasse"
+      ],
+      "kurz_bewertung": "Sehr helle und moderne Erdgeschosswohnung in begehrter Lage direkt am Glückssteinpark.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4728,
+      "longitude": 8.4682,
+      "stadtteil": "Mannheim Lindenhof",
+      "adresse": "68163 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Aufwertungsviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, aber etwas weit von der Uni Mannheim entfernt.",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial durch die gute Lage."
+      },
+      "quadratmeter": 108.0,
+      "kaltmiete": 171.0,
+      "nebenkosten": 471,
+      "warmmiete": 2171,
+      "kaltmiete_qm": 1.58,
+      "expected_market_qm": 15.3,
+      "deal_deviation_pct": -89.7,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mit-grosser-terrasse-in-mannheim-zu-vermieten/3417473519-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnung mit großer Terrasse in Mannheim zu Vermieten",
+      "first_seen": "2026-05-25T16:11:06.105237+00:00",
+      "last_seen": "2026-05-25T16:11:06.105237+00:00",
+      "boni": [
+        "Terrasse",
+        "Neubau"
+      ],
+      "kurz_bewertung": "Moderne Neubauwohnung im neuen Wohngebiet in Franklin",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Franklin",
+      "adresse": "Franklin",
+      "umfeld_analyse": {
+        "demografie": "Familien, junge Erwachsene",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gut für Informatikstudenten: Lernruhe, gute Anbindung Uni Mannheim",
+        "einschaetzung_investor": "Mittel für Investoren: Kein hohes Aufwertungspotenzial, aber stabile Mieter"
+      },
+      "quadratmeter": 65.0,
+      "kaltmiete": 200.0,
+      "nebenkosten": 200,
+      "warmmiete": 1200,
+      "kaltmiete_qm": 3.08,
+      "expected_market_qm": 17.0,
+      "deal_deviation_pct": -81.9,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-all-inclusive-perfekte-1-5-zimmer-wohnung-in-mannheim/3417467882-203-7975",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "WOHNUNG - ALL INCLUSIVE / perfekte 1,5 Zimmer-Wohnung in Mannheim",
+      "first_seen": "2026-05-25T16:11:06.105237+00:00",
+      "last_seen": "2026-05-25T16:11:06.105237+00:00",
+      "boni": [
+        "renoviert",
+        "moebliert"
+      ],
+      "kurz_bewertung": "perfekte 1,5 Zimmer-Wohnung in Mannheim-Feudenheim",
+      "zimmeranzahl": 1.5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Feudenheim",
+      "adresse": "Feudenheimer Grün 3",
+      "umfeld_analyse": {
+        "demografie": "Bürgerliche Wohngegend",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, aber etwas weit von Uni Mannheim entfernt",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial"
+      },
+      "quadratmeter": 30.0,
+      "kaltmiete": 250.0,
+      "nebenkosten": 250,
+      "warmmiete": 699,
+      "kaltmiete_qm": 8.33,
+      "expected_market_qm": 18.5,
+      "deal_deviation_pct": -55.0,
       "deal_score": "gut"
     }
   ]
