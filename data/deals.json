@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-25T18:15:14.442678+00:00",
+  "last_updated": "2026-05-25T21:59:22.829108+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -5484,6 +5484,129 @@
       "bankrate_monat": 1507.92,
       "cashflow_monat": -351.92,
       "deal_score": "skip"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-wohnung-in-mannheim-neckarstadt-west/3418226071-203-7980",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Helle 2-Zimmer-Wohnung in Mannheim Neckarstadt-West",
+      "first_seen": "2026-05-25T21:58:51.371562+00:00",
+      "last_seen": "2026-05-25T21:58:51.371562+00:00",
+      "boni": [],
+      "kurz_bewertung": "Helle 2-Zimmer-Wohnung in ruhiger Umgebung mit guter Anbindung",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "68169 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten: Lernruhe, gute Anbindung Uni Mannheim",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber gutes Aufwertungspotenzial"
+      },
+      "quadratmeter": 53.0,
+      "kaltmiete": 850.0,
+      "warmmiete": 850,
+      "kaltmiete_qm": 16.04,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": 10.6,
+      "deal_score": "teuer"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/renoviertes-moebliertes-1-zimmer-apartment-mannheim-innenstadt-k3/3418185706-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Renoviertes, möbliertes 1-Zimmer-Apartment Mannheim Innenstadt K3",
+      "first_seen": "2026-05-25T21:58:51.371562+00:00",
+      "last_seen": "2026-05-25T21:58:51.371562+00:00",
+      "boni": [
+        "moebliert",
+        "renoviert"
+      ],
+      "kurz_bewertung": "Stilvolles und gepflegtes 1-Zimmer-Apartment in absolut zentraler Lage der Mannheimer Quadrate.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.485,
+      "longitude": 8.465,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel, Berufseinsteiger, Pendler, Singles",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten: Lernruhe, Anbindung Uni Mannheim, gute ÖPNV-Anbindung.",
+        "einschaetzung_investor": "Mittelgut geeignet als Kapitalanlage: Mietnomaden-Risiko, aber gute Mieterzuverlässigkeit und Aufwertungspotenzial."
+      },
+      "quadratmeter": 30.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 750,
+      "quadrat": "K3",
+      "kaltmiete_qm": 5.0,
+      "expected_market_qm": 18.5,
+      "deal_deviation_pct": -73.0,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/rheinau-mannheim-wohnung-zu-vermieten/3418177592-203-4954",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Rheinau Mannheim Wohnung zu vermieten",
+      "first_seen": "2026-05-25T21:58:51.371562+00:00",
+      "last_seen": "2026-05-25T21:58:51.371562+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Wohnung zu vermieten in einer sehr guten Lage in Rheinau, Mannheim.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.5,
+      "longitude": 8.5,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "Neuhofen",
+      "umfeld_analyse": {
+        "demografie": "Familien, Paare oder Berufstätige",
+        "vibe_sicherheit": "ruhig und bürgerlich",
+        "einschaetzung_student": "Lernruhe, Anbindung Uni Mannheim/Heidelberg, ÖPNV",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 65.0,
+      "kaltmiete": 300.0,
+      "nebenkosten": 300,
+      "kaltmiete_qm": 4.62,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -73.6,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-frisch-sanierte-2-zimmer-wohnung-in-top-lage-mannheims/3418154794-203-7982",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Helle, frisch sanierte 2-Zimmer-Wohnung in Top-Lage Mannheims",
+      "first_seen": "2026-05-25T21:58:51.371562+00:00",
+      "last_seen": "2026-05-25T21:58:51.371562+00:00",
+      "boni": [
+        "Balkon",
+        "renoviert"
+      ],
+      "kurz_bewertung": "Helle, gut geschnittene 2-Zimmer-Wohnung im 3. Obergeschoss, vollständig saniert und in einem frischen, bezugsfertigen Zustand.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68163 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien, aber auch einige Sozialwohnungen und Mietshäuser.",
+        "vibe_sicherheit": "Ruhig und bürgerlich, aber auch einige Lärmbelästigungen durch den nahen Verkehr.",
+        "einschaetzung_student": "Gute Lernruhe, aber keine direkte Anbindung an die Uni Mannheim. ÖPNV ist jedoch gut entwickelt.",
+        "einschaetzung_investor": "Mietnomaden-Risiko ist relativ hoch, aber auch einige Aufwertungspotenziale durch die Nähe zum Stadtzentrum."
+      },
+      "quadratmeter": 62.0,
+      "kaltmiete": 160.0,
+      "nebenkosten": 90,
+      "warmmiete": 1320,
+      "kaltmiete_qm": 2.58,
+      "expected_market_qm": 16.0,
+      "deal_deviation_pct": -83.9,
+      "deal_score": "gut"
     }
   ]
 }
