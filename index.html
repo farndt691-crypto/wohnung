@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Immobilien-Sniper</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     .badge{display:inline-block;padding:2px 8px;border-radius:9999px;font-size:.7rem;font-weight:700}
     .tag{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.7rem;font-weight:500;background:#1e1b4b;color:#a5b4fc;margin-right:3px;margin-bottom:3px}
@@ -31,6 +33,15 @@
     .umfeld-box{background:#111827;border:1px solid #1f2937;border-radius:8px;padding:10px 12px}
     .umfeld-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;margin-bottom:3px}
     .umfeld-text{font-size:.78rem;color:#d1d5db;line-height:1.4}
+    details.price-hist summary{cursor:pointer;list-style:none;user-select:none;font-size:.7rem;color:#6b7280}
+    details.price-hist summary::-webkit-details-marker{display:none}
+    #map{height:520px;background:#111827;border-radius:12px}
+    .leaflet-popup-content-wrapper{background:#1f2937;color:#f3f4f6;border:1px solid #374151}
+    .leaflet-popup-tip{background:#1f2937}
+    .tab-btn{padding:8px 20px;border-radius:8px;font-size:.875rem;font-weight:600;cursor:pointer;transition:background .15s}
+    .tab-btn.active{background:#4f46e5;color:#fff}
+    .tab-btn:not(.active){background:#1f2937;color:#9ca3af}
+    .tab-btn:not(.active):hover{background:#374151}
   </style>
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
@@ -55,8 +66,14 @@
   </div>
 </header>
 
+<!-- TABS -->
+<div class="max-w-7xl mx-auto px-4 pt-4 flex gap-2">
+  <button class="tab-btn active" id="tab-liste" onclick="switchTab('liste')">📋 Liste</button>
+  <button class="tab-btn" id="tab-karte" onclick="switchTab('karte')">🗺️ Karte</button>
+</div>
+
 <!-- FILTER BAR -->
-<div class="max-w-7xl mx-auto px-4 pt-5 pb-3 space-y-3">
+<div class="max-w-7xl mx-auto px-4 pt-3 pb-3 space-y-3">
 
   <!-- Row 1: Type + Score -->
   <div class="flex flex-wrap gap-3 items-center">
@@ -75,7 +92,7 @@
     </div>
   </div>
 
-  <!-- Row 2: POI + Radius + Zimmer + Reset -->
+  <!-- Row 2: POI + Radius + Zimmer + Sort + Reset -->
   <div class="flex flex-wrap gap-3 items-center">
 
     <div class="flex items-center gap-2">
@@ -106,6 +123,18 @@
         oninput="render()" class="w-16 text-center"/>
     </div>
 
+    <div class="flex items-center gap-2">
+      <label class="text-gray-400 text-sm whitespace-nowrap">↕ Sort:</label>
+      <select id="sort-select" onchange="render()" class="w-44">
+        <option value="default">Standard</option>
+        <option value="preis_asc">Preis ↑</option>
+        <option value="preis_desc">Preis ↓</option>
+        <option value="datum_desc">Datum (neueste)</option>
+        <option value="cashflow_desc">Cashflow ↓</option>
+        <option value="deviation_asc">Abweichung ↑</option>
+      </select>
+    </div>
+
     <button onclick="resetFilters()"
       class="px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm">
       ✕ Reset
@@ -120,8 +149,8 @@
   <div id="filter-summary" class="text-xs text-gray-500"></div>
 </div>
 
-<!-- CARDS -->
-<main class="max-w-7xl mx-auto px-4 pb-12">
+<!-- LISTE TAB -->
+<main id="view-liste" class="max-w-7xl mx-auto px-4 pb-12">
   <div id="loading" class="text-center py-24 text-gray-500">
     <p class="text-4xl mb-3">⏳</p><p class="text-lg">Deals werden geladen …</p>
   </div>
@@ -133,15 +162,36 @@
   <div id="cards" class="grid gap-4"></div>
 </main>
 
+<!-- KARTE TAB -->
+<div id="view-karte" class="hidden max-w-7xl mx-auto px-4 pb-12">
+  <div class="mb-3 text-xs text-gray-500" id="map-summary"></div>
+  <div id="map"></div>
+  <p class="text-xs text-gray-600 mt-2 text-center">Nur Deals mit GPS-Koordinaten werden angezeigt. Farbe = Deal-Score.</p>
+</div>
+
 <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl opacity-0 pointer-events-none z-50 transition-opacity duration-300"></div>
 
 <script>
 // ── State ─────────────────────────────────────────────────────────────────────
-let allDeals  = [];
-let config    = {};
+let allDeals    = [];
+let config      = {};
 let activeType  = 'alle';
 let activeScore = '';
-let activePoi   = null;   // {name, latitude, longitude}
+let activePoi   = null;
+let activeTab   = 'liste';
+let leafletMap  = null;
+let mapMarkers  = [];
+let dataLoadedAt = null;  // timestamp when data was loaded
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function switchTab(tab) {
+  activeTab = tab;
+  document.getElementById('view-liste').classList.toggle('hidden', tab !== 'liste');
+  document.getElementById('view-karte').classList.toggle('hidden', tab !== 'karte');
+  document.getElementById('tab-liste').classList.toggle('active', tab === 'liste');
+  document.getElementById('tab-karte').classList.toggle('active', tab !== 'liste');
+  if (tab === 'karte') renderMap();
+}
 
 // ── Haversine ─────────────────────────────────────────────────────────────────
 function haversine(lat1, lon1, lat2, lon2) {
@@ -158,6 +208,12 @@ function fmtDist(m) {
   return m < 1000 ? Math.round(m) + ' m' : (m/1000).toFixed(1) + ' km';
 }
 
+function isNew(deal) {
+  if (!deal.first_seen) return false;
+  const age = (Date.now() - new Date(deal.first_seen).getTime()) / 1000 / 3600;
+  return age < 24;
+}
+
 // ── Load ──────────────────────────────────────────────────────────────────────
 async function loadData() {
   document.getElementById('loading').classList.remove('hidden');
@@ -165,7 +221,6 @@ async function loadData() {
   document.getElementById('empty').classList.add('hidden');
 
   try {
-    // Load config + deals in parallel
     const [cfgRes, dataRes] = await Promise.all([
       fetch('config.json?t=' + Date.now()),
       fetch('data/deals.json?t=' + Date.now())
@@ -173,20 +228,17 @@ async function loadData() {
     config   = await cfgRes.json();
     const data = await dataRes.json();
     allDeals = data.deals || [];
+    dataLoadedAt = Date.now();
 
-    // Update city label
-    document.getElementById('city-label').textContent =
-      config.target_city || 'Mannheim';
-
-    // Build POI dropdown
+    document.getElementById('city-label').textContent = config.target_city || 'Mannheim';
     buildPoiDropdown();
 
-    // Stats
     const kauf  = allDeals.filter(d => d.listing_type === 'kauf');
     const miete = allDeals.filter(d => d.listing_type === 'miete');
     const gut   = allDeals.filter(d => ['strong_buy','gut'].includes(d.deal_score));
     const ok    = allDeals.filter(d => ['watch','okay'].includes(d.deal_score));
     const bad   = allDeals.filter(d => ['skip','teuer'].includes(d.deal_score));
+    const neu   = allDeals.filter(isNew);
 
     document.getElementById('stat-total').textContent = allDeals.length;
     document.getElementById('stat-kauf').textContent  = kauf.length;
@@ -200,7 +252,9 @@ async function loadData() {
       last ? '🕐 ' + last.slice(0,16).replace('T',' ') + ' UTC' : '🕐 Noch nie';
 
     render();
-    showToast('✅ ' + allDeals.length + ' Deals geladen', 'success');
+    if (activeTab === 'karte') renderMap();
+    const neuHint = neu.length ? ` (${neu.length} neu 🆕)` : '';
+    showToast('✅ ' + allDeals.length + ' Deals geladen' + neuHint, 'success');
   } catch(e) {
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('empty').classList.remove('hidden');
@@ -211,12 +265,7 @@ async function loadData() {
 function buildPoiDropdown() {
   const sel = document.getElementById('poi-select');
   sel.innerHTML = '<option value="">— Kein Radar —</option>';
-
-  const pois = [];
-  if (config.default_poi) pois.push(config.default_poi);
-  (config.alternative_pois || []).forEach(p => pois.push(p));
-
-  pois.forEach((poi, i) => {
+  getAllPois().forEach((poi, i) => {
     const opt = document.createElement('option');
     opt.value = i;
     opt.textContent = poi.name;
@@ -233,11 +282,7 @@ function getAllPois() {
 
 function onPoiChange() {
   const val = document.getElementById('poi-select').value;
-  if (val === '') {
-    activePoi = null;
-  } else {
-    activePoi = getAllPois()[parseInt(val)] || null;
-  }
+  activePoi = val === '' ? null : (getAllPois()[parseInt(val)] || null);
   render();
 }
 
@@ -273,20 +318,52 @@ function resetFilters() {
   document.getElementById('radius-select').value = '0';
   document.getElementById('zimmer-min').value    = '1';
   document.getElementById('zimmer-max').value    = '';
+  document.getElementById('sort-select').value   = 'default';
   setType('alle');
   setScore('');
 }
 
 // ── Render ────────────────────────────────────────────────────────────────────
-function render() {
-  document.getElementById('loading').classList.add('hidden');
+function applySort(arr) {
+  const s = document.getElementById('sort-select').value;
+  if (s === 'preis_asc') {
+    return [...arr].sort((a, b) => {
+      const pa = a.kaufpreis || a.kaltmiete || 0;
+      const pb = b.kaufpreis || b.kaltmiete || 0;
+      return pa - pb;
+    });
+  }
+  if (s === 'preis_desc') {
+    return [...arr].sort((a, b) => {
+      const pa = a.kaufpreis || a.kaltmiete || 0;
+      const pb = b.kaufpreis || b.kaltmiete || 0;
+      return pb - pa;
+    });
+  }
+  if (s === 'datum_desc') {
+    return [...arr].sort((a, b) =>
+      new Date(b.first_seen || 0) - new Date(a.first_seen || 0)
+    );
+  }
+  if (s === 'cashflow_desc') {
+    return [...arr].sort((a, b) =>
+      (b.cashflow_monat ?? -99999) - (a.cashflow_monat ?? -99999)
+    );
+  }
+  if (s === 'deviation_asc') {
+    return [...arr].sort((a, b) =>
+      (a.deal_deviation_pct ?? 999) - (b.deal_deviation_pct ?? 999)
+    );
+  }
+  return arr;
+}
 
-  const zimMin   = parseFloat(document.getElementById('zimmer-min').value) || null;
-  const zimMax   = parseFloat(document.getElementById('zimmer-max').value) || null;
-  const maxDist  = parseInt(document.getElementById('radius-select').value) || 0;
+function getFiltered() {
+  const zimMin  = parseFloat(document.getElementById('zimmer-min').value) || null;
+  const zimMax  = parseFloat(document.getElementById('zimmer-max').value) || null;
+  const maxDist = parseInt(document.getElementById('radius-select').value) || 0;
 
   let filtered = allDeals.map(d => {
-    // Calculate distance to active POI
     let dist = null;
     if (activePoi && d.latitude != null && d.longitude != null) {
       dist = haversine(activePoi.latitude, activePoi.longitude, d.latitude, d.longitude);
@@ -303,23 +380,31 @@ function render() {
     if (zimMin !== null && zi != null && zi < zimMin) return false;
     if (zimMax !== null && zi != null && zi > zimMax) return false;
     if (maxDist > 0 && activePoi) {
-      if (d._dist === null) return false;  // no coords = hide when radius active
+      if (d._dist === null) return false;
       if (d._dist > maxDist) return false;
     }
     return true;
   });
 
-  // Sort: by distance if POI active, else by score
+  // POI sort takes priority, else apply user sort
   if (activePoi) {
     filtered.sort((a, b) => (a._dist || 999999) - (b._dist || 999999));
+  } else {
+    filtered = applySort(filtered);
   }
+  return filtered;
+}
 
-  // Summary
+function render() {
+  document.getElementById('loading').classList.add('hidden');
+
+  const filtered = getFiltered();
+
   const parts = [];
   if (activeType !== 'alle') parts.push(activeType === 'kauf' ? '🏠 Kauf' : '🔑 Miete');
   if (activeScore) parts.push('Score: ' + activeScore);
-  if (activePoi) parts.push('📍 ' + activePoi.name + (maxDist > 0 ? ' ≤ ' + fmtDist(maxDist) : ''));
-  if (zimMin) parts.push('ab ' + zimMin + ' Zi.');
+  if (activePoi) parts.push('📍 ' + activePoi.name + (parseInt(document.getElementById('radius-select').value) > 0 ? ' ≤ ' + fmtDist(parseInt(document.getElementById('radius-select').value)) : ''));
+  if (parseFloat(document.getElementById('zimmer-min').value) > 1) parts.push('ab ' + document.getElementById('zimmer-min').value + ' Zi.');
   const summary = document.getElementById('filter-summary');
   summary.textContent = (parts.length ? 'Filter: ' + parts.join(' · ') + ' → ' : '') +
     filtered.length + ' Ergebnis' + (filtered.length !== 1 ? 'se' : '');
@@ -327,6 +412,75 @@ function render() {
   const container = document.getElementById('cards');
   document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
   container.innerHTML = filtered.map(d => renderCard(d, activePoi)).join('');
+
+  if (activeTab === 'karte') renderMap();
+}
+
+// ── Map ───────────────────────────────────────────────────────────────────────
+const scoreColors = {
+  strong_buy: '#16a34a', watch: '#ca8a04', skip: '#dc2626',
+  gut: '#16a34a', okay: '#ca8a04', teuer: '#dc2626',
+};
+
+function renderMap() {
+  const filtered = getFiltered().filter(d => d.latitude != null && d.longitude != null);
+
+  document.getElementById('map-summary').textContent =
+    filtered.length + ' Deals mit GPS (von ' + allDeals.filter(d => d.latitude != null).length + ' gesamt)';
+
+  if (!leafletMap) {
+    leafletMap = L.map('map').setView([49.485, 8.465], 13);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap | © CARTO',
+      maxZoom: 19,
+    }).addTo(leafletMap);
+  }
+
+  // Clear old markers
+  mapMarkers.forEach(m => m.remove());
+  mapMarkers = [];
+
+  // Add POI markers
+  getAllPois().forEach(poi => {
+    const poiIcon = L.divIcon({
+      html: '<div style="background:#4f46e5;width:14px;height:14px;border-radius:50%;border:2px solid #818cf8;"></div>',
+      iconSize: [14, 14], iconAnchor: [7, 7], className: ''
+    });
+    const m = L.marker([poi.latitude, poi.longitude], { icon: poiIcon })
+      .addTo(leafletMap)
+      .bindPopup('<b>📍 ' + poi.name + '</b>');
+    mapMarkers.push(m);
+  });
+
+  filtered.forEach(d => {
+    const color = scoreColors[d.deal_score] || '#6b7280';
+    const isKauf = d.listing_type === 'kauf';
+    const preis = isKauf
+      ? (d.kaufpreis ? Math.round(d.kaufpreis).toLocaleString('de') + ' €' : '–')
+      : (d.kaltmiete ? Math.round(d.kaltmiete).toLocaleString('de') + ' €/Mo.' : '–');
+    const newBadge = isNew(d) ? '<span style="background:#7c3aed;color:#fff;padding:1px 5px;border-radius:4px;font-size:10px;margin-left:4px">NEU</span>' : '';
+
+    const icon = L.divIcon({
+      html: `<div style="background:${color};width:12px;height:12px;border-radius:50%;border:2px solid rgba(255,255,255,.4);"></div>`,
+      iconSize: [12, 12], iconAnchor: [6, 6], className: ''
+    });
+
+    const popup = `
+      <div style="min-width:220px;font-size:12px">
+        <b style="font-size:13px">${d.title.slice(0,70)}</b>${newBadge}<br>
+        <span style="color:${color};font-weight:700">${(d.deal_score||'').replace('_',' ').toUpperCase()}</span>
+        · ${isKauf ? '🏠' : '🔑'} ${preis}<br>
+        ${d.stadtteil ? '🏘 ' + d.stadtteil + '<br>' : ''}
+        ${d.zimmeranzahl ? '🛏 ' + d.zimmeranzahl + ' Zi.' : ''}
+        ${d.quadratmeter ? ' · ' + d.quadratmeter + ' m²' : ''}<br>
+        <a href="${d.url}" target="_blank" style="color:#818cf8">→ Anzeige öffnen</a>
+      </div>`;
+
+    const m = L.marker([d.latitude, d.longitude], { icon })
+      .addTo(leafletMap)
+      .bindPopup(popup);
+    mapMarkers.push(m);
+  });
 }
 
 // ── Card ──────────────────────────────────────────────────────────────────────
@@ -348,7 +502,10 @@ function renderCard(d, poi) {
     ? '<span class="badge bg-blue-900 text-blue-200">🏠 Kauf</span>'
     : '<span class="badge bg-purple-900 text-purple-200">🔑 Miete</span>';
 
-  // Distance badge
+  const neuBadge = isNew(d)
+    ? '<span class="badge bg-violet-900 text-violet-200">🆕 Neu</span>'
+    : '';
+
   let distBadge = '';
   if (d._dist !== null && poi) {
     const m = d._dist;
@@ -358,7 +515,6 @@ function renderCard(d, poi) {
     distBadge = '<span class="badge bg-gray-800 text-gray-500">📡 Kein GPS</span>';
   }
 
-  // Location badges
   let locBadges = '';
   if (d.quadrat)   locBadges += `<span class="badge bg-indigo-900 text-indigo-200">📍 ${d.quadrat}</span>`;
   if (d.stadtteil) locBadges += `<span class="badge bg-indigo-800 text-indigo-200">🏘 ${d.stadtteil}</span>`;
@@ -367,9 +523,32 @@ function renderCard(d, poi) {
     ? `<span class="badge bg-gray-700 text-gray-200">🛏 ${d.zimmeranzahl} Zi.</span>` : '';
 
   const boniTags = (d.boni || []).map(b => `<span class="tag">${b}</span>`).join('');
-  const srcColors = { kleinanzeigen: 'bg-orange-900 text-orange-200' };
-  const srcCls = srcColors[d.source] || 'bg-gray-700 text-gray-400';
+  const srcColors = {
+    kleinanzeigen: 'bg-orange-900 text-orange-200',
+    immoscout24:   'bg-sky-900 text-sky-200',
+  };
+  const srcCls  = srcColors[d.source] || 'bg-gray-700 text-gray-400';
   const firstSeen = d.first_seen ? d.first_seen.slice(0,10) : '–';
+
+  // Price history block
+  let priceHistBlock = '';
+  const ph = d.price_history;
+  if (ph && ph.length > 1) {
+    const oldest = ph[0];
+    const latest = ph[ph.length - 1];
+    const diff   = latest.price - oldest.price;
+    const pct    = ((diff / oldest.price) * 100).toFixed(1);
+    const trend  = diff < 0 ? '📉' : '📈';
+    const color  = diff < 0 ? 'text-green-400' : 'text-red-400';
+    const rows   = ph.slice(-5).map(p =>
+      `<span class="text-gray-400">${p.date.slice(0,10)}:</span> <span class="text-gray-200">${Math.round(p.price).toLocaleString('de')} €</span>`
+    ).join(' · ');
+    priceHistBlock = `
+    <details class="price-hist mt-2">
+      <summary>${trend} Preisverlauf: <span class="${color} font-semibold">${diff > 0 ? '+' : ''}${Math.round(diff).toLocaleString('de')} € (${diff > 0 ? '+' : ''}${pct}%)</span> – ${ph.length} Einträge</summary>
+      <div class="mt-1 text-xs text-gray-500 pl-2">${rows}</div>
+    </details>`;
+  }
 
   // Kennzahlen
   let kennzahlen = '';
@@ -426,7 +605,7 @@ function renderCard(d, poi) {
     ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">🤖 ${d.kurz_bewertung}</div>`
     : '';
 
-  // ── Umfeld-Analyse Accordion ──────────────────────────────────────────────
+  // Umfeld accordion
   let umfeldBlock = '';
   const ua = d.umfeld_analyse;
   if (ua && (ua.demografie || ua.vibe_sicherheit || ua.einschaetzung_student || ua.einschaetzung_investor)) {
@@ -457,6 +636,7 @@ function renderCard(d, poi) {
     <div class="flex flex-wrap gap-2 items-center mb-2">
       <span class="badge ${scoreCls}">${scoreLabel}</span>
       ${typeBadge}
+      ${neuBadge}
       ${zimBadge}
       ${distBadge}
       ${locBadges}
@@ -470,6 +650,7 @@ function renderCard(d, poi) {
     ${boniTags ? `<div class="mt-2">${boniTags}</div>` : ''}
     ${d.adresse ? `<p class="text-xs text-gray-500 mt-1">📌 ${d.adresse}</p>` : ''}
     ${kennzahlen}
+    ${priceHistBlock}
     ${aiBlock}
     ${umfeldBlock}
   </div>`;
