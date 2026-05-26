@@ -1,18 +1,20 @@
 """
-scraper.py - Immobilien-Sniper v3.6
-60 deals/run: 30 miete + 30 kauf, 4 pages each, parallel async.
+scraper.py - Immobilien-Sniper v4.0
+Quellen: Kleinanzeigen + ImmoScout24.
 Regex → Preise (kein Quota). Groq/Llama3 → GPS, Umfeld-Analyse, Enrichment.
-Groq Free-Tier: ~14.400 Req/Tag, 30 RPM – kein Limit-Problem mehr.
+Groq Free-Tier: ~14.400 Req/Tag, 30 RPM.
+v4: price_history, dedup-hash, 60-Tage-Archiv, ImmoScout24.
 """
 
 import asyncio
+import hashlib
 import json
 import logging
 import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from groq import Groq
@@ -26,16 +28,17 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-GROQ_API_KEY  = os.environ.get("GROQ_API_KEY", "")
-CONFIG_PATH   = Path("config.json")
-DEALS_PATH    = Path("data/deals.json")
+GROQ_API_KEY         = os.environ.get("GROQ_API_KEY", "")
+CONFIG_PATH          = Path("config.json")
+DEALS_PATH           = Path("data/deals.json")
 MAX_NEW_PER_RUN      = 60
 MAX_PER_SOURCE       = 30
 PAGE_TIMEOUT_MS      = 12000
 DETAIL_WAIT_MS       = 500
 MAX_RUNTIME_SECS     = 2400
 DETAIL_WORKERS       = 3
-GROQ_SLEEP_SECS      = 2.0   # safety buffer under 30 RPM free-tier limit
+GROQ_SLEEP_SECS      = 2.0
+ARCHIVE_AFTER_DAYS   = 60
 
 MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
 MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.65
@@ -52,7 +55,7 @@ NON_MANNHEIM_RE = re.compile(
 
 _groq_key_invalid = False
 _start_time = None
-_groq_lock  = None   # serialises Groq calls to respect RPM limit
+_groq_lock  = None
 
 
 # ── Config / Data helpers ────────────────────────────────────────────────────
@@ -87,6 +90,42 @@ def save_deals(data):
 
 def get_existing_urls(data):
     return {d["url"] for d in data.get("deals", [])}
+
+
+def get_existing_hashes(data):
+    return {d["_hash"] for d in data.get("deals", []) if d.get("_hash")}
+
+
+def compute_deal_hash(title, listing_type, source):
+    """Stable hash for duplicate detection (title+type+source)."""
+    normalized = re.sub(r'\s+', ' ', title.lower().strip())[:200]
+    key = f"{source}|{listing_type}|{normalized}"
+    return hashlib.md5(key.encode()).hexdigest()[:12]
+
+
+def archive_old_deals(data):
+    """Remove deals not seen in 60+ days."""
+    cutoff = datetime.now(timezone.utc) - timedelta(days=ARCHIVE_AFTER_DAYS)
+    before = len(data["deals"])
+    kept = []
+    for d in data["deals"]:
+        seen = d.get("last_seen") or d.get("first_seen")
+        if not seen:
+            kept.append(d)
+            continue
+        try:
+            ts = datetime.fromisoformat(seen)
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=timezone.utc)
+            if ts > cutoff:
+                kept.append(d)
+        except Exception:
+            kept.append(d)
+    data["deals"] = kept
+    removed = before - len(kept)
+    if removed:
+        log.info("Archiviert: %d Deals (>%d Tage alt) | verbleibend: %d",
+                 removed, ARCHIVE_AFTER_DAYS, len(kept))
 
 
 def time_ok():
@@ -181,6 +220,7 @@ def build_deal(raw, ai, now_iso, cfg):
         "stadtteil":      None,
         "adresse":        None,
         "umfeld_analyse": None,
+        "price_history":  [],
     }
     if ai:
         for k, v in ai.items():
@@ -194,7 +234,18 @@ def build_deal(raw, ai, now_iso, cfg):
                 deal[k] = v
         if ai.get("listing_type") in ("kauf", "miete"):
             deal["listing_type"] = ai["listing_type"]
-    return berechne_scores(deal, cfg)
+
+    deal = berechne_scores(deal, cfg)
+
+    # Initialize price history with current price
+    hauptpreis = deal.get("kaufpreis") or deal.get("kaltmiete")
+    if hauptpreis:
+        deal["price_history"] = [{"date": now_iso, "price": hauptpreis}]
+
+    # Dedup hash (title + type + source)
+    deal["_hash"] = compute_deal_hash(raw["title"], deal["listing_type"], raw["source"])
+
+    return deal
 
 
 # ── Detail scraper ───────────────────────────────────────────────────────────
@@ -208,7 +259,9 @@ async def scrape_detail_async(ctx, url, sem):
             parts = []
 
             for sel in ["#viewad-price", "[data-testid='price-amount']",
-                        ".boxedarticle--details--price"]:
+                        ".boxedarticle--details--price",
+                        "[data-testid='purchase-price']",
+                        ".is24-value"]:
                 el = await page.query_selector(sel)
                 if el:
                     txt = (await el.inner_text()).strip()
@@ -216,7 +269,8 @@ async def scrape_detail_async(ctx, url, sem):
                         parts.append("Preis: " + txt)
                         break
 
-            for sel in ["#viewad-locality", "#viewad-address"]:
+            for sel in ["#viewad-locality", "#viewad-address",
+                        "[data-testid='address-block']"]:
                 el = await page.query_selector(sel)
                 if el:
                     txt = (await el.inner_text()).strip()
@@ -225,7 +279,8 @@ async def scrape_detail_async(ctx, url, sem):
                         break
 
             for sel in ["#viewad-details", ".boxedarticle--details",
-                        "[data-testid='ad-detail-attributes']"]:
+                        "[data-testid='ad-detail-attributes']",
+                        ".criteriagroup"]:
                 el = await page.query_selector(sel)
                 if el:
                     txt = (await el.inner_text()).strip()
@@ -233,7 +288,8 @@ async def scrape_detail_async(ctx, url, sem):
                         parts.append(txt)
                         break
 
-            for sel in ["#viewad-description-text", "#viewad-description"]:
+            for sel in ["#viewad-description-text", "#viewad-description",
+                        "[data-testid='expose-description']"]:
                 el = await page.query_selector(sel)
                 if el:
                     txt = (await el.inner_text()).strip()
@@ -392,10 +448,10 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
         '  "boni": <Liste aus ' + json.dumps(boni_keys) + ' nur klar bestätigte>,\n'
         '  "kurz_bewertung": <"1 prägnanter Satz zur Immobilie auf Deutsch">,\n'
         '  "umfeld_analyse": {\n'
-        '    "demografie": <"Wer wohnt hier hauptsächlich? Ungeschönt – z.B. Studentenviertel, Arbeiterklasse, Aufwertungsviertel, sozialer Brennpunkt">,\n'
-        '    "vibe_sicherheit": <"Wie ist die Atmosphäre? z.B. Ruhig und bürgerlich / Lautes Ausgehviertel nachts unruhig / Eher meidungswürdig">,\n'
-        '    "einschaetzung_student": <"Eignung für Informatikstudenten: Lernruhe, Anbindung Uni Mannheim/Heidelberg, ÖPNV – kurzes Fazit">,\n'
-        '    "einschaetzung_investor": <"Eignung als Kapitalanlage: Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit – kurzes Fazit">\n'
+        '    "demografie": <"Wer wohnt hier? Ungeschönt">,\n'
+        '    "vibe_sicherheit": <"Atmosphäre und Sicherheitsgefühl">,\n'
+        '    "einschaetzung_student": <"Eignung für Informatikstudenten">,\n'
+        '    "einschaetzung_investor": <"Eignung als Kapitalanlage">\n'
         '  }\n'
         "}"
     )
@@ -412,8 +468,6 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
             max_tokens=1024,
         )
         raw_resp = response.choices[0].message.content.strip()
-
-        # Strip any accidental markdown fences
         raw_resp = re.sub(r"```(?:json)?\s*|\s*```", "", raw_resp).strip()
         m = re.search(r"\{[\s\S]*\}", raw_resp)
         if not m:
@@ -422,7 +476,6 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
 
         result = json.loads(m.group())
 
-        # Sanitize numeric fields
         for field in ("kaufpreis", "kaltmiete", "nebenkosten", "warmmiete",
                       "quadratmeter", "zimmeranzahl", "latitude", "longitude"):
             val = result.get(field)
@@ -449,7 +502,7 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
                  result.get("kaltmiete"),
                  "ja" if result.get("umfeld_analyse") else "nein")
 
-        time.sleep(GROQ_SLEEP_SECS)  # stay well under 30 RPM
+        time.sleep(GROQ_SLEEP_SECS)
         return result
 
     except json.JSONDecodeError as e:
@@ -462,8 +515,8 @@ def _groq_call_sync(title, raw_text, listing_type_hint, cfg):
             _groq_key_invalid = True
         elif any(x in err for x in ("decommissioned", "no longer supported",
                                      "model_not_found", "model not found")):
-            log.error("   Groq Modell abgeschaltet – deaktiviere Groq: %s", str(e)[:120])
-            _groq_key_invalid = True  # stop all further Groq calls this run
+            log.error("   Groq Modell abgeschaltet: %s", str(e)[:120])
+            _groq_key_invalid = True
         elif any(x in err for x in ("429", "rate_limit", "rate limit",
                                      "too many requests")):
             log.warning("   Groq Rate-Limit – 10s Pause")
@@ -477,10 +530,8 @@ async def analyse_async(title, raw_text, listing_type_hint, cfg):
     """Regex für Preise (kein Quota), Groq für Umfeldanalyse + GPS + Enrichment."""
     global _groq_lock
 
-    # Step 1: Regex – blitzschnell, kein API-Limit
     regex_result = extract_by_regex(title, raw_text, listing_type_hint, cfg)
 
-    # Step 2: Groq – serialisiert für RPM-Sicherheit, liefert umfeld_analyse
     if _groq_key_invalid or not GROQ_API_KEY or not time_ok():
         return regex_result
 
@@ -508,9 +559,11 @@ async def analyse_async(title, raw_text, listing_type_hint, cfg):
 # ── Kleinanzeigen scraper ────────────────────────────────────────────────────
 
 async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
-    raw      = []
-    base_url = source["url"]
-    lst_type = source["listing_type"]
+    """Returns (verified_new, price_updates_for_existing)."""
+    raw           = []
+    price_updates = []
+    base_url      = source["url"]
+    lst_type      = source["listing_type"]
 
     search_page = await ctx.new_page()
     try:
@@ -518,7 +571,7 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
             if len(raw) >= MAX_PER_SOURCE or not time_ok():
                 break
             url = base_url if page_num == 1 else base_url + "?pageNum=" + str(page_num)
-            log.info("   Seite %d: %s", page_num, url[-50:])
+            log.info("   KA Seite %d: %s", page_num, url[-50:])
             try:
                 await search_page.goto(url, wait_until="domcontentloaded",
                                        timeout=PAGE_TIMEOUT_MS)
@@ -540,14 +593,8 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
                             continue
                         if href.startswith("/"):
                             href = "https://www.kleinanzeigen.de" + href
-                        if href in existing_urls:
-                            continue
-                        title_el = await item.query_selector(
-                            "h2, .ellipsis, .aditem-main--middle--headline a")
-                        title = ((await title_el.inner_text()).strip()
-                                 if title_el else "").strip()
-                        if not title or NON_MANNHEIM_RE.search(title):
-                            continue
+
+                        # Collect card text for price tracking
                         card_parts = []
                         for psel in [".aditem-main--middle--price-shipping",
                                      ".price-tile__price", "[data-testid='price']",
@@ -567,6 +614,19 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
                                     card_parts.append(dt)
                                     break
                         card_text = " | ".join(card_parts)
+
+                        if href in existing_urls:
+                            # Track price for existing deal
+                            price_updates.append({"url": href, "card_text": card_text})
+                            continue
+
+                        title_el = await item.query_selector(
+                            "h2, .ellipsis, .aditem-main--middle--headline a")
+                        title = ((await title_el.inner_text()).strip()
+                                 if title_el else "").strip()
+                        if not title or NON_MANNHEIM_RE.search(title):
+                            continue
+
                         raw.append({"url": href, "source": "kleinanzeigen",
                                     "listing_type": lst_type, "title": title[:400],
                                     "card_text": card_text})
@@ -584,7 +644,7 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
         await search_page.close()
 
     if not raw:
-        return []
+        return [], price_updates
 
     log.info("   %d Detailseiten parallel (%dx)...", len(raw), DETAIL_WORKERS)
     det_sem = asyncio.Semaphore(DETAIL_WORKERS)
@@ -599,8 +659,6 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
             raw_text = ""
         detail = str(raw_text) if raw_text else ""
         card   = entry.get("card_text", "")
-        if not detail:
-            log.info("   Detail leer - nutze Karte: %s", entry["title"][:50])
         entry["raw_text"] = (detail + "\n\n" + card).strip() if detail else card
         if not is_mannheim(entry["title"], entry["raw_text"] + " " + card):
             log.info("   SKIP (kein Mannheim): %s", entry["title"][:55])
@@ -608,7 +666,190 @@ async def scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg):
         verified.append(entry)
 
     log.info("   %d/%d nach Mannheim-Filter", len(verified), len(raw))
-    return verified
+    return verified, price_updates
+
+
+# ── ImmoScout24 scraper ──────────────────────────────────────────────────────
+
+async def scrape_immoscout24_async(ctx, source, existing_urls, cfg):
+    """Returns (verified_new, price_updates_for_existing)."""
+    raw           = []
+    price_updates = []
+    base_url      = source["url"]
+    lst_type      = source["listing_type"]
+
+    search_page = await ctx.new_page()
+    try:
+        for page_num in range(1, source.get("pages", 1) + 1):
+            if len(raw) >= MAX_PER_SOURCE or not time_ok():
+                break
+            url = base_url if page_num == 1 else base_url + "?pagenumber=" + str(page_num)
+            log.info("   IS24 Seite %d: %s", page_num, url[-60:])
+            try:
+                await search_page.goto(url, wait_until="domcontentloaded",
+                                       timeout=PAGE_TIMEOUT_MS * 2)
+                await search_page.wait_for_timeout(2500)
+
+                # Accept cookies if banner appears
+                for cookie_sel in [
+                    "button#uc-btn-accept-banner",
+                    "button[data-testid='uc-accept-all-button']",
+                    "button.sc-lbVpMG",
+                    "[data-gdpr='true'] button",
+                ]:
+                    try:
+                        btn = await search_page.query_selector(cookie_sel)
+                        if btn:
+                            await btn.click()
+                            await search_page.wait_for_timeout(1000)
+                            break
+                    except Exception:
+                        pass
+
+                items = await search_page.query_selector_all(
+                    "article[data-id], li.result-list__listing article"
+                )
+                if not items:
+                    log.info("   IS24: Keine Eintraege auf Seite %d", page_num)
+                    break
+
+                found = 0
+                for item in items:
+                    if len(raw) >= MAX_PER_SOURCE:
+                        break
+                    try:
+                        link_el = await item.query_selector("a[href*='/expose/']")
+                        href = (await link_el.get_attribute("href") or "") if link_el else ""
+                        if not href:
+                            continue
+                        if href.startswith("/"):
+                            href = "https://www.immobilienscout24.de" + href
+                        # Normalize: strip query params
+                        href = href.split("?")[0]
+
+                        card_text = (await item.inner_text()).strip()[:600]
+
+                        if href in existing_urls:
+                            price_updates.append({"url": href, "card_text": card_text})
+                            continue
+
+                        # Get title
+                        title = ""
+                        for t_sel in [
+                            "[data-testid='result-list-entry-brand-title']",
+                            "h5.result-list-entry__brand-title-container",
+                            "h3", "h4", "h5",
+                        ]:
+                            t_el = await item.query_selector(t_sel)
+                            if t_el:
+                                title = (await t_el.inner_text()).strip()
+                                if title:
+                                    break
+
+                        if not title:
+                            # Fallback: first non-empty text line
+                            lines = [l.strip() for l in card_text.split("\n") if l.strip()]
+                            title = lines[0][:200] if lines else ""
+
+                        if not title or NON_MANNHEIM_RE.search(title):
+                            continue
+
+                        raw.append({
+                            "url":          href,
+                            "source":       "immoscout24",
+                            "listing_type": lst_type,
+                            "title":        title[:400],
+                            "card_text":    card_text,
+                        })
+                        existing_urls.add(href)
+                        found += 1
+                    except Exception as ex:
+                        log.debug("   IS24 item error: %s", ex)
+
+                log.info("   IS24: %d Kandidaten auf Seite %d", found, page_num)
+                if found == 0:
+                    break
+
+            except Exception as e:
+                log.error("   IS24 Seitenfehler: %s", e)
+                break
+    finally:
+        await search_page.close()
+
+    if not raw:
+        return [], price_updates
+
+    log.info("   %d IS24 Detailseiten parallel...", len(raw))
+    det_sem = asyncio.Semaphore(DETAIL_WORKERS)
+    detail_results = await asyncio.gather(
+        *[scrape_detail_async(ctx, e["url"], det_sem) for e in raw],
+        return_exceptions=True
+    )
+
+    verified = []
+    for entry, raw_text in zip(raw, detail_results):
+        if isinstance(raw_text, Exception):
+            raw_text = ""
+        detail = str(raw_text) if raw_text else ""
+        card   = entry.get("card_text", "")
+        entry["raw_text"] = (detail + "\n\n" + card).strip() if detail else card
+        if not is_mannheim(entry["title"], entry["raw_text"] + " " + card):
+            log.info("   SKIP IS24 (kein Mannheim): %s", entry["title"][:55])
+            continue
+        verified.append(entry)
+
+    log.info("   %d/%d IS24 nach Mannheim-Filter", len(verified), len(raw))
+    return verified, price_updates
+
+
+# ── Source dispatcher ────────────────────────────────────────────────────────
+
+async def scrape_source(ctx, source, existing_urls, cfg):
+    """Dispatches to the correct scraper based on source['scraper']."""
+    scraper_type = source.get("scraper", "kleinanzeigen")
+    if scraper_type == "immoscout24":
+        return await scrape_immoscout24_async(ctx, source, existing_urls, cfg)
+    else:
+        return await scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg)
+
+
+# ── Price history updater ────────────────────────────────────────────────────
+
+def update_price_history(data, price_updates, now_iso, cfg):
+    """Update last_seen and price_history for existing deals based on card prices."""
+    existing_by_url = {d["url"]: d for d in data["deals"]}
+    updated = 0
+    for upd in price_updates:
+        deal = existing_by_url.get(upd["url"])
+        if not deal:
+            continue
+        deal["last_seen"] = now_iso
+        card_text = upd.get("card_text", "")
+        if not card_text:
+            continue
+        regex_upd = extract_by_regex("", card_text, deal["listing_type"], cfg)
+        new_price  = regex_upd.get("kaufpreis") or regex_upd.get("kaltmiete")
+        stored     = deal.get("kaufpreis") or deal.get("kaltmiete")
+        history    = deal.setdefault("price_history", [])
+
+        # Seed history if empty
+        if not history and stored:
+            history.append({"date": deal.get("first_seen", now_iso), "price": stored})
+
+        # Record price change (>100 EUR = real change)
+        if new_price and stored and abs(new_price - stored) > 100:
+            history.append({"date": now_iso, "price": new_price})
+            log.info("   Preisaenderung: %s → %.0f EUR (war %.0f)",
+                     deal["url"][35:70], new_price, stored)
+            if deal["listing_type"] == "kauf":
+                deal["kaufpreis"] = new_price
+            else:
+                deal["kaltmiete"] = new_price
+            berechne_scores(deal, cfg)
+            updated += 1
+
+    if updated:
+        log.info("Preisaenderungen: %d Deals aktualisiert", updated)
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
@@ -619,19 +860,26 @@ async def main():
     _groq_lock  = asyncio.Lock()
 
     log.info("=" * 58)
-    log.info("Immobilien-Sniper v3.6 | MAX=%d | PRO_QUELLE=%d | PAGES=4",
+    log.info("Immobilien-Sniper v4.0 | MAX=%d | PRO_QUELLE=%d",
              MAX_NEW_PER_RUN, MAX_PER_SOURCE)
-    log.info("MaxRun=%ds | Details=%dx | Groq sleep=%.1fs",
-             MAX_RUNTIME_SECS, DETAIL_WORKERS, GROQ_SLEEP_SECS)
+    log.info("MaxRun=%ds | Details=%dx | Groq sleep=%.1fs | Archiv=%dd",
+             MAX_RUNTIME_SECS, DETAIL_WORKERS, GROQ_SLEEP_SECS, ARCHIVE_AFTER_DAYS)
     log.info("Groq-Key: %s", "OK" if GROQ_API_KEY else "FEHLT!")
     log.info("=" * 58)
 
     cfg  = load_config()
     data = load_deals()
-    existing_urls = get_existing_urls(data)
-    log.info("Bestehende Deals: %d", len(existing_urls))
 
-    all_raw = []
+    # Archive old deals first
+    archive_old_deals(data)
+
+    existing_urls   = get_existing_urls(data)
+    existing_hashes = get_existing_hashes(data)
+    log.info("Bestehende Deals: %d | URLs: %d | Hashes: %d",
+             len(data["deals"]), len(existing_urls), len(existing_hashes))
+
+    all_raw           = []
+    all_price_updates = []
 
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(
@@ -653,11 +901,13 @@ async def main():
         for source in cfg.get("sources", []):
             if not source.get("enabled", True) or not time_ok():
                 continue
-            log.info("\nQuelle: %s", source["name"])
+            log.info("\nQuelle: %s (%s)", source["name"], source.get("scraper", "kleinanzeigen"))
             try:
-                results = await scrape_kleinanzeigen_async(ctx, source, existing_urls, cfg)
-                log.info("%d verifiziert von %s", len(results), source["name"])
+                results, upds = await scrape_source(ctx, source, existing_urls, cfg)
+                log.info("%d verifiziert | %d Preis-Updates von %s",
+                         len(results), len(upds), source["name"])
                 all_raw.extend(results)
+                all_price_updates.extend(upds)
                 if len(all_raw) >= MAX_NEW_PER_RUN:
                     break
                 log.info("Pause 15s zwischen Quellen (Anti-Bot)...")
@@ -667,12 +917,14 @@ async def main():
 
         await browser.close()
 
-    all_raw = all_raw[:MAX_NEW_PER_RUN]
+    # Update price history for existing deals
     now_iso = datetime.now(timezone.utc).isoformat()
-    ai_ok = ai_fail = 0
+    update_price_history(data, all_price_updates, now_iso, cfg)
 
-    log.info("\nAnalyse: %d Inserate (Regex + Groq/Llama3)...", len(all_raw))
-    # Groq calls serialised via _groq_lock, but I/O and regex run concurrently
+    all_raw = all_raw[:MAX_NEW_PER_RUN]
+    ai_ok = ai_fail = dedup_skip = 0
+
+    log.info("\nAnalyse: %d neue Inserate (Regex + Groq/Llama3)...", len(all_raw))
     ai_results = await asyncio.gather(
         *[analyse_async(
             r["title"], r.get("raw_text", ""), r["listing_type"], cfg)
@@ -688,16 +940,27 @@ async def main():
             ai_ok += 1
         else:
             ai_fail += 1
+
         log.info("[%2d/%d] %s", i, len(all_raw), raw_entry["title"][:60])
         deal = build_deal(raw_entry, ai, now_iso, cfg)
+
+        # Dedup check by hash
+        deal_hash = deal.get("_hash", "")
+        if deal_hash and deal_hash in existing_hashes:
+            log.info("   DEDUP skip (gleicher Titel): %s", raw_entry["title"][:55])
+            dedup_skip += 1
+            continue
+        existing_hashes.add(deal_hash)
+
         data["deals"].append(deal)
         if i % 10 == 0:
             save_deals(data)
 
     elapsed = int(time.time() - _start_time)
     log.info("=" * 58)
-    log.info("Fertig: %ds | neu=%d | AI ok=%d fail=%d | gesamt=%d",
-             elapsed, len(all_raw), ai_ok, ai_fail, len(data["deals"]))
+    log.info("Fertig: %ds | neu=%d | dedup_skip=%d | AI ok=%d fail=%d | gesamt=%d",
+             elapsed, len(all_raw) - dedup_skip, dedup_skip,
+             ai_ok, ai_fail, len(data["deals"]))
     save_deals(data)
 
 
