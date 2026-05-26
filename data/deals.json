@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-25T21:59:22.829108+00:00",
+  "last_updated": "2026-05-26T18:09:39.253063+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -5607,6 +5607,185 @@
       "expected_market_qm": 16.0,
       "deal_deviation_pct": -83.9,
       "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnungsswap-3-zimmer-92-m-relaisstrasse-mannheim/3335843913-203-7978",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnungsswap - 3 Zimmer, 92 m² - Relaisstraße, Mannheim",
+      "first_seen": "2026-05-26T18:08:29.929978+00:00",
+      "last_seen": "2026-05-26T18:08:29.929978+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Tauschangebot für 3-Zimmer-Wohnung mit 92 m² Wohnfläche und Balkon.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim",
+      "adresse": "Relaisstraße 28, 68219 Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Familien und Pendler",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, aber keine direkte Anbindung an die Uni Mannheim.",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber potenzielles Aufwertungspotenzial."
+      },
+      "quadratmeter": 92.0,
+      "kaltmiete": 830.0,
+      "kaltmiete_qm": 9.02,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -39.9,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zkb-schienenstrasse-37-mannheim-neubau-ausbau-dg/3418882337-203-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 ZKB Schienenstraße 37, Mannheim, Neubau/Ausbau DG",
+      "first_seen": "2026-05-26T18:08:29.929978+00:00",
+      "last_seen": "2026-05-26T18:08:29.929978+00:00",
+      "boni": [
+        "Garage",
+        "renoviert",
+        "Neubau"
+      ],
+      "kurz_bewertung": "Ideal für Studenten, Pendler und Singlehaushalte.",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "Schienenstraße 37, Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten: Lernruhe, Anbindung Uni Mannheim/Heidelberg, ÖPNV.",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit."
+      },
+      "quadratmeter": 30.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 700,
+      "kaltmiete_qm": 5.0,
+      "expected_market_qm": 17.8,
+      "deal_deviation_pct": -71.9,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-3-zimmer-wohnung-in-mannheim-ab-01-07-26/3418543735-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Zentrale 3-Zimmer-Wohnung in Mannheim ab 01.07.26",
+      "first_seen": "2026-05-26T18:08:29.929978+00:00",
+      "last_seen": "2026-05-26T18:08:29.929978+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Zentrale 3-Zimmer-Wohnung in Mannheim ab 01.07.26",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, gute Anbindung an Uni Mannheim, gute ÖPNV-Anbindung",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 62.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 850,
+      "kaltmiete_qm": 2.42,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -86.2,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-2-zimmer-wohnung-in-mannheim-kaefertal/3418579063-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Moderne 2-Zimmer-Wohnung in Mannheim-Käfertal",
+      "first_seen": "2026-05-26T18:08:29.929978+00:00",
+      "last_seen": "2026-05-26T18:08:29.929978+00:00",
+      "boni": [],
+      "kurz_bewertung": "Großzügig geschnittene und helle 2-Zimmer-Wohnung mit moderner Einbauküche und gemütlicher Loggia.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Familien und jungen Erwachsenen, aber auch Studenten und Pendler.",
+        "vibe_sicherheit": "Ruhig und bürgerlich, aber mit einigen Lärmbelästigungen durch die Bundesstraße.",
+        "einschaetzung_student": "Gute Anbindung an die Uni Mannheim, aber Lernruhe ist nicht garantiert.",
+        "einschaetzung_investor": "Mietnomaden-Risiko ist hoch, aber Aufwertungspotenzial ist vorhanden."
+      },
+      "quadratmeter": 66.17,
+      "kaltmiete": 227.0,
+      "nebenkosten": 227,
+      "warmmiete": 97,
+      "kaltmiete_qm": 3.43,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -76.3,
+      "deal_score": "gut"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wg-zimmer-in-mannheim/3418388707-203-7980",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "WG Zimmer in Mannheim",
+      "first_seen": "2026-05-26T18:08:29.929978+00:00",
+      "last_seen": "2026-05-26T18:08:29.929978+00:00",
+      "boni": [],
+      "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
+      "zimmeranzahl": 1,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": "68169 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studentenviertel",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Anbindung an die Uni Mannheim, ruhige Lage",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber potenziell gute Mieterzuverlässigkeit"
+      },
+      "kaltmiete": 120.0,
+      "quadratmeter": 0,
+      "nebenkosten": 120,
+      "warmmiete": 570,
+      "deal_score": "okay"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/lichtdurchflutetes-wohnglueck-in-waldnaehe-mannheim-gartenstadt-nur-bei-realunis/3418351745-196-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Lichtdurchflutetes Wohnglück in Waldnähe – Mannheim Gartenstadt - nur bei realunis",
+      "first_seen": "2026-05-26T18:08:29.929978+00:00",
+      "last_seen": "2026-05-26T18:08:29.929978+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Gepflegte 3-Zimmer-Wohnung im 3. Obergeschoss eines äußerst gepflegten Mehrfamilienhauses.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Gartenstadt",
+      "adresse": "Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien, Paare, Eigennutzer",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Lernruhe, gute Anbindung Uni Mannheim, gute ÖPNV-Anbindung",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial"
+      },
+      "quadratmeter": 72.0,
+      "kaufpreis": 229000.0,
+      "nebenkosten": 317,
+      "kaltmiete": 864.0,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 1049.58,
+      "cashflow_monat": -235.58,
+      "deal_score": "skip"
     }
   ]
 }
