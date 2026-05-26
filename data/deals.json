@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-26T18:09:39.253063+00:00",
+  "last_updated": "2026-05-26T19:36:22.434027+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -5786,6 +5786,68 @@
       "bankrate_monat": 1049.58,
       "cashflow_monat": -235.58,
       "deal_score": "skip"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-ab-01-08-2026/3418894746-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2-Zimmer-Wohnung in Mannheim ab 01.08.2026",
+      "first_seen": "2026-05-26T19:36:16.741898+00:00",
+      "last_seen": "2026-05-26T19:36:16.741898+00:00",
+      "boni": [
+        "Gartenmitbenutzung",
+        "Balkon"
+      ],
+      "kurz_bewertung": "2-Zimmer-Wohnung in ruhiger Lage mit Balkon und Gartenmitbenutzung",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim",
+      "adresse": "Burgstraße",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Familien und Einzelpersonen, keine spezifische Studenten- oder Arbeiterklasse",
+        "vibe_sicherheit": "Ruhig und bürgerlich",
+        "einschaetzung_student": "Gute Anbindung an Uni Mannheim, ruhige Lage, aber keine spezifische Studenten-orientierung",
+        "einschaetzung_investor": "Mietnomaden-Risiko, aber potenziell gute Mieterzuverlässigkeit und Aufwertungspotenzial"
+      },
+      "quadratmeter": 47.0,
+      "kaltmiete": 727.0,
+      "nebenkosten": 150,
+      "warmmiete": 727,
+      "kaltmiete_qm": 15.47,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": 3.1,
+      "deal_score": "okay"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-zu-vermieten-mannheim-rheinau/3418891324-203-7978",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnung zu vermieten Mannheim Rheinau",
+      "first_seen": "2026-05-26T19:36:16.741898+00:00",
+      "last_seen": "2026-05-26T19:36:16.741898+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Wohnung zu vermieten in einer sehr guten Lage in Rheinau, Mannheim.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "68219 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien, Paare oder Berufstätige",
+        "vibe_sicherheit": "ruhig und bürgerlich",
+        "einschaetzung_student": "Lernruhe, Anbindung Uni Mannheim/Heidelberg, ÖPNV",
+        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit"
+      },
+      "quadratmeter": 65.0,
+      "kaltmiete": 300.0,
+      "nebenkosten": 300,
+      "kaltmiete_qm": 4.62,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -73.6,
+      "deal_score": "gut"
     }
   ]
 }
