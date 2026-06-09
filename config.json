@@ -1,0 +1,118 @@
+{
+  "target_city": "Mannheim",
+  "search_radius_km": 10,
+  "min_rooms": 2.5,
+  "base_rent_per_sqm": 14.5,
+  "financing": {
+    "interest_rate": 0.035,
+    "repayment_rate": 0.015,
+    "overhead_factor": 1.1,
+    "maintenance_monthly": 50
+  },
+  "rent_bonuses": {
+    "EBK": 1.0,
+    "Balkon": 0.5,
+    "Terrasse": 0.5,
+    "renoviert": 1.0,
+    "moebliert": 3.0,
+    "Neubau": 2.0,
+    "Aufzug": 0.5,
+    "Garage": 0.3
+  },
+  "default_poi": {
+    "name": "Uni Mannheim",
+    "latitude": 49.4836,
+    "longitude": 8.4631
+  },
+  "alternative_pois": [
+    {
+      "name": "Quadrate Mitte (B3)",
+      "latitude": 49.4889,
+      "longitude": 8.4694
+    },
+    {
+      "name": "Hauptbahnhof",
+      "latitude": 49.4794,
+      "longitude": 8.4698
+    },
+    {
+      "name": "Lindenhof",
+      "latitude": 49.4728,
+      "longitude": 8.4682
+    },
+    {
+      "name": "Neckarstadt-West",
+      "latitude": 49.495,
+      "longitude": 8.46
+    },
+    {
+      "name": "Schwetzingerstadt",
+      "latitude": 49.4833,
+      "longitude": 8.4833
+    },
+    {
+      "name": "Jungbusch",
+      "latitude": 49.4862,
+      "longitude": 8.4572
+    },
+    {
+      "name": "Rheinau",
+      "latitude": 49.453,
+      "longitude": 8.485
+    }
+  ],
+  "sources": [
+    {
+      "name": "kleinanzeigen_miete",
+      "scraper": "kleinanzeigen",
+      "listing_type": "miete",
+      "enabled": true,
+      "pages": 4,
+      "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/k0c203"
+    },
+    {
+      "name": "kleinanzeigen_kauf",
+      "scraper": "kleinanzeigen",
+      "listing_type": "kauf",
+      "enabled": true,
+      "pages": 4,
+      "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/mannheim/k0c196"
+    },
+    {
+      "name": "immonet_miete",
+      "scraper": "immonet",
+      "listing_type": "miete",
+      "enabled": true,
+      "pages": 2,
+      "max_new": 5,
+      "url": "https://www.immonet.de/wohnungen-mieten/mannheim.html"
+    },
+    {
+      "name": "immonet_kauf",
+      "scraper": "immonet",
+      "listing_type": "kauf",
+      "enabled": true,
+      "pages": 2,
+      "max_new": 5,
+      "url": "https://www.immonet.de/eigentumswohnungen/mannheim.html"
+    },
+    {
+      "name": "immoscout24_kauf",
+      "scraper": "immoscout24",
+      "listing_type": "kauf",
+      "enabled": true,
+      "pages": 3,
+      "max_new": 8,
+      "url": "https://www.immobilienscout24.de/Suche/de/baden-wuerttemberg/mannheim/wohnung-kaufen"
+    },
+    {
+      "name": "immoscout24_miete",
+      "scraper": "immoscout24",
+      "listing_type": "miete",
+      "enabled": true,
+      "pages": 3,
+      "max_new": 8,
+      "url": "https://www.immobilienscout24.de/Suche/de/baden-wuerttemberg/mannheim/wohnung-mieten"
+    }
+  ]
+}

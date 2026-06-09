@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immobilien-Sniper – Mannheim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .badge-strong_buy { background:#16a34a; color:#fff; }
+    .badge-watch      { background:#ca8a04; color:#fff; }
+    .badge-skip       { background:#dc2626; color:#fff; }
+    .row-strong_buy   { border-left: 4px solid #16a34a; }
+    .row-watch        { border-left: 4px solid #ca8a04; }
+    .row-skip         { border-left: 4px solid #dc2626; }
+    .spinner { border: 3px solid #e5e7eb; border-top-color: #6366f1; border-radius: 50%;
+               width: 20px; height: 20px; animation: spin .8s linear infinite; display:none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🎯</span>
+        <h1 class="text-xl font-bold text-white">Immobilien-Sniper</h1>
+        <span class="text-xs text-gray-400 mt-1">Mannheim Quadrate</span>
+      </div>
+
+      <!-- Stats Pills -->
+      <div class="flex gap-2 ml-auto flex-wrap">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-700 text-gray-200">
+          📊 Gesamt: <strong>{{ stats.total }}</strong>
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-900 text-green-200">
+          🟢 Strong Buy: <strong>{{ stats.strong_buy }}</strong>
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-yellow-900 text-yellow-200">
+          🟡 Watch: <strong>{{ stats.watch }}</strong>
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-red-900 text-red-200">
+          🔴 Skip: <strong>{{ stats.skip }}</strong>
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs bg-gray-700 text-gray-400">
+          🕐 Letzter Lauf: {{ stats.last_run }}
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-6">
+
+    <!-- FILTER & AKTIONEN -->
+    <div class="flex flex-wrap gap-3 mb-6 items-center">
+      <!-- Score-Filter -->
+      <form method="get" class="flex gap-2 flex-wrap items-center">
+        <input type="hidden" name="source" value="{{ filter_source }}" />
+        <span class="text-sm text-gray-400 mr-1">Deal-Score:</span>
+
+        <button type="submit" name="score" value=""
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_score == '' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          📋 Alle
+        </button>
+        <button type="submit" name="score" value="strong_buy"
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_score == 'strong_buy' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          🟢 Strong Buy
+        </button>
+        <button type="submit" name="score" value="watch"
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_score == 'watch' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          🟡 Watch
+        </button>
+        <button type="submit" name="score" value="skip"
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_score == 'skip' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          🔴 Skip
+        </button>
+      </form>
+
+      <!-- Source-Filter -->
+      <form method="get" class="flex gap-2 flex-wrap items-center ml-4">
+        <input type="hidden" name="score" value="{{ filter_score }}" />
+        <span class="text-sm text-gray-400 mr-1">Quelle:</span>
+
+        <button type="submit" name="source" value=""
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_source == '' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          Alle
+        </button>
+        <button type="submit" name="source" value="kleinanzeigen"
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_source == 'kleinanzeigen' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          Kleinanzeigen
+        </button>
+        <button type="submit" name="source" value="immonet"
+          class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all {% if filter_source == 'immonet' %}bg-indigo-600 text-white{% else %}bg-gray-800 text-gray-300 hover:bg-gray-700{% endif %}">
+          Immonet
+        </button>
+      </form>
+
+      <!-- Manueller Scraping-Button -->
+      <button id="scrapeBtn" onclick="triggerScrape()"
+        class="ml-auto flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all">
+        <div class="spinner" id="scrapeSpinner"></div>
+        <span id="scrapeBtnText">▶ Jetzt scrapen</span>
+      </button>
+    </div>
+
+    <!-- NÄCHSTE LÄUFE -->
+    {% if next_runs %}
+    <p class="text-xs text-gray-500 mb-4">
+      ⏰ Nächste automatische Läufe:
+      {% for t in next_runs %}<span class="bg-gray-800 px-2 py-0.5 rounded text-gray-300 mr-1">{{ t }}</span>{% endfor %}
+    </p>
+    {% endif %}
+
+    <!-- LISTINGS -->
+    {% if listings %}
+    <div class="grid gap-4">
+      {% for l in listings %}
+      <div class="bg-gray-900 rounded-xl p-5 row-{{ l.deal_score or 'skip' }} hover:bg-gray-800 transition-all">
+        <div class="flex flex-wrap gap-3 items-start">
+
+          <!-- Linke Spalte: Titel + Badges -->
+          <div class="flex-1 min-w-0">
+            <div class="flex flex-wrap gap-2 items-center mb-1">
+              <!-- Deal-Score Badge -->
+              <span class="badge-{{ l.deal_score or 'skip' }} px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide">
+                {% if l.deal_score == 'strong_buy' %}🟢 Strong Buy
+                {% elif l.deal_score == 'watch' %}🟡 Watch
+                {% else %}🔴 Skip{% endif %}
+              </span>
+              <!-- Quadrat Badge -->
+              {% if l.quadrat %}
+              <span class="bg-indigo-900 text-indigo-300 px-2 py-0.5 rounded text-xs font-mono font-bold">
+                📍 {{ l.quadrat }}
+              </span>
+              {% endif %}
+              <!-- Quelle -->
+              <span class="bg-gray-700 text-gray-400 px-2 py-0.5 rounded text-xs">
+                {{ l.source }}
+              </span>
+              <!-- Miete geschätzt -->
+              {% if l.miete_geschaetzt %}
+              <span class="bg-yellow-950 text-yellow-400 px-2 py-0.5 rounded text-xs" title="Aus Mietspiegel berechnet">
+                📐 Miete geschätzt
+              </span>
+              {% endif %}
+            </div>
+
+            <a href="{{ l.url }}" target="_blank" rel="noopener noreferrer"
+               class="text-white font-semibold text-sm hover:text-indigo-400 transition-colors line-clamp-2">
+              {{ l.title }}
+            </a>
+            <p class="text-gray-500 text-xs mt-1">
+              Entdeckt: {{ l.first_seen[:16].replace('T', ' ') if l.first_seen else '—' }}
+              · Zuletzt: {{ l.last_seen[:16].replace('T', ' ') if l.last_seen else '—' }}
+            </p>
+          </div>
+
+          <!-- Rechte Spalte: Kennzahlen-Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+
+            <div class="bg-gray-800 rounded-lg px-3 py-2">
+              <p class="text-gray-400 text-xs mb-0.5">Kaufpreis</p>
+              <p class="text-white font-bold text-sm">
+                {% if l.kaufpreis %}{{ "{:,.0f}".format(l.kaufpreis).replace(",",".") }} €{% else %}—{% endif %}
+              </p>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg px-3 py-2">
+              <p class="text-gray-400 text-xs mb-0.5">Kaltmiete/Mo.</p>
+              <p class="text-white font-bold text-sm">
+                {% if l.kaltmiete_monat %}{{ "{:,.0f}".format(l.kaltmiete_monat) }} €{% else %}—{% endif %}
+              </p>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg px-3 py-2">
+              <p class="text-gray-400 text-xs mb-0.5">Bankrate/Mo.</p>
+              <p class="text-white font-bold text-sm">
+                {% if l.bankrate_monat %}{{ "{:,.0f}".format(l.bankrate_monat) }} €{% else %}—{% endif %}
+              </p>
+            </div>
+
+            <!-- Cashflow – farblich hervorgehoben -->
+            <div class="rounded-lg px-3 py-2
+              {% if l.cashflow_monat is not none %}
+                {% if l.cashflow_monat >= 0 %}bg-green-900{% elif l.cashflow_monat >= -150 %}bg-yellow-900{% else %}bg-red-900{% endif %}
+              {% else %}bg-gray-800{% endif %}">
+              <p class="text-gray-300 text-xs mb-0.5">Cashflow/Mo.</p>
+              <p class="font-bold text-sm
+                {% if l.cashflow_monat is not none %}
+                  {% if l.cashflow_monat >= 0 %}text-green-300{% elif l.cashflow_monat >= -150 %}text-yellow-300{% else %}text-red-300{% endif %}
+                {% else %}text-white{% endif %}">
+                {% if l.cashflow_monat is not none %}
+                  {% if l.cashflow_monat >= 0 %}+{% endif %}{{ "{:,.0f}".format(l.cashflow_monat) }} €
+                {% else %}—{% endif %}
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Rendite + Fläche + Miete-Edit -->
+          <div class="w-full flex flex-wrap gap-3 items-center mt-2 pt-2 border-t border-gray-800">
+            {% if l.bruttomietrendite_pct %}
+            <span class="text-xs
+              {% if l.bruttomietrendite_pct >= 5 %}text-green-400{% elif l.bruttomietrendite_pct >= 4 %}text-yellow-400{% else %}text-red-400{% endif %}">
+              📈 Bruttomietrendite: <strong>{{ "%.2f"|format(l.bruttomietrendite_pct) }}%</strong>
+              {% if l.bruttomietrendite_pct < 4 %}<span class="text-red-500">(unter 4% – schwach)</span>{% endif %}
+            </span>
+            {% endif %}
+            {% if l.wohnflaeche_qm %}
+            <span class="text-xs text-gray-400">
+              🏠 {{ l.wohnflaeche_qm }} m²
+              {% if l.kaufpreis %} · {{ "{:,.0f}".format(l.kaufpreis / l.wohnflaeche_qm) }} €/m²{% endif %}
+            </span>
+            {% endif %}
+
+            <!-- Miete manuell anpassen -->
+            <div class="ml-auto flex items-center gap-2">
+              <input type="number" id="miete_{{ l.id }}" placeholder="Miete €/Mo."
+                step="50" min="100" max="5000"
+                value="{{ l.kaltmiete_monat|int if l.kaltmiete_monat else '' }}"
+                class="bg-gray-700 text-white text-xs rounded px-2 py-1 w-32 border border-gray-600 focus:outline-none focus:border-indigo-500" />
+              <button onclick="patchMiete({{ l.id }})"
+                class="text-xs bg-indigo-700 hover:bg-indigo-600 text-white px-2 py-1 rounded transition-all">
+                💾 Miete setzen
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <!-- Leer-Zustand -->
+    <div class="text-center py-24 text-gray-600">
+      <p class="text-5xl mb-4">🔍</p>
+      <p class="text-xl font-semibold text-gray-400 mb-2">Noch keine Listings</p>
+      <p class="text-sm">Klicke auf <strong class="text-indigo-400">▶ Jetzt scrapen</strong> um den ersten Lauf zu starten.</p>
+    </div>
+    {% endif %}
+
+  </main>
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl transition-all opacity-0 pointer-events-none z-50">
+  </div>
+
+  <script>
+    function showToast(msg, type = "success") {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.className = `fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl transition-all z-50 ${
+        type === "success" ? "bg-green-600 text-white" : "bg-red-600 text-white"
+      }`;
+      t.style.opacity = "1";
+      setTimeout(() => { t.style.opacity = "0"; }, 3500);
+    }
+
+    async function triggerScrape() {
+      const btn    = document.getElementById("scrapeBtn");
+      const txt    = document.getElementById("scrapeBtnText");
+      const spin   = document.getElementById("scrapeSpinner");
+      btn.disabled = true;
+      txt.textContent = "Läuft …";
+      spin.style.display = "block";
+      try {
+        const res = await fetch("/api/scrape", { method: "POST" });
+        const data = await res.json();
+        showToast("✅ Scraping gestartet! Seite in ~60s neu laden.", "success");
+      } catch(e) {
+        showToast("❌ Fehler: " + e.message, "error");
+      } finally {
+        btn.disabled = false;
+        txt.textContent = "▶ Jetzt scrapen";
+        spin.style.display = "none";
+      }
+    }
+
+    async function patchMiete(listingId) {
+      const input = document.getElementById("miete_" + listingId);
+      const val   = parseFloat(input.value);
+      if (isNaN(val) || val < 100) {
+        showToast("⚠️ Bitte gültige Miete eingeben (min. 100 €)", "error");
+        return;
+      }
+      try {
+        const res = await fetch(
+          `/api/listings/${listingId}/miete?kaltmiete_monat=${val}`,
+          { method: "PATCH" }
+        );
+        if (!res.ok) throw new Error(await res.text());
+        showToast("✅ Miete aktualisiert! Seite wird neu geladen …", "success");
+        setTimeout(() => location.reload(), 1800);
+      } catch(e) {
+        showToast("❌ Fehler: " + e, "error");
+      }
+    }
+
+    // Auto-Refresh alle 5 Minuten
+    setTimeout(() => location.reload(), 5 * 60 * 1000);
+  </script>
+
+</body>
+</html>

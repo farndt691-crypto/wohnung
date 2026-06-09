@@ -1,0 +1,10 @@
+*.py
+__pycache__/
+*.pyc
+venv/
+*.db
+*.bat
+Dockerfile
+docker-compose.yml
+templates/
+api/

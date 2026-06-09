@@ -1,183 +1,371 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Immobilien-Sniper – Mannheim</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Immobilien-Sniper</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
-    .badge { @apply inline-block px-2 py-0.5 rounded-full text-xs font-semibold; }
-    .tag   { @apply inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-indigo-900 text-indigo-200 mr-1 mb-1; }
-
-    /* Kauf-Score */
-    .score-strong_buy { border-left: 4px solid #16a34a; }
-    .score-watch      { border-left: 4px solid #ca8a04; }
-    .score-skip       { border-left: 4px solid #dc2626; }
-
-    /* Miete-Score */
-    .score-gut   { border-left: 4px solid #16a34a; }
-    .score-okay  { border-left: 4px solid #ca8a04; }
-    .score-teuer { border-left: 4px solid #dc2626; }
-
-    .deviation-gut   { background: #14532d; color: #86efac; }
-    .deviation-okay  { background: #713f12; color: #fde68a; }
-    .deviation-teuer { background: #7f1d1d; color: #fca5a5; }
+    .badge{display:inline-block;padding:2px 8px;border-radius:9999px;font-size:.7rem;font-weight:700}
+    .tag{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.7rem;font-weight:500;background:#1e1b4b;color:#a5b4fc;margin-right:3px;margin-bottom:3px}
+    .score-strong_buy{border-left:4px solid #16a34a}
+    .score-watch{border-left:4px solid #ca8a04}
+    .score-skip{border-left:4px solid #dc2626}
+    .score-gut{border-left:4px solid #16a34a}
+    .score-okay{border-left:4px solid #ca8a04}
+    .score-teuer{border-left:4px solid #dc2626}
+    .dev-gut{background:#14532d;color:#86efac}
+    .dev-okay{background:#713f12;color:#fde68a}
+    .dev-teuer{background:#7f1d1d;color:#fca5a5}
+    .dist-close{background:#1e3a5f;color:#93c5fd}
+    .dist-mid{background:#2d3748;color:#cbd5e0}
+    .dist-far{background:#3b2a2a;color:#fc8181}
+    select,input[type=number],input[type=text]{background:#1f2937;color:#f3f4f6;border:1px solid #4b5563;border-radius:6px;padding:6px 10px;font-size:.875rem}
+    .stat-scroll::-webkit-scrollbar{height:4px}
+    .stat-scroll::-webkit-scrollbar-thumb{background:#374151;border-radius:4px}
+    #fin-panel input[type=range]{accent-color:#6366f1;height:4px;cursor:pointer}
+    select option{background:#1f2937}
+    details.umfeld summary{cursor:pointer;list-style:none;user-select:none}
+    details.umfeld summary::-webkit-details-marker{display:none}
+    details.umfeld summary::before{content:"▶ ";font-size:.65rem;transition:transform .2s}
+    details.umfeld[open] summary::before{content:"▼ "}
+    .umfeld-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+    @media(max-width:640px){.umfeld-row{grid-template-columns:1fr}}
+    .umfeld-box{background:#111827;border:1px solid #1f2937;border-radius:8px;padding:10px 12px}
+    .umfeld-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;margin-bottom:3px}
+    .umfeld-text{font-size:.78rem;color:#d1d5db;line-height:1.4}
+    details.price-hist summary{cursor:pointer;list-style:none;user-select:none;font-size:.7rem;color:#6b7280}
+    details.price-hist summary::-webkit-details-marker{display:none}
+    #map{height:520px;background:#111827;border-radius:12px}
+    .leaflet-popup-content-wrapper{background:#1f2937;color:#f3f4f6;border:1px solid #374151}
+    .leaflet-popup-tip{background:#1f2937}
+    .tab-btn{padding:8px 20px;border-radius:8px;font-size:.875rem;font-weight:600;cursor:pointer;transition:background .15s}
+    .tab-btn.active{background:#4f46e5;color:#fff}
+    .tab-btn:not(.active){background:#1f2937;color:#9ca3af}
+    .tab-btn:not(.active):hover{background:#374151}
   </style>
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
 
-<!-- ═══════════════════════════════════════════════ HEADER ═══ -->
+<!-- HEADER -->
 <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center gap-3">
     <div class="flex items-center gap-2">
       <span class="text-2xl">🎯</span>
       <h1 class="text-lg font-bold text-white">Immobilien-Sniper</h1>
-      <span class="text-xs text-gray-400">Mannheim Quadrate</span>
+      <span id="city-label" class="text-xs text-gray-400">Mannheim</span>
     </div>
-
-    <!-- Stats Chips -->
-    <div id="stats" class="flex gap-2 ml-auto flex-wrap text-xs">
-      <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-200">
-        📊 Gesamt: <strong id="stat-total">–</strong>
-      </span>
-      <span class="px-3 py-1 rounded-full bg-blue-900 text-blue-200">
-        🏠 Kauf: <strong id="stat-kauf">–</strong>
-      </span>
-      <span class="px-3 py-1 rounded-full bg-purple-900 text-purple-200">
-        🔑 Miete: <strong id="stat-miete">–</strong>
-      </span>
-      <span class="px-3 py-1 rounded-full bg-green-900 text-green-200">
-        🟢 <strong id="stat-gut">–</strong>
-      </span>
-      <span class="px-3 py-1 rounded-full bg-yellow-900 text-yellow-200">
-        🟡 <strong id="stat-ok">–</strong>
-      </span>
-      <span class="px-3 py-1 rounded-full bg-red-900 text-red-200">
-        🔴 <strong id="stat-bad">–</strong>
-      </span>
-      <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-400" id="stat-last">
-        🕐 –
-      </span>
+    <div class="flex gap-2 ml-auto text-xs overflow-x-auto flex-nowrap sm:flex-wrap max-w-full pb-1 stat-scroll">
+      <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-200 whitespace-nowrap">📊 Gesamt: <strong id="stat-total">–</strong></span>
+      <span class="px-3 py-1 rounded-full bg-blue-900 text-blue-200 whitespace-nowrap">🏠 Kauf: <strong id="stat-kauf">–</strong></span>
+      <span class="px-3 py-1 rounded-full bg-purple-900 text-purple-200 whitespace-nowrap">🔑 Miete: <strong id="stat-miete">–</strong></span>
+      <span class="px-3 py-1 rounded-full bg-green-900 text-green-200 whitespace-nowrap">🟢 <strong id="stat-gut">–</strong></span>
+      <span class="px-3 py-1 rounded-full bg-yellow-900 text-yellow-200 whitespace-nowrap">🟡 <strong id="stat-ok">–</strong></span>
+      <span class="px-3 py-1 rounded-full bg-red-900 text-red-200 whitespace-nowrap">🔴 <strong id="stat-bad">–</strong></span>
+      <span class="px-3 py-1 rounded-full bg-gray-700 text-gray-400 whitespace-nowrap" id="stat-last">🕐 –</span>
     </div>
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════════ FILTER ═══ -->
-<div class="max-w-7xl mx-auto px-4 pt-5 pb-3">
+<!-- TABS -->
+<div class="max-w-7xl mx-auto px-4 pt-4 flex gap-2">
+  <button class="tab-btn active" id="tab-liste" onclick="switchTab('liste')">📋 Liste</button>
+  <button class="tab-btn" id="tab-karte" onclick="switchTab('karte')">🗺️ Karte</button>
+</div>
+
+<!-- FILTER BAR -->
+<div class="max-w-7xl mx-auto px-4 pt-3 pb-3 space-y-3">
+
+  <!-- Row 1: Type + Score -->
   <div class="flex flex-wrap gap-3 items-center">
-
-    <!-- Kauf / Miete Toggle -->
-    <div class="flex rounded-lg overflow-hidden border border-gray-700 text-sm font-medium">
-      <button onclick="setType('alle')"  id="btn-alle"  class="type-btn px-4 py-2 bg-indigo-600 text-white">Alle</button>
-      <button onclick="setType('kauf')"  id="btn-kauf"  class="type-btn px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700">🏠 Kauf</button>
-      <button onclick="setType('miete')" id="btn-miete" class="type-btn px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700">🔑 Miete / WG</button>
+    <div class="flex items-center gap-2">
+      <div class="inline-flex rounded-lg overflow-hidden border border-gray-600 text-sm font-semibold shadow">
+        <button onclick="setType('kauf')"  id="btn-kauf"  class="type-btn px-5 py-2 bg-indigo-600 text-white">🏠 Kauf</button>
+        <button onclick="setType('miete')" id="btn-miete" class="type-btn px-5 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700">🔑 Miete</button>
+      </div>
+      <button onclick="setType('alle')" id="btn-alle"
+        class="type-btn px-3 py-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 text-xs border border-gray-700 whitespace-nowrap">Alle</button>
     </div>
-
-    <!-- Score-Filter -->
-    <div class="flex gap-2 text-sm">
-      <button onclick="setScore('')"          id="sc-alle"       class="score-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white">Alle Scores</button>
+    <div class="flex gap-2 text-sm flex-wrap">
+      <button onclick="setScore('')"           id="sc-alle"       class="score-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white">Alle Scores</button>
       <button onclick="setScore('strong_buy')" id="sc-strong_buy" class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟢 Strong Buy</button>
       <button onclick="setScore('watch')"      id="sc-watch"      class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟡 Watch</button>
       <button onclick="setScore('gut')"        id="sc-gut"        class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟢 Günstig</button>
       <button onclick="setScore('okay')"       id="sc-okay"       class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟡 Okay</button>
       <button onclick="setScore('skip')"       id="sc-skip"       class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🔴 Skip/Teuer</button>
     </div>
+  </div>
 
-    <!-- Zimmer -->
-    <div class="flex items-center gap-2 text-sm ml-auto">
-      <label class="text-gray-400">Zimmer:</label>
-      <input id="zimmer-min" type="number" placeholder="min" min="1" max="10" step="0.5"
-        oninput="render()"
-        class="w-16 bg-gray-800 border border-gray-600 rounded px-2 py-1 text-center text-white" />
+  <!-- Row 2: Suche + POI + Radius + Zimmer + Sort + Reset -->
+  <div class="flex flex-wrap gap-3 items-center">
+
+    <div class="flex items-center gap-2 grow sm:grow-0">
+      <label class="text-gray-400 text-sm">🔎</label>
+      <input id="search-text" type="text" placeholder="Suche: Titel, Stadtteil, Adresse…"
+        oninput="render()" class="w-full sm:w-56"/>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <label class="text-gray-400 text-sm whitespace-nowrap">📍 POI:</label>
+      <select id="poi-select" onchange="onPoiChange()" class="min-w-[200px]">
+        <option value="">— Kein Radar —</option>
+      </select>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <label class="text-gray-400 text-sm whitespace-nowrap">Radius:</label>
+      <select id="radius-select" onchange="render()" class="w-28">
+        <option value="0">Alle</option>
+        <option value="500">500 m</option>
+        <option value="1000">1 km</option>
+        <option value="2000">2 km</option>
+        <option value="5000">5 km</option>
+        <option value="10000">10 km</option>
+      </select>
+    </div>
+
+    <div class="flex items-center gap-2 text-sm">
+      <label class="text-gray-400 whitespace-nowrap">🛏 Zimmer:</label>
+      <input id="zimmer-min" type="number" value="1" min="1" max="10" step="0.5"
+        oninput="render()" class="w-16 text-center"/>
       <span class="text-gray-500">–</span>
       <input id="zimmer-max" type="number" placeholder="max" min="1" max="10" step="0.5"
-        oninput="render()"
-        class="w-16 bg-gray-800 border border-gray-600 rounded px-2 py-1 text-center text-white" />
-
-      <button onclick="loadData()"
-        class="ml-3 flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-medium transition-all">
-        ↻ Aktualisieren
-      </button>
+        oninput="render()" class="w-16 text-center"/>
     </div>
+
+    <div class="flex items-center gap-2">
+      <label class="text-gray-400 text-sm whitespace-nowrap">↕ Sort:</label>
+      <select id="sort-select" onchange="render()" class="w-44">
+        <option value="default">Standard</option>
+        <option value="preis_asc">Preis ↑</option>
+        <option value="preis_desc">Preis ↓</option>
+        <option value="datum_desc">Datum (neueste)</option>
+        <option value="cashflow_desc">Cashflow ↓</option>
+        <option value="deviation_asc">Abweichung ↑</option>
+        <option value="score_asc">🟢 Score (Gut → Schlecht)</option>
+        <option value="score_desc">🔴 Score (Schlecht → Gut)</option>
+      </select>
+    </div>
+
+    <button onclick="toggleBalkon()" id="btn-balkon"
+      class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700 text-sm border border-gray-700">
+      🌿 Balkon/Terrasse
+    </button>
+    <button onclick="toggleFavoritesOnly()" id="btn-favs"
+      class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700 text-sm border border-gray-700">
+      ⭐ Favoriten
+    </button>
+    <button onclick="resetFilters()"
+      class="px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm">
+      ✕ Reset
+    </button>
+    <button onclick="loadData()"
+      class="ml-auto px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-medium">
+      ↻ Aktualisieren
+    </button>
+  </div>
+
+  <!-- Filter summary -->
+  <div id="filter-summary" class="text-xs text-gray-500"></div>
+</div>
+
+<!-- VOLLFINANZIERUNGS-RECHNER (nur Kauf) -->
+<div id="fin-panel" class="max-w-7xl mx-auto px-4 pb-3">
+  <div class="bg-gray-900 border border-gray-800 rounded-xl p-4">
+    <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+      <h3 class="text-sm font-semibold text-indigo-300">💰 Vollfinanzierungs-Rechner
+        <span class="text-xs text-gray-500 font-normal">– rechnet alle Kauf-Objekte live neu</span></h3>
+      <button onclick="resetFinancing()" class="text-xs text-gray-400 hover:text-gray-200">↺ Standardwerte</button>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-3">
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Zins p.a. <span id="fin-zins-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-zins" type="range" min="0.5" max="7" step="0.1" oninput="onFinChange()" class="w-full">
+      </div>
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Tilgung p.a. <span id="fin-tilg-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-tilg" type="range" min="1" max="5" step="0.1" oninput="onFinChange()" class="w-full">
+      </div>
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Eigenkapital <span id="fin-ek-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-ek" type="range" min="0" max="40" step="1" oninput="onFinChange()" class="w-full">
+      </div>
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Kaufnebenkosten <span id="fin-nk-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-nk" type="range" min="0" max="15" step="0.1" oninput="onFinChange()" class="w-full">
+      </div>
+    </div>
+    <p class="text-xs text-gray-500 mt-2" id="fin-hint"></p>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════ CARDS ════ -->
-<main class="max-w-7xl mx-auto px-4 pb-12">
+<!-- LISTE TAB -->
+<main id="view-liste" class="max-w-7xl mx-auto px-4 pb-12">
   <div id="loading" class="text-center py-24 text-gray-500">
-    <p class="text-4xl mb-3">⏳</p>
-    <p class="text-lg">Deals werden geladen …</p>
+    <p class="text-4xl mb-3">⏳</p><p class="text-lg">Deals werden geladen …</p>
   </div>
   <div id="empty" class="hidden text-center py-24 text-gray-600">
     <p class="text-5xl mb-4">🔍</p>
-    <p class="text-xl font-semibold text-gray-400 mb-2">Noch keine Deals</p>
-    <p class="text-sm">Der GitHub Actions Scraper läuft 3× täglich automatisch.</p>
+    <p class="text-xl font-semibold text-gray-400 mb-2">Keine Deals gefunden</p>
+    <p class="text-sm">Filter anpassen oder warten – Scraper läuft 3× täglich.</p>
   </div>
   <div id="cards" class="grid gap-4"></div>
 </main>
 
-<!-- ═══════════════════════════════════════════════ TOAST ════ -->
+<!-- KARTE TAB -->
+<div id="view-karte" class="hidden max-w-7xl mx-auto px-4 pb-12">
+  <div class="mb-3 text-xs text-gray-500" id="map-summary"></div>
+  <div id="map"></div>
+  <p class="text-xs text-gray-600 mt-2 text-center">Nur Deals mit GPS-Koordinaten werden angezeigt. Farbe = Deal-Score.</p>
+</div>
+
 <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl opacity-0 pointer-events-none z-50 transition-opacity duration-300"></div>
 
 <script>
-// ─── State ───────────────────────────────────────────────────────────────────
-let allDeals = [];
-let activeType  = 'alle';
-let activeScore = '';
+// ── State ─────────────────────────────────────────────────────────────────────
+let allDeals    = [];
+let config      = {};
+let activeType  = localStorage.getItem('immo_type')  || 'kauf';   // Standard: Kauf
+let activeScore = localStorage.getItem('immo_score') || '';
+let activePoi   = null;
+let activeTab   = 'liste';
+let activeBalkon = false;
+let favoritesOnly = false;
+let favorites = new Set(JSON.parse(localStorage.getItem('immo_favs') || '[]'));
+function saveFavorites() { localStorage.setItem('immo_favs', JSON.stringify([...favorites])); }
+let leafletMap  = null;
+let mapMarkers  = [];
+let dataLoadedAt = null;  // timestamp when data was loaded
 
-// ─── Laden ───────────────────────────────────────────────────────────────────
+// ── Vollfinanzierung (live) ───────────────────────────────────────────────────
+const HAUSGELD       = 50;     // €/Mo. nicht umlagefähig
+let   standardZins   = 3.9;    // aktueller Standard-Bauzins (aus data/zins.json)
+let   zinsStand      = '';     // Stand-Datum des Standardzinses
+const FIN_DEFAULTS   = { tilg: 2.0, ek: 0, nk: 7.0 };  // BW: 5% GrESt + 2% Notar/GB
+function loadFinPrefs() {
+  let s = {};
+  try { s = JSON.parse(localStorage.getItem('immo_fin') || '{}'); } catch(e){}
+  return { tilg: s.tilg ?? FIN_DEFAULTS.tilg, ek: s.ek ?? FIN_DEFAULTS.ek, nk: s.nk ?? FIN_DEFAULTS.nk };
+}
+// Zins startet immer beim aktuellen Standard; Tilgung/EK/NK werden gemerkt
+let finState = { zins: standardZins, ...loadFinPrefs() };
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function switchTab(tab) {
+  activeTab = tab;
+  document.getElementById('view-liste').classList.toggle('hidden', tab !== 'liste');
+  document.getElementById('view-karte').classList.toggle('hidden', tab !== 'karte');
+  document.getElementById('tab-liste').classList.toggle('active', tab === 'liste');
+  document.getElementById('tab-karte').classList.toggle('active', tab !== 'liste');
+  if (tab === 'karte') renderMap();
+}
+
+// ── Haversine ─────────────────────────────────────────────────────────────────
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371000;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) *
+            Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function fmtDist(m) {
+  return m < 1000 ? Math.round(m) + ' m' : (m/1000).toFixed(1) + ' km';
+}
+
+function isNew(deal) {
+  if (!deal.first_seen) return false;
+  const age = (Date.now() - new Date(deal.first_seen).getTime()) / 1000 / 3600;
+  return age < 24;
+}
+
+// ── Load ──────────────────────────────────────────────────────────────────────
 async function loadData() {
   document.getElementById('loading').classList.remove('hidden');
   document.getElementById('cards').innerHTML = '';
   document.getElementById('empty').classList.add('hidden');
 
   try {
-    const res = await fetch('/data/deals.json?t=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    const [cfgRes, dataRes] = await Promise.all([
+      fetch('config.json?t=' + Date.now()),
+      fetch('data/deals.json?t=' + Date.now())
+    ]);
+    config   = await cfgRes.json();
+    const data = await dataRes.json();
     allDeals = data.deals || [];
+    dataLoadedAt = Date.now();
 
-    // Stats-Leiste aktualisieren
-    const kauf  = allDeals.filter(d => d.listing_type === 'kauf');
-    const miete = allDeals.filter(d => d.listing_type === 'miete');
-    const gut   = allDeals.filter(d => ['strong_buy','gut'].includes(d.deal_score));
-    const ok    = allDeals.filter(d => ['watch','okay'].includes(d.deal_score));
-    const bad   = allDeals.filter(d => ['skip','teuer'].includes(d.deal_score));
+    document.getElementById('city-label').textContent = config.target_city || 'Mannheim';
+    buildPoiDropdown();
 
-    document.getElementById('stat-total').textContent = allDeals.length;
-    document.getElementById('stat-kauf').textContent  = kauf.length;
-    document.getElementById('stat-miete').textContent = miete.length;
-    document.getElementById('stat-gut').textContent   = gut.length;
-    document.getElementById('stat-ok').textContent    = ok.length;
-    document.getElementById('stat-bad').textContent   = bad.length;
+    // Aktuellen Standard-Bauzins laden → Ausgangsposition des Zinsreglers
+    await loadStandardZins();
+
+    recomputeFinancing();   // Vollfinanzierung mit aktuellen Reglern berechnen
+    updateStats();
+    const neu = allDeals.filter(isNew);
 
     const last = data.last_updated;
     document.getElementById('stat-last').textContent =
       last ? '🕐 ' + last.slice(0,16).replace('T',' ') + ' UTC' : '🕐 Noch nie';
 
     render();
-    showToast('✅ ' + allDeals.length + ' Deals geladen', 'success');
-  } catch (e) {
+    if (activeTab === 'karte') renderMap();
+    const neuHint = neu.length ? ` (${neu.length} neu 🆕)` : '';
+    showToast('✅ ' + allDeals.length + ' Deals geladen' + neuHint, 'success');
+  } catch(e) {
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('empty').classList.remove('hidden');
     showToast('❌ Ladefehler: ' + e.message, 'error');
   }
 }
 
-// ─── Filter ──────────────────────────────────────────────────────────────────
+function buildPoiDropdown() {
+  const sel = document.getElementById('poi-select');
+  sel.innerHTML = '<option value="">— Kein Radar —</option>';
+  getAllPois().forEach((poi, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = poi.name;
+    sel.appendChild(opt);
+  });
+}
+
+function getAllPois() {
+  const pois = [];
+  if (config.default_poi) pois.push(config.default_poi);
+  (config.alternative_pois || []).forEach(p => pois.push(p));
+  return pois;
+}
+
+function onPoiChange() {
+  const val = document.getElementById('poi-select').value;
+  activePoi = val === '' ? null : (getAllPois()[parseInt(val)] || null);
+  render();
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────────
 function setType(t) {
   activeType = t;
+  localStorage.setItem('immo_type', t);
+  const fp = document.getElementById('fin-panel');
+  if (fp) fp.classList.toggle('hidden', t === 'miete');   // Rechner nur bei Kauf/Alle
   document.querySelectorAll('.type-btn').forEach(b => {
     b.classList.remove('bg-indigo-600','text-white');
-    b.classList.add('bg-gray-800','text-gray-300');
+    b.classList.add('bg-gray-800', b.id === 'btn-alle' ? 'text-gray-400' : 'text-gray-300');
   });
   const btn = document.getElementById('btn-' + t);
-  if (btn) { btn.classList.add('bg-indigo-600','text-white'); btn.classList.remove('bg-gray-800','text-gray-300'); }
+  if (btn) { btn.classList.add('bg-indigo-600','text-white'); btn.classList.remove('bg-gray-800','text-gray-300','text-gray-400'); }
   render();
 }
 
 function setScore(s) {
   activeScore = s;
+  localStorage.setItem('immo_score', s);
   document.querySelectorAll('.score-btn').forEach(b => {
     b.classList.remove('bg-indigo-600','text-white');
     b.classList.add('bg-gray-800','text-gray-300');
@@ -188,37 +376,344 @@ function setScore(s) {
   render();
 }
 
-// ─── Render ──────────────────────────────────────────────────────────────────
-function render() {
-  document.getElementById('loading').classList.add('hidden');
+function resetFilters() {
+  activeType  = 'kauf';   // Standard: Kauf
+  activeScore = '';
+  activePoi   = null;
+  const st = document.getElementById('search-text'); if (st) st.value = '';
+  document.getElementById('poi-select').value    = '';
+  document.getElementById('radius-select').value = '0';
+  document.getElementById('zimmer-min').value    = '1';
+  document.getElementById('zimmer-max').value    = '';
+  document.getElementById('sort-select').value   = 'default';
+  activeBalkon = false;
+  const bBtn = document.getElementById('btn-balkon');
+  if (bBtn) { bBtn.classList.remove('bg-green-800','text-green-200','border-green-600'); bBtn.classList.add('bg-gray-800','text-gray-300','border-gray-700'); }
+  favoritesOnly = false;
+  const fBtn = document.getElementById('btn-favs');
+  if (fBtn) { fBtn.classList.remove('bg-yellow-800','text-yellow-200','border-yellow-600'); fBtn.classList.add('bg-gray-800','text-gray-300','border-gray-700'); }
+  setType('kauf');
+  setScore('');
+}
 
-  const zimMin = parseFloat(document.getElementById('zimmer-min').value) || null;
-  const zimMax = parseFloat(document.getElementById('zimmer-max').value) || null;
+function toggleBalkon() {
+  activeBalkon = !activeBalkon;
+  const btn = document.getElementById('btn-balkon');
+  if (activeBalkon) {
+    btn.classList.remove('bg-gray-800','text-gray-300','border-gray-700');
+    btn.classList.add('bg-green-800','text-green-200','border-green-600');
+  } else {
+    btn.classList.remove('bg-green-800','text-green-200','border-green-600');
+    btn.classList.add('bg-gray-800','text-gray-300','border-gray-700');
+  }
+  render();
+}
 
-  let filtered = allDeals.filter(d => {
+function toggleFavoritesOnly() {
+  favoritesOnly = !favoritesOnly;
+  const btn = document.getElementById('btn-favs');
+  if (favoritesOnly) {
+    btn.classList.remove('bg-gray-800','text-gray-300','border-gray-700');
+    btn.classList.add('bg-yellow-800','text-yellow-200','border-yellow-600');
+  } else {
+    btn.classList.remove('bg-yellow-800','text-yellow-200','border-yellow-600');
+    btn.classList.add('bg-gray-800','text-gray-300','border-gray-700');
+  }
+  render();
+}
+
+// ── Vollfinanzierung: Berechnung & UI ─────────────────────────────────────────
+async function loadStandardZins() {
+  try {
+    const r = await fetch('data/zins.json?t=' + Date.now());
+    if (r.ok) {
+      const j = await r.json();
+      if (j && typeof j.zins === 'number' && j.zins > 0 && j.zins < 15) {
+        standardZins = +j.zins.toFixed(1);
+        zinsStand    = j.stand || '';
+      }
+    }
+  } catch(e) { /* Fallback: standardZins bleibt 3.9 */ }
+  finState.zins = standardZins;   // Ausgangsposition des Reglers
+  syncFinInputs();
+}
+function syncFinInputs() {
+  document.getElementById('fin-zins').value = finState.zins;
+  document.getElementById('fin-tilg').value = finState.tilg;
+  document.getElementById('fin-ek').value   = finState.ek;
+  document.getElementById('fin-nk').value   = finState.nk;
+  updateFinOut();
+}
+function updateFinOut() {
+  document.getElementById('fin-zins-out').textContent = finState.zins.toFixed(1) + ' %';
+  document.getElementById('fin-tilg-out').textContent = finState.tilg.toFixed(1) + ' %';
+  document.getElementById('fin-ek-out').textContent   = Math.round(finState.ek) + ' %';
+  document.getElementById('fin-nk-out').textContent   = finState.nk.toFixed(1) + ' %';
+  const annu = (finState.zins + finState.tilg).toFixed(1);
+  const ekTxt = finState.ek > 0 ? `${Math.round(finState.ek)} % Eigenkapital` : 'Vollfinanzierung (0 % EK)';
+  const standTxt = zinsStand ? ` · Standardzins-Stand ${zinsStand}` : '';
+  document.getElementById('fin-hint').textContent =
+    `${ekTxt} · Kaufpreis + ${finState.nk.toFixed(1)} % Nebenkosten · Annuität ${annu} % · Hausgeld ${HAUSGELD} €/Mo.${standTxt}`;
+}
+function onFinChange() {
+  finState = {
+    zins: parseFloat(document.getElementById('fin-zins').value),
+    tilg: parseFloat(document.getElementById('fin-tilg').value),
+    ek:   parseFloat(document.getElementById('fin-ek').value),
+    nk:   parseFloat(document.getElementById('fin-nk').value),
+  };
+  localStorage.setItem('immo_fin', JSON.stringify({ tilg: finState.tilg, ek: finState.ek, nk: finState.nk }));
+  updateFinOut();
+  recomputeFinancing();
+  updateStats();
+  render();
+}
+function resetFinancing() {
+  finState = { zins: standardZins, ...FIN_DEFAULTS };
+  localStorage.setItem('immo_fin', JSON.stringify(FIN_DEFAULTS));
+  syncFinInputs();
+  recomputeFinancing();
+  updateStats();
+  render();
+}
+function recomputeFinancing() {
+  const z = finState.zins/100, t = finState.tilg/100;
+  const ekF = finState.ek/100, nkF = finState.nk/100;
+  allDeals.forEach(d => {
+    if (d.listing_type !== 'kauf' || !d.kaufpreis || !d.kaltmiete) return;
+    const gesamt   = d.kaufpreis * (1 + nkF);
+    const eigen    = d.kaufpreis * ekF;
+    const darlehen = Math.max(0, gesamt - eigen);
+    const bankrate = darlehen * (z + t) / 12;
+    const zinsLast = darlehen * z / 12;
+    d.bankrate_monat       = Math.round(bankrate);
+    d.cashflow_monat       = Math.round(d.kaltmiete - bankrate - HAUSGELD);
+    d.cashflow_vor_tilgung = Math.round(d.kaltmiete - zinsLast - HAUSGELD);
+    d.bruttorendite_pct    = +(d.kaltmiete * 12 / d.kaufpreis * 100).toFixed(2);
+    d.kaufpreisfaktor      = +(d.kaufpreis / (d.kaltmiete * 12)).toFixed(1);
+    d.deal_score = d.cashflow_monat >= 0 ? 'strong_buy'
+                 : d.cashflow_monat >= -150 ? 'watch' : 'skip';
+  });
+}
+function updateStats() {
+  const cnt = (f) => allDeals.filter(f).length;
+  document.getElementById('stat-total').textContent = allDeals.length;
+  document.getElementById('stat-kauf').textContent  = cnt(d => d.listing_type === 'kauf');
+  document.getElementById('stat-miete').textContent = cnt(d => d.listing_type === 'miete');
+  document.getElementById('stat-gut').textContent   = cnt(d => ['strong_buy','gut'].includes(d.deal_score));
+  document.getElementById('stat-ok').textContent    = cnt(d => ['watch','okay'].includes(d.deal_score));
+  document.getElementById('stat-bad').textContent   = cnt(d => ['skip','teuer'].includes(d.deal_score));
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function applySort(arr) {
+  const s = document.getElementById('sort-select').value;
+  // Kauf-Standardansicht: beste Cashflows (Vollfinanzierung) zuerst
+  if (s === 'default' && activeType === 'kauf') {
+    return [...arr].sort((a, b) =>
+      (b.cashflow_monat ?? -1e9) - (a.cashflow_monat ?? -1e9));
+  }
+  if (s === 'preis_asc') {
+    return [...arr].sort((a, b) => {
+      const pa = a.kaufpreis || a.kaltmiete || 0;
+      const pb = b.kaufpreis || b.kaltmiete || 0;
+      return pa - pb;
+    });
+  }
+  if (s === 'preis_desc') {
+    return [...arr].sort((a, b) => {
+      const pa = a.kaufpreis || a.kaltmiete || 0;
+      const pb = b.kaufpreis || b.kaltmiete || 0;
+      return pb - pa;
+    });
+  }
+  if (s === 'datum_desc') {
+    return [...arr].sort((a, b) =>
+      new Date(b.first_seen || 0) - new Date(a.first_seen || 0)
+    );
+  }
+  if (s === 'cashflow_desc') {
+    return [...arr].sort((a, b) =>
+      (b.cashflow_monat ?? -99999) - (a.cashflow_monat ?? -99999)
+    );
+  }
+  if (s === 'deviation_asc') {
+    return [...arr].sort((a, b) =>
+      (a.deal_deviation_pct ?? 999) - (b.deal_deviation_pct ?? 999)
+    );
+  }
+  if (s === 'score_asc') {
+    const o = {strong_buy:0, gut:0, watch:1, okay:1, skip:2, teuer:2};
+    return [...arr].sort((a,b) => (o[a.deal_score]??3) - (o[b.deal_score]??3));
+  }
+  if (s === 'score_desc') {
+    const o = {strong_buy:0, gut:0, watch:1, okay:1, skip:2, teuer:2};
+    return [...arr].sort((a,b) => (o[b.deal_score]??3) - (o[a.deal_score]??3));
+  }
+  return arr;
+}
+
+function getFiltered() {
+  const zimMin  = parseFloat(document.getElementById('zimmer-min').value) || null;
+  const zimMax  = parseFloat(document.getElementById('zimmer-max').value) || null;
+  const maxDist = parseInt(document.getElementById('radius-select').value) || 0;
+  const q       = (document.getElementById('search-text')?.value || '').toLowerCase().trim();
+
+  let filtered = allDeals.map(d => {
+    let dist = null;
+    if (activePoi && d.latitude != null && d.longitude != null) {
+      dist = haversine(activePoi.latitude, activePoi.longitude, d.latitude, d.longitude);
+    }
+    return { ...d, _dist: dist };
+  }).filter(d => {
     if (activeType !== 'alle' && d.listing_type !== activeType) return false;
     if (activeScore) {
       const s = d.deal_score || '';
       if (activeScore === 'skip' && !['skip','teuer'].includes(s)) return false;
       if (activeScore !== 'skip' && s !== activeScore) return false;
     }
-    if (zimMin !== null && d.zimmer !== null && d.zimmer !== undefined && d.zimmer < zimMin) return false;
-    if (zimMax !== null && d.zimmer !== null && d.zimmer !== undefined && d.zimmer > zimMax) return false;
+    const zi = d.zimmeranzahl;
+    if (zimMin !== null && zi != null && zi < zimMin) return false;
+    if (zimMax !== null && zi != null && zi > zimMax) return false;
+    if (maxDist > 0 && activePoi) {
+      if (d._dist === null) return false;
+      if (d._dist > maxDist) return false;
+    }
+    if (activeBalkon && !d.hat_balkon) return false;
+    if (favoritesOnly && !favorites.has(d.url)) return false;
+    if (q) {
+      const hay = ((d.title||'') + ' ' + (d.stadtteil||'') + ' ' +
+                   (d.adresse||'') + ' ' + (d.quadrat||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
     return true;
   });
 
-  const container = document.getElementById('cards');
-  document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
-  container.innerHTML = filtered.map(renderCard).join('');
+  // POI sort takes priority, else apply user sort
+  if (activePoi) {
+    filtered.sort((a, b) => (a._dist || 999999) - (b._dist || 999999));
+  } else {
+    filtered = applySort(filtered);
+  }
+  return filtered;
 }
 
-// ─── Card ─────────────────────────────────────────────────────────────────────
-function renderCard(d) {
-  const isKauf  = d.listing_type === 'kauf';
-  const isMiete = d.listing_type === 'miete';
-  const score   = d.deal_score || '';
+function render() {
+  document.getElementById('loading').classList.add('hidden');
 
-  // Score-Label & Farbe
+  const filtered = getFiltered();
+
+  const parts = [];
+  if (activeType !== 'alle') parts.push(activeType === 'kauf' ? '🏠 Kauf' : '🔑 Miete');
+  if (activeScore) parts.push('Score: ' + activeScore);
+  if (activePoi) parts.push('📍 ' + activePoi.name + (parseInt(document.getElementById('radius-select').value) > 0 ? ' ≤ ' + fmtDist(parseInt(document.getElementById('radius-select').value)) : ''));
+  if (parseFloat(document.getElementById('zimmer-min').value) > 1) parts.push('ab ' + document.getElementById('zimmer-min').value + ' Zi.');
+  const summary = document.getElementById('filter-summary');
+  summary.textContent = (parts.length ? 'Filter: ' + parts.join(' · ') + ' → ' : '') +
+    filtered.length + ' Ergebnis' + (filtered.length !== 1 ? 'se' : '');
+
+  const container = document.getElementById('cards');
+  document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
+  container.innerHTML = filtered.map(d => renderCard(d, activePoi)).join('');
+
+  if (activeTab === 'karte') renderMap();
+}
+
+// ── Map ───────────────────────────────────────────────────────────────────────
+const scoreColors = {
+  strong_buy: '#16a34a', watch: '#ca8a04', skip: '#dc2626',
+  gut: '#16a34a', okay: '#ca8a04', teuer: '#dc2626',
+};
+
+function renderMap() {
+  const filtered = getFiltered().filter(d => d.latitude != null && d.longitude != null);
+
+  document.getElementById('map-summary').textContent =
+    filtered.length + ' Deals mit GPS (von ' + allDeals.filter(d => d.latitude != null).length + ' gesamt)';
+
+  if (!leafletMap) {
+    leafletMap = L.map('map').setView([49.485, 8.465], 13);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap | © CARTO',
+      maxZoom: 19,
+    }).addTo(leafletMap);
+  }
+
+  // Clear old markers
+  mapMarkers.forEach(m => m.remove());
+  mapMarkers = [];
+
+  // Add POI markers
+  getAllPois().forEach(poi => {
+    const poiIcon = L.divIcon({
+      html: '<div style="background:#4f46e5;width:14px;height:14px;border-radius:50%;border:2px solid #818cf8;"></div>',
+      iconSize: [14, 14], iconAnchor: [7, 7], className: ''
+    });
+    const m = L.marker([poi.latitude, poi.longitude], { icon: poiIcon })
+      .addTo(leafletMap)
+      .bindPopup('<b>📍 ' + poi.name + '</b>');
+    mapMarkers.push(m);
+  });
+
+  filtered.forEach(d => {
+    const color = scoreColors[d.deal_score] || '#6b7280';
+    const isKauf = d.listing_type === 'kauf';
+    const preis = isKauf
+      ? (d.kaufpreis ? Math.round(d.kaufpreis).toLocaleString('de') + ' €' : '–')
+      : (d.kaltmiete ? Math.round(d.kaltmiete).toLocaleString('de') + ' €/Mo.' : '–');
+    const newBadge = isNew(d) ? '<span style="background:#7c3aed;color:#fff;padding:1px 5px;border-radius:4px;font-size:10px;margin-left:4px">NEU</span>' : '';
+
+    const icon = L.divIcon({
+      html: `<div style="background:${color};width:12px;height:12px;border-radius:50%;border:2px solid rgba(255,255,255,.4);"></div>`,
+      iconSize: [12, 12], iconAnchor: [6, 6], className: ''
+    });
+
+    const popup = `
+      <div style="min-width:220px;font-size:12px">
+        <b style="font-size:13px">${d.title.slice(0,70)}</b>${newBadge}<br>
+        <span style="color:${color};font-weight:700">${(d.deal_score||'').replace('_',' ').toUpperCase()}</span>
+        · ${isKauf ? '🏠' : '🔑'} ${preis}<br>
+        ${d.stadtteil ? '🏘 ' + d.stadtteil + '<br>' : ''}
+        ${d.zimmeranzahl ? '🛏 ' + d.zimmeranzahl + ' Zi.' : ''}
+        ${d.quadratmeter ? ' · ' + d.quadratmeter + ' m²' : ''}<br>
+        <a href="${d.url}" target="_blank" style="color:#818cf8">→ Anzeige öffnen</a>
+      </div>`;
+
+    const m = L.marker([d.latitude, d.longitude], { icon })
+      .addTo(leafletMap)
+      .bindPopup(popup);
+    mapMarkers.push(m);
+  });
+}
+
+function toggleFav(evt, url) {
+  evt.preventDefault(); evt.stopPropagation();
+  if (favorites.has(url)) { favorites.delete(url); } else { favorites.add(url); }
+  saveFavorites();
+  render();
+}
+
+function renderSparkline(ph) {
+  if (!ph || ph.length < 2) return '';
+  const prices = ph.map(p => p.price);
+  const mn = Math.min(...prices), mx = Math.max(...prices);
+  const range = mx - mn || 1;
+  const W = 80, H = 24, P = 3;
+  const pts = prices.map((p, i) => {
+    const x = P + (i / (prices.length - 1)) * (W - 2*P);
+    const y = H - P - ((p - mn) / range) * (H - 2*P);
+    return x.toFixed(1) + ',' + y.toFixed(1);
+  }).join(' ');
+  const clr = prices[prices.length-1] <= prices[0] ? '#16a34a' : '#dc2626';
+  const last = pts.split(' ').pop().split(',');
+  return `<svg width="${W}" height="${H}" style="display:inline-block;vertical-align:middle;margin:0 4px"><polyline points="${pts}" fill="none" stroke="${clr}" stroke-width="1.5" stroke-linejoin="round"/><circle cx="${last[0]}" cy="${last[1]}" r="2.5" fill="${clr}"/></svg>`;
+}
+
+// ── Card ──────────────────────────────────────────────────────────────────────
+function renderCard(d, poi) {
+  const isKauf = d.listing_type === 'kauf';
+  const score  = d.deal_score || '';
+
   const scoreLabels = {
     strong_buy: ['🟢 Strong Buy', 'bg-green-900 text-green-200'],
     watch:      ['🟡 Watch',      'bg-yellow-900 text-yellow-200'],
@@ -229,49 +724,82 @@ function renderCard(d) {
   };
   const [scoreLabel, scoreCls] = scoreLabels[score] || ['⚪ Unklar', 'bg-gray-700 text-gray-400'];
 
-  // Typ-Badge
   const typeBadge = isKauf
     ? '<span class="badge bg-blue-900 text-blue-200">🏠 Kauf</span>'
     : '<span class="badge bg-purple-900 text-purple-200">🔑 Miete</span>';
 
-  // Quelle
-  const srcColors = {
-    kleinanzeigen: 'bg-orange-900 text-orange-200',
-    wg_gesucht:    'bg-teal-900 text-teal-200',
-    immonet:       'bg-sky-900 text-sky-200',
-    immoscout24:   'bg-rose-900 text-rose-200',
-  };
-  const srcCls = srcColors[d.source] || 'bg-gray-700 text-gray-400';
-
-  // Quadrat
-  const quadratBadge = d.quadrat
-    ? `<span class="badge bg-indigo-900 text-indigo-200">📍 ${d.quadrat}</span>`
+  const neuBadge = isNew(d)
+    ? '<span class="badge bg-violet-900 text-violet-200">🆕 Neu</span>'
     : '';
 
-  // Feature-Tags
-  const featureTags = (d.features || [])
-    .map(f => `<span class="tag">${f}</span>`).join('');
+  const balkonBadge = d.hat_balkon
+    ? '<span class="badge bg-green-950 text-green-300 border border-green-800">🌿 Balkon</span>'
+    : '<span class="badge bg-gray-800 text-gray-600">🚫 kein Balkon</span>';
 
-  // Metazeile (Datum)
+  let distBadge = '';
+  if (d._dist !== null && poi) {
+    const m = d._dist;
+    const cls = m < 1000 ? 'dist-close' : m < 3000 ? 'dist-mid' : 'dist-far';
+    distBadge = `<span class="badge ${cls}">📡 ${fmtDist(m)} bis ${poi.name}</span>`;
+  } else if (d.latitude == null && poi) {
+    distBadge = '<span class="badge bg-gray-800 text-gray-500">📡 Kein GPS</span>';
+  }
+
+  let locBadges = '';
+  if (d.quadrat)   locBadges += `<span class="badge bg-indigo-900 text-indigo-200">📍 ${d.quadrat}</span>`;
+  if (d.stadtteil) locBadges += `<span class="badge bg-indigo-800 text-indigo-200">🏘 ${d.stadtteil}</span>`;
+
+  const zimBadge = d.zimmeranzahl != null
+    ? `<span class="badge bg-gray-700 text-gray-200">🛏 ${d.zimmeranzahl} Zi.</span>` : '';
+
+  const boniTags = (d.boni || []).map(b => `<span class="tag">${b}</span>`).join('');
+  const srcColors = {
+    kleinanzeigen: 'bg-orange-900 text-orange-200',
+    immoscout24:   'bg-sky-900 text-sky-200',
+    immowelt:      'bg-teal-900 text-teal-200',
+    gbg:           'bg-emerald-900 text-emerald-200',
+    vonovia:       'bg-rose-900 text-rose-200',
+  };
+  const srcCls  = srcColors[d.source] || 'bg-gray-700 text-gray-400';
   const firstSeen = d.first_seen ? d.first_seen.slice(0,10) : '–';
 
-  // ── Kauf-Kennzahlen ──────────────────────────────────────────────
+  // Price history block
+  let priceHistBlock = '';
+  const ph = d.price_history;
+  if (ph && ph.length > 1) {
+    const oldest = ph[0];
+    const latest = ph[ph.length - 1];
+    const diff   = latest.price - oldest.price;
+    const pct    = ((diff / oldest.price) * 100).toFixed(1);
+    const trend  = diff < 0 ? '📉' : '📈';
+    const color  = diff < 0 ? 'text-green-400' : 'text-red-400';
+    const rows   = ph.slice(-5).map(p =>
+      `<span class="text-gray-400">${p.date.slice(0,10)}:</span> <span class="text-gray-200">${Math.round(p.price).toLocaleString('de')} €</span>`
+    ).join(' · ');
+    priceHistBlock = `
+    <details class="price-hist mt-2">
+      <summary class="flex items-center gap-1">${trend} Preisverlauf: <span class="${color} font-semibold">${diff > 0 ? '+' : ''}${Math.round(diff).toLocaleString('de')} € (${diff > 0 ? '+' : ''}${pct}%)</span>${renderSparkline(ph)} <span class="text-gray-600 text-xs">· ${ph.length} Einträge</span></summary>
+      <div class="mt-1 text-xs text-gray-500 pl-2">${rows}</div>
+    </details>`;
+  }
+
+  // Kennzahlen
   let kennzahlen = '';
   if (isKauf) {
-    const preis = d.kaufpreis ? fmtEuro(d.kaufpreis) : '–';
-    const miete = d.kaltmiete ? fmtEuro(d.kaltmiete) + '/Mo.' : '–';
-    const bank  = d.bankrate_monat ? fmtEuro(d.bankrate_monat) + '/Mo.' : '–';
-    const cf    = d.cashflow_monat !== undefined && d.cashflow_monat !== null
-      ? (d.cashflow_monat >= 0 ? '+' : '') + fmtEuro(d.cashflow_monat) + '/Mo.'
-      : '–';
-    const cfCls = d.cashflow_monat >= 0
-      ? 'text-green-400 font-bold' : d.cashflow_monat >= -150
-      ? 'text-yellow-400 font-bold' : 'text-red-400 font-bold';
+    const preis = d.kaufpreis        ? fmtEuro(d.kaufpreis) : '–';
+    const miete = d.kaltmiete        ? fmtEuro(d.kaltmiete) + '/Mo.' : '–';
+    const bank  = d.bankrate_monat   ? fmtEuro(d.bankrate_monat) + '/Mo.' : '–';
+    const cf    = d.cashflow_monat != null
+      ? (d.cashflow_monat >= 0 ? '+' : '') + fmtEuro(d.cashflow_monat) + '/Mo.' : '–';
+    const cfCls = d.cashflow_monat >= 0 ? 'text-green-400 font-bold'
+      : d.cashflow_monat >= -150 ? 'text-yellow-400 font-bold' : 'text-red-400 font-bold';
+
+    const mieteLabel = d.miete_geschaetzt ? 'Kaltmiete* /Mo.' : 'Kaltmiete/Mo.';
 
     kennzahlen = `
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
         ${kz('Kaufpreis', preis)}
-        ${kz('Kaltmiete/Mo.', miete)}
+        ${kz(mieteLabel, miete)}
         ${kz('Bankrate/Mo.', bank)}
         <div class="bg-gray-800 rounded-lg px-3 py-2 text-center">
           <p class="text-gray-400 text-xs mb-0.5">Cashflow/Mo.</p>
@@ -279,27 +807,41 @@ function renderCard(d) {
         </div>
       </div>`;
 
-    if (d.wohnflaeche_qm && d.kaufpreis) {
-      const qmPreis = Math.round(d.kaufpreis / d.wohnflaeche_qm);
-      kennzahlen += `<p class="text-xs text-gray-500 mt-2">🏠 ${d.wohnflaeche_qm} m² · ${qmPreis.toLocaleString('de')} €/m²
-        ${d.zimmer ? ' · ' + d.zimmer + ' Zi.' : ''}</p>`;
+    // Rendite-Kennzahlen + Cashflow vor Tilgung
+    const renditeRow = [];
+    if (d.bruttorendite_pct != null) {
+      const rCls = d.bruttorendite_pct >= 4 ? 'text-green-400' : d.bruttorendite_pct >= 3 ? 'text-yellow-400' : 'text-red-400';
+      renditeRow.push(`<span>📈 Bruttorendite: <strong class="${rCls}">${d.bruttorendite_pct.toFixed(2)} %</strong></span>`);
     }
-  }
-
-  // ── Miete-Kennzahlen ─────────────────────────────────────────────
-  if (isMiete) {
-    const kalt  = d.kaltmiete  ? fmtEuro(d.kaltmiete)  + '/Mo.' : '–';
-    const nk    = d.nebenkosten ? fmtEuro(d.nebenkosten) + '/Mo.' : '–';
-    const warm  = d.warmmiete  ? fmtEuro(d.warmmiete)  + '/Mo.' : '–';
-    const qm    = d.kaltmiete_qm ? d.kaltmiete_qm.toFixed(2) + ' €/m²' : '–';
-    const markt = d.expected_market_qm ? d.expected_market_qm.toFixed(2) + ' €/m²' : '–';
+    if (d.kaufpreisfaktor != null) {
+      const fCls = d.kaufpreisfaktor <= 25 ? 'text-green-400' : d.kaufpreisfaktor <= 30 ? 'text-yellow-400' : 'text-red-400';
+      renditeRow.push(`<span>✖️ Kauffaktor: <strong class="${fCls}">${d.kaufpreisfaktor.toFixed(1)}</strong></span>`);
+    }
+    if (d.cashflow_vor_tilgung != null) {
+      const v = d.cashflow_vor_tilgung;
+      const vCls = v >= 0 ? 'text-green-400' : 'text-gray-300';
+      renditeRow.push(`<span>💧 vor Tilgung: <strong class="${vCls}">${v >= 0 ? '+' : ''}${fmtEuro(v)}/Mo.</strong></span>`);
+    }
+    if (renditeRow.length) {
+      kennzahlen += `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-400">${renditeRow.join('')}</div>`;
+    }
+    if (d.quadratmeter && d.kaufpreis) {
+      kennzahlen += `<p class="text-xs text-gray-500 mt-1">🏠 ${d.quadratmeter} m² · ${Math.round(d.kaufpreis/d.quadratmeter).toLocaleString('de')} €/m²</p>`;
+    }
+    if (d.miete_geschaetzt) {
+      kennzahlen += `<p class="text-xs text-gray-600 mt-1 italic">* Kaltmiete geschätzt (Mietspiegel) – Cashflow ist eine Annahme</p>`;
+    }
+  } else {
+    const kalt = d.kaltmiete    ? fmtEuro(d.kaltmiete)   + '/Mo.' : '–';
+    const nk   = d.nebenkosten  ? fmtEuro(d.nebenkosten)  + '/Mo.' : '–';
+    const warm = d.warmmiete    ? fmtEuro(d.warmmiete)    + '/Mo.' : '–';
+    const qm   = d.kaltmiete_qm ? d.kaltmiete_qm.toFixed(2) + ' €/m²' : '–';
 
     let devBadge = '';
-    if (d.deal_deviation_pct !== undefined && d.deal_deviation_pct !== null) {
+    if (d.deal_deviation_pct != null) {
       const dev = d.deal_deviation_pct;
-      const devCls = dev <= -10 ? 'deviation-gut' : dev <= 10 ? 'deviation-okay' : 'deviation-teuer';
-      const sign = dev > 0 ? '+' : '';
-      devBadge = `<span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${devCls}">${sign}${dev.toFixed(1)}% vs. Markt</span>`;
+      const cls = dev <= -10 ? 'dev-gut' : dev <= 10 ? 'dev-okay' : 'dev-teuer';
+      devBadge = `<span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${cls}">${dev>0?'+':''}${dev.toFixed(1)}% vs. Markt</span>`;
     }
 
     kennzahlen = `
@@ -310,42 +852,70 @@ function renderCard(d) {
         ${kz('Preis/m²', qm)}
       </div>
       <div class="flex flex-wrap gap-2 mt-2 items-center text-xs text-gray-400">
-        <span>📊 Markt-Benchmark: <strong class="text-gray-300">${markt}</strong></span>
+        ${d.expected_market_qm ? `<span>📊 Markt: <strong class="text-gray-300">${d.expected_market_qm.toFixed(2)} €/m²</strong></span>` : ''}
         ${devBadge}
-        ${d.wohnflaeche_qm ? `· 🏠 ${d.wohnflaeche_qm} m²` : ''}
-        ${d.zimmer ? `· ${d.zimmer} Zi.` : ''}
+        ${d.quadratmeter ? `<span>· 🏠 ${d.quadratmeter} m²</span>` : ''}
       </div>`;
   }
 
-  // ── KI-Einschätzung ────────────────────────────────────────────────
-  const aiBlock = d.einschaetzung
-    ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">
-         🤖 ${d.einschaetzung}
-       </div>`
+  const aiBlock = d.kurz_bewertung
+    ? `<div class="mt-3 text-xs text-gray-400 italic border-l-2 border-indigo-700 pl-3">🤖 ${d.kurz_bewertung}</div>`
     : '';
 
+  // Umfeld accordion
+  let umfeldBlock = '';
+  const ua = d.umfeld_analyse;
+  if (ua && (ua.demografie || ua.vibe_sicherheit || ua.einschaetzung_student || ua.einschaetzung_investor)) {
+    const uRow = (icon, label, text) => text ? `
+      <div class="umfeld-box">
+        <div class="umfeld-label">${icon} ${label}</div>
+        <div class="umfeld-text">${text}</div>
+      </div>` : '';
+
+    umfeldBlock = `
+    <details class="umfeld mt-3 border border-gray-700 rounded-lg overflow-hidden">
+      <summary class="px-4 py-2.5 bg-gray-800 text-xs font-semibold text-indigo-300 hover:bg-gray-700 transition-colors">
+        📍 Umfeld- &amp; Lageanalyse
+      </summary>
+      <div class="px-4 pb-4 pt-1 bg-gray-900">
+        <div class="umfeld-row">
+          ${uRow('👥', 'Demografie', ua.demografie)}
+          ${uRow('🛡️', 'Vibe &amp; Sicherheit', ua.vibe_sicherheit)}
+          ${uRow('🎓', 'Für Studenten', ua.einschaetzung_student)}
+          ${uRow('💼', 'Für Investoren', ua.einschaetzung_investor)}
+        </div>
+      </div>
+    </details>`;
+  }
+
   return `
-  <div class="bg-gray-900 rounded-xl p-5 score-${score} hover:bg-gray-800 transition-colors">
+  <div class="bg-gray-900 rounded-xl p-5 score-${score} hover:bg-gray-800 transition-colors${d.status === 'offline' ? ' opacity-50' : ''}">
     <div class="flex flex-wrap gap-2 items-center mb-2">
       <span class="badge ${scoreCls}">${scoreLabel}</span>
       ${typeBadge}
-      ${quadratBadge}
+      ${d.status === 'offline' ? '<span class="badge bg-gray-700 text-gray-400">⚠️ Offline</span>' : ''}
+      ${neuBadge}
+      ${balkonBadge}
+      ${zimBadge}
+      ${distBadge}
+      ${locBadges}
       <span class="badge ${srcCls}">${d.source.replace('_',' ')}</span>
-      <span class="text-xs text-gray-500 ml-auto">📅 ${firstSeen}</span>
+      <button onclick="toggleFav(event,'${d.url}')" id="fav-${d._hash||d.url.slice(-8)}" class="ml-auto text-lg leading-none hover:scale-110 transition-transform" title="Zu Favoriten">${favorites.has(d.url) ? '⭐' : '☆'}</button>
+      <span class="text-xs text-gray-500">📅 ${firstSeen}</span>
     </div>
-
     <a href="${d.url}" target="_blank" rel="noopener noreferrer"
        class="text-white font-semibold text-sm hover:text-indigo-400 transition-colors line-clamp-2">
       ${d.title}
     </a>
-
-    ${featureTags ? `<div class="mt-2">${featureTags}</div>` : ''}
+    ${boniTags ? `<div class="mt-2">${boniTags}</div>` : ''}
+    ${d.adresse ? `<p class="text-xs text-gray-500 mt-1">📌 ${d.adresse}</p>` : ''}
     ${kennzahlen}
+    ${priceHistBlock}
     ${aiBlock}
+    ${umfeldBlock}
   </div>`;
 }
 
-// ─── Helfer ───────────────────────────────────────────────────────────────────
 function kz(label, value) {
   return `<div class="bg-gray-800 rounded-lg px-3 py-2 text-center">
     <p class="text-gray-400 text-xs mb-0.5">${label}</p>
@@ -353,21 +923,21 @@ function kz(label, value) {
   </div>`;
 }
 
-function fmtEuro(n) {
-  return Math.round(n).toLocaleString('de-DE') + ' €';
-}
+function fmtEuro(n) { return Math.round(n).toLocaleString('de-DE') + ' €'; }
 
 function showToast(msg, type='success') {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.className = `fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-semibold shadow-xl z-50 transition-opacity duration-300 ${
-    type === 'success' ? 'bg-green-700 text-white' : 'bg-red-700 text-white'
-  }`;
+    type==='success'?'bg-green-700 text-white':'bg-red-700 text-white'}`;
   t.style.opacity = '1';
   setTimeout(() => { t.style.opacity = '0'; }, 3500);
 }
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
+// Gespeicherten Filter-Zustand auf die Buttons anwenden (Standard: Kauf)
+syncFinInputs();
+setType(activeType);
+setScore(activeScore);
 loadData();
 </script>
 </body>

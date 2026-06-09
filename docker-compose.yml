@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  sniper:
+    build: .
+    container_name: immobilien-sniper
+    ports:
+      - "8000:8000"
+    volumes:
+      # Datenbank außerhalb des Containers persistieren
+      - ./data:/app/data
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=sqlite:////app/data/immobilien_sniper.db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/stats"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
