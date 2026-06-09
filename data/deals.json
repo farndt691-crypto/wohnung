@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T23:06:57.557606+00:00",
+  "last_updated": "2026-06-09T16:53:09.310403+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -6887,7 +6887,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-03T00:17:44.507199+00:00",
+      "last_seen": "2026-06-09T16:52:33.585013+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -7976,7 +7976,7 @@
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/vollstaendig-moeblierte-1-5-zimmer-wohnung-in-mannheim-feudenheim/3421429136-196-7975",
       "source": "kleinanzeigen",
-      "listing_type": "kauf",
+      "listing_type": "miete",
       "title": "vollständig möblierte 1,5 Zimmer-Wohnung in Mannheim-Feudenheim",
       "first_seen": "2026-05-30T11:58:14.721214+00:00",
       "last_seen": "2026-06-03T00:17:44.507199+00:00",
@@ -8002,13 +8002,14 @@
         }
       ],
       "quadratmeter": 52.0,
-      "kaufpreis": 950,
+      "kaufpreis": null,
       "kaltmiete": 624.0,
       "miete_geschaetzt": true,
-      "bankrate_monat": 4.35,
-      "cashflow_monat": 569.65,
-      "deal_score": "strong_buy",
-      "_hash": "aaab467a1fca"
+      "deal_score": "gut",
+      "_hash": "45bf19b4fb04",
+      "kaltmiete_qm": 12.0,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -31.4
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eine-schoene-4-zimmer-wohnung-naehe-franklin-mannheim-kaefertal/3212569412-196-7973",
@@ -12469,6 +12470,181 @@
       "quadratmeter": 90.0,
       "deal_score": "okay",
       "_hash": "68127d613fcb"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-studentenwohnheim/3431008430-203-9070",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Mannheim Studentenwohnheim",
+      "first_seen": "2026-06-09T16:52:33.585013+00:00",
+      "last_seen": "2026-06-09T16:52:33.585013+00:00",
+      "boni": [
+        "moebliert",
+        "Balkon"
+      ],
+      "kurz_bewertung": "Ideal für Studierende, Pendler oder Singles",
+      "zimmeranzahl": 2,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "Campo Novo, Mannheim Franklin",
+      "umfeld_analyse": {
+        "demografie": "Studierende, Pendler, Singles",
+        "vibe_sicherheit": "Gute Infrastruktur, aber möglicherweise laut",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mittelmäßig geeignet"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-09T16:52:33.585013+00:00",
+          "price": 600.0
+        }
+      ],
+      "etage": "4. Etage",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "quadratmeter": 20.0,
+      "kaltmiete": 600.0,
+      "nebenkosten": 0,
+      "warmmiete": 600,
+      "quadrat": "Franklin",
+      "kaltmiete_qm": 30.0,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": 66.7,
+      "deal_score": "teuer",
+      "_hash": "79b55dac4089"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/500-wunschgutschein-zum-einzug-schicke-2-zimmer-wohnung-im-zentrum-von-mannheim-vogelstang/3430748208-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "500 € Wunschgutschein* zum Einzug - Schicke 2-Zimmer-Wohnung Im Zentrum von Mannheim-Vogelstang",
+      "first_seen": "2026-06-09T16:52:33.585013+00:00",
+      "last_seen": "2026-06-09T16:52:33.585013+00:00",
+      "boni": [
+        "Balkon",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Schicke 2-Zimmer-Wohnung im Zentrum von Mannheim-Vogelstang",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
+        "vibe_sicherheit": "Gut, aber einige dunkle Ecken und Lärmbelästigung durch Straßenverkehr",
+        "einschaetzung_student": "Sehr geeignet, da nahe an der Uni und mit öffentlichen Verkehrsmitteln erreichbar",
+        "einschaetzung_investor": "Mäßig geeignet, da die Miete relativ hoch ist und die Lage nicht besonders attraktiv ist"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-09T16:52:33.585013+00:00",
+          "price": 137.0
+        }
+      ],
+      "etage": "5. Etage",
+      "baujahr": 1969,
+      "energieklasse": null,
+      "heizungsart": null,
+      "quadratmeter": 64.82,
+      "kaltmiete": 137.0,
+      "nebenkosten": 185,
+      "warmmiete": 1005,
+      "kaltmiete_qm": 2.11,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": -86.4,
+      "deal_score": "gut",
+      "_hash": "3b2f2ac4b886"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zkb-dachgeschoss-in-ruhiger-lage-mannheim-neckarstadt-west/3430683357-203-7980",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2 ZKB Dachgeschoss in ruhiger lage Mannheim -Neckarstadt West",
+      "first_seen": "2026-06-09T16:52:33.585013+00:00",
+      "last_seen": "2026-06-09T16:52:33.585013+00:00",
+      "boni": [],
+      "kurz_bewertung": "Moderne 2-Zimmer-Wohnung – ideal für Singles, Paare oder WG geeignet",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "68169 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Singles und Paare",
+        "vibe_sicherheit": "ruhig und angenehm",
+        "einschaetzung_student": "gut",
+        "einschaetzung_investor": "mäßig"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-09T16:52:33.585013+00:00",
+          "price": 120.0
+        }
+      ],
+      "etage": "Dachgeschoss",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "quadratmeter": 50.0,
+      "kaltmiete": 120.0,
+      "nebenkosten": 120,
+      "warmmiete": 920,
+      "kaltmiete_qm": 2.4,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -83.4,
+      "deal_score": "gut",
+      "_hash": "706f4f1d8ff5"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/frisch-renoviertes-apartment-fuer-singles-in-mannheim-vogelstang-wartet-auf-sie-/3430631907-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Frisch renoviertes Apartment für Singles in Mannheim-Vogelstang wartet auf Sie!",
+      "first_seen": "2026-06-09T16:52:33.585013+00:00",
+      "last_seen": "2026-06-09T16:52:33.585013+00:00",
+      "boni": [
+        "Balkon",
+        "renoviert",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Frisch renoviertes Apartment für Singles in Mannheim-Vogelstang wartet auf Sie!",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Vogelstang ist ein beliebter Wohnort für Singles, Paare und kleine Familien.",
+        "vibe_sicherheit": "Das Wohnhaus bietet ein ruhiges und komfortables Umfeld.",
+        "einschaetzung_student": "Für Informatikstudenten ist Vogelstang wahrscheinlich nicht die beste Wahl, da es sich um einen Wohnort für Familien und Singles handelt.",
+        "einschaetzung_investor": "Vogelstang ist wahrscheinlich keine gute Kapitalanlage, da es sich um einen Wohnort für Familien und Singles handelt."
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-09T16:52:33.585013+00:00",
+          "price": 111.0
+        }
+      ],
+      "etage": "7. Etage",
+      "baujahr": 1969,
+      "energieklasse": null,
+      "heizungsart": null,
+      "quadratmeter": 38.7,
+      "kaltmiete": 111.0,
+      "nebenkosten": 111,
+      "warmmiete": 664,
+      "kaltmiete_qm": 2.87,
+      "expected_market_qm": 16.5,
+      "deal_deviation_pct": -82.6,
+      "deal_score": "gut",
+      "_hash": "ea51453104c3"
     }
   ]
 }
