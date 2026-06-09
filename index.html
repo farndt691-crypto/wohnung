@@ -480,7 +480,21 @@ function recomputeFinancing() {
   const z = finState.zins/100, t = finState.tilg/100;
   const ekF = finState.ek/100, nkF = finState.nk/100;
   allDeals.forEach(d => {
-    if (d.listing_type !== 'kauf' || !d.kaufpreis || !d.kaltmiete) return;
+    if (d.listing_type !== 'kauf') return;
+    // Plausibilitäts-Check: Kaufpreis < 20.000 € ist kein echter Kaufpreis
+    // (meist ein falsch einsortiertes Mietinserat, z. B. 950 €/Mo.)
+    if (d.kaufpreis && d.kaufpreis < 20000) {
+      d.kaufpreis_invalid    = true;
+      d.deal_score           = 'skip';
+      d.bankrate_monat       = null;
+      d.cashflow_monat       = null;
+      d.cashflow_vor_tilgung = null;
+      d.bruttorendite_pct    = null;
+      d.kaufpreisfaktor      = null;
+      return;
+    }
+    d.kaufpreis_invalid = false;
+    if (!d.kaufpreis || !d.kaltmiete) return;
     const gesamt   = d.kaufpreis * (1 + nkF);
     const eigen    = d.kaufpreis * ekF;
     const darlehen = Math.max(0, gesamt - eigen);
@@ -828,8 +842,11 @@ function renderCard(d, poi) {
     if (d.quadratmeter && d.kaufpreis) {
       kennzahlen += `<p class="text-xs text-gray-500 mt-1">🏠 ${d.quadratmeter} m² · ${Math.round(d.kaufpreis/d.quadratmeter).toLocaleString('de')} €/m²</p>`;
     }
-    if (d.miete_geschaetzt) {
+    if (d.miete_geschaetzt && !d.kaufpreis_invalid) {
       kennzahlen += `<p class="text-xs text-gray-600 mt-1 italic">* Kaltmiete geschätzt (Mietspiegel) – Cashflow ist eine Annahme</p>`;
+    }
+    if (d.kaufpreis_invalid) {
+      kennzahlen += `<p class="text-xs text-red-400 mt-1 font-semibold">⚠️ Preis unplausibel für einen Kauf (${fmtEuro(d.kaufpreis)}) – wahrscheinlich ein falsch einsortiertes Mietinserat. Wird beim nächsten Scan als Miete bereinigt.</p>`;
     }
   } else {
     const kalt = d.kaltmiete    ? fmtEuro(d.kaltmiete)   + '/Mo.' : '–';

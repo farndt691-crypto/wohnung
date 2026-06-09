@@ -215,6 +215,36 @@ def berechne_scores(deal, cfg):
     return deal
 
 
+def cleanup_deals(data, cfg):
+    """Bereinigt bestehende deals.json bei jedem Lauf:
+    - 'kauf' mit Mini-Preis (<20.000 €) → als Miete reklassifizieren (Monatsmiete)
+      bzw. bei unbrauchbarem Wert entfernen.
+    Korrigiert so auch Altdaten ohne kompletten Re-Scrape."""
+    kept, reclass, dropped = [], 0, 0
+    for d in data.get("deals", []):
+        if d.get("listing_type") == "kauf" and d.get("kaufpreis") and d["kaufpreis"] < 20_000:
+            p = d["kaufpreis"]
+            if 100 <= p <= 6_000:
+                d["listing_type"] = "miete"
+                if not d.get("kaltmiete"):
+                    d["kaltmiete"] = p
+                d["kaufpreis"] = None
+                for k in ("bankrate_monat", "cashflow_monat", "cashflow_vor_tilgung",
+                          "bruttorendite_pct", "kaufpreisfaktor"):
+                    d.pop(k, None)
+                berechne_scores(d, cfg)
+                d["_hash"] = compute_deal_hash(d.get("title", ""), "miete", d.get("source", ""))
+                reclass += 1
+            else:
+                dropped += 1
+                continue
+        kept.append(d)
+    data["deals"] = kept
+    if reclass or dropped:
+        log.info("Bereinigung: %d kauf→miete reklassifiziert, %d entfernt", reclass, dropped)
+    return data
+
+
 def build_deal(raw, ai, now_iso, cfg):
     deal = {
         "url":            raw["url"],
@@ -250,6 +280,20 @@ def build_deal(raw, ai, now_iso, cfg):
                 deal[k] = v
         if ai.get("listing_type") in ("kauf", "miete"):
             deal["listing_type"] = ai["listing_type"]
+
+    # Fehl-Kategorisierung korrigieren: "Kauf" mit Mini-Preis ist real ein
+    # (oft möbliertes) Mietinserat – der Preis ist die Monatsmiete.
+    if deal["listing_type"] == "kauf" and deal.get("kaufpreis") and deal["kaufpreis"] < 20_000:
+        p = deal["kaufpreis"]
+        if 100 <= p <= 6_000:
+            deal["listing_type"] = "miete"
+            if not deal.get("kaltmiete"):
+                deal["kaltmiete"] = p
+            deal["kaufpreis"] = None
+            log.info("   Reklassifiziert kauf→miete (Mini-Preis %.0f EUR): %s",
+                     p, deal.get("title", "")[:50])
+        else:
+            deal["kaufpreis"] = None  # unbrauchbarer Wert
 
     deal = berechne_scores(deal, cfg)
 
@@ -351,9 +395,11 @@ def extract_by_regex(title, raw_text, listing_type_hint, cfg):
         except ValueError:
             pass
 
-    # Preise: "275.000 EUR", "275.000,00 €", "275000€"
+    # Preise: "275.000 EUR", "1.045.000 €", "275.000,00 €", "275000€", "850 €"
+    # Alt1: Tausender mit Trennzeichen (führende Gruppe 1–3 Ziffern → auch Millionen
+    #       wie 1.045.000). Alt2: zusammenhängende Ziffernfolge ohne Trennzeichen.
     price_re = re.compile(
-        r'(\d{2,3}(?:[.\s]\d{3})*(?:,\d{2})?)\s*(?:€|EUR|Euro)',
+        r'(\d{1,3}(?:[.\s]\d{3})+(?:,\d{2})?|\d{3,8}(?:,\d{2})?)\s*(?:€|EUR|Euro)',
         re.IGNORECASE
     )
     prices = []
@@ -1102,6 +1148,9 @@ async def main():
 
     # Archive old deals first
     archive_old_deals(data)
+
+    # Bestehende Daten bereinigen (Fehl-Kategorisierungen korrigieren)
+    cleanup_deals(data, cfg)
 
     existing_urls   = get_existing_urls(data)
     existing_hashes = get_existing_hashes(data)
