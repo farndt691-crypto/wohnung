@@ -1,1 +1,18 @@
+# Secrets / Umgebungsvariablen – NIEMALS committen
+.env
+.env.local
+.env.*
+
+# Vercel
 .vercel
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Lokale DB
+*.db
+
+# Legacy (ungenutzte FastAPI/Supabase-Pipeline) – enthielt Secrets
+# Empfehlung: ganz löschen (siehe Audit)

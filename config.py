@@ -9,13 +9,9 @@ import re
 # ---------------------------------------------------------------------------
 # Supabase (Datenbank – bleibt in der Cloud)
 # ---------------------------------------------------------------------------
-SUPABASE_URL = os.environ.get(
-    "SUPABASE_URL", "https://fskfbipjhxxrxccmdpga.supabase.co"
-)
-SUPABASE_KEY = os.environ.get(
-    "SUPABASE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZza2ZiaXBqaHh4cnhjY21kcGdhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3OTI2Njg0NiwiZXhwIjoyMDk0ODQyODQ2fQ.-iAI_DFCMXiq-cAZ1_KfWKHXXu9sJPWpVrozMy5Tv7E",
-)
+# Secrets NUR aus Umgebungsvariablen – keine hartkodierten Defaults!
+SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
 
 # ---------------------------------------------------------------------------
 # Server
