@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-09T23:07:01.527765+00:00",
+  "last_updated": "2026-06-10T18:13:29.016612+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -1155,7 +1155,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 249500.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/solide-kapitalanlage-vermietete-2-zimmer-wohnung-mit-balkon-in-mannheim-realunis/3265234338-196-7980",
@@ -1192,7 +1193,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 139000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/little-ny-in-der-mannheim-oststadt-offen-grosszuegig-ueberraschend-privat-/3415016499-196-7981",
@@ -1234,7 +1236,8 @@
           "date": "2026-06-09T23:06:41.845923+00:00",
           "price": 1950000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-kapitalanlage-in-mannheim-vermietete-2-zimmer-wohnung-mit-balkon/3323901416-196-7972",
@@ -1272,7 +1275,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 145000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/geraeumiges-wohnen-auf-89-qm-im-mannheimer-sueden-ideal-fuer-die-moderne-familie-/3357676533-196-7986",
@@ -1312,7 +1316,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 299000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1348,7 +1353,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 275000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-stadtwohnung-mit-innenhof-oase-in-toplage-der-mannheimer-quadrate/3350358464-196-7981",
@@ -1388,7 +1394,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 385000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-2-zimmer-eigentumswohnung-in-mannheim-kaefertal-rott/3318995071-196-7973",
@@ -1426,7 +1433,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 175000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mit-gruenblick-und-balkon-sofort-bezugsfrei-mannheim-kaefertal/3343975404-196-7973",
@@ -1461,7 +1469,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 129000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zkb-wohnung-mit-grosser-loggia-und-tg-stellplatz-in-sehr-guter-lage-von-mannheim-seckenheim/3316783389-196-7976",
@@ -1499,7 +1508,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 285000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/drei-zimmer-wohnung-in-mannheim-kaefertal-mit-balkon/3363865866-196-7973",
@@ -1534,7 +1544,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 199000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/renovierungsbeduerftiges-1-zimmer-appartement-im-2-og-27qm-mit-pantry-kueche-in-super-lage-von-mannheim-zu-verkaufen/3331257264-196-7984",
@@ -1570,7 +1581,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 109000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/5-zimmer-maisonettewohnung-in-mannheim-sandhofen-zu-verkaufen/3414124828-196-7974",
@@ -1607,7 +1619,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 420000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-eigentumswohnung-in-mannheim-herzogenried/3414019232-196-7980",
@@ -1642,7 +1655,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 289000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/modern-ausgestattetes-apartment-mit-tg-stellplatz-im-beliebten-mannheimer-stadtteil-niederfeld/3401584087-196-7986",
@@ -1680,7 +1694,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 147000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/traumhafte-dachgeschosswohnung-in-der-mannheimer-oststadt/3311047831-196-7983",
@@ -1718,7 +1733,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 795000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/rendite-highlight-3-zimmer-wohnung-mit-balkon-ueber-6-rendite-perfekt-fuer-wg-nutzung-in-mannheim-oststadt-/3413256811-196-7981",
@@ -1755,7 +1771,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 329000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-wohnung-mit-grosser-terrasse-saniertes-wohnen-im-herzen-von-mannheim-sandhofen/3388017305-196-7974",
@@ -1794,7 +1811,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 398000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/sehr-gepflegte-moderne-3-zimmer-dachgeschosswohnung-mit-offenem-giebel-in-mannheim-neckarau/3412841453-196-7986",
@@ -1824,7 +1842,8 @@
       "miete_geschaetzt": true,
       "bankrate_monat": 779.17,
       "cashflow_monat": -109.17,
-      "deal_score": "watch"
+      "deal_score": "watch",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-in-mannheim-wallstadt-zu-verkaufen-/3412679773-196-7975",
@@ -1857,7 +1876,8 @@
       "miete_geschaetzt": true,
       "bankrate_monat": 1507.92,
       "cashflow_monat": -351.92,
-      "deal_score": "skip"
+      "deal_score": "skip",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-in-68309-mannheim-stendaler-weg-/3412377536-196-7973",
@@ -1898,7 +1918,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 350000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/solide-3-zimmer-mit-neuem-balkon-in-mannheim-rheinau-bald-bezugsfrei/3412376264-196-7978",
@@ -1939,7 +1960,8 @@
           "date": "2026-05-26T22:53:19.281427+00:00",
           "price": 219000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/4-zimmer-wohnung-im-5-og-mit-balkon-in-mannheim-rheinau-provisionsfrei-vb/3374575809-196-7978",
@@ -1977,7 +1999,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 275000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/provisionsfrei-2-zimmer-wohnung-in-mannheim/3412190578-196-7986",
@@ -2014,7 +2037,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 134000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-2-zimmer-maisonettewohnung-in-top-lage-von-mannheim-friedrichsfeld/3276351332-196-7977",
@@ -2051,7 +2075,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 329000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/geniessen-sie-den-unverbaubaren-blick-ueber-mannheim-aus-einer-liebevoll-renovierten-eigentumswohnung/3383290137-196-7973",
@@ -2089,7 +2114,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 225000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/gepflegte-3-zimmer-wohnung-mit-loggia-und-stellplatz-in-mannheim-neckarau-/3165342636-196-7986",
@@ -2125,7 +2151,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 299000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/kernsanierte-2-zimmer-wohnung-in-mannheim-casterfeld/3409084868-196-7978",
@@ -2163,7 +2190,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 190000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-1zkbb-und-vier-pkw-stellplaetze/3408769547-196-7979",
@@ -2196,7 +2224,8 @@
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 229000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-vollmoeblierte-3-5-zimmer-dachgeschosswohnung-in-mannheim-neckarau/3377511885-203-7986",
@@ -3324,7 +3353,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 199000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-2-5-zimmer-wohnung-in-mannheim-renoviert-sofort-bezugsbereit/3406006324-196-7976",
@@ -3361,7 +3391,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 319000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/ihr-neues-zuhause-tolle-5-zkb-etw-126m-im-erdgeschoss-mit-2x-garagen-terrasse-xl-keller-privater-einfahrt-in-ruhiger-lage-von-mannheim/3322977927-196-7975",
@@ -3401,7 +3432,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 599000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/gepflegte-2-zimmer-wohnung-mit-stellplatz-in-mannheim-neuostheim/3405440598-196-7982",
@@ -3440,7 +3472,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 249000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/charmante-dachgeschosswohnung-mannheim-2x-parkplatz/3404762179-196-7979",
@@ -3476,7 +3509,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 249999.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/4-zimmer-wohnung-in-mannheim/3322095160-196-7984",
@@ -3512,7 +3546,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 369000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zi-wohnung-mannheim-feudenheim-mit-duplex-parker/3404358428-196-7975",
@@ -3552,7 +3587,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 208000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zi-wohnung-mannheim-feudenheim-mit-duplex-parker/3404355293-196-7975",
@@ -3592,7 +3628,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 208000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stadthaus-feeling-pur-lichtdurchflutete-garten-maisonette-in-mannheims-gruener-oase/3377365189-196-7975",
@@ -3629,7 +3666,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 424700.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tiefgaragenstellplatz-alleinstehen-b7-17-mannheim/3402887289-196-7984",
@@ -3661,7 +3699,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 80000
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-bester-lage-von-mannheim-niederfeld-/3402846810-196-7982",
@@ -3698,7 +3737,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 735000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/betreutes-wohnen-als-kapitalanlage-in-mannheim/3375792292-196-7984",
@@ -3732,7 +3772,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 200000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/perfekt-fuer-wg-konzept-4-zimmer-wohnung-naehe-franklin-mannheim-kaefertal/3212569412-196-7973",
@@ -3766,7 +3807,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 259000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/4-zw-inkl-garagenplatz-in-mannheim-kaefertal-im-rott-/3402228502-196-7973",
@@ -3806,7 +3848,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 415000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/freies-1-zimmer-apartment-23m-in-guter-lage-von-mannheim-zu-verkaufen/3402058058-196-7978",
@@ -3843,7 +3886,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 83000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/kapitalanlage-in-mannheim-q7-vermietete-2-zimmer-dg-wohnung-mit-balkon-tg-stellplatz-/3400212853-196-7983",
@@ -3882,7 +3926,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 155000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-1-zimmer-wohnung-in-mannheim-kaefertal-ideale-investitionsmoeglichkeit/3340741312-196-7973",
@@ -3921,7 +3966,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 119000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-3-zkb-gaeste-wc-balkon-in-mannheim/3396707542-196-7972",
@@ -3960,7 +4006,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 310000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/-gemuetliche-2-zkb-dachgeschosswohnung-mit-stellplaetzen-in-mannheim-schoenau-/3312736782-196-7974",
@@ -4001,7 +4048,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 160000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-in-mannheim-waldhof-kaufen-attraktive-eigentumswohnung-in-guter-lage/3394130154-196-7972",
@@ -4034,7 +4082,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 229000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/freie-1-zimmer-etw-im-erdgeschoss-23-5m-in-guter-lage-von-mannheim-zu-verkaufen/3202080136-196-7984",
@@ -4063,7 +4112,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 104000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-etw-im-erdgeschoss-17-m-in-guter-lage-von-mannheim-zu-verkaufen/3202085386-196-7984",
@@ -4098,7 +4148,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 85000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmerwohnung-mannheim-vogelstang-von-privat/3392680920-196-7973",
@@ -4136,7 +4187,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 290000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/exklusive-maisonette-wohnung-in-mannheim-wallstadt/3336135156-196-7975",
@@ -4173,7 +4225,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 449000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-altbauperle-in-bestlage-grosszuegige-4-zimmer-wohnung-in-der-mannheimer-oststadt/3364559525-196-7981",
@@ -4210,7 +4263,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 570000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-3-zimmer-dachgeschosswohnung-in-mannheim-waldhof-solide-kapitalanlage/3363722167-196-7973",
@@ -4244,7 +4298,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 219000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zkb-mannheim-traitteurstrasse-mannheim-kernsaniert/3386784513-196-5343",
@@ -4281,7 +4336,8 @@
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 260000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wg-neugruendung-3-zimmer-wohnung-in-mannheim-neckarau/3415605859-203-7986",
@@ -4477,7 +4533,8 @@
           "date": "2026-05-26T22:53:19.281427+00:00",
           "price": 219000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/modernisierte-2-zimmer-wohnung-in-mannheim-neckarstadt/3299537005-196-7980",
@@ -4515,7 +4572,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 199000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/5-zimmer-eg-wohnung-mannheim/3380315984-196-5239",
@@ -4549,7 +4607,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 230000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmerwohnung-mit-terrasse-und-gartenstueck-mannheim-vogelstang/3378730132-196-7973",
@@ -4581,7 +4640,8 @@
       "miete_geschaetzt": true,
       "bankrate_monat": 1187.08,
       "cashflow_monat": -277.08,
-      "deal_score": "skip"
+      "deal_score": "skip",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-mannheim-lindenhof/3373119770-196-4764",
@@ -4616,7 +4676,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 317000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/neu-sanierte-dreizimmerwohnung-in-der-naehe-des-mannheimer-hbf/3373111589-196-7977",
@@ -4652,7 +4713,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 479000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-mit-aufzug-in-mannheim-innenstadt/3370057909-196-7981",
@@ -4690,7 +4752,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 270000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/68309-mannheim-vogelstang-3-5-zimmer-wohnung/3369801592-196-7973",
@@ -4728,7 +4791,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 252800.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/licht-panorama-barriereleichte-wohlfuehlwohnung-in-mannheim/3364545386-196-7973",
@@ -4766,7 +4830,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 205000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-etagen-in-seckenheim-mannheim-im-2-familienhaus-mit-garten/3363215604-196-7976",
@@ -4803,7 +4868,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 333000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-5-zimmer-dachgeschosswohnung-in-68305-mannheim-waldhof-64-m-/3356325437-196-7972",
@@ -4840,7 +4906,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 215000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/ohne-makler-zwei-zimmer-whng-in-mannheim/3348682581-196-4768",
@@ -4878,7 +4945,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 178000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-mannheim-lindenhof/3322030450-196-21328",
@@ -4915,7 +4983,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 320000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mannheim-innenstadt-zentral-privat-verkauf/3162505091-196-7980",
@@ -4951,7 +5020,8 @@
           "date": "2026-05-23T15:49:53.847902+00:00",
           "price": 890000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/suche-2-4-wohnung-oder-haus-zum-kauf-in-mannheim-lindenhof/2990268633-196-7982",
@@ -5692,7 +5762,7 @@
       "listing_type": "miete",
       "title": "TAUSCHWOHNUNG 2-Zimmer-Flat in Mannheim gegen Wiesloch tauschen",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-05-24T21:16:36.548232+00:00",
+      "last_seen": "2026-06-10T18:13:01.307102+00:00",
       "boni": [],
       "kurz_bewertung": "Gemütliche 2-Zimmer-Flat in ruhiger Lage mit guter Anbindung",
       "zimmeranzahl": 2.0,
@@ -5707,12 +5777,22 @@
         "einschaetzung_investor": "Mietnomaden-Risiko, geringes Aufwertungspotenzial, gute Mieterzuverlässigkeit"
       },
       "quadratmeter": 40.0,
-      "kaltmiete": 130.0,
+      "kaltmiete": 600.0,
       "nebenkosten": 130,
-      "kaltmiete_qm": 3.25,
+      "kaltmiete_qm": 15.0,
       "expected_market_qm": 14.5,
-      "deal_deviation_pct": -77.6,
-      "deal_score": "gut"
+      "deal_deviation_pct": 3.4,
+      "deal_score": "okay",
+      "price_history": [
+        {
+          "date": "2026-05-24T21:16:36.548232+00:00",
+          "price": 130.0
+        },
+        {
+          "date": "2026-06-10T18:13:01.307102+00:00",
+          "price": 600.0
+        }
+      ]
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-appartement-in-sehr-guter-wohnlage-68161-mannheim-/3405273229-203-7983",
@@ -6594,7 +6674,8 @@
           "date": "2026-05-25T18:13:45.498306+00:00",
           "price": 329000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-wohnung-in-mannheim-neckarstadt-west/3418226071-203-7980",
@@ -6909,7 +6990,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-09T23:06:41.845923+00:00",
+      "last_seen": "2026-06-10T18:13:01.307102+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -6974,7 +7055,8 @@
           "date": "2026-05-26T18:08:29.929978+00:00",
           "price": 229000.0
         }
-      ]
+      ],
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-ab-01-08-2026/3418894746-203-7981",
@@ -7212,7 +7294,8 @@
       "bankrate_monat": 912.08,
       "cashflow_monat": -446.08,
       "deal_score": "skip",
-      "_hash": "582ca52a5167"
+      "_hash": "582ca52a5167",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-eigentumswohnung-in-mannheim-kaefertal-rott/3419388679-196-7973",
@@ -7251,7 +7334,8 @@
       "bankrate_monat": 802.08,
       "cashflow_monat": -72.08,
       "deal_score": "watch",
-      "_hash": "05bc86730fe5"
+      "_hash": "05bc86730fe5",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/exklusive-penthouse-wohnung-mit-panorama-ausblick-ueber-mannheim/3419121393-196-7973",
@@ -7294,7 +7378,8 @@
       "bankrate_monat": 4349.58,
       "cashflow_monat": -2857.7,
       "deal_score": "skip",
-      "_hash": "bef5b7bca4d4"
+      "_hash": "bef5b7bca4d4",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zentrales-1-zimmer-studio-in-mannheim-innenstadt-ab-01-06/3420125942-203-7984",
@@ -7684,7 +7769,8 @@
       "bankrate_monat": 2415.42,
       "cashflow_monat": -1115.42,
       "deal_score": "skip",
-      "_hash": "4cdbd8d6dcf1"
+      "_hash": "4cdbd8d6dcf1",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mit-balkon-frisch-saniert-in-mannheim-innenstadt/3420600655-203-7984",
@@ -7848,7 +7934,8 @@
       "bankrate_monat": 1049.58,
       "cashflow_monat": -782.58,
       "deal_score": "skip",
-      "_hash": "5fee010567a1"
+      "_hash": "5fee010567a1",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-innenstadt-teilmoebliert/3421149841-203-9181",
@@ -8067,7 +8154,8 @@
       "bankrate_monat": 1187.08,
       "cashflow_monat": -205.08,
       "deal_score": "skip",
-      "_hash": "0ad481858280"
+      "_hash": "0ad481858280",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-mit-grandioser-aussicht-in-mannheims-bester-lage/3421449641-196-7982",
@@ -8105,7 +8193,8 @@
       "bankrate_monat": 2291.67,
       "cashflow_monat": -1261.67,
       "deal_score": "skip",
-      "_hash": "9f31a26729b7"
+      "_hash": "9f31a26729b7",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stylisches-voll-moebliertes-apartment-in-mannheim-ab-01-06-26/3421944447-203-7979",
@@ -9098,7 +9187,8 @@
       "bankrate_monat": 89819.58,
       "cashflow_monat": -88895.58,
       "deal_score": "skip",
-      "_hash": "2828f5dbc991"
+      "_hash": "2828f5dbc991",
+      "preis_verdacht": true
     },
     {
       "url": "https://www.immowelt.de/expose/30995423-571d-4d3b-b2a6-fc6db44e2aa2",
@@ -9134,7 +9224,8 @@
       "bankrate_monat": 83760.42,
       "cashflow_monat": -82901.42,
       "deal_score": "skip",
-      "_hash": "928b097391e2"
+      "_hash": "928b097391e2",
+      "preis_verdacht": true
     },
     {
       "url": "https://www.immowelt.de/expose/e02f48bf-95cb-438a-84d7-4b3be301a379",
@@ -9170,7 +9261,8 @@
       "bankrate_monat": 912.08,
       "cashflow_monat": -304.08,
       "deal_score": "skip",
-      "_hash": "776409cf6bf8"
+      "_hash": "776409cf6bf8",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/629e3378-0620-48f5-9729-257189e46b55",
@@ -9206,7 +9298,8 @@
       "bankrate_monat": 2125.75,
       "cashflow_monat": -1642.75,
       "deal_score": "skip",
-      "_hash": "59c3377f9a5d"
+      "_hash": "59c3377f9a5d",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/f0d11085-1a77-4a08-aaf2-e38e19436a35",
@@ -9241,7 +9334,8 @@
       "bankrate_monat": 1095.42,
       "cashflow_monat": -355.42,
       "deal_score": "skip",
-      "_hash": "94daf85594e3"
+      "_hash": "94daf85594e3",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.vonovia.de/zuhause-finden/immobilien/schoen-hier-zu-wohnen-87-1249760017",
@@ -9563,7 +9657,8 @@
       "bankrate_monat": 682.92,
       "cashflow_monat": -504.92,
       "deal_score": "skip",
-      "_hash": "810048379212"
+      "_hash": "810048379212",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-fuer-3-zimmer-wohnung-in-mannheim-innenstadt-gesucht/3424740024-203-7983",
@@ -10289,7 +10384,8 @@
       "bankrate_monat": 2424.58,
       "cashflow_monat": -1725.58,
       "deal_score": "skip",
-      "_hash": "678bb3f074c1"
+      "_hash": "678bb3f074c1",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/2f4c3c04-75d3-41b6-a37e-02aac240a01e",
@@ -10336,7 +10432,8 @@
       "bankrate_monat": 481.25,
       "cashflow_monat": -184.25,
       "deal_score": "skip",
-      "_hash": "dc6c89991bdb"
+      "_hash": "dc6c89991bdb",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/e484881d-e10b-4f6f-bbca-66b63aae9ade",
@@ -10379,7 +10476,8 @@
       "bankrate_monat": 1077.08,
       "cashflow_monat": -350.08,
       "deal_score": "skip",
-      "_hash": "cacd1e44422d"
+      "_hash": "cacd1e44422d",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/ef5f794a-118c-4a87-b189-cae8cf130c10",
@@ -10424,7 +10522,8 @@
       "bankrate_monat": 1237.5,
       "cashflow_monat": -394.5,
       "deal_score": "skip",
-      "_hash": "6dbc2f49b9d3"
+      "_hash": "6dbc2f49b9d3",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-schoenau-zu-vermieten/3426037532-203-7974",
@@ -10608,7 +10707,8 @@
       "bankrate_monat": 4789.58,
       "cashflow_monat": -3015.58,
       "deal_score": "skip",
-      "_hash": "232b34318a2b"
+      "_hash": "232b34318a2b",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-sandhofen-2-5-zkb/3425584355-196-7974",
@@ -10652,7 +10752,8 @@
       "bankrate_monat": 939.58,
       "cashflow_monat": -173.58,
       "deal_score": "skip",
-      "_hash": "1ca75e48204b"
+      "_hash": "1ca75e48204b",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/8eb290a3-a23f-4e1a-817f-46246bb9d04d",
@@ -10742,7 +10843,8 @@
       "bankrate_monat": 1663.75,
       "cashflow_monat": -1513.75,
       "deal_score": "skip",
-      "_hash": "6ecd420389af"
+      "_hash": "6ecd420389af",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/4c521c66-9bca-4c2d-8b75-723fc16bcc64",
@@ -10785,7 +10887,8 @@
       "bankrate_monat": 3208.33,
       "cashflow_monat": -2638.33,
       "deal_score": "skip",
-      "_hash": "0e4de6ead826"
+      "_hash": "0e4de6ead826",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/26r32h6hzwgx",
@@ -11056,7 +11159,8 @@
       "bankrate_monat": 1008.33,
       "cashflow_monat": -562.61,
       "deal_score": "skip",
-      "_hash": "c255830c530f"
+      "_hash": "c255830c530f",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-3-zimmer-terrassenwohnung-mit-tiefgarage-in-mannheim-kaefertal/3426955636-196-7973",
@@ -11100,7 +11204,8 @@
       "bankrate_monat": 1741.67,
       "cashflow_monat": -927.43,
       "deal_score": "skip",
-      "_hash": "a44c16ed3662"
+      "_hash": "a44c16ed3662",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-erdgeschosswohnung-2024-saniert-in-ruhiger-zentraler-lage-von-mannheim/3426950543-196-7980",
@@ -11144,7 +11249,8 @@
       "bankrate_monat": 1370.42,
       "cashflow_monat": -496.42,
       "deal_score": "skip",
-      "_hash": "495d9f4361bc"
+      "_hash": "495d9f4361bc",
+      "preis_verdacht": false
     },
     {
       "url": "https://homepage.immomio.com/de/gbg/fe075dccef76dd1c",
@@ -11230,7 +11336,8 @@
       "bankrate_monat": 1741.67,
       "cashflow_monat": -1535.67,
       "deal_score": "skip",
-      "_hash": "83933aa250d9"
+      "_hash": "83933aa250d9",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.immowelt.de/expose/7c3d87e7-67a3-4eb6-a324-50791ba9e209",
@@ -11274,7 +11381,8 @@
       "bankrate_monat": 1008.33,
       "cashflow_monat": -331.33,
       "deal_score": "skip",
-      "_hash": "281dcf91efe9"
+      "_hash": "281dcf91efe9",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-waldhof-zu-verkaufen/3427410767-196-7977",
@@ -11317,7 +11425,8 @@
       "bankrate_monat": 591.25,
       "cashflow_monat": -125.25,
       "deal_score": "watch",
-      "_hash": "ec13c7039af3"
+      "_hash": "ec13c7039af3",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/altbau-studio-loft-charme-anbindung-12min-mannheim-worms-fra-hbf/3427905311-203-4761",
@@ -11425,7 +11534,8 @@
       "bankrate_monat": 1232.92,
       "cashflow_monat": -393.92,
       "deal_score": "skip",
-      "_hash": "9bbc7a980a61"
+      "_hash": "9bbc7a980a61",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/70-m2-3-zkb-in-mannheim-sandhofen-1-og-mit-kueche/3428224426-203-7974",
@@ -12303,7 +12413,8 @@
       "bankrate_monat": 426.25,
       "cashflow_monat": 3.75,
       "deal_score": "strong_buy",
-      "_hash": "0edc770a585b"
+      "_hash": "0edc770a585b",
+      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-geraeumige-wohnung-in-mannheim-neckarau/3430336904-203-7986",
@@ -12922,6 +13033,185 @@
       "deal_deviation_pct": 51.7,
       "deal_score": "teuer",
       "_hash": "40c85cc71ead"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/kellerwohnung-in-mannheim-waldhof-zu-vermieten/3431917372-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Kellerwohnung in Mannheim-Waldhof zu vermieten",
+      "first_seen": "2026-06-10T18:13:01.307102+00:00",
+      "last_seen": "2026-06-10T18:13:01.307102+00:00",
+      "boni": [
+        "moebliert",
+        "renoviert"
+      ],
+      "kurz_bewertung": "Moderne, frisch renovierte und sanierte Kellerwohnung in Mannheim-Waldhof zu vermieten.",
+      "zimmeranzahl": 2,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Waldhof",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Wohnviertel mit mittlerer Altersstruktur, keine Studenten oder Familien",
+        "vibe_sicherheit": "Geringes Sicherheitsgefühl aufgrund der Lage in einem Keller",
+        "einschaetzung_student": "Ungeeignet für Informatikstudenten aufgrund der Lage und der Größe",
+        "einschaetzung_investor": "Mäßige Eignung als Kapitalanlage aufgrund der Lage und der Größe"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-10T18:13:01.307102+00:00",
+          "price": 1000.0
+        }
+      ],
+      "etage": "Souterrain",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 60.0,
+      "kaltmiete": 1000.0,
+      "warmmiete": 1000,
+      "kaltmiete_qm": 16.67,
+      "expected_market_qm": 18.5,
+      "deal_deviation_pct": -9.9,
+      "deal_score": "okay",
+      "_hash": "86d06adc617f"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-in-mannheim-hochstaett-nachmieter-gesucht/3431875905-203-8125",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnung in Mannheim-Hochstätt – Nachmieter gesucht",
+      "first_seen": "2026-06-10T18:13:01.307102+00:00",
+      "last_seen": "2026-06-10T18:13:01.307102+00:00",
+      "boni": [],
+      "kurz_bewertung": "Große Wohnung in Mannheim-Hochstätt zum Mieten",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Hochstätt",
+      "adresse": "Hochstätt",
+      "umfeld_analyse": {
+        "demografie": "Familienviertel mit älteren Bewohnern",
+        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
+        "einschaetzung_student": "nicht ideal für Studenten",
+        "einschaetzung_investor": "keine gute Kapitalanlage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-10T18:13:01.307102+00:00",
+          "price": 700.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 50.0,
+      "kaltmiete": 700.0,
+      "warmmiete": 700,
+      "kaltmiete_qm": 14.0,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -3.4,
+      "deal_score": "okay",
+      "_hash": "a016504f940d"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-1-zimmer-apartment-in-mannheim-neuhermsheim/3431473442-203-7982",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Möbliertes 1 Zimmer - Apartment in Mannheim Neuhermsheim",
+      "first_seen": "2026-06-10T18:13:01.307102+00:00",
+      "last_seen": "2026-06-10T18:13:01.307102+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Praktische und komfortable Wohnung in ruhiger Lage",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neuhermsheim",
+      "adresse": "68163 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studierende, Pendler und Berufstätige",
+        "vibe_sicherheit": "ruhig",
+        "einschaetzung_student": "gut",
+        "einschaetzung_investor": "mäßig"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-10T18:13:01.307102+00:00",
+          "price": 750.0
+        }
+      ],
+      "etage": "EG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 22.0,
+      "kaltmiete": 750.0,
+      "nebenkosten": 0,
+      "warmmiete": 750,
+      "kaltmiete_qm": 34.09,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": 94.8,
+      "deal_score": "teuer",
+      "_hash": "c5446951ae46"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/neue-wg-in-weinheim-mannheim-einzug-ab-01-10-2026/3431412920-203-4776",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Neue WG in Weinheim/Mannheim – Einzug ab 01.10.2026",
+      "first_seen": "2026-06-10T18:13:01.307102+00:00",
+      "last_seen": "2026-06-10T18:13:01.307102+00:00",
+      "boni": [],
+      "kurz_bewertung": "Neue WG in Weinheim/Mannheim, 15 m², 5 Zimmer, 450 € Kaltmiete",
+      "zimmeranzahl": 5,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": "Hessen - Heppenheim (Bergstraße)",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Azubis und Berufstätige, aber keine spezifische Studenten- oder Familienfreundlichkeit",
+        "vibe_sicherheit": "Ruhige Kleinstadt, aber gute Anbindung an Mannheim",
+        "einschaetzung_student": "Möglich, aber keine spezifische Studentenfreundlichkeit",
+        "einschaetzung_investor": "Nicht geeignet als Kapitalanlage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-10T18:13:01.307102+00:00",
+          "price": 450.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 15.0,
+      "kaltmiete": 450.0,
+      "nebenkosten": 150,
+      "warmmiete": 600,
+      "kaltmiete_qm": 30.0,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": 106.9,
+      "deal_score": "teuer",
+      "_hash": "7e4daf1dbe0a"
     }
   ]
 }
