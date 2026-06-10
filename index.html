@@ -139,6 +139,7 @@
       <label class="text-gray-400 text-sm whitespace-nowrap">↕ Sort:</label>
       <select id="sort-select" onchange="render()" class="w-44">
         <option value="default">Standard</option>
+        <option value="unterbewertung">📊 Unter Markt (Kauf)</option>
         <option value="preis_asc">Preis ↑</option>
         <option value="preis_desc">Preis ↓</option>
         <option value="datum_desc">Datum (neueste)</option>
@@ -196,6 +197,18 @@
         <label class="flex justify-between text-xs text-gray-400 mb-1">Kaufnebenkosten <span id="fin-nk-out" class="text-gray-100 font-semibold"></span></label>
         <input id="fin-nk" type="range" min="0" max="15" step="0.1" oninput="onFinChange()" class="w-full">
       </div>
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Steuersatz <span id="fin-tax-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-tax" type="range" min="0" max="45" step="1" oninput="onFinChange()" class="w-full">
+      </div>
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Gebäude-AfA <span id="fin-afa-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-afa" type="range" min="0" max="3" step="0.5" oninput="onFinChange()" class="w-full">
+      </div>
+      <div>
+        <label class="flex justify-between text-xs text-gray-400 mb-1">Wertsteigerung p.a. <span id="fin-wert-out" class="text-gray-100 font-semibold"></span></label>
+        <input id="fin-wert" type="range" min="0" max="5" step="0.5" oninput="onFinChange()" class="w-full">
+      </div>
     </div>
     <p class="text-xs text-gray-500 mt-2" id="fin-hint"></p>
   </div>
@@ -243,11 +256,15 @@ let dataLoadedAt = null;  // timestamp when data was loaded
 const HAUSGELD       = 50;     // €/Mo. nicht umlagefähig
 let   standardZins   = 3.9;    // aktueller Standard-Bauzins (aus data/zins.json)
 let   zinsStand      = '';     // Stand-Datum des Standardzinses
-const FIN_DEFAULTS   = { tilg: 2.0, ek: 0, nk: 7.0 };  // BW: 5% GrESt + 2% Notar/GB
+const FIN_DEFAULTS   = { tilg: 2.0, ek: 0, nk: 7.0, tax: 42, afa: 2.0, wert: 2.0 };
+const GEBAEUDE_ANTEIL = 0.80;   // Anteil Gebäude (AfA-fähig), Rest = Grundstück
 function loadFinPrefs() {
   let s = {};
   try { s = JSON.parse(localStorage.getItem('immo_fin') || '{}'); } catch(e){}
-  return { tilg: s.tilg ?? FIN_DEFAULTS.tilg, ek: s.ek ?? FIN_DEFAULTS.ek, nk: s.nk ?? FIN_DEFAULTS.nk };
+  return {
+    tilg: s.tilg ?? FIN_DEFAULTS.tilg, ek: s.ek ?? FIN_DEFAULTS.ek, nk: s.nk ?? FIN_DEFAULTS.nk,
+    tax:  s.tax  ?? FIN_DEFAULTS.tax,  afa: s.afa ?? FIN_DEFAULTS.afa, wert: s.wert ?? FIN_DEFAULTS.wert
+  };
 }
 // Zins startet immer beim aktuellen Standard; Tilgung/EK/NK werden gemerkt
 let finState = { zins: standardZins, ...loadFinPrefs() };
@@ -442,6 +459,9 @@ function syncFinInputs() {
   document.getElementById('fin-tilg').value = finState.tilg;
   document.getElementById('fin-ek').value   = finState.ek;
   document.getElementById('fin-nk').value   = finState.nk;
+  document.getElementById('fin-tax').value  = finState.tax;
+  document.getElementById('fin-afa').value  = finState.afa;
+  document.getElementById('fin-wert').value = finState.wert;
   updateFinOut();
 }
 function updateFinOut() {
@@ -449,11 +469,14 @@ function updateFinOut() {
   document.getElementById('fin-tilg-out').textContent = finState.tilg.toFixed(1) + ' %';
   document.getElementById('fin-ek-out').textContent   = Math.round(finState.ek) + ' %';
   document.getElementById('fin-nk-out').textContent   = finState.nk.toFixed(1) + ' %';
+  document.getElementById('fin-tax-out').textContent  = Math.round(finState.tax) + ' %';
+  document.getElementById('fin-afa-out').textContent  = finState.afa.toFixed(1) + ' %';
+  document.getElementById('fin-wert-out').textContent = finState.wert.toFixed(1) + ' %';
   const annu = (finState.zins + finState.tilg).toFixed(1);
   const ekTxt = finState.ek > 0 ? `${Math.round(finState.ek)} % Eigenkapital` : 'Vollfinanzierung (0 % EK)';
   const standTxt = zinsStand ? ` · Standardzins-Stand ${zinsStand}` : '';
   document.getElementById('fin-hint').textContent =
-    `${ekTxt} · Kaufpreis + ${finState.nk.toFixed(1)} % Nebenkosten · Annuität ${annu} % · Hausgeld ${HAUSGELD} €/Mo.${standTxt}`;
+    `${ekTxt} · Kaufpreis + ${finState.nk.toFixed(1)} % Nebenkosten · Annuität ${annu} % · Steuer ${Math.round(finState.tax)} % · AfA ${finState.afa.toFixed(1)} %${standTxt}`;
 }
 function onFinChange() {
   finState = {
@@ -461,8 +484,13 @@ function onFinChange() {
     tilg: parseFloat(document.getElementById('fin-tilg').value),
     ek:   parseFloat(document.getElementById('fin-ek').value),
     nk:   parseFloat(document.getElementById('fin-nk').value),
+    tax:  parseFloat(document.getElementById('fin-tax').value),
+    afa:  parseFloat(document.getElementById('fin-afa').value),
+    wert: parseFloat(document.getElementById('fin-wert').value),
   };
-  localStorage.setItem('immo_fin', JSON.stringify({ tilg: finState.tilg, ek: finState.ek, nk: finState.nk }));
+  localStorage.setItem('immo_fin', JSON.stringify({
+    tilg: finState.tilg, ek: finState.ek, nk: finState.nk,
+    tax: finState.tax, afa: finState.afa, wert: finState.wert }));
   updateFinOut();
   recomputeFinancing();
   updateStats();
@@ -475,6 +503,16 @@ function resetFinancing() {
   recomputeFinancing();
   updateStats();
   render();
+}
+// Markt-€/m² je Stadtteil nachschlagen (Unterbewertungs-Score)
+function marktQm(d) {
+  const tbl = config.kauf_markt_qm || {};
+  const def = config.kauf_markt_qm_default || 4000;
+  const st = (d.stadtteil || '').replace(/^Mannheim\s+/i, '').trim();
+  if (st && tbl[st] != null) return tbl[st];
+  // Teilstring-Treffer (z. B. "Neckarstadt-Ost" in Schlüsseln)
+  for (const k in tbl) { if (st && (st.includes(k) || k.includes(st))) return tbl[k]; }
+  return def;
 }
 function recomputeFinancing() {
   const z = finState.zins/100, t = finState.tilg/100;
@@ -514,6 +552,35 @@ function recomputeFinancing() {
     d.cashflow_vor_tilgung = Math.round(d.kaltmiete - zinsLast - nichtUml);
     d.bruttorendite_pct    = +(d.kaltmiete * 12 / d.kaufpreis * 100).toFixed(2);
     d.kaufpreisfaktor      = +(d.kaufpreis / (d.kaltmiete * 12)).toFixed(1);
+
+    // Unterbewertung vs. Stadtteil-Markt (€/m²)
+    const mqm = marktQm(d);
+    d.markt_qm = mqm;
+    d.kauf_abweichung_pct = (qmPreis !== null && mqm)
+      ? +(((qmPreis - mqm) / mqm) * 100).toFixed(1) : null;
+
+    // Netto-Mietrendite: (Jahreskaltmiete − nicht-uml. Kosten) / Gesamtkosten
+    d.nettorendite_pct = +((d.kaltmiete * 12 - nichtUml * 12) / gesamt * 100).toFixed(2);
+
+    // Eigenkapitalrendite (Cash-on-Cash) – nur bei EK > 0 sinnvoll
+    d.eigenkapitalrendite_pct = eigen > 0
+      ? +((d.cashflow_monat * 12) / eigen * 100).toFixed(1) : null;
+
+    // AfA & Steuer
+    const afaJahr   = d.kaufpreis * GEBAEUDE_ANTEIL * (finState.afa / 100);
+    const steuerBasis = d.kaltmiete * 12 - zinsLast * 12 - afaJahr - nichtUml * 12;
+    d.steuer_monat          = Math.round((-steuerBasis * (finState.tax / 100)) / 12);
+    d.cashflow_nach_steuer  = Math.round(d.cashflow_monat + d.steuer_monat);
+
+    // Vermögensprognose: Wertsteigerung + Tilgung (Restschuld sinkt)
+    const wachstum = finState.wert / 100;
+    const annuJahr = darlehen * (z + t);
+    [10, 20].forEach(jahre => {
+      let rest = darlehen;
+      for (let j = 0; j < jahre; j++) rest = Math.max(0, rest * (1 + z) - annuJahr);
+      d['vermoegen_' + jahre] = Math.round(d.kaufpreis * Math.pow(1 + wachstum, jahre) - rest);
+    });
+
     // Zusätzlicher Verdacht: unrealistisch hohe Bruttorendite (>12 %)
     if (d.bruttorendite_pct > 12) d.preis_verdacht = true;
     d.deal_score = d.preis_verdacht ? 'skip'
@@ -538,6 +605,11 @@ function applySort(arr) {
   if (s === 'default' && activeType === 'kauf') {
     return [...arr].sort((a, b) =>
       (b.cashflow_monat ?? -1e9) - (a.cashflow_monat ?? -1e9));
+  }
+  if (s === 'unterbewertung') {
+    // Am stärksten unter Markt zuerst (negativste Abweichung)
+    return [...arr].sort((a, b) =>
+      (a.kauf_abweichung_pct ?? 999) - (b.kauf_abweichung_pct ?? 999));
   }
   if (s === 'preis_asc') {
     return [...arr].sort((a, b) => {
@@ -650,12 +722,29 @@ const scoreColors = {
   strong_buy: '#16a34a', watch: '#ca8a04', skip: '#dc2626',
   gut: '#16a34a', okay: '#ca8a04', teuer: '#dc2626',
 };
+// Farbe nach Marktabweichung (Heatmap): grün = unter Markt, rot = über Markt
+function abwColor(pct) {
+  if (pct == null) return '#6b7280';
+  if (pct <= -15) return '#16a34a';
+  if (pct <=  -5) return '#65a30d';
+  if (pct <=   5) return '#ca8a04';
+  if (pct <=  15) return '#ea580c';
+  return '#dc2626';
+}
+let heatLayer = [];
 
 function renderMap() {
   const filtered = getFiltered().filter(d => d.latitude != null && d.longitude != null);
+  const heatOn = (activeType === 'kauf');
 
-  document.getElementById('map-summary').textContent =
-    filtered.length + ' Deals mit GPS (von ' + allDeals.filter(d => d.latitude != null).length + ' gesamt)';
+  const legend = heatOn
+    ? ' &nbsp;|&nbsp; <b>Heatmap (Kauf):</b> '
+      + '<span style="color:#16a34a">●</span> stark unter Markt '
+      + '<span style="color:#ca8a04">●</span> marktüblich '
+      + '<span style="color:#dc2626">●</span> über Markt'
+    : '';
+  document.getElementById('map-summary').innerHTML =
+    filtered.length + ' Deals mit GPS (von ' + allDeals.filter(d => d.latitude != null).length + ' gesamt)' + legend;
 
   if (!leafletMap) {
     leafletMap = L.map('map').setView([49.485, 8.465], 13);
@@ -665,9 +754,34 @@ function renderMap() {
     }).addTo(leafletMap);
   }
 
-  // Clear old markers
+  // Clear old markers + Heatmap-Layer
   mapMarkers.forEach(m => m.remove());
   mapMarkers = [];
+  heatLayer.forEach(c => c.remove());
+  heatLayer = [];
+
+  // Stadtteil-Heatmap (nur Kauf): Kreise je Stadtteil, Farbe = ø Marktabweichung
+  if (heatOn) {
+    const grp = {};
+    filtered.forEach(d => {
+      if (d.kauf_abweichung_pct == null) return;
+      const st = (d.stadtteil || 'Sonstige').replace('Mannheim ', '');
+      (grp[st] = grp[st] || []).push(d);
+    });
+    Object.entries(grp).forEach(([st, ds]) => {
+      const lat = ds.reduce((s, d) => s + d.latitude, 0) / ds.length;
+      const lng = ds.reduce((s, d) => s + d.longitude, 0) / ds.length;
+      const avg = ds.reduce((s, d) => s + d.kauf_abweichung_pct, 0) / ds.length;
+      const circle = L.circle([lat, lng], {
+        radius: 280 + ds.length * 60,
+        color: abwColor(avg), fillColor: abwColor(avg),
+        fillOpacity: 0.18, weight: 1.5,
+      }).addTo(leafletMap).bindPopup(
+        `<b>🏘 ${st}</b><br>${ds.length} Objekte · ø <b>${avg >= 0 ? '+' : ''}${avg.toFixed(1)} %</b> vs. Markt`
+      );
+      heatLayer.push(circle);
+    });
+  }
 
   // Add POI markers
   getAllPois().forEach(poi => {
@@ -682,7 +796,9 @@ function renderMap() {
   });
 
   filtered.forEach(d => {
-    const color = scoreColors[d.deal_score] || '#6b7280';
+    const color = (heatOn && d.kauf_abweichung_pct != null)
+      ? abwColor(d.kauf_abweichung_pct)
+      : (scoreColors[d.deal_score] || '#6b7280');
     const isKauf = d.listing_type === 'kauf';
     const preis = isKauf
       ? (d.kaufpreis ? Math.round(d.kaufpreis).toLocaleString('de') + ' €' : '–')
@@ -700,6 +816,7 @@ function renderMap() {
         <span style="color:${color};font-weight:700">${(d.deal_score||'').replace('_',' ').toUpperCase()}</span>
         · ${isKauf ? '🏠' : '🔑'} ${preis}<br>
         ${d.stadtteil ? '🏘 ' + d.stadtteil + '<br>' : ''}
+        ${isKauf && d.kauf_abweichung_pct != null ? `<span style="color:${abwColor(d.kauf_abweichung_pct)};font-weight:700">📊 ${d.kauf_abweichung_pct >= 0 ? '+' : ''}${d.kauf_abweichung_pct.toFixed(1)} % vs. Markt</span><br>` : ''}
         ${d.zimmeranzahl ? '🛏 ' + d.zimmeranzahl + ' Zi.' : ''}
         ${d.quadratmeter ? ' · ' + d.quadratmeter + ' m²' : ''}<br>
         <a href="${d.url}" target="_blank" style="color:#818cf8">→ Anzeige öffnen</a>
@@ -833,15 +950,34 @@ function renderCard(d, poi) {
         </div>
       </div>`;
 
+    // Unterbewertung vs. Stadtteil-Markt (€/m²) – das Sniper-Merkmal
+    if (d.kauf_abweichung_pct != null) {
+      const dev = d.kauf_abweichung_pct;
+      const cls = dev <= -10 ? 'dev-gut' : dev <= 10 ? 'dev-okay' : 'dev-teuer';
+      const lbl = dev < 0 ? `${Math.abs(dev).toFixed(1)} % unter Markt` : `${dev.toFixed(1)} % über Markt`;
+      kennzahlen += `<div class="mt-2"><span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${cls}">📊 ${lbl}</span> <span class="text-xs text-gray-500">Markt ~${Math.round(d.markt_qm).toLocaleString('de')} €/m²${d.stadtteil ? ' · ' + d.stadtteil.replace('Mannheim ','') : ''}</span></div>`;
+    }
+
     // Rendite-Kennzahlen + Cashflow vor Tilgung
     const renditeRow = [];
     if (d.bruttorendite_pct != null) {
       const rCls = d.bruttorendite_pct >= 4 ? 'text-green-400' : d.bruttorendite_pct >= 3 ? 'text-yellow-400' : 'text-red-400';
       renditeRow.push(`<span>📈 Bruttorendite: <strong class="${rCls}">${d.bruttorendite_pct.toFixed(2)} %</strong></span>`);
     }
+    if (d.nettorendite_pct != null) {
+      renditeRow.push(`<span>📉 Netto: <strong class="text-gray-200">${d.nettorendite_pct.toFixed(2)} %</strong></span>`);
+    }
     if (d.kaufpreisfaktor != null) {
       const fCls = d.kaufpreisfaktor <= 25 ? 'text-green-400' : d.kaufpreisfaktor <= 30 ? 'text-yellow-400' : 'text-red-400';
       renditeRow.push(`<span>✖️ Kauffaktor: <strong class="${fCls}">${d.kaufpreisfaktor.toFixed(1)}</strong></span>`);
+    }
+    if (d.eigenkapitalrendite_pct != null) {
+      const eCls = d.eigenkapitalrendite_pct >= 0 ? 'text-green-400' : 'text-red-400';
+      renditeRow.push(`<span>💶 EK-Rendite: <strong class="${eCls}">${d.eigenkapitalrendite_pct.toFixed(1)} %</strong></span>`);
+    }
+    if (d.cashflow_nach_steuer != null) {
+      const sCls = d.cashflow_nach_steuer >= 0 ? 'text-green-400' : d.cashflow_nach_steuer >= -150 ? 'text-yellow-400' : 'text-red-400';
+      renditeRow.push(`<span>🧾 n. Steuer: <strong class="${sCls}">${d.cashflow_nach_steuer >= 0 ? '+' : ''}${fmtEuro(d.cashflow_nach_steuer)}/Mo.</strong></span>`);
     }
     if (d.cashflow_vor_tilgung != null) {
       const v = d.cashflow_vor_tilgung;
@@ -858,6 +994,9 @@ function renderCard(d, poi) {
     }
     if (renditeRow.length) {
       kennzahlen += `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-400">${renditeRow.join('')}</div>`;
+    }
+    if (d.vermoegen_10 != null) {
+      kennzahlen += `<p class="text-xs text-gray-500 mt-1">🏦 Immobilienvermögen: nach 10 J. <strong class="text-gray-300">${fmtEuro(d.vermoegen_10)}</strong> · nach 20 J. <strong class="text-gray-300">${fmtEuro(d.vermoegen_20)}</strong> <span class="text-gray-600">(bei ${finState.wert.toFixed(1)} % Wertsteig./J.)</span></p>`;
     }
     if (d.quadratmeter && d.kaufpreis) {
       kennzahlen += `<p class="text-xs text-gray-500 mt-1">🏠 ${d.quadratmeter} m² · ${Math.round(d.kaufpreis/d.quadratmeter).toLocaleString('de')} €/m²</p>`;
