@@ -156,6 +156,20 @@ def valid_mannheim_coords(lat, lon):
 
 # ── Scoring ──────────────────────────────────────────────────────────────────
 
+def estimate_kaltmiete(qm, boni, cfg):
+    """Schätzt die Kaltmiete: Mietspiegel-Basis (€/m²) + Ausstattungs-Boni
+    + Größenabschlag für große Wohnungen. Realistischer als pauschal qm×12."""
+    base     = cfg.get("base_rent_per_sqm", 14.50)
+    boni_map = cfg.get("rent_bonuses", {})
+    aufschlag = sum(boni_map.get(b, 0.0) for b in (boni or []))
+    est_qm = base + aufschlag
+    if qm > 120:
+        est_qm *= 0.88          # große Wohnungen: niedrigerer €/m²
+    elif qm > 90:
+        est_qm *= 0.94
+    return qm * est_qm
+
+
 def berechne_scores(deal, cfg):
     fin      = cfg.get("financing", {})
     base     = cfg.get("base_rent_per_sqm", 14.50)
@@ -173,14 +187,28 @@ def berechne_scores(deal, cfg):
         if not kaufpreis:
             deal.setdefault("deal_score", "skip")
             return deal
+        # Plausibilitätscheck: €/m² muss im realistischen Rahmen liegen
+        # (fängt Parsing-Fehler wie 1.045.000 → 45.000 ab → 296 €/m²)
+        if qm and qm > 0:
+            qm_preis = kaufpreis / qm
+            if qm_preis < 800 or qm_preis > 15_000:
+                log.info("   Kauf: €/m² unplausibel (%.0f) – Verdacht auf Parsing-Fehler: %s",
+                         qm_preis, deal.get("title", "")[:50])
+                deal["preis_verdacht"] = True
+                deal["deal_score"] = "skip"
+                return deal
+        # Mietschätzung: Mietspiegel-Basis + Ausstattungs-Boni + Größenabschlag
         if not kaltmiete and qm:
-            kaltmiete = round(qm * 12.00, 2)
+            kaltmiete = round(estimate_kaltmiete(qm, deal.get("boni", []), cfg), 2)
             deal["kaltmiete"] = kaltmiete
             deal["miete_geschaetzt"] = True
         if kaltmiete:
             rate     = fin.get("interest_rate", 0.035) + fin.get("repayment_rate", 0.015)
             bankrate = round((kaufpreis * fin.get("overhead_factor", 1.10)) * rate / 12, 2)
-            cashflow = round(kaltmiete - bankrate - fin.get("maintenance_monthly", 50), 2)
+            # nicht-umlagefähiges Hausgeld (~35 %) statt Pauschale, wenn bekannt
+            hg = deal.get("hausgeld")
+            nicht_uml = round(hg * 0.35) if hg else fin.get("maintenance_monthly", 50)
+            cashflow = round(kaltmiete - bankrate - nicht_uml, 2)
             deal["bankrate_monat"] = bankrate
             deal["cashflow_monat"] = cashflow
             deal["deal_score"] = (
@@ -220,7 +248,7 @@ def cleanup_deals(data, cfg):
     - 'kauf' mit Mini-Preis (<20.000 €) → als Miete reklassifizieren (Monatsmiete)
       bzw. bei unbrauchbarem Wert entfernen.
     Korrigiert so auch Altdaten ohne kompletten Re-Scrape."""
-    kept, reclass, dropped = [], 0, 0
+    kept, reclass, dropped, flagged = [], 0, 0, 0
     for d in data.get("deals", []):
         if d.get("listing_type") == "kauf" and d.get("kaufpreis") and d["kaufpreis"] < 20_000:
             p = d["kaufpreis"]
@@ -238,10 +266,20 @@ def cleanup_deals(data, cfg):
             else:
                 dropped += 1
                 continue
+        # Plausibilität bestehender Kauf-Deals: €/m² außerhalb 800–15.000 → Verdacht
+        elif d.get("listing_type") == "kauf" and d.get("kaufpreis") and d.get("quadratmeter"):
+            qm_preis = d["kaufpreis"] / d["quadratmeter"]
+            if qm_preis < 800 or qm_preis > 15_000:
+                d["preis_verdacht"] = True
+                d["deal_score"] = "skip"
+                flagged += 1
+            else:
+                d["preis_verdacht"] = False
         kept.append(d)
     data["deals"] = kept
-    if reclass or dropped:
-        log.info("Bereinigung: %d kauf→miete reklassifiziert, %d entfernt", reclass, dropped)
+    if reclass or dropped or flagged:
+        log.info("Bereinigung: %d kauf→miete, %d entfernt, %d Preis-Verdacht markiert",
+                 reclass, dropped, flagged)
     return data
 
 
@@ -267,6 +305,9 @@ def build_deal(raw, ai, now_iso, cfg):
         "baujahr":        None,
         "energieklasse":  None,
         "heizungsart":    None,
+        "hausgeld":       None,
+        "provisionsfrei": None,
+        "preis_verdacht": False,
     }
     if ai:
         for k, v in ai.items():
@@ -429,6 +470,29 @@ def extract_by_regex(title, raw_text, listing_type_hint, cfg):
         rent_prices = [p for p in prices if 100 < p < 8_000]
         if rent_prices:
             result["kaltmiete"] = min(rent_prices)
+
+    # Hausgeld (für Kauf relevant): "Hausgeld 550 €", "Hausgeld: 550", "550 € Hausgeld"
+    hg = re.search(
+        r'Hausgeld[^\d]{0,15}(\d{2,4}(?:[.\s]\d{3})?)\s*(?:€|EUR)?'
+        r'|(\d{2,4})\s*(?:€|EUR)?\s*Hausgeld',
+        text, re.IGNORECASE
+    )
+    if hg:
+        val = (hg.group(1) or hg.group(2) or "").replace(" ", "").replace(".", "")
+        try:
+            h = float(val)
+            if 20 <= h <= 3000:          # plausibles Hausgeld
+                result["hausgeld"] = h
+        except ValueError:
+            pass
+
+    # Provision / Makler
+    if re.search(r'provisionsfrei|courtagefrei|(?:ohne|keine?)\s+(?:provision|courtage|makler)'
+                 r'|von\s+privat|privatverkauf',
+                 text, re.IGNORECASE):
+        result["provisionsfrei"] = True
+    elif re.search(r'provision|courtage|makler', text, re.IGNORECASE):
+        result["provisionsfrei"] = False
 
     # Stadtteil
     stadtteile = [

@@ -494,18 +494,30 @@ function recomputeFinancing() {
       return;
     }
     d.kaufpreis_invalid = false;
+    // Verdacht auf Parsing-Fehler: unrealistischer €/m² (z. B. 1.045.000 €
+    // falsch als 45.000 € → 296 €/m²). Mannheim real ~1.000–15.000 €/m².
+    const qmPreis = (d.quadratmeter && d.kaufpreis) ? d.kaufpreis / d.quadratmeter : null;
+    d.preis_verdacht = (qmPreis !== null && (qmPreis < 800 || qmPreis > 15000));
     if (!d.kaufpreis || !d.kaltmiete) return;
-    const gesamt   = d.kaufpreis * (1 + nkF);
+    // Makler-Provision: erhöht die Kaufnebenkosten für dieses Objekt um ~3,57 %
+    const dealNk   = nkF + (d.provisionsfrei === false ? 0.0357 : 0);
+    // Nicht-umlagefähiges Hausgeld: ~35 % des echten Hausgelds, sonst Pauschale
+    const nichtUml = d.hausgeld ? Math.round(d.hausgeld * 0.35) : HAUSGELD;
+    d.hausgeld_nicht_uml   = nichtUml;
+    const gesamt   = d.kaufpreis * (1 + dealNk);
     const eigen    = d.kaufpreis * ekF;
     const darlehen = Math.max(0, gesamt - eigen);
     const bankrate = darlehen * (z + t) / 12;
     const zinsLast = darlehen * z / 12;
     d.bankrate_monat       = Math.round(bankrate);
-    d.cashflow_monat       = Math.round(d.kaltmiete - bankrate - HAUSGELD);
-    d.cashflow_vor_tilgung = Math.round(d.kaltmiete - zinsLast - HAUSGELD);
+    d.cashflow_monat       = Math.round(d.kaltmiete - bankrate - nichtUml);
+    d.cashflow_vor_tilgung = Math.round(d.kaltmiete - zinsLast - nichtUml);
     d.bruttorendite_pct    = +(d.kaltmiete * 12 / d.kaufpreis * 100).toFixed(2);
     d.kaufpreisfaktor      = +(d.kaufpreis / (d.kaltmiete * 12)).toFixed(1);
-    d.deal_score = d.cashflow_monat >= 0 ? 'strong_buy'
+    // Zusätzlicher Verdacht: unrealistisch hohe Bruttorendite (>12 %)
+    if (d.bruttorendite_pct > 12) d.preis_verdacht = true;
+    d.deal_score = d.preis_verdacht ? 'skip'
+                 : d.cashflow_monat >= 0 ? 'strong_buy'
                  : d.cashflow_monat >= -150 ? 'watch' : 'skip';
   });
 }
@@ -835,6 +847,14 @@ function renderCard(d, poi) {
       const v = d.cashflow_vor_tilgung;
       const vCls = v >= 0 ? 'text-green-400' : 'text-gray-300';
       renditeRow.push(`<span>💧 vor Tilgung: <strong class="${vCls}">${v >= 0 ? '+' : ''}${fmtEuro(v)}/Mo.</strong></span>`);
+    }
+    if (d.hausgeld) {
+      renditeRow.push(`<span>🏢 Hausgeld: <strong class="text-gray-200">${fmtEuro(d.hausgeld)}/Mo.</strong>${d.hausgeld_nicht_uml ? ` <span class="text-gray-500">(n. uml. ~${fmtEuro(d.hausgeld_nicht_uml)})</span>` : ''}</span>`);
+    }
+    if (d.provisionsfrei === true) {
+      renditeRow.push(`<span class="text-green-400">✓ provisionsfrei</span>`);
+    } else if (d.provisionsfrei === false) {
+      renditeRow.push(`<span class="text-yellow-400">+ Provision (~3,6 %)</span>`);
     }
     if (renditeRow.length) {
       kennzahlen += `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-400">${renditeRow.join('')}</div>`;
