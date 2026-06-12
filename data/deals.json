@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T23:13:44.225311+00:00",
+  "last_updated": "2026-06-12T17:35:12.793828+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -1164,7 +1164,7 @@
       "listing_type": "kauf",
       "title": "Solide Kapitalanlage: Vermietete 2-Zimmer-Wohnung mit Balkon in Mannheim - realunis",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "renoviert",
         "Balkon"
@@ -1202,7 +1202,7 @@
       "listing_type": "kauf",
       "title": "Little NY in der Mannheim Oststadt. Offen. Großzügig. Überraschend privat.",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "renoviert",
         "Balkon"
@@ -1245,7 +1245,7 @@
       "listing_type": "kauf",
       "title": "Attraktive Kapitalanlage in Mannheim: Vermietete 2-Zimmer-Wohnung mit Balkon",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "renoviert",
         "Balkon"
@@ -1284,7 +1284,7 @@
       "listing_type": "kauf",
       "title": "Geräumiges Wohnen auf 89 qm im Mannheimer Süden - Ideal für die moderne Familie!",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -1325,7 +1325,7 @@
       "listing_type": "kauf",
       "title": "Helle 2-Zimmerwohnung mit Balkon – fußläufig zum Wasserturm in Mannheim!",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Balkon"
       ],
@@ -1442,7 +1442,7 @@
       "listing_type": "kauf",
       "title": "Wohnung mit Grünblick und Balkon (sofort bezugsfrei) | Mannheim-Käfertal",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Balkon"
       ],
@@ -1478,7 +1478,7 @@
       "listing_type": "kauf",
       "title": "Helle 2-ZKB-Wohnung mit großer Loggia und TG-Stellplatz in sehr guter Lage von Mannheim-Seckenheim",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Loggia",
         "TG-Stellplatz",
@@ -3186,7 +3186,7 @@
       "listing_type": "miete",
       "title": "Frisch renoviert in Mannheim-Sandhofen – 4 großzügige Zimmer mit Balkon",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-03T00:17:44.507199+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -3204,17 +3204,21 @@
         "einschaetzung_investor": "Mäßig geeignet als Kapitalanlage: Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial"
       },
       "quadratmeter": 114.0,
-      "kaltmiete": 300.0,
+      "kaltmiete": 1100.0,
       "nebenkosten": 300,
       "warmmiete": 1550,
-      "kaltmiete_qm": 2.63,
+      "kaltmiete_qm": 9.65,
       "expected_market_qm": 16.0,
-      "deal_deviation_pct": -83.6,
+      "deal_deviation_pct": -39.7,
       "deal_score": "gut",
       "price_history": [
         {
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 300.0
+        },
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 1100.0
         }
       ]
     },
@@ -3404,7 +3408,7 @@
       "listing_type": "kauf",
       "title": "Ihr neues Zuhause: Tolle 5 ZKB ETW, 126m² im Erdgeschoss, mit 2x Garagen, Terrasse, XL-Keller & privater Einfahrt, in ruhiger Lage von Mannheim",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Terrasse",
         "privater Einfahrt",
@@ -3522,7 +3526,7 @@
       "listing_type": "kauf",
       "title": "4 Zimmer Wohnung in Mannheim",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "renoviert"
       ],
@@ -7001,7 +7005,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -7275,7 +7279,7 @@
       "listing_type": "kauf",
       "title": "Bezugsfrei in Mannheim: modernisierte Ein-Zimmer-Wohnung mit Balkon",
       "first_seen": "2026-05-27T18:10:19.479733+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -7314,7 +7318,7 @@
       "listing_type": "kauf",
       "title": "Helle 2-Zimmer-Eigentumswohnung in Mannheim-Käfertal/Rott",
       "first_seen": "2026-05-27T18:10:19.479733+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Garage",
         "Balkon"
@@ -8777,7 +8781,7 @@
       "listing_type": "miete",
       "title": "Erstbezug | Modern möbilierte 1 Zimmer Whg in Mannheim nähe Uni",
       "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "renoviert",
         "Aufzug",
@@ -9635,7 +9639,7 @@
       "listing_type": "kauf",
       "title": "***Möbliertes City-Apartment im Zentrum Mannheim Quadrate mit starker Rendite***",
       "first_seen": "2026-06-02T06:22:38.416128+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "renoviert",
         "moebliert"
@@ -12389,7 +12393,7 @@
       "listing_type": "kauf",
       "title": "Top-Renditeobjekt in der Mannheimer Neckarstadt",
       "first_seen": "2026-06-08T18:11:11.261422+00:00",
-      "last_seen": "2026-06-11T23:13:37.543890+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Aufzug"
       ],
@@ -13372,7 +13376,7 @@
       "listing_type": "kauf",
       "title": "Preis: 750.000 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Town-House-Feeling auf zwei Ebenen",
       "zimmeranzahl": null,
@@ -13410,7 +13414,7 @@
       "listing_type": "kauf",
       "title": "Preis: 487.700 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Hoch hinaus im Hochpunkt E - 2 Zimmer mit Weitblick",
       "zimmeranzahl": 2.0,
@@ -13448,7 +13452,7 @@
       "listing_type": "kauf",
       "title": "Preis: 515.200 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Luxusimmobilie mit Panorama über Mannheim",
       "zimmeranzahl": null,
@@ -13486,7 +13490,7 @@
       "listing_type": "kauf",
       "title": "Preis: 473.900 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Barrierefreies 2-Zi.-Apartment mit sonniger Loggia",
       "zimmeranzahl": 2,
@@ -13524,7 +13528,7 @@
       "listing_type": "kauf",
       "title": "Preis: 491.800 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "EXKLUSIV Wohnen über den Dächern Mannheims",
       "zimmeranzahl": null,
@@ -13562,7 +13566,7 @@
       "listing_type": "kauf",
       "title": "Preis: 582.600 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnen im architektonischen Highlight",
       "zimmeranzahl": null,
@@ -13600,7 +13604,7 @@
       "listing_type": "kauf",
       "title": "Preis: 501.700 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnen im Town-House Style",
       "zimmeranzahl": null,
@@ -13638,7 +13642,7 @@
       "listing_type": "kauf",
       "title": "Preis: 452.300 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Barrierefreies 2-Zi.-Apartment mit einer hochwertigen Designnote",
       "zimmeranzahl": 2,
@@ -13676,7 +13680,7 @@
       "listing_type": "miete",
       "title": "Neubau 4-Zimmer-Wohnung in der Innenstadt - New7 -",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Neubau"
       ],
@@ -13718,7 +13722,7 @@
       "listing_type": "miete",
       "title": "Wohnung in Toplage - New7 - 4-Zimmer Neubauwohnung",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Neubau"
       ],
@@ -13760,7 +13764,7 @@
       "listing_type": "miete",
       "title": "MA-City - New7 - Neubauwohnung in Toplage",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Neubau"
       ],
@@ -13801,7 +13805,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Etagenwohnung mit Gartenterrasse",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13842,7 +13846,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Wohnung mit Terrasse und Bad en Suite",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13883,7 +13887,7 @@
       "listing_type": "miete",
       "title": "Ihr neues Zuhause: 3-Zimmer-Terrassenwohnung mit zwei Bädern",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13924,7 +13928,7 @@
       "listing_type": "miete",
       "title": "Großzügige 2- ZKB, großer Wohn-Essbereich, Tageslichtbad, sonnige Terrasse",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13964,7 +13968,7 @@
       "listing_type": "miete",
       "title": "500,00 € Gutschein * Helle 2-Zimmer-Wohnung im Zentrum von Vogelstang!",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-11T20:44:01.454793+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
       "boni": [],
       "kurz_bewertung": "Helle 2-Zimmer-Wohnung im Zentrum von Vogelstang!",
       "zimmeranzahl": 2.0,
@@ -13996,6 +14000,860 @@
       "warmmiete": 653,
       "deal_score": "okay",
       "_hash": "3ffab7d75e20"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/provisionsfrei-1-zkb-wohnung-mannheim-waldhof-2023-renoviert/3433462274-203-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Provisionsfrei 1 ZKB-WOHNUNG Mannheim Waldhof, 2023 renoviert",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "renoviert"
+      ],
+      "kurz_bewertung": "Ruhige 1-Zimmer-Wohnung im Hinterhaus mit eigenem Energieversorgungssystem.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Waldhof",
+      "adresse": "Hinterhaus, Waldhof",
+      "umfeld_analyse": {
+        "demografie": "Familien und Singles, möglicherweise auch Studenten, da nahe an der Uni.",
+        "vibe_sicherheit": "Ruhig und sicher, da im Hinterhaus und mit wenigen Parteien.",
+        "einschaetzung_student": "Gut geeignet, da nahe an der Uni und mit günstigen Mietpreisen.",
+        "einschaetzung_investor": "Mittelmäßig geeignet, da die Miete nicht sehr hoch ist, aber die Lage nicht sehr attraktiv ist."
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 430.0
+        }
+      ],
+      "etage": "Hinterhaus",
+      "baujahr": 2023,
+      "energieklasse": null,
+      "heizungsart": "Gas",
+      "hausgeld": null,
+      "provisionsfrei": true,
+      "preis_verdacht": false,
+      "quadratmeter": 40.0,
+      "kaltmiete": 430.0,
+      "nebenkosten": 100,
+      "warmmiete": 530,
+      "kaltmiete_qm": 10.75,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": -30.6,
+      "deal_score": "gut",
+      "_hash": "59c72e076843"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-in-mannheim-kaefertal-ab-01-08-zu-vermieten/3433034949-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1-Zimmer-Wohnung in Mannheim-Käfertal ab 01.08. zu vermieten",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "1-Zimmer-Wohnung in ruhiger Lage, geeignet für eine Person",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien und Singles, eher älteres Publikum",
+        "vibe_sicherheit": "ruhig, aber nicht sehr sicher, da es einige dunkle Ecken gibt",
+        "einschaetzung_student": "nicht sehr geeignet, da es keine Studentenwohnheime gibt und die Lage nicht sehr zentral ist",
+        "einschaetzung_investor": "nicht sehr geeignet, da die Miete relativ hoch ist und die Lage nicht sehr attraktiv ist"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 660.0
+        }
+      ],
+      "etage": "EG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 38.0,
+      "kaltmiete": 660.0,
+      "nebenkosten": 1680,
+      "warmmiete": 660,
+      "kaltmiete_qm": 17.37,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": 19.8,
+      "deal_score": "teuer",
+      "_hash": "75fd28fd965f"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mannheim-schwetzinger-vorstadt/3433031771-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnung Mannheim Schwetzinger Vorstadt",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Diese gepflegte, helle 2 Zimmerwohnung liegt zentral nur wenige Minuten von Bahnhof, Innenstadt, Uni, Geschäften und Straßenbahn entfernt.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68165 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 150.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 60.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 850,
+      "kaltmiete_qm": 2.5,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -83.3,
+      "deal_score": "gut",
+      "_hash": "5475dde78c0e"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-eigentumswohnung-in-top-lage-in-mannheim/3433040964-196-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Attraktive Eigentumswohnung in Top-Lage in Mannheim",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "renoviert",
+        "Balkon",
+        "moebliert"
+      ],
+      "kurz_bewertung": "Charmante 2-Zimmer-Wohnung in denkmalgeschütztem Altbau – komplett möbliert in bester Lage von Mannheim",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Schwetzingerstadt",
+      "adresse": "68165 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
+        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Gut geeignet"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 270000.0
+        }
+      ],
+      "etage": "3. OG",
+      "baujahr": 2014,
+      "energieklasse": null,
+      "heizungsart": "Infrarotheizung",
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "quadratmeter": 61.37,
+      "kaufpreis": 270000.0,
+      "nebenkosten": 152,
+      "kaltmiete": 1166.03,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 1237.5,
+      "cashflow_monat": -121.47,
+      "deal_score": "watch",
+      "_hash": "c50f19406a22"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/68309-mannheim-vogelstang-3-5-zimmer-wohnung/3433037141-196-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "68309 Mannheim-Vogelstang 3,5 Zimmer Wohnung",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "Aufzug",
+        "Balkon"
+      ],
+      "kurz_bewertung": "helle und gepflegte 3,5-Zimmer-Eigentumswohnung",
+      "zimmeranzahl": 3.5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "68309 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "ruhig und sicher",
+        "einschaetzung_student": "gut geeignet",
+        "einschaetzung_investor": "mittelgut geeignet"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 249000.0
+        }
+      ],
+      "etage": "5. Obergeschoss",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 233.0,
+      "provisionsfrei": true,
+      "preis_verdacht": false,
+      "quadratmeter": 79.0,
+      "kaufpreis": 249000.0,
+      "nebenkosten": 233,
+      "kaltmiete": 1224.5,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 1141.25,
+      "cashflow_monat": 1.25,
+      "deal_score": "strong_buy",
+      "_hash": "880520f125ce"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/168112357",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 239.000 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "Aufzug",
+        "Balkon"
+      ],
+      "kurz_bewertung": "Attraktive 3-Zimmer-Dachgeschosswohnung mit Klima, Balkon & Aufzug",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Jungbusch",
+      "adresse": null,
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
+        "einschaetzung_investor": "Mittlere Eignung, aber Preise können hoch sein"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 239000.0
+        }
+      ],
+      "etage": "Dachgeschoss",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 239000.0,
+      "deal_score": "skip",
+      "_hash": "778859e285f6"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/141430157",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 524.600 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Barrierefreies 3-Zi.-Apartment mit einer hochwertigen Designnote",
+      "zimmeranzahl": 3,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "George-Washington-Str. 239-241",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Gut",
+        "einschaetzung_investor": "Gut"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 524600.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 524600.0,
+      "deal_score": "skip",
+      "_hash": "b312d758fe5f"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/141429352",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 764.200 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "George-Washington-Str. 239-241 l",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
+        "einschaetzung_student": "Gut, aber einige Lärmquellen",
+        "einschaetzung_investor": "Gut, aber einige potenzielle Risiken"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 764200.0
+        }
+      ],
+      "etage": "E",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 764200.0,
+      "quadrat": "C3",
+      "deal_score": "skip",
+      "_hash": "275df9ac8b12"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/132279759",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 777.100 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "4-Zimmer-Wohnung mit Barrierefreiheit in lebendigem Stadtquartier und grüner Umgebung",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "George-Washington-Str. 239-241",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut, aber einige Lärmbelästigungen durch den Stadtverkehr",
+        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
+        "einschaetzung_investor": "Gut, steigende Immobilienpreise in der Region"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 777100.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 777100.0,
+      "deal_score": "skip",
+      "_hash": "a9fda64c3e6a"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/167973192",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 890.000 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "4 TG-Plätzen",
+        "7-Zimmer-Townhouse"
+      ],
+      "kurz_bewertung": "Besonderes 7-Zimmer-Townhouse mit 4 TG-Plätzen!",
+      "zimmeranzahl": 7.0,
+      "latitude": 49.4728,
+      "longitude": 8.4682,
+      "stadtteil": "Mannheim Lindenhof",
+      "adresse": null,
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Mittel",
+        "einschaetzung_investor": "Gut"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 890000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 890000.0,
+      "deal_score": "skip",
+      "_hash": "62647cac65a5"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/155316713",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 452.017 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Ein Meisterwerk der modernen Architektur",
+      "zimmeranzahl": null,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "Thomas-Jefferson-Straße 50",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut, aber einige Lärmbelästigungen durch den nahegelegenen Verkehr",
+        "einschaetzung_student": "Gut, aber einige Lärmbelästigungen durch den nahegelegenen Verkehr",
+        "einschaetzung_investor": "Gut, aber einige Lärmbelästigungen durch den nahegelegenen Verkehr"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 452017.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 452017.0,
+      "deal_score": "skip",
+      "_hash": "6ff0ca77bd77"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/148959311",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 652.482 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "Thomas-Jefferson-Straße 50",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "ruhig und sicher",
+        "einschaetzung_student": "möglich, aber nicht ideal",
+        "einschaetzung_investor": "gut"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 652482.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 652482.0,
+      "deal_score": "skip",
+      "_hash": "5d6587bd3851"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/148957903",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: 269.324 €",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Käfertal",
+      "adresse": "Thomas-Jefferson-Straße 50",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Gut",
+        "einschaetzung_investor": "Gut"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 269324.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaufpreis": 269324.0,
+      "deal_score": "skip",
+      "_hash": "99a581a94f25"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/137770764",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "1.000,00 € Wunschgutschein * Schöne 2 -Zimmer-Wohnung im Herzen von Vogelstang",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Schöne 2-Zimmer-Wohnung im Herzen von Vogelstang",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.5,
+      "longitude": 8.5,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "Freiberger Ring 3",
+      "umfeld_analyse": {
+        "demografie": "Vogelstang ist ein beliebter Stadtteil für Familien und junge Erwachsene, bekannt für seine gute Infrastruktur und die Nähe zum Zentrum von Mannheim.",
+        "vibe_sicherheit": "Vogelstang gilt als sicherer Stadtteil, aber es gibt auch einige Probleme mit Lärm und Parkplatzmangel.",
+        "einschaetzung_student": "Vogelstang ist eine gute Wahl für Studenten, da es in der Nähe der Uni Mannheim liegt und eine gute Infrastruktur bietet.",
+        "einschaetzung_investor": "Vogelstang ist eine gute Kapitalanlage, da es eine stabile Nachfrage nach Wohnraum hat und eine gute Entwicklungspotenzial bietet."
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 678.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 678.0,
+      "deal_score": "okay",
+      "_hash": "b44a0bccd1e7"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/166361176",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "Schöne 2-Zimmer-Wohnung in Vogelstang Zentrum",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Schöne 2-Zimmer-Wohnung in Vogelstang Zentrum",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.5,
+      "longitude": 8.5,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "Geraer Ring 10",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Mittel",
+        "einschaetzung_investor": "Mittel"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 690.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 690.0,
+      "warmmiete": 690,
+      "deal_score": "okay",
+      "_hash": "8b0472ed74f4"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/161519925",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "Zentrale 3-Zimmer-Wohnung mit tollem Ausblick in Mannheim",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Zentrale 3-Zimmer-Wohnung mit tollem Ausblick in Mannheim",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "Neckarpromenade 25",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
+        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
+        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
+        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Verkehrsanbindung"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 960.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 960.0,
+      "warmmiete": 960,
+      "deal_score": "okay",
+      "_hash": "66377c993f5b"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/158623208",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "1000 € Wunschgutschein zum Einzug ! Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.5,
+      "longitude": 8.5,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "Geraer Ring 2",
+      "umfeld_analyse": {
+        "demografie": "Familien mit Kindern, ältere Menschen",
+        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
+        "einschaetzung_student": "nicht geeignet für Informatikstudenten, da keine Nähe zur Uni",
+        "einschaetzung_investor": "nicht geeignet als Kapitalanlage, da keine hohe Nachfrage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 1000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 1000.0,
+      "deal_score": "okay",
+      "_hash": "c901dd42cb85"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/166559534",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "Erstbezug - Schöne 2-Zimmer Wohnung mit gehobener Ausstattung",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Schöne 2-Zimmer Wohnung mit gehobener Ausstattung",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "Rohrhoferstraße 30",
+      "umfeld_analyse": {
+        "demografie": "Familienviertel mit älteren und jüngeren Familien",
+        "vibe_sicherheit": "ruhig und sicher, aber etwas abgelegen von Zentrum",
+        "einschaetzung_student": "nicht ideal für Studenten, da weit vom Uni-Campus entfernt",
+        "einschaetzung_investor": "keine gute Kapitalanlage, da Preis nicht sehr niedrig"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 955.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 955.0,
+      "warmmiete": 955,
+      "deal_score": "okay",
+      "_hash": "499775803e93"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/166558759",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "Erstbezug - Schöne 3-Zimmer Wohnung",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Schöne 3-Zimmer Wohnung",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "Rohrhoferstraße 30",
+      "umfeld_analyse": {
+        "demografie": "Familienviertel mit älteren Wohnbevölkerung",
+        "vibe_sicherheit": "ruhig, aber nicht sehr lebendig",
+        "einschaetzung_student": "nicht ideal für Studenten, da weit vom Uni-Campus entfernt",
+        "einschaetzung_investor": "keine gute Kapitalanlage, da keine steigende Nachfrage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 1185.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 1185.0,
+      "warmmiete": 1185,
+      "deal_score": "okay",
+      "_hash": "bd360ab8481f"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/166555794",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "Erstbezug - Schöne 2-Zimmer Wohnung",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [],
+      "kurz_bewertung": "Schöne 2-Zimmer Wohnung",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.5,
+      "longitude": 8.5,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "Rohrhoferstraße 34",
+      "umfeld_analyse": {
+        "demografie": "Familienviertel mit älteren Bewohnern",
+        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
+        "einschaetzung_student": "nicht geeignet für Studenten",
+        "einschaetzung_investor": "keine gute Kapitalanlage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 835.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 835.0,
+      "warmmiete": 835,
+      "deal_score": "okay",
+      "_hash": "7811e353b9ee"
+    },
+    {
+      "url": "https://www.immobilienscout24.de/expose/168494548",
+      "source": "immoscout24",
+      "listing_type": "miete",
+      "title": "Gepflegte 4-Zimmer-Wohnung mit großem Balkon, Möbelübernahme möglich",
+      "first_seen": "2026-06-12T17:30:38.859659+00:00",
+      "last_seen": "2026-06-12T17:30:38.859659+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Gepflegte 4-Zimmer-Wohnung mit großem Balkon, Möbelübernahme möglich",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "Bürgermeister-Fuchs-Straße 20",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Familien und jungen Erwachsenen",
+        "vibe_sicherheit": "Gut, aber einige Straßen können nachts dunkel sein",
+        "einschaetzung_student": "Gut, viele Studenten wohnen in der Nähe der Uni",
+        "einschaetzung_investor": "Mäßig, Preis-Leistungs-Verhältnis ist okay, aber keine Top-Investition"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-12T17:30:38.859659+00:00",
+          "price": 1050.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "kaltmiete": 1050.0,
+      "warmmiete": 1050,
+      "deal_score": "okay",
+      "_hash": "b2edb5fa69b6"
     }
   ]
 }
