@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T23:05:55.879678+00:00",
+  "last_updated": "2026-06-13T12:21:50.902070+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -7005,7 +7005,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-12T23:05:49.226649+00:00",
+      "last_seen": "2026-06-13T12:21:34.874657+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -8781,7 +8781,7 @@
       "listing_type": "miete",
       "title": "Erstbezug | Modern möbilierte 1 Zimmer Whg in Mannheim nähe Uni",
       "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-12T23:05:49.226649+00:00",
+      "last_seen": "2026-06-13T12:21:34.874657+00:00",
       "boni": [
         "renoviert",
         "Aufzug",
@@ -14953,6 +14953,144 @@
       "deal_deviation_pct": -8.1,
       "deal_score": "okay",
       "_hash": "7a8f06e759ef"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim-lindenhof-fuer-studenten-azubis/3434100990-203-7982",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 Zimmer Wohnung Mannheim-Lindenhof für Studenten/Azubis",
+      "first_seen": "2026-06-13T12:21:34.874657+00:00",
+      "last_seen": "2026-06-13T12:21:34.874657+00:00",
+      "boni": [
+        "Garage"
+      ],
+      "kurz_bewertung": "Zentrale 1-Zimmer-Wohnung in Mannheim-Lindenhof für Studenten/Azubis",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4728,
+      "longitude": 8.4682,
+      "stadtteil": "Mannheim Lindenhof",
+      "adresse": "68163 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten und Familien",
+        "vibe_sicherheit": "Sehr sicher, zentrale Lage",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten",
+        "einschaetzung_investor": "Keine gute Kapitalanlage, hohe Miete"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-13T12:21:34.874657+00:00",
+          "price": 110.0
+        }
+      ],
+      "etage": "5. Stock",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 28.0,
+      "kaltmiete": 110.0,
+      "nebenkosten": 110,
+      "warmmiete": 480,
+      "kaltmiete_qm": 3.93,
+      "expected_market_qm": 14.8,
+      "deal_deviation_pct": -73.4,
+      "deal_score": "gut",
+      "_hash": "304d57c5bf56"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/4-zi-wg-mit-ebk-in-mannheim-friedrichsfeld-ab-sofort-/3433910431-203-8125",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "4 Zi-WG mit EBK in Mannheim Friedrichsfeld! ab sofort!",
+      "first_seen": "2026-06-13T12:21:34.874657+00:00",
+      "last_seen": "2026-06-13T12:21:34.874657+00:00",
+      "boni": [
+        "EBK"
+      ],
+      "kurz_bewertung": "gut geschnittene, auch WG-geeignete 4 Zi-Wohnung",
+      "zimmeranzahl": 4,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Friedrichsfeld",
+      "adresse": "Edingen-Neckarhausen",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "ruhig und sicher",
+        "einschaetzung_student": "geeignet für Studenten, aber nicht direkt in der Nähe der Uni",
+        "einschaetzung_investor": "nicht geeignet als Kapitalanlage, da keine guten Renditechancen"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-13T12:21:34.874657+00:00",
+          "price": 124.0
+        }
+      ],
+      "etage": "3. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": "Elektro",
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 99.0,
+      "kaltmiete": 124.0,
+      "nebenkosten": 124,
+      "warmmiete": 981,
+      "kaltmiete_qm": 1.25,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": -91.9,
+      "deal_score": "gut",
+      "_hash": "937395361e67"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim/3433839424-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 Zimmer Wohnung Mannheim",
+      "first_seen": "2026-06-13T12:21:34.874657+00:00",
+      "last_seen": "2026-06-13T12:21:34.874657+00:00",
+      "boni": [
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Etagenwohnung 3. Stock, Aufzug vorhanden, 1 Zimmer mit Küchenzeile, Flur, Bad mit Dusche/WC.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "Neckarauer Str.",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet, nahe zur Technischen Hochschule",
+        "einschaetzung_investor": "Mäßig geeignet, keine besonderen Vorteile"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-13T12:21:34.874657+00:00",
+          "price": 110.0
+        }
+      ],
+      "etage": "3. Stock",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 24.0,
+      "kaltmiete": 110.0,
+      "nebenkosten": 110,
+      "warmmiete": 520,
+      "kaltmiete_qm": 4.58,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -69.5,
+      "deal_score": "gut",
+      "_hash": "03a7c1863810"
     }
   ]
 }
