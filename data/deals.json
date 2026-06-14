@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T21:59:42.366176+00:00",
+  "last_updated": "2026-06-14T13:19:28.361313+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -3073,7 +3073,7 @@
       "listing_type": "miete",
       "title": "1000 € Wunschgutschein zum Einzug ! Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-01T22:26:38.054175+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
       "boni": [
         "Aufzug"
       ],
@@ -3090,17 +3090,21 @@
         "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial"
       },
       "quadratmeter": 101.46,
-      "kaltmiete": 211.0,
+      "kaltmiete": 1040.0,
       "nebenkosten": 233,
       "warmmiete": 1484,
-      "kaltmiete_qm": 2.08,
+      "kaltmiete_qm": 10.25,
       "expected_market_qm": 15.0,
-      "deal_deviation_pct": -86.1,
+      "deal_deviation_pct": -31.7,
       "deal_score": "gut",
       "price_history": [
         {
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 211.0
+        },
+        {
+          "date": "2026-06-14T13:19:09.159905+00:00",
+          "price": 1040.0
         }
       ]
     },
@@ -3148,7 +3152,7 @@
       "listing_type": "miete",
       "title": "Schöne 1-Zimmer-Wohnung mit tollem Ausblick im Zentrum von Mannheim Vogelstang",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-01T22:26:38.054175+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
       "boni": [
         "Balkon",
         "Aufzug"
@@ -7005,7 +7009,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-13T21:56:54.570581+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -8781,7 +8785,7 @@
       "listing_type": "miete",
       "title": "Erstbezug | Modern möbilierte 1 Zimmer Whg in Mannheim nähe Uni",
       "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-13T21:56:54.570581+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
       "boni": [
         "renoviert",
         "Aufzug",
@@ -16469,6 +16473,143 @@
       "warmmiete": 2300,
       "deal_score": "okay",
       "_hash": "1bcd65c3737b"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/studentenapartent-mit-balkon-im-angesagten-jungbusch-mannheim/3434736648-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Studentenapartent mit Balkon im angesagten Jungbusch Mannheim",
+      "first_seen": "2026-06-14T13:19:09.159905+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
+      "boni": [
+        "Balkon",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Die Wohnung ist ideal für Studierende der Universität Mannheim und junge Berufstätige, die zentral wohnen möchten.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Jungbusch",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Der Jungbusch ist ein beliebter Wohnstandort für Studierende, junge Berufstätige und Kreative.",
+        "vibe_sicherheit": "Die Atmosphäre im Jungbusch ist dynamisch und urban, Sicherheitsgefühl ist gut.",
+        "einschaetzung_student": "Sehr geeignet für Informatikstudenten, da die Universität Mannheim in der Nähe liegt.",
+        "einschaetzung_investor": "Geringe Eignung als Kapitalanlage, da die Miete relativ hoch ist."
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-14T13:19:09.159905+00:00",
+          "price": 900.0
+        }
+      ],
+      "etage": "5. Etage",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 24.0,
+      "kaltmiete": 900.0,
+      "nebenkosten": 100,
+      "warmmiete": 900,
+      "kaltmiete_qm": 37.5,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": 141.9,
+      "deal_score": "teuer",
+      "_hash": "88f231503f08"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-in-mannheim-jungbusch-nur-fuer-studenten/3435001525-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1-Zimmer-Wohnung in Mannheim-Jungbusch | nur für Studenten",
+      "first_seen": "2026-06-14T13:19:09.159905+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
+      "boni": [],
+      "kurz_bewertung": "Kompakte 1-Zimmer-Wohnung im Herzen des Mannheimer Jungbuschs",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Jungbusch",
+      "adresse": "Akademiestraße 6",
+      "umfeld_analyse": {
+        "demografie": "Studenten, junge Erwachsene, Familien mit Kindern",
+        "vibe_sicherheit": "Gut, da die Wohnung in einem sicheren Stadtteil liegt und die Anbindung an den öffentlichen Nahverkehr direkt gegeben ist",
+        "einschaetzung_student": "Sehr geeignet, da die Wohnung in der Nähe der Universität liegt und kurze Wege zum Studienort bieten",
+        "einschaetzung_investor": "Mäßig geeignet, da die Wohnung in einem beliebten Stadtteil liegt, aber die Miete relativ hoch ist"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-14T13:19:09.159905+00:00",
+          "price": 430.0
+        }
+      ],
+      "etage": "1. Stock",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 21.0,
+      "kaltmiete": 430.0,
+      "nebenkosten": 100,
+      "warmmiete": 430,
+      "kaltmiete_qm": 20.48,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": 41.2,
+      "deal_score": "teuer",
+      "_hash": "918c169d805b"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim-vollmoebliert-650-wm/3434780957-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1-Zimmer Wohnung Mannheim, vollmöbliert 650€ WM",
+      "first_seen": "2026-06-14T13:19:09.159905+00:00",
+      "last_seen": "2026-06-14T13:19:09.159905+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Vollmöblierte 1-Zimmer-Wohnung in Mannheim-Almenhof zum Mieten.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Almenhof",
+      "adresse": "68199 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
+        "vibe_sicherheit": "Gut, da es sich um einen belebten Stadtteil handelt.",
+        "einschaetzung_student": "Sehr geeignet, da es sich um eine Hochschulstadt handelt.",
+        "einschaetzung_investor": "Gut, da es sich um einen wirtschaftlich starken Stadtteil handelt."
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-14T13:19:09.159905+00:00",
+          "price": 150.0
+        }
+      ],
+      "etage": "Hochparterre",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 27.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 650,
+      "kaltmiete_qm": 5.56,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -68.2,
+      "deal_score": "gut",
+      "_hash": "8cdb6796b0e8"
     }
   ]
 }
