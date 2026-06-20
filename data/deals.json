@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T14:20:52.908311+00:00",
+  "last_updated": "2026-06-20T19:27:58.618049+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -213,7 +213,7 @@
       "listing_type": "miete",
       "title": "2 Zimmerwohnung mit Balkon, 68161 Mannheim",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "EBK",
         "Balkon"
@@ -292,7 +292,7 @@
       "listing_type": "miete",
       "title": "Perfekte Wohnung für Paare in Mannheim",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "EBK",
         "Garage"
@@ -2237,7 +2237,7 @@
       "listing_type": "miete",
       "title": "Schöne vollmöblierte 3,5-Zimmer Dachgeschosswohnung in Mannheim-Neckarau",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "moebliert",
         "renoviert"
@@ -10963,7 +10963,7 @@
       "listing_type": "miete",
       "title": "Renovierte 3,5-Zimmer-Wohnung mit Altbaucharme in Mannheimer Toplage",
       "first_seen": "2026-06-05T16:39:34.932979+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "renoviert"
       ],
@@ -13384,7 +13384,7 @@
       "listing_type": "kauf",
       "title": "Preis: 750.000 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Town-House-Feeling auf zwei Ebenen",
       "zimmeranzahl": null,
@@ -13422,7 +13422,7 @@
       "listing_type": "kauf",
       "title": "Preis: 487.700 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Hoch hinaus im Hochpunkt E - 2 Zimmer mit Weitblick",
       "zimmeranzahl": 2.0,
@@ -13460,7 +13460,7 @@
       "listing_type": "kauf",
       "title": "Preis: 515.200 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Luxusimmobilie mit Panorama über Mannheim",
       "zimmeranzahl": null,
@@ -13498,7 +13498,7 @@
       "listing_type": "kauf",
       "title": "Preis: 473.900 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Barrierefreies 2-Zi.-Apartment mit sonniger Loggia",
       "zimmeranzahl": 2,
@@ -13536,7 +13536,7 @@
       "listing_type": "kauf",
       "title": "Preis: 491.800 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "EXKLUSIV Wohnen über den Dächern Mannheims",
       "zimmeranzahl": null,
@@ -13574,7 +13574,7 @@
       "listing_type": "kauf",
       "title": "Preis: 582.600 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnen im architektonischen Highlight",
       "zimmeranzahl": null,
@@ -13612,7 +13612,7 @@
       "listing_type": "kauf",
       "title": "Preis: 501.700 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnen im Town-House Style",
       "zimmeranzahl": null,
@@ -13650,7 +13650,7 @@
       "listing_type": "kauf",
       "title": "Preis: 452.300 €",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Barrierefreies 2-Zi.-Apartment mit einer hochwertigen Designnote",
       "zimmeranzahl": 2,
@@ -13688,7 +13688,7 @@
       "listing_type": "miete",
       "title": "Neubau 4-Zimmer-Wohnung in der Innenstadt - New7 -",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Neubau"
       ],
@@ -13730,7 +13730,7 @@
       "listing_type": "miete",
       "title": "Wohnung in Toplage - New7 - 4-Zimmer Neubauwohnung",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Neubau"
       ],
@@ -13772,7 +13772,7 @@
       "listing_type": "miete",
       "title": "MA-City - New7 - Neubauwohnung in Toplage",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Neubau"
       ],
@@ -13813,7 +13813,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Etagenwohnung mit Gartenterrasse",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13854,7 +13854,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Wohnung mit Terrasse und Bad en Suite",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13895,7 +13895,7 @@
       "listing_type": "miete",
       "title": "Ihr neues Zuhause: 3-Zimmer-Terrassenwohnung mit zwei Bädern",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -13936,7 +13936,7 @@
       "listing_type": "miete",
       "title": "Großzügige 2- ZKB, großer Wohn-Essbereich, Tageslichtbad, sonnige Terrasse",
       "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -14250,7 +14250,7 @@
       "listing_type": "kauf",
       "title": "Preis: 239.000 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -14291,7 +14291,7 @@
       "listing_type": "kauf",
       "title": "Preis: 524.600 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Barrierefreies 3-Zi.-Apartment mit einer hochwertigen Designnote",
       "zimmeranzahl": 3,
@@ -14329,7 +14329,7 @@
       "listing_type": "kauf",
       "title": "Preis: 764.200 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": null,
@@ -14368,7 +14368,7 @@
       "listing_type": "kauf",
       "title": "Preis: 777.100 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "4-Zimmer-Wohnung mit Barrierefreiheit in lebendigem Stadtquartier und grüner Umgebung",
       "zimmeranzahl": 4.0,
@@ -14406,7 +14406,7 @@
       "listing_type": "kauf",
       "title": "Preis: 890.000 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "4 TG-Plätzen",
         "7-Zimmer-Townhouse"
@@ -14447,7 +14447,7 @@
       "listing_type": "kauf",
       "title": "Preis: 452.017 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Ein Meisterwerk der modernen Architektur",
       "zimmeranzahl": null,
@@ -14485,7 +14485,7 @@
       "listing_type": "kauf",
       "title": "Preis: 652.482 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": null,
@@ -14523,7 +14523,7 @@
       "listing_type": "kauf",
       "title": "Preis: 269.324 €",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": null,
@@ -14561,7 +14561,7 @@
       "listing_type": "miete",
       "title": "1.000,00 € Wunschgutschein * Schöne 2 -Zimmer-Wohnung im Herzen von Vogelstang",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2-Zimmer-Wohnung im Herzen von Vogelstang",
       "zimmeranzahl": 2.0,
@@ -14599,7 +14599,7 @@
       "listing_type": "miete",
       "title": "Schöne 2-Zimmer-Wohnung in Vogelstang Zentrum",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2-Zimmer-Wohnung in Vogelstang Zentrum",
       "zimmeranzahl": 2.0,
@@ -14638,7 +14638,7 @@
       "listing_type": "miete",
       "title": "Zentrale 3-Zimmer-Wohnung mit tollem Ausblick in Mannheim",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Zentrale 3-Zimmer-Wohnung mit tollem Ausblick in Mannheim",
       "zimmeranzahl": 3.0,
@@ -14677,7 +14677,7 @@
       "listing_type": "miete",
       "title": "1000 € Wunschgutschein zum Einzug ! Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
       "zimmeranzahl": 4.0,
@@ -14715,7 +14715,7 @@
       "listing_type": "miete",
       "title": "Erstbezug - Schöne 2-Zimmer Wohnung mit gehobener Ausstattung",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2-Zimmer Wohnung mit gehobener Ausstattung",
       "zimmeranzahl": 2.0,
@@ -14754,7 +14754,7 @@
       "listing_type": "miete",
       "title": "Erstbezug - Schöne 3-Zimmer Wohnung",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 3-Zimmer Wohnung",
       "zimmeranzahl": 3.0,
@@ -14793,7 +14793,7 @@
       "listing_type": "miete",
       "title": "Erstbezug - Schöne 2-Zimmer Wohnung",
       "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2-Zimmer Wohnung",
       "zimmeranzahl": 2.0,
@@ -15265,7 +15265,7 @@
       "listing_type": "kauf",
       "title": "Preis: 572.222 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Clever investieren mit 10 Jahre Mietgarantie!",
       "zimmeranzahl": null,
@@ -15303,7 +15303,7 @@
       "listing_type": "kauf",
       "title": "Preis: 515.701 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": null,
@@ -15341,7 +15341,7 @@
       "listing_type": "kauf",
       "title": "Preis: 899.000 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Eine seltene Gelegenheit mit großem Potenzial!",
       "zimmeranzahl": null,
@@ -15379,7 +15379,7 @@
       "listing_type": "kauf",
       "title": "Preis: 1.190.000 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -15419,7 +15419,7 @@
       "listing_type": "kauf",
       "title": "Preis: 329.000 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -15459,7 +15459,7 @@
       "listing_type": "kauf",
       "title": "Preis: 597.000 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Vis-a-Vis mit der Christuskirche - Zentrale und gehobene Lage",
       "zimmeranzahl": null,
@@ -15497,7 +15497,7 @@
       "listing_type": "kauf",
       "title": "Preis: 370.000 €",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "stilvolle und modernisierte Stadtwohnung",
       "zimmeranzahl": null,
@@ -15774,7 +15774,7 @@
       "listing_type": "miete",
       "title": "Helle 3-Zimmer-Wohnung mit Balkon & moderner Einbauküche",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -15815,7 +15815,7 @@
       "listing_type": "miete",
       "title": "Ihr neues Zuhause: Stilvolle 3-Zimmer-Wohnung mit Einbauküche und Balkon",
       "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -15856,7 +15856,7 @@
       "listing_type": "kauf",
       "title": "Preis: 408.106 €",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": null,
@@ -16009,7 +16009,7 @@
       "listing_type": "kauf",
       "title": "Preis: 310.000 €",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-19T18:23:55.192728+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -16050,7 +16050,7 @@
       "listing_type": "kauf",
       "title": "Preis: 499.000 €",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-19T18:23:55.192728+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Vermietete Stadtwohnung mit Lift, Süd-Loggia und TG!",
       "zimmeranzahl": null,
@@ -16202,7 +16202,7 @@
       "listing_type": "miete",
       "title": "Großzügige 2-Zimmer-Wohnung – Erstbezug mit neuer Einbauküche",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Großzügige 2-Zimmer-Wohnung mit neuer Einbauküche",
       "zimmeranzahl": 2.0,
@@ -16241,7 +16241,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Wohnung mit EBK und viel Licht",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "EBK"
       ],
@@ -16282,7 +16282,7 @@
       "listing_type": "miete",
       "title": "Helle 2-Zimmerwohnung mit EBK und sonnigem Balkon",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon",
         "EBK"
@@ -16324,7 +16324,7 @@
       "listing_type": "miete",
       "title": "Attraktive 2-Zimmer-Wohnung mit Einbauküche & hellem Bad",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Attraktive 2-Zimmer-Wohnung mit Einbauküche & hellem Bad",
       "zimmeranzahl": 2.0,
@@ -16363,7 +16363,7 @@
       "listing_type": "miete",
       "title": "Exklusive 3-Zimmer Wohnung mit zwei Balkonen und Einbauküche",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -16404,7 +16404,7 @@
       "listing_type": "miete",
       "title": "Wohnen im Trendviertel Franklin – 3-Zimmer-Wohnung mit Einbauküche",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnen im Trendviertel Franklin – 3-Zimmer-Wohnung mit Einbauküche",
       "zimmeranzahl": 3.0,
@@ -16443,7 +16443,7 @@
       "listing_type": "miete",
       "title": "Exklusive 4-Zimmer-Wohnung mit Terrasse & Weitblick - modernes Wohnen im Orbit",
       "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -17786,7 +17786,7 @@
       "listing_type": "miete",
       "title": "Renovierte, möblierte 1-Zimmer-Wohnung mit Balkon in Mannheimer Bestlage",
       "first_seen": "2026-06-17T17:54:08.384703+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Aufzug",
         "renoviert",
@@ -17992,7 +17992,7 @@
       "listing_type": "kauf",
       "title": "Preis: 195.000 €",
       "first_seen": "2026-06-17T17:54:08.384703+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -18070,7 +18070,7 @@
       "listing_type": "miete",
       "title": "Charmante 4-Zimmerwohnung in Mannheim-Neckarstadt-West",
       "first_seen": "2026-06-17T19:53:52.875578+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon",
         "moebliert"
@@ -18116,7 +18116,7 @@
       "listing_type": "miete",
       "title": "Schöne 1,5 Zimmerwohnung ab 01.07/01.08.26 frei - Mannheim -",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 1,5 Zimmerwohnung ab 01.07/01.08.26 frei",
       "zimmeranzahl": 1.5,
@@ -18159,7 +18159,7 @@
       "listing_type": "miete",
       "title": "Nachmieter für Mannheim-Feudenheimer 3-Zimmer Wohnung gesucht",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 3-Zimmer Wohnung in Feudenheim zum Mieten",
       "zimmeranzahl": 3.0,
@@ -18207,7 +18207,7 @@
       "listing_type": "miete",
       "title": "Möbliertes 1 Zimmer Apartment in Mannheim zu vermieten",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Dieses 1 Zimmer Apartment mit 21qm befindet sich im Erdgeschoss eines ruhigen Mehrfamilienhaus in Mannheim.",
       "zimmeranzahl": 1.0,
@@ -18255,7 +18255,7 @@
       "listing_type": "miete",
       "title": "Gepflegte 1-ZKB Wohnung direkt in Mannheim Stadtzentrum",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "EBK",
         "Aufzug",
@@ -18351,7 +18351,7 @@
       "listing_type": "kauf",
       "title": "Preis: 495.000 €",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Ihr Oststadt-Wohntraum mit FLAIR: Exklusive 2 bis 3 Zimmer-Wohnungen in Bestlage!",
       "zimmeranzahl": 3.0,
@@ -18589,7 +18589,7 @@
       "listing_type": "miete",
       "title": "großzügige 1-Zimmer-Wohnung mit Balkon und Einbauküche",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -18630,7 +18630,7 @@
       "listing_type": "miete",
       "title": "Moderne Maisonette-Wohnung mit 2 Balkonen und Einbauküche",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -18671,7 +18671,7 @@
       "listing_type": "miete",
       "title": "Urban. Modern. Neu. 2-Zimmer-Wohnung mit Balkon und Einbauküche",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -18712,7 +18712,7 @@
       "listing_type": "miete",
       "title": "Möblierte Modernes Appartement in zentraler Lage",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "moebliert"
       ],
@@ -18753,7 +18753,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer-Wohnung in ruhiger Gegend",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "2-Zimmer-Wohnung in ruhiger Gegend",
       "zimmeranzahl": 2.0,
@@ -18792,7 +18792,7 @@
       "listing_type": "miete",
       "title": "Charmante 2-Zimmerwohnung mit Einbauküche und Duschbad",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Charme und Komfort in einer kleinen Wohnung",
       "zimmeranzahl": 2.0,
@@ -18831,7 +18831,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.497,20 €",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "2-Zimmer-Apartment in Käfertal",
       "zimmeranzahl": 2.0,
@@ -18870,7 +18870,7 @@
       "listing_type": "miete",
       "title": "Preis: 2.325,75 €",
       "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Exklusive barrierefreie 4-Zimmer-Wohnung im Hochpunkt E",
       "zimmeranzahl": 4.0,
@@ -18910,7 +18910,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer-Wohnung mit Balkon · Mannheim Waldhof",
       "first_seen": "2026-06-18T20:47:28.717378+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -18960,7 +18960,7 @@
       "listing_type": "miete",
       "title": "Wohnung Mannheim",
       "first_seen": "2026-06-18T20:47:28.717378+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnung in Mannheim",
       "zimmeranzahl": 2,
@@ -19293,7 +19293,7 @@
       "listing_type": "miete",
       "title": "Preis: 2.273,40 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Stylisches 5-Zimmer-Apartment mit außergewöhnlichem Ausblick",
       "zimmeranzahl": 5.0,
@@ -19332,7 +19332,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.443,30 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "EXKLUSIV Wohnen über den Dächern Mannheims",
       "zimmeranzahl": null,
@@ -19370,7 +19370,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.306,80 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Wohnen in einem architektonischen Highlight",
       "zimmeranzahl": null,
@@ -19408,7 +19408,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.331,75 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Balkon"
       ],
@@ -19449,7 +19449,7 @@
       "listing_type": "miete",
       "title": "Preis: 2.449,44 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse",
         "Balkon"
@@ -19491,7 +19491,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.570,80 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Town-House Style in Käfertal",
       "zimmeranzahl": null,
@@ -19530,7 +19530,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.392,81 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Penthouse",
         "Neubau"
@@ -19572,7 +19572,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.002,66 €",
       "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Neubau"
       ],
@@ -19612,7 +19612,7 @@
       "listing_type": "miete",
       "title": "2 ZKB Wohnung in Mannheim Lindenhof",
       "first_seen": "2026-06-19T16:41:55.371829+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2-Zimmer-Wohnung im 1. OG eines 7-Parteien-Hauses mit hoher Decke und kostenlosen Parkplätzen in der Nähe.",
       "zimmeranzahl": 2.0,
@@ -19659,7 +19659,7 @@
       "listing_type": "miete",
       "title": "Helle, gemütliche Wohnung mit moderner Küche in Mannheim",
       "first_seen": "2026-06-19T16:41:55.371829+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Helle, gemütliche Wohnung mit moderner Küche in Mannheim",
       "zimmeranzahl": 2,
@@ -19702,7 +19702,7 @@
       "listing_type": "miete",
       "title": "Schöne 2ZKB Altbau Wohnung in Mannheim Wohlgelegen/Ost",
       "first_seen": "2026-06-19T16:41:55.371829+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "moebliert"
       ],
@@ -19798,7 +19798,7 @@
       "listing_type": "miete",
       "title": "Helle 3 ZKBB-Altbauwohnung in Mannheim",
       "first_seen": "2026-06-19T16:41:55.371829+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "renoviert"
       ],
@@ -19848,7 +19848,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer-Wohnung in Mannheim-Schönau zu vermieten.",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2-Zimmer-Wohnung in ruhiger Lage von Mannheim-Schönau zu vermieten.",
       "zimmeranzahl": 2.0,
@@ -19892,7 +19892,7 @@
       "listing_type": "miete",
       "title": "Zweizimmerparterre Wohnung in Mannheim Feudenheim 49m²",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Wände frisch gestrichen",
         "Waschmaschine",
@@ -19943,7 +19943,7 @@
       "listing_type": "miete",
       "title": "3er-WG in Mannheim Lindenhof pro Zimmer 635€",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Zentrale Lage, ruhige und harmonische WG",
       "zimmeranzahl": 3,
@@ -19987,7 +19987,7 @@
       "listing_type": "kauf",
       "title": "Preis: 385.000 €",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Urbanes Wohnen mit Komfort – Moderne Wohnung in Mannheim",
       "zimmeranzahl": null,
@@ -20227,7 +20227,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Etagenwohnung in zentraler Lage",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "3-Zimmer-Etagenwohnung in zentraler Lage",
       "zimmeranzahl": 3.0,
@@ -20267,7 +20267,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer-Etagenwohnung in zentraler Lage",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "2-Zimmer-Etagenwohnung in zentraler Lage",
       "zimmeranzahl": 2.0,
@@ -20306,7 +20306,7 @@
       "listing_type": "miete",
       "title": "Schöne 2ZKB Altbau in Mannheim Wohlgelegen/Ost sucht Nachmieter zum 01.08.2026",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Schöne 2ZKB Altbau in Mannheim Wohlgelegen/Ost",
       "zimmeranzahl": 2,
@@ -20345,7 +20345,7 @@
       "listing_type": "miete",
       "title": "Liebevoll eingerichtete Altbauwohnung",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Liebevoll eingerichtete Altbauwohnung",
       "zimmeranzahl": null,
@@ -20383,7 +20383,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.140,52 €",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Neubau"
       ],
@@ -20424,7 +20424,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.711,58 €",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Terrasse",
         "Neubau",
@@ -20468,7 +20468,7 @@
       "listing_type": "miete",
       "title": "Preis: 2.036,16 €",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "einzigartiges Wohnen mit Panoramablick",
       "zimmeranzahl": null,
@@ -20507,7 +20507,7 @@
       "listing_type": "miete",
       "title": "Preis: 1.578,92 €",
       "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Neubau"
       ],
@@ -20596,7 +20596,7 @@
       "listing_type": "kauf",
       "title": "Preis: 449.000 €",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "E-PKW-SP",
         "Balkon"
@@ -20637,7 +20637,7 @@
       "listing_type": "kauf",
       "title": "Preis: 830.000 €",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Rheingold-Residenz 3.OG 5-Zimmer Penthousewohnung",
       "zimmeranzahl": 5.0,
@@ -20675,7 +20675,7 @@
       "listing_type": "kauf",
       "title": "Preis: 487.000 €",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": 3.0,
@@ -20713,7 +20713,7 @@
       "listing_type": "kauf",
       "title": "Preis: 765.000 €",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Ideale Stadtwohnung am Luisenpark",
       "zimmeranzahl": null,
@@ -20751,7 +20751,7 @@
       "listing_type": "miete",
       "title": "Wohnen auf höchstem Niveau – lichtdurchflutete Wohnung im wohl bekanntesten Hochpunkt Mannheims",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "lichtdurchflutete Wohnung im wohl bekanntesten Hochpunkt Mannheims",
       "zimmeranzahl": null,
@@ -20790,7 +20790,7 @@
       "listing_type": "miete",
       "title": "Stilvoll modernisiert: 3-Zimmer-Wohnung in Mannheim",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Stilvoll modernisiert: 3-Zimmer-Wohnung in Mannheim",
       "zimmeranzahl": 3.0,
@@ -20829,7 +20829,7 @@
       "listing_type": "miete",
       "title": "Nachmieter gesucht – Helle 2-Zimmer-Wohnung in Bestlage",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Helle 2-Zimmer-Wohnung in Bestlage",
       "zimmeranzahl": 2.0,
@@ -20868,7 +20868,7 @@
       "listing_type": "miete",
       "title": "Helle 2-Zimmerwohnung in der Neckarstadt -Ost im1. OG- Nachmieter gesucht",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [],
       "kurz_bewertung": "Helle 2-Zimmerwohnung in der Neckarstadt -Ost im1. OG- Nachmieter gesucht",
       "zimmeranzahl": 2.0,
@@ -20907,7 +20907,7 @@
       "listing_type": "miete",
       "title": "Komplett sanierte 3-Zimmer-Altbauwohnung mit Terrasse und Gartenteil 68165 Mannheim",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "Gartenteil",
         "renoviert",
@@ -20950,7 +20950,7 @@
       "listing_type": "miete",
       "title": "1-Zimmerwohnung mit EBK, vollmöbliert und Balkon: stilvoll wohnen in Mannheim",
       "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
       "boni": [
         "moebliert",
         "Balkon",
@@ -21067,6 +21067,49 @@
       "warmmiete": 490,
       "deal_score": "okay",
       "_hash": "a24a27ff140c"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zkb-68305-mannheim/3440091816-203-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "3 ZKB 68305 Mannheim",
+      "first_seen": "2026-06-20T19:27:55.213359+00:00",
+      "last_seen": "2026-06-20T19:27:55.213359+00:00",
+      "boni": [],
+      "kurz_bewertung": "Schöne 3-Zimmer-Küche-Bad-Wohnung zu vermieten.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68305 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mannheim ist eine Stadt mit einer Vielzahl von Altersgruppen und Berufen.",
+        "vibe_sicherheit": "Mannheim hat eine gute Sicherheitslage, aber es gibt auch einige Problemviertel.",
+        "einschaetzung_student": "Mannheim ist eine gute Wahl für Informatikstudenten, da es eine gute Verbindung zur Uni gibt.",
+        "einschaetzung_investor": "Mannheim ist eine gute Wahl für Investoren, da es eine gute Wirtschaftslage und eine hohe Nachfrage nach Immobilien gibt."
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-20T19:27:55.213359+00:00",
+          "price": 840.0
+        }
+      ],
+      "etage": "1",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 70.0,
+      "kaltmiete": 840.0,
+      "warmmiete": 1060,
+      "kaltmiete_qm": 12.0,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -17.2,
+      "deal_score": "gut",
+      "_hash": "71c3a5110e38"
     }
   ]
 }
