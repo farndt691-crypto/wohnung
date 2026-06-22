@@ -1,7 +1,6 @@
 {
   "zins": 3.9,
-  "stand": "2026-06-09",
+  "stand": "2026-06-22",
   "bindung": "10 Jahre",
-  "quelle": "Durchschnitt 10-jaehrige Sollzinsbindung, dt. Markt (Dr. Klein / baufivergleich.de / Finanztip)",
-  "hinweis": "Wird woechentlich automatisch aktualisiert (Scheduled Task)."
-}
+  "quelle": "Durchschnitt 10-jaehrige Sollzinsbindung, dt. Markt (Interhyp/Statista ~3,93%; Topkonditionen baufivergleich.de 3,6% / Dr. Klein 3,57%, Spanne 3,5-4,3%)",
+  "hinweis": "Wird woechentlich automatisc
