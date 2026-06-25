@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T10:17:55.105566+00:00",
+  "last_updated": "2026-06-25T14:44:49.161458+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -6254,7 +6254,7 @@
       "listing_type": "miete",
       "title": "Moderne 3-Zimmer-Wohnung in Mannheim",
       "first_seen": "2026-05-25T16:11:06.105237+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [
         "Garage",
         "EBK"
@@ -7017,7 +7017,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -12588,7 +12588,7 @@
       "listing_type": "miete",
       "title": "2 Zimmer Wohnung im 1. OG inkl. Einbaugeräte in Mannheim L12/7",
       "first_seen": "2026-06-08T23:06:08.579695+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [
         "renoviert"
       ],
@@ -22352,7 +22352,7 @@
       "listing_type": "miete",
       "title": "2-Zi-Wohnung mit eign.Garten, EBK, Garage in Mannheim Rheinau",
       "first_seen": "2026-06-23T15:14:32.054554+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [
         "Garage",
         "EBK"
@@ -22588,7 +22588,7 @@
       "listing_type": "miete",
       "title": "Helle 2-Zimmer Wohnung mit Balkon im 2. OG im Herzen Mannheims",
       "first_seen": "2026-06-24T19:47:03.956700+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [
         "Balkon"
       ],
@@ -22638,7 +22638,7 @@
       "listing_type": "miete",
       "title": "Möblierte 1,5-Zimmer-Wohnung zur Untermiete in Mannheim",
       "first_seen": "2026-06-25T10:17:37.982117+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [
         "moebliert",
         "Balkon"
@@ -22660,6 +22660,10 @@
         {
           "date": "2026-06-25T10:17:37.982117+00:00",
           "price": 500.0
+        },
+        {
+          "date": "2026-06-25T14:44:06.855338+00:00",
+          "price": 1500.0
         }
       ],
       "etage": "1",
@@ -22670,13 +22674,13 @@
       "provisionsfrei": null,
       "preis_verdacht": false,
       "quadratmeter": 56.0,
-      "kaltmiete": 500.0,
+      "kaltmiete": 1500.0,
       "nebenkosten": 500,
       "warmmiete": 1500,
-      "kaltmiete_qm": 8.93,
+      "kaltmiete_qm": 26.79,
       "expected_market_qm": 18.0,
-      "deal_deviation_pct": -50.4,
-      "deal_score": "gut",
+      "deal_deviation_pct": 48.8,
+      "deal_score": "teuer",
       "_hash": "758c4acb78a8"
     },
     {
@@ -22685,7 +22689,7 @@
       "listing_type": "miete",
       "title": "Gemütliche Wohnung Untermiete Mannheim",
       "first_seen": "2026-06-25T10:17:37.982117+00:00",
-      "last_seen": "2026-06-25T10:17:37.982117+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
       "boni": [
         "moebliert",
         "Terrasse"
@@ -22724,6 +22728,143 @@
       "deal_deviation_pct": 47.1,
       "deal_score": "teuer",
       "_hash": "cb6e8b211806"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-126qm-balkon-garage-kueche-gaeste-wc/3443747565-203-5197",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Mannheim 126qm, Balkon, Garage, Küche, Gäste WC",
+      "first_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "boni": [
+        "renoviert",
+        "Balkon",
+        "Garage"
+      ],
+      "kurz_bewertung": "Moderne und hochwertige Wohnung in zentraler Lage",
+      "zimmeranzahl": 6,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "Friedrich-Ebert-Straße 49",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet, nahe Uni und Bahnhof",
+        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Lage"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-25T14:44:06.855338+00:00",
+          "price": 250.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 126.0,
+      "kaltmiete": 250.0,
+      "nebenkosten": 250,
+      "warmmiete": 0,
+      "kaltmiete_qm": 1.98,
+      "expected_market_qm": 16.3,
+      "deal_deviation_pct": -87.9,
+      "deal_score": "gut",
+      "_hash": "0a1c09072e1f"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-zur-zwischenmiete-in-mannheim/3443681776-203-8337",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2-Zimmer-Wohnung zur Zwischenmiete in Mannheim",
+      "first_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Möblierte 2-Zimmer-Wohnung in Mannheim zur Zwischenmiete",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mannheim ist eine Stadt mit einer Vielzahl von Altersgruppen und Berufsgruppen. Der Stadtteil, in dem sich die Wohnung befindet, ist wahrscheinlich ein beliebter Wohnort für Studenten und junge Erwachsene.",
+        "vibe_sicherheit": "Mannheim ist eine sichere Stadt, aber es gibt auch einige Problemviertel. Der Stadtteil, in dem sich die Wohnung befindet, ist wahrscheinlich ein sicheres Gebiet, aber es ist immer ratsam, sich vorher zu informieren.",
+        "einschaetzung_student": "Die Wohnung ist ideal für Studenten, da sie in der Nähe der Uni Mannheim liegt und eine gute Verkehrsanbindung hat.",
+        "einschaetzung_investor": "Die Wohnung ist nicht ideal als Kapitalanlage, da sie nur für eine kurze Zeit vermietet wird und keine langfristige Rendite bietet."
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-25T14:44:06.855338+00:00",
+          "price": 700.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 48.0,
+      "kaltmiete": 700.0,
+      "warmmiete": 750,
+      "kaltmiete_qm": 14.58,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -16.7,
+      "deal_score": "gut",
+      "_hash": "974fe4d8b8b5"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliches-wg-zimmer-in-mannheim-490-warmmiete-/3443664615-203-7978",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Gemütliches WG-Zimmer in Mannheim - 490€-Warmmiete!!!",
+      "first_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "boni": [],
+      "kurz_bewertung": "Gemütliches, helles Zimmer in 3er-WG",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "68219 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien, Studenten, Berufstätige",
+        "vibe_sicherheit": "ruhig, aber gut frequentiert",
+        "einschaetzung_student": "gut geeignet für Studenten",
+        "einschaetzung_investor": "keine gute Kapitalanlage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-25T14:44:06.855338+00:00",
+          "price": 150.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 17.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 490,
+      "kaltmiete_qm": 8.82,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -39.2,
+      "deal_score": "gut",
+      "_hash": "c10fb031793f"
     }
   ]
 }
