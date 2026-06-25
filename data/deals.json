@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T14:44:49.161458+00:00",
+  "last_updated": "2026-06-25T20:02:19.693949+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -6254,7 +6254,7 @@
       "listing_type": "miete",
       "title": "Moderne 3-Zimmer-Wohnung in Mannheim",
       "first_seen": "2026-05-25T16:11:06.105237+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "Garage",
         "EBK"
@@ -7017,7 +7017,7 @@
       "listing_type": "miete",
       "title": "WG Zimmer in Mannheim",
       "first_seen": "2026-05-26T18:08:29.929978+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [],
       "kurz_bewertung": "Ein einfaches WG-Zimmer in Mannheim für 450 € Miete",
       "zimmeranzahl": 1,
@@ -12588,7 +12588,7 @@
       "listing_type": "miete",
       "title": "2 Zimmer Wohnung im 1. OG inkl. Einbaugeräte in Mannheim L12/7",
       "first_seen": "2026-06-08T23:06:08.579695+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "renoviert"
       ],
@@ -22352,7 +22352,7 @@
       "listing_type": "miete",
       "title": "2-Zi-Wohnung mit eign.Garten, EBK, Garage in Mannheim Rheinau",
       "first_seen": "2026-06-23T15:14:32.054554+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "Garage",
         "EBK"
@@ -22588,7 +22588,7 @@
       "listing_type": "miete",
       "title": "Helle 2-Zimmer Wohnung mit Balkon im 2. OG im Herzen Mannheims",
       "first_seen": "2026-06-24T19:47:03.956700+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "Balkon"
       ],
@@ -22689,7 +22689,7 @@
       "listing_type": "miete",
       "title": "Gemütliche Wohnung Untermiete Mannheim",
       "first_seen": "2026-06-25T10:17:37.982117+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "moebliert",
         "Terrasse"
@@ -22735,7 +22735,7 @@
       "listing_type": "miete",
       "title": "Mannheim 126qm, Balkon, Garage, Küche, Gäste WC",
       "first_seen": "2026-06-25T14:44:06.855338+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "renoviert",
         "Balkon",
@@ -22758,6 +22758,10 @@
         {
           "date": "2026-06-25T14:44:06.855338+00:00",
           "price": 250.0
+        },
+        {
+          "date": "2026-06-25T20:01:47.571365+00:00",
+          "price": 1800.0
         }
       ],
       "etage": "2. OG",
@@ -22768,12 +22772,12 @@
       "provisionsfrei": null,
       "preis_verdacht": false,
       "quadratmeter": 126.0,
-      "kaltmiete": 250.0,
+      "kaltmiete": 1800.0,
       "nebenkosten": 250,
       "warmmiete": 0,
-      "kaltmiete_qm": 1.98,
+      "kaltmiete_qm": 14.29,
       "expected_market_qm": 16.3,
-      "deal_deviation_pct": -87.9,
+      "deal_deviation_pct": -12.3,
       "deal_score": "gut",
       "_hash": "0a1c09072e1f"
     },
@@ -22783,7 +22787,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer-Wohnung zur Zwischenmiete in Mannheim",
       "first_seen": "2026-06-25T14:44:06.855338+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [
         "moebliert"
       ],
@@ -22828,7 +22832,7 @@
       "listing_type": "miete",
       "title": "Gemütliches WG-Zimmer in Mannheim - 490€-Warmmiete!!!",
       "first_seen": "2026-06-25T14:44:06.855338+00:00",
-      "last_seen": "2026-06-25T14:44:06.855338+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
       "boni": [],
       "kurz_bewertung": "Gemütliches, helles Zimmer in 3er-WG",
       "zimmeranzahl": 1,
@@ -22847,6 +22851,10 @@
         {
           "date": "2026-06-25T14:44:06.855338+00:00",
           "price": 150.0
+        },
+        {
+          "date": "2026-06-25T20:01:47.571365+00:00",
+          "price": 370.0
         }
       ],
       "etage": "2. OG",
@@ -22857,14 +22865,150 @@
       "provisionsfrei": null,
       "preis_verdacht": false,
       "quadratmeter": 17.0,
-      "kaltmiete": 150.0,
+      "kaltmiete": 370.0,
       "nebenkosten": 150,
       "warmmiete": 490,
-      "kaltmiete_qm": 8.82,
+      "kaltmiete_qm": 21.76,
       "expected_market_qm": 14.5,
-      "deal_deviation_pct": -39.2,
-      "deal_score": "gut",
+      "deal_deviation_pct": 50.1,
+      "deal_score": "teuer",
       "_hash": "c10fb031793f"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-in-mannheim-rheinau/3443991707-203-7978",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Nachmieter Gesucht in Mannheim Rheinau",
+      "first_seen": "2026-06-25T20:01:47.571365+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Möblierte 3-Zimmer-Wohnung in Mannheim Rheinau zum Mieten",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "68219 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Familien, Pendler",
+        "vibe_sicherheit": "Gut, aber einige Lärmbelästigungen durch Straßenverkehr",
+        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
+        "einschaetzung_investor": "Mäßig, hohe Mieten, aber gute Verkehrsanbindung"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-25T20:01:47.571365+00:00",
+          "price": 850.0
+        }
+      ],
+      "etage": "Dachgeschoss",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 100.0,
+      "kaltmiete": 850.0,
+      "nebenkosten": 100,
+      "warmmiete": 950,
+      "kaltmiete_qm": 8.5,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -51.4,
+      "deal_score": "gut",
+      "_hash": "6f2462853eb7"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/voll-moeblierte-1-5-zimmer-wohnung-in-mannheim-zur-untermiete/3443914907-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Voll möblierte 1,5-Zimmer-Wohnung in Mannheim zur Untermiete",
+      "first_seen": "2026-06-25T20:01:47.571365+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
+      "boni": [
+        "moebliert",
+        "Balkon"
+      ],
+      "kurz_bewertung": "Geeignet für eine ruhige Einzelperson, die sorgfältig und respektvoll mit der Wohnung umgeht.",
+      "zimmeranzahl": 1.5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "68199 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Familien, Berufstätigen und Studenten, aber eher ruhig und nicht sehr studentisch",
+        "vibe_sicherheit": "Gut, da es viele Familien und Berufstätige gibt, aber auch einige Läden und Restaurants in der Nähe",
+        "einschaetzung_student": "2/5, da es nicht sehr studentisch ist, aber einige Läden und Restaurants in der Nähe",
+        "einschaetzung_investor": "3/5, da es eine mittlere Einkommensgruppe hat, aber auch einige Läden und Restaurants in der Nähe"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-06-25T20:01:47.571365+00:00",
+          "price": 150.0
+        }
+      ],
+      "etage": "1",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 56.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 1300,
+      "kaltmiete_qm": 2.68,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": -85.1,
+      "deal_score": "gut",
+      "_hash": "bec7c9e10435"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/geschmackvolle-wohnung-mit-4-zimmern-in-mannheim/3443899358-203-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Geschmackvolle Wohnung mit 4 Zimmern in Mannheim",
+      "first_seen": "2026-06-25T20:01:47.571365+00:00",
+      "last_seen": "2026-06-25T20:01:47.571365+00:00",
+      "boni": [],
+      "kurz_bewertung": "Geschmackvolle Erdgeschosswohnung in belebter Gegend",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim",
+      "adresse": "Luzenberg",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
+        "vibe_sicherheit": "Lebendige Atmosphäre, aber auch Lärm und Verkehr",
+        "einschaetzung_student": "Sehr geeignet für Studenten, viele Cafés und Restaurants",
+        "einschaetzung_investor": "Mäßig geeignet als Kapitalanlage, hohe Mieten, aber auch hoher Wartungsaufwand"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-06-25T20:01:47.571365+00:00",
+          "price": 1450.0
+        }
+      ],
+      "etage": "EG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "quadratmeter": 90.0,
+      "kaltmiete": 1450.0,
+      "warmmiete": 1450,
+      "kaltmiete_qm": 16.11,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": 11.1,
+      "deal_score": "teuer",
+      "_hash": "6bcfa9246e43"
     }
   ]
 }
