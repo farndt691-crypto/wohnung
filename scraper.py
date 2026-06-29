@@ -37,7 +37,7 @@ GROQ_API_KEY         = os.environ.get("GROQ_API_KEY", "")
 IS24_COOKIES_JSON    = os.environ.get("IS24_COOKIES", "")
 CONFIG_PATH          = Path("config.json")
 DEALS_PATH           = Path("data/deals.json")
-MAX_NEW_PER_RUN      = 60
+MAX_NEW_PER_RUN      = 120   # höher, da jetzt 2 Städte (Mannheim + Heidelberg)
 MAX_PER_SOURCE       = 5    # default; overridden per source via config 'max_new'
 PAGE_TIMEOUT_MS      = 12000
 DETAIL_WAIT_MS       = 500
@@ -46,16 +46,19 @@ DETAIL_WORKERS       = 3
 GROQ_SLEEP_SECS      = 2.0
 ARCHIVE_AFTER_DAYS   = 60
 
-MHM_LAT_MIN, MHM_LAT_MAX = 49.40, 49.60
-MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.65
+# Bounding-Box deckt Mannheim UND Heidelberg ab
+MHM_LAT_MIN, MHM_LAT_MAX = 49.34, 49.60
+MHM_LON_MIN, MHM_LON_MAX = 8.35,  8.78
 
-MANNHEIM_RE = re.compile(r'\bMannheim\b', re.IGNORECASE)
+# Zielstädte: Mannheim + Heidelberg
+TARGET_CITY_RE = re.compile(r'\b(Mannheim|Heidelberg)\b', re.IGNORECASE)
+MANNHEIM_RE = TARGET_CITY_RE  # Rückwärtskompatibel
 NON_MANNHEIM_RE = re.compile(
     r'\b(Hamburg|Berlin|Muenchen|Frankfurt am Main|Stuttgart|Koeln|Duesseldorf|'
     r'Dortmund|Essen|Leipzig|Dresden|Hannover|Nuernberg|Bremen|Duisburg|'
     r'Bochum|Wuppertal|Bielefeld|Bonn|Muenster|Freiburg|HafenCity|'
     r'Buxtehude|Harburg|Altona|Wandsbek|Barmbek|Bergedorf|'
-    r'Pankow|Kreuzberg|Friedrichshain|Karlsruhe|Heidelberg|Ludwigshafen)\b',
+    r'Pankow|Kreuzberg|Friedrichshain|Karlsruhe|Ludwigshafen)\b',
     re.IGNORECASE,
 )
 
@@ -308,6 +311,7 @@ def build_deal(raw, ai, now_iso, cfg):
         "hausgeld":       None,
         "provisionsfrei": None,
         "preis_verdacht": False,
+        "stadt":          raw.get("stadt", cfg.get("target_city", "Mannheim")),
     }
     if ai:
         for k, v in ai.items():
@@ -494,16 +498,26 @@ def extract_by_regex(title, raw_text, listing_type_hint, cfg):
     elif re.search(r'provision|courtage|makler', text, re.IGNORECASE):
         result["provisionsfrei"] = False
 
-    # Stadtteil
-    stadtteile = [
+    # Stadtteil (je Stadt eigene Liste; Prefix passend zur erkannten Stadt)
+    mannheim_stadtteile = [
         "Lindenhof", "Neckarstadt", "Schwetzingerstadt", "Jungbusch",
-        "Feudenheim", "Kaefertal", "Waldhof", "Sandhofen", "Rheinau",
-        "Seckenheim", "Friedrichsfeld", "Vogelstang", "Hochstaett",
-        "Oststadt", "Weststadt", "Innenstadt", "Almenhof",
+        "Feudenheim", "Kaefertal", "Käfertal", "Waldhof", "Sandhofen", "Rheinau",
+        "Seckenheim", "Friedrichsfeld", "Vogelstang", "Hochstaett", "Hochstätt",
+        "Oststadt", "Weststadt", "Innenstadt", "Almenhof", "Niederfeld",
+        "Neuostheim", "Neuhermsheim", "Wallstadt", "Gartenstadt", "Schoenau", "Schönau",
     ]
-    for st in stadtteile:
-        if st.lower() in text.lower():
-            result["stadtteil"] = "Mannheim " + st
+    heidelberg_stadtteile = [
+        "Altstadt", "Neuenheim", "Handschuhsheim", "Bergheim", "Suedstadt", "Südstadt",
+        "Weststadt", "Rohrbach", "Kirchheim", "Pfaffengrund", "Wieblingen",
+        "Boxberg", "Emmertsgrund", "Ziegelhausen", "Schlierbach", "Bahnstadt",
+    ]
+    tl = text.lower()
+    is_hd = "heidelberg" in tl
+    primary = heidelberg_stadtteile if is_hd else mannheim_stadtteile
+    stadt_name = "Heidelberg" if is_hd else "Mannheim"
+    for st in primary:
+        if st.lower() in tl:
+            result["stadtteil"] = stadt_name + " " + st
             break
 
     # Boni
@@ -1247,6 +1261,10 @@ async def main():
             log.info("\nQuelle: %s (%s)", source["name"], source.get("scraper", "kleinanzeigen"))
             try:
                 results, upds = await scrape_source(ctx, source, existing_urls, cfg)
+                # Stadt der Quelle an jedes Ergebnis hängen (Mannheim/Heidelberg)
+                src_stadt = source.get("stadt", cfg.get("target_city", "Mannheim"))
+                for r in results:
+                    r.setdefault("stadt", src_stadt)
                 log.info("%d verifiziert | %d Preis-Updates von %s",
                          len(results), len(upds), source["name"])
                 all_raw.extend(results)

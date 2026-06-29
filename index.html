@@ -96,6 +96,10 @@
       <button onclick="setScore('okay')"       id="sc-okay"       class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🟡 Okay</button>
       <button onclick="setScore('skip')"       id="sc-skip"       class="score-btn px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700">🔴 Skip/Teuer</button>
     </div>
+    <button onclick="toggleHideRed()" id="btn-hidered"
+      class="px-3 py-1.5 rounded-lg text-sm border whitespace-nowrap bg-red-900 text-red-200 border-red-700">
+      🔴 Rote ausgeblendet
+    </button>
   </div>
 
   <!-- Row 2: Suche + POI + Radius + Zimmer + Sort + Reset -->
@@ -105,6 +109,15 @@
       <label class="text-gray-400 text-sm">🔎</label>
       <input id="search-text" type="text" placeholder="Suche: Titel, Stadtteil, Adresse…"
         oninput="render()" class="w-full sm:w-56"/>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <label class="text-gray-400 text-sm whitespace-nowrap">🏙 Stadt:</label>
+      <select id="city-select" onchange="onCityChange()" class="w-36">
+        <option value="alle">Alle</option>
+        <option value="Mannheim">Mannheim</option>
+        <option value="Heidelberg">Heidelberg</option>
+      </select>
     </div>
 
     <div class="flex items-center gap-2">
@@ -242,6 +255,8 @@ let allDeals    = [];
 let config      = {};
 let activeType  = localStorage.getItem('immo_type')  || 'kauf';   // Standard: Kauf
 let activeScore = localStorage.getItem('immo_score') || '';
+let activeCity  = localStorage.getItem('immo_city')  || 'alle';   // Mannheim/Heidelberg/alle
+let hideRed     = (localStorage.getItem('immo_hidered') ?? 'true') === 'true';  // Standard: rote aus
 let activePoi   = null;
 let activeTab   = 'liste';
 let activeBalkon = false;
@@ -316,7 +331,10 @@ async function loadData() {
     allDeals = data.deals || [];
     dataLoadedAt = Date.now();
 
-    document.getElementById('city-label').textContent = config.target_city || 'Mannheim';
+    document.getElementById('city-label').textContent =
+      (config.target_cities && config.target_cities.length)
+        ? config.target_cities.join(' + ')
+        : (config.target_city || 'Mannheim');
     buildPoiDropdown();
 
     // Aktuellen Standard-Bauzins laden → Ausgangsposition des Zinsreglers
@@ -380,6 +398,28 @@ function setType(t) {
   render();
 }
 
+function onCityChange() {
+  activeCity = document.getElementById('city-select').value;
+  localStorage.setItem('immo_city', activeCity);
+  render();
+}
+function toggleHideRed() {
+  hideRed = !hideRed;
+  localStorage.setItem('immo_hidered', hideRed ? 'true' : 'false');
+  syncHideRedBtn();
+  render();
+}
+function syncHideRedBtn() {
+  const b = document.getElementById('btn-hidered');
+  if (!b) return;
+  if (hideRed) {
+    b.textContent = '🔴 Rote ausgeblendet';
+    b.className = 'px-3 py-1.5 rounded-lg text-sm border whitespace-nowrap bg-red-900 text-red-200 border-red-700';
+  } else {
+    b.textContent = '🔴 Rote einblenden';
+    b.className = 'px-3 py-1.5 rounded-lg text-sm border whitespace-nowrap bg-gray-800 text-gray-400 border-gray-700 hover:bg-gray-700';
+  }
+}
 function setScore(s) {
   activeScore = s;
   localStorage.setItem('immo_score', s);
@@ -398,6 +438,12 @@ function resetFilters() {
   activeScore = '';
   activePoi   = null;
   const st = document.getElementById('search-text'); if (st) st.value = '';
+  activeCity = 'alle';
+  const cs = document.getElementById('city-select'); if (cs) cs.value = 'alle';
+  localStorage.setItem('immo_city', 'alle');
+  hideRed = true;
+  localStorage.setItem('immo_hidered', 'true');
+  syncHideRedBtn();
   document.getElementById('poi-select').value    = '';
   document.getElementById('radius-select').value = '0';
   document.getElementById('zimmer-min').value    = '1';
@@ -504,13 +550,15 @@ function resetFinancing() {
   updateStats();
   render();
 }
-// Markt-€/m² je Stadtteil nachschlagen (Unterbewertungs-Score)
+// Markt-€/m² je Stadt+Stadtteil nachschlagen (Unterbewertungs-Score)
 function marktQm(d) {
-  const tbl = config.kauf_markt_qm || {};
-  const def = config.kauf_markt_qm_default || 4000;
-  const st = (d.stadtteil || '').replace(/^Mannheim\s+/i, '').trim();
+  const stadt = d.stadt || 'Mannheim';
+  const all = config.kauf_markt_qm || {};
+  const tbl = all[stadt] || all['Mannheim'] || {};
+  const defObj = config.kauf_markt_qm_default;
+  const def = (defObj && typeof defObj === 'object' ? (defObj[stadt] ?? 4000) : (defObj || 4000));
+  const st = (d.stadtteil || '').replace(/^(Mannheim|Heidelberg)\s+/i, '').trim();
   if (st && tbl[st] != null) return tbl[st];
-  // Teilstring-Treffer (z. B. "Neckarstadt-Ost" in Schlüsseln)
   for (const k in tbl) { if (st && (st.includes(k) || k.includes(st))) return tbl[k]; }
   return def;
 }
@@ -665,11 +713,14 @@ function getFiltered() {
     return { ...d, _dist: dist };
   }).filter(d => {
     if (activeType !== 'alle' && d.listing_type !== activeType) return false;
+    if (activeCity !== 'alle' && (d.stadt || 'Mannheim') !== activeCity) return false;
     if (activeScore) {
       const s = d.deal_score || '';
       if (activeScore === 'skip' && !['skip','teuer'].includes(s)) return false;
       if (activeScore !== 'skip' && s !== activeScore) return false;
     }
+    // Standard: rote (skip/teuer) ausblenden – außer der Score-Filter zeigt sie gezielt
+    if (hideRed && activeScore !== 'skip' && ['skip','teuer'].includes(d.deal_score)) return false;
     const zi = d.zimmeranzahl;
     if (zimMin !== null && zi != null && zi < zimMin) return false;
     if (zimMax !== null && zi != null && zi > zimMax) return false;
@@ -747,7 +798,7 @@ function renderMap() {
     filtered.length + ' Deals mit GPS (von ' + allDeals.filter(d => d.latitude != null).length + ' gesamt)' + legend;
 
   if (!leafletMap) {
-    leafletMap = L.map('map').setView([49.485, 8.465], 13);
+    leafletMap = L.map('map').setView([49.44, 8.58], 11);  // deckt Mannheim + Heidelberg ab
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       attribution: '© OpenStreetMap | © CARTO',
       maxZoom: 19,
@@ -765,7 +816,7 @@ function renderMap() {
     const grp = {};
     filtered.forEach(d => {
       if (d.kauf_abweichung_pct == null) return;
-      const st = (d.stadtteil || 'Sonstige').replace('Mannheim ', '');
+      const st = (d.stadtteil || 'Sonstige').replace(/^(Mannheim|Heidelberg) /, '');
       (grp[st] = grp[st] || []).push(d);
     });
     Object.entries(grp).forEach(([st, ds]) => {
@@ -955,7 +1006,7 @@ function renderCard(d, poi) {
       const dev = d.kauf_abweichung_pct;
       const cls = dev <= -10 ? 'dev-gut' : dev <= 10 ? 'dev-okay' : 'dev-teuer';
       const lbl = dev < 0 ? `${Math.abs(dev).toFixed(1)} % unter Markt` : `${dev.toFixed(1)} % über Markt`;
-      kennzahlen += `<div class="mt-2"><span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${cls}">📊 ${lbl}</span> <span class="text-xs text-gray-500">Markt ~${Math.round(d.markt_qm).toLocaleString('de')} €/m²${d.stadtteil ? ' · ' + d.stadtteil.replace('Mannheim ','') : ''}</span></div>`;
+      kennzahlen += `<div class="mt-2"><span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${cls}">📊 ${lbl}</span> <span class="text-xs text-gray-500">Markt ~${Math.round(d.markt_qm).toLocaleString('de')} €/m²${d.stadtteil ? ' · ' + d.stadtteil.replace(/^(Mannheim|Heidelberg) /,'') : ''}${d.stadt ? ' · ' + d.stadt : ''}</span></div>`;
     }
 
     // Rendite-Kennzahlen + Cashflow vor Tilgung
@@ -1110,8 +1161,10 @@ function showToast(msg, type='success') {
   setTimeout(() => { t.style.opacity = '0'; }, 3500);
 }
 
-// Gespeicherten Filter-Zustand auf die Buttons anwenden (Standard: Kauf)
+// Gespeicherten Filter-Zustand auf die Bedienelemente anwenden (Standard: Kauf, rote aus)
 syncFinInputs();
+const _cs = document.getElementById('city-select'); if (_cs) _cs.value = activeCity;
+syncHideRedBtn();
 setType(activeType);
 setScore(activeScore);
 loadData();

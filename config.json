@@ -1,40 +1,60 @@
 {
   "target_city": "Mannheim",
+  "target_cities": ["Mannheim", "Heidelberg"],
   "search_radius_km": 10,
   "min_rooms": 2.5,
   "base_rent_per_sqm": 14.5,
-  "kauf_markt_qm_default": 4000,
+  "kauf_markt_qm_default": { "Mannheim": 4000, "Heidelberg": 5000 },
   "kauf_markt_qm": {
-    "Oststadt": 5730,
-    "Lindenhof": 4700,
-    "Niederfeld": 4500,
-    "Neuostheim": 4800,
-    "Neuhermsheim": 4400,
-    "Schwetzingerstadt": 4300,
-    "Oststadt/Schwetzingerstadt": 4500,
-    "Weststadt": 4200,
-    "Almenhof": 4200,
-    "Innenstadt": 4500,
-    "Quadrate": 4500,
-    "Jungbusch": 3800,
-    "Neckarstadt-Ost": 3800,
-    "Neckarstadt": 3500,
-    "Neckarstadt-West": 3000,
-    "Feudenheim": 3800,
-    "Wallstadt": 3400,
-    "Seckenheim": 3500,
-    "Friedrichsfeld": 3200,
-    "Kaefertal": 3200,
-    "Käfertal": 3200,
-    "Vogelstang": 2900,
-    "Waldhof": 2900,
-    "Sandhofen": 2900,
-    "Schoenau": 2700,
-    "Schönau": 2700,
-    "Gartenstadt": 3000,
-    "Rheinau": 3100,
-    "Hochstaett": 2700,
-    "Hochstätt": 2700
+    "Mannheim": {
+      "Oststadt": 5730,
+      "Lindenhof": 4700,
+      "Niederfeld": 4500,
+      "Neuostheim": 4800,
+      "Neuhermsheim": 4400,
+      "Schwetzingerstadt": 4300,
+      "Weststadt": 4200,
+      "Almenhof": 4200,
+      "Innenstadt": 4500,
+      "Quadrate": 4500,
+      "Jungbusch": 3800,
+      "Neckarstadt-Ost": 3800,
+      "Neckarstadt": 3500,
+      "Neckarstadt-West": 3000,
+      "Feudenheim": 3800,
+      "Wallstadt": 3400,
+      "Seckenheim": 3500,
+      "Friedrichsfeld": 3200,
+      "Kaefertal": 3200,
+      "Käfertal": 3200,
+      "Vogelstang": 2900,
+      "Waldhof": 2900,
+      "Sandhofen": 2900,
+      "Schoenau": 2700,
+      "Schönau": 2700,
+      "Gartenstadt": 3000,
+      "Rheinau": 3100,
+      "Hochstaett": 2700,
+      "Hochstätt": 2700
+    },
+    "Heidelberg": {
+      "Altstadt": 6000,
+      "Neuenheim": 6200,
+      "Handschuhsheim": 5200,
+      "Bergheim": 5000,
+      "Weststadt": 5500,
+      "Suedstadt": 5000,
+      "Südstadt": 5000,
+      "Bahnstadt": 5800,
+      "Rohrbach": 4500,
+      "Kirchheim": 4000,
+      "Pfaffengrund": 3900,
+      "Wieblingen": 4200,
+      "Boxberg": 4500,
+      "Ziegelhausen": 4500,
+      "Schlierbach": 5000,
+      "Emmertsgrund": 3500
+    }
   },
   "financing": {
     "interest_rate": 0.035,
@@ -58,47 +78,23 @@
     "longitude": 8.4631
   },
   "alternative_pois": [
-    {
-      "name": "Quadrate Mitte (B3)",
-      "latitude": 49.4889,
-      "longitude": 8.4694
-    },
-    {
-      "name": "Hauptbahnhof",
-      "latitude": 49.4794,
-      "longitude": 8.4698
-    },
-    {
-      "name": "Lindenhof",
-      "latitude": 49.4728,
-      "longitude": 8.4682
-    },
-    {
-      "name": "Neckarstadt-West",
-      "latitude": 49.495,
-      "longitude": 8.46
-    },
-    {
-      "name": "Schwetzingerstadt",
-      "latitude": 49.4833,
-      "longitude": 8.4833
-    },
-    {
-      "name": "Jungbusch",
-      "latitude": 49.4862,
-      "longitude": 8.4572
-    },
-    {
-      "name": "Rheinau",
-      "latitude": 49.453,
-      "longitude": 8.485
-    }
+    { "name": "MA Hauptbahnhof", "latitude": 49.4794, "longitude": 8.4698 },
+    { "name": "MA Quadrate Mitte (B3)", "latitude": 49.4889, "longitude": 8.4694 },
+    { "name": "MA Lindenhof", "latitude": 49.4728, "longitude": 8.4682 },
+    { "name": "MA Neckarstadt-West", "latitude": 49.495, "longitude": 8.46 },
+    { "name": "MA Schwetzingerstadt", "latitude": 49.4833, "longitude": 8.4833 },
+    { "name": "Uni Heidelberg (Altstadt)", "latitude": 49.4109, "longitude": 8.7065 },
+    { "name": "HD Hauptbahnhof", "latitude": 49.4036, "longitude": 8.6755 },
+    { "name": "HD Bismarckplatz", "latitude": 49.4093, "longitude": 8.6946 },
+    { "name": "HD Neuenheim (Uni-Campus)", "latitude": 49.4174, "longitude": 8.6712 },
+    { "name": "HD Bahnstadt", "latitude": 49.4035, "longitude": 8.6614 }
   ],
   "sources": [
     {
       "name": "kleinanzeigen_miete",
       "scraper": "kleinanzeigen",
       "listing_type": "miete",
+      "stadt": "Mannheim",
       "enabled": true,
       "pages": 4,
       "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/mannheim/k0c203"
@@ -107,6 +103,7 @@
       "name": "kleinanzeigen_kauf",
       "scraper": "kleinanzeigen",
       "listing_type": "kauf",
+      "stadt": "Mannheim",
       "enabled": true,
       "pages": 4,
       "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/mannheim/k0c196"
@@ -115,6 +112,7 @@
       "name": "immonet_miete",
       "scraper": "immonet",
       "listing_type": "miete",
+      "stadt": "Mannheim",
       "enabled": true,
       "pages": 2,
       "max_new": 5,
@@ -124,6 +122,7 @@
       "name": "immonet_kauf",
       "scraper": "immonet",
       "listing_type": "kauf",
+      "stadt": "Mannheim",
       "enabled": true,
       "pages": 2,
       "max_new": 5,
@@ -133,6 +132,7 @@
       "name": "immoscout24_kauf",
       "scraper": "immoscout24",
       "listing_type": "kauf",
+      "stadt": "Mannheim",
       "enabled": true,
       "pages": 3,
       "max_new": 8,
@@ -142,10 +142,69 @@
       "name": "immoscout24_miete",
       "scraper": "immoscout24",
       "listing_type": "miete",
+      "stadt": "Mannheim",
       "enabled": true,
       "pages": 3,
       "max_new": 8,
       "url": "https://www.immobilienscout24.de/Suche/de/baden-wuerttemberg/mannheim/wohnung-mieten"
+    },
+    {
+      "name": "kleinanzeigen_miete_hd",
+      "scraper": "kleinanzeigen",
+      "listing_type": "miete",
+      "stadt": "Heidelberg",
+      "enabled": true,
+      "pages": 4,
+      "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/heidelberg/k0c203"
+    },
+    {
+      "name": "kleinanzeigen_kauf_hd",
+      "scraper": "kleinanzeigen",
+      "listing_type": "kauf",
+      "stadt": "Heidelberg",
+      "enabled": true,
+      "pages": 4,
+      "url": "https://www.kleinanzeigen.de/s-wohnung-kaufen/heidelberg/k0c196"
+    },
+    {
+      "name": "immonet_miete_hd",
+      "scraper": "immonet",
+      "listing_type": "miete",
+      "stadt": "Heidelberg",
+      "enabled": true,
+      "pages": 2,
+      "max_new": 5,
+      "url": "https://www.immonet.de/wohnungen-mieten/heidelberg.html"
+    },
+    {
+      "name": "immonet_kauf_hd",
+      "scraper": "immonet",
+      "listing_type": "kauf",
+      "stadt": "Heidelberg",
+      "enabled": true,
+      "pages": 2,
+      "max_new": 5,
+      "url": "https://www.immonet.de/eigentumswohnungen/heidelberg.html"
+    },
+    {
+      "name": "immoscout24_kauf_hd",
+      "scraper": "immoscout24",
+      "listing_type": "kauf",
+      "stadt": "Heidelberg",
+      "enabled": true,
+      "pages": 3,
+      "max_new": 8,
+      "url": "https://www.immobilienscout24.de/Suche/de/baden-wuerttemberg/heidelberg/wohnung-kaufen"
+    },
+    {
+      "name": "immoscout24_miete_hd",
+      "scraper": "immoscout24",
+      "listing_type": "miete",
+      "stadt": "Heidelberg",
+      "enabled": true,
+      "pages": 3,
+      "max_new": 8,
+      "url": "https://www.immobilienscout24.de/Suche/de/baden-wuerttemberg/heidelberg/wohnung-mieten"
     }
   ]
 }
