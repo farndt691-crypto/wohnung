@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T14:24:22.528377+00:00",
+  "last_updated": "2026-07-02T19:27:34.257681+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -6005,7 +6005,7 @@
       "listing_type": "miete",
       "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -9854,7 +9854,7 @@
       "listing_type": "miete",
       "title": "Möbliertes Appartement mit Balkon, Nähe Nationaltheater Mannheim",
       "first_seen": "2026-06-02T19:59:48.791321+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "Balkon",
         "moebliert"
@@ -12987,7 +12987,7 @@
       "listing_type": "miete",
       "title": "500 € Wunschgutschein* zum Einzug - Gemütliche 2-Zimmer-Wohnung im tollen Mannheim-Vogelstang!",
       "first_seen": "2026-06-09T19:38:09.398495+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "Aufzug"
       ],
@@ -17897,7 +17897,7 @@
       "listing_type": "miete",
       "title": "Maisonette Wohnung über den Dächern von Mannheim",
       "first_seen": "2026-06-17T17:54:08.384703+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "Terrasse",
         "Aufzug"
@@ -26814,7 +26814,7 @@
       "listing_type": "miete",
       "title": "2-Zi-Wohnung in Mannheim Rheinau",
       "first_seen": "2026-07-01T10:47:52.597625+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "Garage"
       ],
@@ -29269,7 +29269,7 @@
       "listing_type": "miete",
       "title": "Ideal für STUDENTEN! Möbliertes Appartement in sehr guter Wohnlage (68161 Mannheim)",
       "first_seen": "2026-07-02T10:15:06.705286+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "moebliert"
       ],
@@ -29316,7 +29316,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer Wohnung ab 01.09 in Mannheim-Wallstadt",
       "first_seen": "2026-07-02T10:15:06.705286+00:00",
-      "last_seen": "2026-07-02T14:17:31.667924+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
       "boni": [
         "Balkon",
         "moebliert"
@@ -30666,6 +30666,148 @@
       "warmmiete": 700,
       "deal_score": "okay",
       "_hash": "a440fb144c89"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/ideal-fuer-studenten-moebliertes-appartement-mit-duschbad-pantry-kueche-in-68161-mannheim/3424070077-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Ideal für Studenten! Möbliertes Appartement mit Duschbad, Pantry-Küche in 68161 Mannheim",
+      "first_seen": "2026-07-02T19:27:08.123038+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Ideal für Studenten!",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68161 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, junge Erwachsene",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mittelmäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-02T19:27:08.123038+00:00",
+          "price": 570.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 23.0,
+      "kaltmiete": 570.0,
+      "nebenkosten": 100,
+      "warmmiete": 670,
+      "kaltmiete_qm": 24.78,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": 41.6,
+      "deal_score": "teuer",
+      "_hash": "750df8178d8c"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-2-zw-in-mannheim-lindenhof-gegen-1-zw-in-heidelberg/3424042452-203-7982",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "TAUSCHWOHNUNG 2-ZW in Mannheim Lindenhof gegen 1-ZW in Heidelberg",
+      "first_seen": "2026-07-02T19:27:08.123038+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Gemütliche 69 m² Wohnung in Mannheim Lindenhof mit Rheinblick",
+      "zimmeranzahl": 2,
+      "latitude": 49.4728,
+      "longitude": 8.4682,
+      "stadtteil": "Heidelberg Neuenheim",
+      "adresse": "68163 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Familien, Pendler",
+        "vibe_sicherheit": "Sehr ruhig, aber in der Nähe der Innenstadt",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-07-02T19:27:08.123038+00:00",
+          "price": 150.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 69.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 150,
+      "warmmiete": 990,
+      "kaltmiete_qm": 2.17,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -85.5,
+      "deal_score": "gut",
+      "_hash": "7f00e5310b12"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-penthouse-mannheim-oststadt/3350364883-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Großzügiges PENTHOUSE Mannheim Oststadt",
+      "first_seen": "2026-07-02T19:27:08.123038+00:00",
+      "last_seen": "2026-07-02T19:27:08.123038+00:00",
+      "boni": [
+        "renoviert",
+        "Terrasse"
+      ],
+      "kurz_bewertung": "Großzügiges Penthouse in zentraler Lage mit privater Dachterrasse.",
+      "zimmeranzahl": 4.5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Oststadt",
+      "adresse": "68165 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
+        "vibe_sicherheit": "Gut, aber Abendstunden können laut sein",
+        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
+        "einschaetzung_investor": "Gut, aber Mieteinnahmen könnten durch Studentenwohnheime beeinflusst werden"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-07-02T19:27:08.123038+00:00",
+          "price": 165.0
+        }
+      ],
+      "etage": "5",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 132.0,
+      "kaltmiete": 165.0,
+      "nebenkosten": 95,
+      "warmmiete": 2055,
+      "kaltmiete_qm": 1.25,
+      "expected_market_qm": 16.0,
+      "deal_deviation_pct": -92.2,
+      "deal_score": "gut",
+      "_hash": "e3e7b0f4a540"
     }
   ]
 }
