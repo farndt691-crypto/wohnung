@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-05T19:28:40.315236+00:00",
+  "last_updated": "2026-07-06T11:32:43.748141+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -6005,7 +6005,7 @@
       "listing_type": "miete",
       "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-07-05T19:21:40.980257+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -6817,7 +6817,7 @@
       "listing_type": "miete",
       "title": "Helle, frisch sanierte 2-Zimmer-Wohnung in Top-Lage Mannheims",
       "first_seen": "2026-05-25T21:58:51.371562+00:00",
-      "last_seen": "2026-06-27T09:31:14.619149+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -12987,7 +12987,7 @@
       "listing_type": "miete",
       "title": "500 € Wunschgutschein* zum Einzug - Gemütliche 2-Zimmer-Wohnung im tollen Mannheim-Vogelstang!",
       "first_seen": "2026-06-09T19:38:09.398495+00:00",
-      "last_seen": "2026-07-05T19:21:40.980257+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
       "boni": [
         "Aufzug"
       ],
@@ -26814,7 +26814,7 @@
       "listing_type": "miete",
       "title": "2-Zi-Wohnung in Mannheim Rheinau",
       "first_seen": "2026-07-01T10:47:52.597625+00:00",
-      "last_seen": "2026-07-05T19:21:40.980257+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
       "boni": [
         "Garage"
       ],
@@ -32028,7 +32028,7 @@
       "listing_type": "miete",
       "title": "Geschmackvolle Altbauwohnung Komplett Möbliert in Mannheim",
       "first_seen": "2026-07-05T09:48:03.439328+00:00",
-      "last_seen": "2026-07-05T19:21:40.980257+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
       "boni": [
         "EBK",
         "moebliert"
@@ -33735,6 +33735,246 @@
       "warmmiete": 1667,
       "deal_score": "okay",
       "_hash": "e1825d7e9e54"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/altbauwohnung-in-innenstadt-mannheim/3452172105-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Altbauwohnung in Innenstadt Mannheim",
+      "first_seen": "2026-07-06T11:31:53.543008+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Helle und großzügige Altbauwohnung in bester Innenstadtlage von Mannheim.",
+      "zimmeranzahl": 3.5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "U 5, 11, 68161 Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-06T11:31:53.543008+00:00",
+          "price": 1800.0
+        }
+      ],
+      "etage": "4. Obergeschoss",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 95.0,
+      "kaltmiete": 1800.0,
+      "warmmiete": 1800,
+      "quadrat": "U 5",
+      "kaltmiete_qm": 18.95,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": 8.3,
+      "deal_score": "okay",
+      "_hash": "ec35a72caa68"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-qadrate-mannheim/3452057389-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1-Zimmer-Wohnung Qadrate Mannheim",
+      "first_seen": "2026-07-06T11:31:53.543008+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
+      "boni": [
+        "Balkon",
+        "Garage",
+        "moebliert",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Eine 18qm große 1-Zimmer-Wohnung in zentraler Innenstadtlage von Mannheim.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Singles und Berufstätige",
+        "vibe_sicherheit": "Gut, da es sich um eine zentrale Innenstadtlocation handelt",
+        "einschaetzung_student": "Sehr geeignet, da es sich um eine zentrale Location handelt",
+        "einschaetzung_investor": "Gut, da es sich um eine zentrale Location handelt"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-07-06T11:31:53.543008+00:00",
+          "price": 120.0
+        }
+      ],
+      "etage": "4. Stock",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 18.0,
+      "kaltmiete": 120.0,
+      "nebenkosten": 120,
+      "warmmiete": 590,
+      "kaltmiete_qm": 6.67,
+      "expected_market_qm": 18.8,
+      "deal_deviation_pct": -64.5,
+      "deal_score": "gut",
+      "_hash": "ee33a75adb30"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-neue-moeblierte-5er-wg-wg-zimmer-ab-460-warm-mannheim-muehlauhafen/3452248807-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Moderne Neue Möblierte 5er-WG | WG-Zimmer ab 460€ warm | Mannheim-Mühlauhafen",
+      "first_seen": "2026-07-06T11:31:53.543008+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
+      "boni": [
+        "renoviert",
+        "moebliert"
+      ],
+      "kurz_bewertung": "Stylisches WG-Zimmer in einer frisch renovierten 5er-WG in Mannheim-Mühlauhafen.",
+      "zimmeranzahl": 5,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mühlauhafen",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studis, Azubis und Young Professionals",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Nicht geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-06T11:31:53.543008+00:00",
+          "price": 380.0
+        }
+      ],
+      "etage": "0",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 13.0,
+      "kaltmiete": 380.0,
+      "nebenkosten": 80,
+      "warmmiete": 460,
+      "kaltmiete_qm": 29.23,
+      "expected_market_qm": 18.5,
+      "deal_deviation_pct": 58.0,
+      "deal_score": "teuer",
+      "_hash": "80a779172ab2"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/schicke-wohnung-mannheim-neckarau-2-zimmer-lift-garage-kueche/3452056272-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Schicke Wohnung Mannheim Neckarau 2 Zimmer, Lift, Garage, Küche",
+      "first_seen": "2026-07-06T11:31:53.543008+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
+      "boni": [
+        "Aufzug",
+        "Garage"
+      ],
+      "kurz_bewertung": "Ruhige und gute Wohnlage in der Wacholderstr.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "Wacholderstr.",
+      "umfeld_analyse": {
+        "demografie": "Überwiegend selbst Eigentümer",
+        "vibe_sicherheit": "Gute Wohnlage, ruhig und sicher",
+        "einschaetzung_student": "Gut geeignet für Informatikstudenten",
+        "einschaetzung_investor": "Gut geeignet als Kapitalanlage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-06T11:31:53.543008+00:00",
+          "price": 344.0
+        }
+      ],
+      "etage": "3. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 71.0,
+      "kaltmiete": 344.0,
+      "nebenkosten": 344,
+      "warmmiete": 1094,
+      "kaltmiete_qm": 4.85,
+      "expected_market_qm": 15.3,
+      "deal_deviation_pct": -68.3,
+      "deal_score": "gut",
+      "_hash": "adc1a88dc598"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-wg-zimmer-im-zentrum-mannheims-frau-zw-18-29j-gesucht/3451984971-203-7980",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Schönes WG-Zimmer im Zentrum Mannheims, Frau zw. 18-29J. Gesucht",
+      "first_seen": "2026-07-06T11:31:53.543008+00:00",
+      "last_seen": "2026-07-06T11:31:53.543008+00:00",
+      "boni": [
+        "renoviert"
+      ],
+      "kurz_bewertung": "Schönes WG-Zimmer im Zentrum Mannheims",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "68169 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, junge Erwachsene, Familien",
+        "vibe_sicherheit": "Gut, viele Menschen, gute Infrastruktur",
+        "einschaetzung_student": "Sehr geeignet, viele Einkaufsmöglichkeiten, gute Verkehrsanbindung",
+        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Rendite"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-06T11:31:53.543008+00:00",
+          "price": 122.0
+        }
+      ],
+      "etage": "2",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 18.0,
+      "kaltmiete": 122.0,
+      "nebenkosten": 122,
+      "warmmiete": 456,
+      "kaltmiete_qm": 6.78,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": -56.3,
+      "deal_score": "gut",
+      "_hash": "109e86ea5de5"
     }
   ]
 }
