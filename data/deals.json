@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T10:15:45.948019+00:00",
+  "last_updated": "2026-07-20T14:23:30.235599+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -6005,7 +6005,7 @@
       "listing_type": "miete",
       "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-07-20T10:15:29.978365+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -32032,7 +32032,7 @@
       "listing_type": "miete",
       "title": "Geschmackvolle Altbauwohnung Komplett Möbliert in Mannheim",
       "first_seen": "2026-07-05T09:48:03.439328+00:00",
-      "last_seen": "2026-07-20T10:15:29.978365+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
       "boni": [
         "EBK",
         "moebliert"
@@ -33746,7 +33746,7 @@
       "listing_type": "miete",
       "title": "Altbauwohnung in Innenstadt Mannheim",
       "first_seen": "2026-07-06T11:31:53.543008+00:00",
-      "last_seen": "2026-07-20T10:15:29.978365+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
       "boni": [
         "moebliert"
       ],
@@ -38003,7 +38003,7 @@
       "listing_type": "miete",
       "title": "1,5-Zi.- Wohnung in Mannheim zu vermieten",
       "first_seen": "2026-07-15T09:13:48.080966+00:00",
-      "last_seen": "2026-07-20T10:15:29.978365+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
       "boni": [
         "Gäste-WC",
         "Kamin",
@@ -39283,6 +39283,242 @@
       "deal_deviation_pct": -79.2,
       "deal_score": "gut",
       "_hash": "8c9bf4a34093"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-apartment-mannheim/3463843035-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 Zimmer Apartment Mannheim",
+      "first_seen": "2026-07-20T14:22:27.857182+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Mittel in Neckarau, alle Geschäfte innerhalb von 1 Minute erreichbar",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "68199 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Familien und Pendler",
+        "vibe_sicherheit": "Gut, aber einige Lärmquellen durch den Stadtteil",
+        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
+        "einschaetzung_investor": "Mittel, einige potenzielle Investitionschancen"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-20T14:22:27.857182+00:00",
+          "price": 630.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 30.0,
+      "kaltmiete": 630.0,
+      "warmmiete": 630,
+      "kaltmiete_qm": 21.0,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": 20.0,
+      "deal_score": "teuer",
+      "_hash": "62e6112449bf"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-mannheim-neckarau/3463836741-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "3 Zimmer Wohnung Mannheim Neckarau",
+      "first_seen": "2026-07-20T14:22:27.857182+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
+      "boni": [],
+      "kurz_bewertung": "Zentrale Lage, direkt an der Haltestelle, alle Geschäfte im Umkreis von 3 min. Fußweg.",
+      "zimmeranzahl": 3.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "68199 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien, Pendler, Studenten",
+        "vibe_sicherheit": "Gut, zentrale Lage, aber möglicherweise laut",
+        "einschaetzung_student": "Gut, zentrale Lage, viele Geschäfte und Verkehrsmittel in der Nähe",
+        "einschaetzung_investor": "Mäßig, zentrale Lage, aber möglicherweise hohe Nebenkosten"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-20T14:22:27.857182+00:00",
+          "price": 300.0
+        }
+      ],
+      "etage": "4. Etage",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 80.0,
+      "kaltmiete": 300.0,
+      "nebenkosten": 300,
+      "warmmiete": 1250,
+      "kaltmiete_qm": 3.75,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -74.1,
+      "deal_score": "gut",
+      "_hash": "7ace4a3df70b"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/-moebliertes-city-apartment-im-zentrum-mannheim-quadrate-/3463766509-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "***Möbliertes City-Apartment im Zentrum Mannheim Quadrate***",
+      "first_seen": "2026-07-20T14:22:27.857182+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
+      "boni": [
+        "renoviert",
+        "moebliert"
+      ],
+      "kurz_bewertung": "Kompakte City-Wohnung mit moderner Ausstattung und zentraler Lage.",
+      "zimmeranzahl": 1,
+      "latitude": 49.4889,
+      "longitude": 8.4694,
+      "stadtteil": null,
+      "adresse": "68161 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Singles und Berufspendler",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-20T14:22:27.857182+00:00",
+          "price": 190.0
+        }
+      ],
+      "etage": "1",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 19.0,
+      "kaltmiete": 190.0,
+      "nebenkosten": 190,
+      "warmmiete": 770,
+      "quadrat": "Quadrate",
+      "kaltmiete_qm": 10.0,
+      "expected_market_qm": 18.5,
+      "deal_deviation_pct": -45.9,
+      "deal_score": "gut",
+      "_hash": "15358eb5205e"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmerwohnung-mit-balkon-und-ebk-in-mannheim/3463749335-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2-Zimmerwohnung mit Balkon und EBK in Mannheim",
+      "first_seen": "2026-07-20T14:22:27.857182+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
+      "boni": [
+        "Balkon",
+        "EBK"
+      ],
+      "kurz_bewertung": "Direkt im Mannheimer Zentrum am Rande der Quadrate gelegen.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Gut"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-07-20T14:22:27.857182+00:00",
+          "price": 200.0
+        }
+      ],
+      "etage": "2. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 60.0,
+      "kaltmiete": 200.0,
+      "nebenkosten": 200,
+      "warmmiete": 890,
+      "kaltmiete_qm": 3.33,
+      "expected_market_qm": 16.0,
+      "deal_deviation_pct": -79.2,
+      "deal_score": "gut",
+      "_hash": "c74dec8199d9"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/voll-moeblierte-1-zimmer-wohnung-in-mannheim-zu-vermieten-07-08-26/3453892291-203-7979",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Voll möblierte 1-Zimmer Wohnung in Mannheim zu vermieten:07.08.26",
+      "first_seen": "2026-07-20T14:22:27.857182+00:00",
+      "last_seen": "2026-07-20T14:22:27.857182+00:00",
+      "boni": [
+        "moebliert",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Ideal für Einzelpersonen, Paare oder Berufstätige geeignet.",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "Carl-Benz-Straße 128",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
+        "vibe_sicherheit": "Gute Sicherheitslage, aber einige Lärmbelästigungen durch Straßenbahn und Verkehr",
+        "einschaetzung_student": "Sehr geeignet für Studenten, da nahe an der Uni und mit guter Verkehrsanbindung",
+        "einschaetzung_investor": "Mittlere Eignung als Kapitalanlage, da die Miete relativ hoch ist, aber die Lage gut ist"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-20T14:22:27.857182+00:00",
+          "price": 130.0
+        }
+      ],
+      "etage": "4. EG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 34.0,
+      "kaltmiete": 130.0,
+      "nebenkosten": 130,
+      "warmmiete": 910,
+      "kaltmiete_qm": 3.82,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": -78.8,
+      "deal_score": "gut",
+      "_hash": "6650297af458"
     }
   ]
 }
