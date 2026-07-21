@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T19:47:05.857080+00:00",
+  "last_updated": "2026-07-21T09:32:33.165692+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-appartement-im-gewerbegebiet-mannheim-guetherhallenstrasse/3409280053-203-7983",
@@ -87,7 +87,7 @@
       "listing_type": "miete",
       "title": "Schöne möblierte 1Zimmer Wohnung, 20qm, im 1. OG in zentraler Lage in Mannheim zu vermieten.",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-24T14:44:24.866800+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
       "boni": [
         "moebliert"
       ],
@@ -6005,7 +6005,7 @@
       "listing_type": "miete",
       "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-07-20T19:46:31.528315+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -32032,7 +32032,7 @@
       "listing_type": "miete",
       "title": "Geschmackvolle Altbauwohnung Komplett Möbliert in Mannheim",
       "first_seen": "2026-07-05T09:48:03.439328+00:00",
-      "last_seen": "2026-07-20T19:46:31.528315+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
       "boni": [
         "EBK",
         "moebliert"
@@ -33746,7 +33746,7 @@
       "listing_type": "miete",
       "title": "Altbauwohnung in Innenstadt Mannheim",
       "first_seen": "2026-07-06T11:31:53.543008+00:00",
-      "last_seen": "2026-07-20T19:46:31.528315+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
       "boni": [
         "moebliert"
       ],
@@ -38003,7 +38003,7 @@
       "listing_type": "miete",
       "title": "1,5-Zi.- Wohnung in Mannheim zu vermieten",
       "first_seen": "2026-07-15T09:13:48.080966+00:00",
-      "last_seen": "2026-07-20T19:46:31.528315+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
       "boni": [
         "Gäste-WC",
         "Kamin",
@@ -39719,6 +39719,140 @@
       "deal_deviation_pct": -54.0,
       "deal_score": "gut",
       "_hash": "5ccac2ef2fd2"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zw-mietwohnung-in-68199-mannheim-neckarau-herrlachstr-1-/3464356476-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 ZW Mietwohnung in 68199 Mannheim Neckarau Herrlachstr 1",
+      "first_seen": "2026-07-21T09:31:37.778316+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
+      "boni": [],
+      "kurz_bewertung": "Helle 1-Zimmer-Wohnung in 1. OG, 12 Min zur Uni und Stadtmitte",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "Herrlachstr. 1, 68199 Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien und Studenten, gute Verkehrsanbindung",
+        "vibe_sicherheit": "Gut, aber einige Lärmquellen durch Straßenbahn und Geschäfte",
+        "einschaetzung_student": "Sehr gut, gute Verkehrsanbindung und Nähe zur Uni",
+        "einschaetzung_investor": "Mittel, hohe Miete, aber gute Rendite"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-21T09:31:37.778316+00:00",
+          "price": 160.0
+        }
+      ],
+      "etage": "1. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 21.0,
+      "kaltmiete": 160.0,
+      "nebenkosten": 160,
+      "warmmiete": 580,
+      "kaltmiete_qm": 7.62,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -47.4,
+      "deal_score": "gut",
+      "_hash": "5203aa0c5e15"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/mietwohnung-mannheim-neckarstadt-west-ab-september/3464424881-203-7979",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Mietwohnung Mannheim Neckarstadt-West ab September",
+      "first_seen": "2026-07-21T09:31:37.778316+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
+      "boni": [],
+      "kurz_bewertung": "Charme Altbauwohnung in zentraler Lage",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Neckarstadt",
+      "adresse": "68167 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut, aber abends etwas ruhiger",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-21T09:31:37.778316+00:00",
+          "price": 180.0
+        }
+      ],
+      "etage": "1",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 51.0,
+      "kaltmiete": 180.0,
+      "nebenkosten": 180,
+      "warmmiete": 830,
+      "kaltmiete_qm": 3.53,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -75.7,
+      "deal_score": "gut",
+      "_hash": "862323c24345"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/studentenzinmer-mannheim-neckarau/3464298395-203-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Studentenzinmer Mannheim Neckarau",
+      "first_seen": "2026-07-21T09:31:37.778316+00:00",
+      "last_seen": "2026-07-21T09:31:37.778316+00:00",
+      "boni": [],
+      "kurz_bewertung": "Studentenzimmer in Mannheim-Neckarau zur Untermiete",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckarau",
+      "adresse": "68199 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, junge Erwachsene",
+        "vibe_sicherheit": "Gut, da es eine direkte Anbindung an die Straßenbahnlinie 3 gibt",
+        "einschaetzung_student": "Sehr geeignet, da es sich um einen Studentenzimmer handelt",
+        "einschaetzung_investor": "Nicht geeignet, da es sich um eine Untermiete handelt"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-07-21T09:31:37.778316+00:00",
+          "price": 350.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 15.0,
+      "kaltmiete": 350.0,
+      "nebenkosten": 700,
+      "kaltmiete_qm": 23.33,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": 60.9,
+      "deal_score": "teuer",
+      "_hash": "30a643011c7b"
     }
   ]
 }
