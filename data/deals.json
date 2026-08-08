@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07T18:58:57.692716+00:00",
+  "last_updated": "2026-08-08T07:54:17.854551+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1064,7 +1064,7 @@
       "listing_type": "miete",
       "title": "Frisch renoviert in Mannheim-Sandhofen – 4 großzügige Zimmer mit Balkon",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -1970,7 +1970,7 @@
       "listing_type": "miete",
       "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -2641,274 +2641,6 @@
       "_hash": "269b452e3a64"
     },
     {
-      "url": "https://www.immowelt.de/expose/fa451b05-b893-447d-be98-6919da2e3099",
-      "source": "immowelt",
-      "listing_type": "miete",
-      "title": "EPPLE GmbH",
-      "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Altbauwohnung in Käfertal",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "Käfertal",
-      "umfeld_analyse": {
-        "demografie": "Familien und Pendler",
-        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
-        "einschaetzung_student": "nicht ideal für Studenten",
-        "einschaetzung_investor": "keine gute Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-01T21:20:14.981971+00:00",
-          "price": 235.0
-        }
-      ],
-      "quadratmeter": 66.0,
-      "kaltmiete": 235.0,
-      "kaltmiete_qm": 3.56,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -75.4,
-      "deal_score": "gut",
-      "_hash": "a194837f89db"
-    },
-    {
-      "url": "https://www.immowelt.de/expose/26lfpb23tccn",
-      "source": "immowelt",
-      "listing_type": "miete",
-      "title": "Wohnung zur Miete 1.350 € 3 Zimmer 118 m² Geschoss 1/2 frei ab 01.07.2026 Rheinau Mannheim 68219",
-      "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gut gelegene Wohnung in einem ruhigen Stadtteil von Mannheim.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "Rheinau, Mannheim",
-      "umfeld_analyse": {
-        "demografie": "In Rheinau wohnen vor allem Familien und ältere Menschen, es gibt jedoch auch einige Studenten und jüngere Erwachsene.",
-        "vibe_sicherheit": "Rheinau gilt als ruhiger und sicheres Stadtteil, es gibt jedoch einige dunkle Ecken und Straßen, die nachts besser vermieden werden sollten.",
-        "einschaetzung_student": "Für Informatikstudenten ist Rheinau eine gute Wahl, da es in der Nähe der Uni Mannheim liegt und eine gute Verkehrsanbindung hat.",
-        "einschaetzung_investor": "Rheinau ist keine gute Wahl für Investoren, da es sich um einen ruhigen Stadtteil handelt und die Mietpreise nicht sehr hoch sind."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-01T21:20:14.981971+00:00",
-          "price": 350.0
-        }
-      ],
-      "quadratmeter": 118.0,
-      "kaltmiete": 350.0,
-      "kaltmiete_qm": 2.97,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -79.5,
-      "deal_score": "gut",
-      "_hash": "161aa0474a0a"
-    },
-    {
-      "url": "https://www.immowelt.de/expose/e02f48bf-95cb-438a-84d7-4b3be301a379",
-      "source": "immowelt",
-      "listing_type": "kauf",
-      "title": "FALC Immobilien Bergstraße",
-      "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Günstige Wohnung in zentraler Lage",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "Bergstraße",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
-        "vibe_sicherheit": "Gut, aber bei Nacht etwas dunkel",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Gut, aber Preise sind nicht besonders niedrig"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-01T21:20:14.981971+00:00",
-          "price": 199000.0
-        }
-      ],
-      "quadratmeter": 63.0,
-      "kaufpreis": 199000.0,
-      "kaltmiete": 658.0,
-      "nebenkosten": 658,
-      "bankrate_monat": 912.08,
-      "cashflow_monat": -304.08,
-      "deal_score": "skip",
-      "_hash": "776409cf6bf8",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.immowelt.de/expose/629e3378-0620-48f5-9729-257189e46b55",
-      "source": "immowelt",
-      "listing_type": "kauf",
-      "title": "Akin Immobilien GmbH",
-      "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Provisionsfrei, 1. Geschoss, frei ab 31.12.2027",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "Rüsselsheimer Straße 39-41",
-      "umfeld_analyse": {
-        "demografie": "Familien, Pendler, ältere Bevölkerung",
-        "vibe_sicherheit": "ruhig, aber nicht sehr lebendig",
-        "einschaetzung_student": "nicht geeignet, zu weit vom Uni-Campus entfernt",
-        "einschaetzung_investor": "möglicherweise geeignet, aber Preise sind nicht sehr niedrig"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-01T21:20:14.981971+00:00",
-          "price": 463800.0
-        }
-      ],
-      "quadratmeter": 87.5,
-      "kaufpreis": 463800.0,
-      "kaltmiete": 533.0,
-      "nebenkosten": 5301,
-      "bankrate_monat": 2125.75,
-      "cashflow_monat": -1642.75,
-      "deal_score": "skip",
-      "_hash": "59c3377f9a5d",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.vonovia.de/zuhause-finden/immobilien/schoen-hier-zu-wohnen-87-1249760017",
-      "source": "vonovia",
-      "listing_type": "miete",
-      "title": "Schön hier zu wohnen.",
-      "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Schön hier zu wohnen.",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Keine Informationen zur Demografie des Stadtteils verfügbar.",
-        "vibe_sicherheit": "Keine Informationen zur Atmosphäre und Sicherheitsgefühl des Stadtteils verfügbar.",
-        "einschaetzung_student": "Keine Informationen zur Eignung für Informatikstudenten verfügbar.",
-        "einschaetzung_investor": "Keine Informationen zur Eignung als Kapitalanlage verfügbar."
-      },
-      "hat_balkon": false,
-      "price_history": [],
-      "deal_score": "okay",
-      "_hash": "57b4f0974e1e",
-      "status": "offline",
-      "offline_since": "2026-08-05T19:31:33.294129+00:00"
-    },
-    {
-      "url": "https://www.vonovia.de/zuhause-finden/immobilien/stay-study-hier-will-ich-wohnen-freies-studentenzimmer-komplett-moebliert-87-1341060002",
-      "source": "vonovia",
-      "listing_type": "miete",
-      "title": "Stay + Study - Hier will ich wohnen. Freies Studentenzimmer, komplett möbliert!",
-      "first_seen": "2026-06-01T21:20:14.981971+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Freies Studentenzimmer, komplett möbliert!",
-      "zimmeranzahl": null,
-      "latitude": 49.5,
-      "longitude": 8.5,
-      "stadtteil": "DIEBURG",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr gut, nahe der Uni",
-        "einschaetzung_investor": "Mittel, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [],
-      "deal_score": "okay",
-      "_hash": "cc6be27c4995"
-    },
-    {
-      "url": "https://www.immowelt.de/expose/26tlg285gvms",
-      "source": "immowelt",
-      "listing_type": "miete",
-      "title": "Wohnung zur Miete 1.200 € 3 Zimmer 75 m² Geschoss 2/3 frei ab sofort Käfertal Mannheim 68309",
-      "first_seen": "2026-06-01T21:49:56.484234+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gut gelegene Wohnung in Käfertal, aber keine spektakulären Extras.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "Käfertal, Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene, aber auch einige Studenten und Rentner.",
-        "vibe_sicherheit": "Gut, aber es gibt einige dunkle Ecken und Lärmbelästigung durch die Autobahn.",
-        "einschaetzung_student": "Gut, da es in der Nähe der Uni ist und einige Studentenwohnungen gibt.",
-        "einschaetzung_investor": "Mäßig, da die Mieten nicht besonders hoch sind, aber die Lage nicht besonders attraktiv ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-01T21:49:56.484234+00:00",
-          "price": 200.0
-        }
-      ],
-      "quadratmeter": 75.0,
-      "kaltmiete": 200.0,
-      "kaltmiete_qm": 2.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -81.6,
-      "deal_score": "gut",
-      "_hash": "21fa9d194370"
-    },
-    {
-      "url": "https://www.immowelt.de/expose/2641vg9c4x44",
-      "source": "immowelt",
-      "listing_type": "miete",
-      "title": "Wohnung zur Miete 1.000 € 3 Zimmer 90 m² Geschoss 2/4 frei ab sofort Waldhofstraße 43 a Neckarstadt Mannheim 68169",
-      "first_seen": "2026-06-01T21:49:56.484234+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gute Lage, aber keine besonderen Extras.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "Waldhofstraße 43 a",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien, aber eher nicht für Familien mit Kindern geeignet.",
-        "vibe_sicherheit": "Gute Sicherheitslage, aber abends kann es noch ein bisschen heruntergehen.",
-        "einschaetzung_student": "Gute Lage für Studenten, aber keine besonderen Studentenangebote in der Nähe.",
-        "einschaetzung_investor": "Keine gute Kapitalanlage, da die Miete relativ hoch ist und die Lage nicht besonders attraktiv ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-01T21:49:56.484234+00:00",
-          "price": 1000
-        }
-      ],
-      "quadratmeter": 90.0,
-      "kaltmiete": 1000,
-      "kaltmiete_qm": 11.11,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -23.4,
-      "deal_score": "gut",
-      "_hash": "3bb7bc3bff47"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/-moebliertes-city-apartment-im-zentrum-mannheim-quadrate-mit-starker-rendite-/3340585700-196-7983",
       "source": "kleinanzeigen",
       "listing_type": "kauf",
@@ -2956,7 +2688,7 @@
       "listing_type": "miete",
       "title": "Wohnung Mannheim Neckarstadt-West",
       "first_seen": "2026-06-02T19:59:48.791321+00:00",
-      "last_seen": "2026-07-28T14:25:02.836844+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Balkon"
       ],
@@ -3318,50 +3050,6 @@
       "cashflow_monat": -173.58,
       "deal_score": "skip",
       "_hash": "1ca75e48204b",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.immowelt.de/expose/9de57d2f-49d7-4fd8-a9f2-28e521f7c3f5",
-      "source": "immowelt",
-      "listing_type": "kauf",
-      "title": "Enjutin Immobilien",
-      "first_seen": "2026-06-04T17:39:51.048570+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [
-        "moebliert",
-        "Neubau",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Investitionsobjekt für WG-Vermietung in guter Lage",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "Neckarstadt",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Sehr geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-04T17:39:51.048570+00:00",
-          "price": 363000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 73.3,
-      "kaufpreis": 363000.0,
-      "kaltmiete": 200.0,
-      "bankrate_monat": 1663.75,
-      "cashflow_monat": -1513.75,
-      "deal_score": "skip",
-      "_hash": "6ecd420389af",
       "preis_verdacht": false
     },
     {
@@ -3901,7 +3589,7 @@
       "listing_type": "miete",
       "title": "TAUSCHWOHNUNG Tausche Magdeburg gegen Mannheim-Wohnung",
       "first_seen": "2026-06-07T12:17:15.927906+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "gemütliche 2-Zimmer-Wohnung in Magdeburg",
       "zimmeranzahl": 2.0,
@@ -3941,7 +3629,7 @@
       "listing_type": "miete",
       "title": "TAUSCHWOHNUNG 54qm gegen Wohnung ab 60qm in Mannheim und Umgebung",
       "first_seen": "2026-06-07T12:17:15.927906+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "2-Zimmer-Wohnung in Mannheim, Schwetzingerstadt/Oststadt mit 54 m² und einer Miete von 620 Euro",
       "zimmeranzahl": 2.0,
@@ -3974,46 +3662,6 @@
       "deal_deviation_pct": -20.8,
       "deal_score": "gut",
       "_hash": "deee0b87178b"
-    },
-    {
-      "url": "https://www.immowelt.de/expose/261hhbllm3dd",
-      "source": "immowelt",
-      "listing_type": "miete",
-      "title": "Wohnung zur Miete 820 € 2 Zimmer 63 m² frei ab 01.09.2026 Quadrate Mannheim 68161",
-      "first_seen": "2026-06-07T12:17:15.927906+00:00",
-      "last_seen": "2026-06-08T23:06:08.579695+00:00",
-      "boni": [],
-      "kurz_bewertung": "Wohnung zur Miete in Mannheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4889,
-      "longitude": 8.4694,
-      "stadtteil": null,
-      "adresse": "Quadrate, Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-07T12:17:15.927906+00:00",
-          "price": 820.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 63.0,
-      "kaltmiete": 820.0,
-      "quadrat": "Quadrate",
-      "kaltmiete_qm": 13.02,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -10.2,
-      "deal_score": "gut",
-      "_hash": "5b3fd124b54c"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1zimmer-wohnung-in-mannheim-rheinau-sued/3428159249-203-4763",
@@ -4156,7 +3804,7 @@
       "listing_type": "miete",
       "title": "TAUSCHWOHNUNG Mannheim Almenhof tauschen gegen Regensburg!",
       "first_seen": "2026-06-07T21:55:49.198705+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "Einladendes Apartment mit drei Zimmern und gemeinschaftlich nutzbarer Garten.",
       "zimmeranzahl": 3,
@@ -26389,7 +26037,7 @@
       "listing_type": "miete",
       "title": "Tolle 1 Zimmer Wohnung, 23QM in Mannheim nähe Innenstadt zu vermieten",
       "first_seen": "2026-07-07T14:52:22.048335+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "Tolle 1 Zimmer Wohnung im Zentrum Mannheim",
       "zimmeranzahl": 1.0,
@@ -26865,7 +26513,7 @@
       "listing_type": "miete",
       "title": "Schöne 1 Zimmer Etagenwohnung mit 27qm und Pantry-Küche in Top Lage Mannheim",
       "first_seen": "2026-07-08T19:27:25.260488+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "moebliert"
       ],
@@ -34669,7 +34317,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Sanierung: helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
       "first_seen": "2026-07-29T14:34:54.576760+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -36684,7 +36332,7 @@
       "listing_type": "miete",
       "title": "Sanierte Altbauwohnung 90m2 in der Mannheimer Oststadt",
       "first_seen": "2026-08-05T14:24:19.279753+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "renoviert"
       ],
@@ -36833,7 +36481,7 @@
       "listing_type": "miete",
       "title": "Vollmöblierte 2-Z-Wohnung in Mannheim-Wallstadt",
       "first_seen": "2026-08-05T19:31:33.294129+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Balkon",
         "moebliert"
@@ -36938,7 +36586,7 @@
       "listing_type": "miete",
       "title": "4 Zimmer Neubau Wohnung Mannheim Schwetzingerstadt",
       "first_seen": "2026-08-06T14:27:33.251260+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Terrassenwohnung",
         "Terrasse",
@@ -36991,7 +36639,7 @@
       "listing_type": "miete",
       "title": "Schöne 2-Zimmer Wohnung (ca. 55qm) in Mannheim Käfertal",
       "first_seen": "2026-08-06T14:27:33.251260+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "Die Wohnung eignet sich ideal für Singles oder Paare und überzeugt durch ihre praktische Raumaufteilung.",
       "zimmeranzahl": 2.0,
@@ -37036,7 +36684,7 @@
       "listing_type": "miete",
       "title": "Gepflegtes 1 Zimmer-Appartement, 20qm mit Terrasse in ruhiger Lage von Mannheim",
       "first_seen": "2026-08-06T14:27:33.251260+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Balkon",
         "renoviert",
@@ -37085,7 +36733,7 @@
       "listing_type": "miete",
       "title": "Charmante 75 m² Altbauwohnung Mannheim Innenstadt Nähe Univers",
       "first_seen": "2026-08-06T14:27:33.251260+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Balkon",
         "Garage"
@@ -37137,7 +36785,7 @@
       "listing_type": "miete",
       "title": "3,5-Zimmer Wohnung (1. Stock) mit Garten u. Garage - Mannheim-Vogelstang",
       "first_seen": "2026-08-07T00:01:16.730755+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Garage",
         "Balkon"
@@ -37189,7 +36837,7 @@
       "listing_type": "miete",
       "title": "Penthouse-Apartment mit 180°-Panoramablick – Uni Mannheim",
       "first_seen": "2026-08-07T00:01:16.730755+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Aufzug",
         "Garage"
@@ -37241,7 +36889,7 @@
       "listing_type": "miete",
       "title": "Möbliertes City-Apartment mit Balkon – Uni Mannheim",
       "first_seen": "2026-08-07T00:01:16.730755+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "moebliert",
         "Aufzug",
@@ -37295,7 +36943,7 @@
       "listing_type": "miete",
       "title": "Helle 3 Zimmer Wohnung mit Balkon in Mannheim-Nachmieter gesucht",
       "first_seen": "2026-08-07T00:01:16.730755+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Garage",
         "Balkon"
@@ -37347,7 +36995,7 @@
       "listing_type": "miete",
       "title": "Sanierte 1-Zimmer Wohnung in Mannheim-Waldhof",
       "first_seen": "2026-08-07T00:01:16.730755+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "Gepflegte 1-Zimmer-Wohnung mit gutem Grundriss und angenehmer Wohnatmosphäre.",
       "zimmeranzahl": 1.0,
@@ -37392,7 +37040,7 @@
       "listing_type": "miete",
       "title": "2-ZimmerWohnung in den Quadraten von Mannheim",
       "first_seen": "2026-08-07T08:18:36.232104+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "Helle 2-Zimmer-Wohnung mit Einbauküche in zentraler Lage",
       "zimmeranzahl": 2.0,
@@ -37441,7 +37089,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer Wohnung zwischen Mannheim und Heidelberg",
       "first_seen": "2026-08-07T18:58:14.359606+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -37488,7 +37136,7 @@
       "listing_type": "miete",
       "title": "1 Zimmerwohnung in Mannheim, ideal für Studenten",
       "first_seen": "2026-08-07T18:58:14.359606+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
+      "last_seen": "2026-08-08T07:54:10.332093+00:00",
       "boni": [],
       "kurz_bewertung": "Die Wohnung liegt in einem ruhigen Hinterhof, hat 24m² mit Einbauküche und separatem Badezimmer.",
       "zimmeranzahl": 1.0,
