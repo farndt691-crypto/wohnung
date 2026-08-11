@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-11T08:14:50.087646+00:00",
+  "last_updated": "2026-08-11T13:21:19.559345+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -33372,7 +33372,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Sanierung: helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
       "first_seen": "2026-07-29T14:34:54.576760+00:00",
-      "last_seen": "2026-08-11T08:13:51.917334+00:00",
+      "last_seen": "2026-08-11T13:20:22.839049+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -35387,7 +35387,7 @@
       "listing_type": "miete",
       "title": "Sanierte Altbauwohnung 90m2 in der Mannheimer Oststadt",
       "first_seen": "2026-08-05T14:24:19.279753+00:00",
-      "last_seen": "2026-08-11T08:13:51.917334+00:00",
+      "last_seen": "2026-08-11T13:20:22.839049+00:00",
       "boni": [
         "renoviert"
       ],
@@ -36906,6 +36906,194 @@
       "deal_deviation_pct": -36.8,
       "deal_score": "gut",
       "_hash": "d6c8df1e4c2b"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/4-zimmer-maisonettwohnung-mit-fernblick-im-zentrum-von-mannheim/3482113849-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "4 Zimmer Maisonettwohnung mit Fernblick im Zentrum von Mannheim",
+      "first_seen": "2026-08-11T13:20:22.839049+00:00",
+      "last_seen": "2026-08-11T13:20:22.839049+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "Ideales Zuhause für Singles, Paare oder kleine Familien.",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68161 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Mischung aus Studenten, Berufstätigen und Familien.",
+        "vibe_sicherheit": "Gut, da es sich um ein Hochhaus in einer Wohnanlage handelt.",
+        "einschaetzung_student": "Sehr geeignet, da es sich um ein Zentrum von Mannheim handelt.",
+        "einschaetzung_investor": "Gut, da es sich um eine Wohnanlage handelt."
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-11T13:20:22.839049+00:00",
+          "price": 150.0
+        }
+      ],
+      "etage": "24. bzw. 25. Obergeschoss",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 130.0,
+      "kaltmiete": 150.0,
+      "nebenkosten": 200,
+      "warmmiete": 1790,
+      "kaltmiete_qm": 1.15,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -92.3,
+      "deal_score": "gut",
+      "_hash": "40710f39fb08"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/ideal-fuer-studenten-top-lage-naehe-nationaltheater-in-mannheim-moebliertes-appartement/3482079885-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Ideal für Studenten! TOP Lage Nähe Nationaltheater in Mannheim, möbliertes Appartement",
+      "first_seen": "2026-08-11T13:20:22.839049+00:00",
+      "last_seen": "2026-08-11T13:20:22.839049+00:00",
+      "boni": [
+        "moebliert"
+      ],
+      "kurz_bewertung": "Ideal für Studenten oder 1 berufstätige Person.",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "68161 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten und Berufstätige",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-11T13:20:22.839049+00:00",
+          "price": 120.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 26.0,
+      "kaltmiete": 120.0,
+      "nebenkosten": 120,
+      "warmmiete": 730,
+      "kaltmiete_qm": 4.62,
+      "expected_market_qm": 17.5,
+      "deal_deviation_pct": -73.6,
+      "deal_score": "gut",
+      "_hash": "21de377da96d"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-in-mannheim-gesucht-moebilisierte-2-zimmer-wohnung-/3482044952-203-7979",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Nachmieter in Mannheim gesucht! ( möbilisierte 2-Zimmer-Wohnung)",
+      "first_seen": "2026-08-11T13:20:22.839049+00:00",
+      "last_seen": "2026-08-11T13:20:22.839049+00:00",
+      "boni": [
+        "moebliert",
+        "Terrasse"
+      ],
+      "kurz_bewertung": "Schöne, mobilisierte 2-Zimmer-Wohnung mit großzügiger Dachterrasse.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim",
+      "adresse": "Untere Clignetstraße",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-11T13:20:22.839049+00:00",
+          "price": 803.0
+        }
+      ],
+      "etage": "3. Stock",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 52.0,
+      "kaltmiete": 803.0,
+      "kaltmiete_qm": 15.44,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": -14.2,
+      "deal_score": "gut",
+      "_hash": "e014bd8497f6"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/familienfreundliche-4-zimmer-wohnung-in-mannheim-vogelstang/3482019836-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
+      "first_seen": "2026-08-11T13:20:22.839049+00:00",
+      "last_seen": "2026-08-11T13:20:22.839049+00:00",
+      "boni": [
+        "Aufzug",
+        "Balkon"
+      ],
+      "kurz_bewertung": "Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
+      "zimmeranzahl": 4.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": "Vogelstang",
+      "umfeld_analyse": {
+        "demografie": "Familien und Singles",
+        "vibe_sicherheit": "ruhig und komfortabel",
+        "einschaetzung_student": "möglich, aber nicht ideal",
+        "einschaetzung_investor": "möglich, aber nicht sehr lukrativ"
+      },
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-11T13:20:22.839049+00:00",
+          "price": 211.0
+        }
+      ],
+      "etage": "1. Etage",
+      "baujahr": 1968,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 101.46,
+      "kaltmiete": 211.0,
+      "nebenkosten": 233,
+      "warmmiete": 1484,
+      "kaltmiete_qm": 2.08,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": -86.6,
+      "deal_score": "gut",
+      "_hash": "83d6ad3f849b"
     }
   ]
 }
