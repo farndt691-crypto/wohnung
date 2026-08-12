@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12T13:24:29.834286+00:00",
+  "last_updated": "2026-08-12T19:03:32.913473+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -2484,7 +2484,7 @@
       "listing_type": "miete",
       "title": "Wohnung Mannheim Neckarstadt-West",
       "first_seen": "2026-06-02T19:59:48.791321+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "Balkon"
       ],
@@ -29267,7 +29267,7 @@
       "listing_type": "miete",
       "title": "1,5 Zimmer in Mannheim Jungbusch",
       "first_seen": "2026-07-19T19:08:05.194929+00:00",
-      "last_seen": "2026-08-11T08:13:51.917334+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "Balkon",
         "Aufzug"
@@ -32107,7 +32107,7 @@
       "listing_type": "miete",
       "title": "1 Zimmer Apartment im beliebten Mannheimer Jungbusch",
       "first_seen": "2026-07-27T19:29:29.107270+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -32297,7 +32297,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Wohnung in Mannheim Käfertal",
       "first_seen": "2026-07-28T09:40:46.572673+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "Garage"
       ],
@@ -32835,7 +32835,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Sanierung: helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
       "first_seen": "2026-07-29T14:34:54.576760+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -33667,7 +33667,7 @@
       "listing_type": "miete",
       "title": "Exklusiv für Studenten/Azubis: Möbliertes Männer-WG-Zimmer in der Mannheimer Innenstadt",
       "first_seen": "2026-08-01T09:10:30.937666+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "moebliert"
       ],
@@ -34850,7 +34850,7 @@
       "listing_type": "miete",
       "title": "Sanierte Altbauwohnung 90m2 in der Mannheimer Oststadt",
       "first_seen": "2026-08-05T14:24:19.279753+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "renoviert"
       ],
@@ -36094,7 +36094,7 @@
       "listing_type": "miete",
       "title": "3 Zimmer Wohnung Mannheim",
       "first_seen": "2026-08-10T13:22:57.812082+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "Balkon",
         "Garage"
@@ -36679,7 +36679,7 @@
       "listing_type": "miete",
       "title": "Seltenheit direkt an der Uni Mannheim: Design-Apartment",
       "first_seen": "2026-08-12T08:21:37.882651+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [
         "renoviert",
         "moebliert"
@@ -36731,7 +36731,7 @@
       "listing_type": "miete",
       "title": "Q7: 1-Zimmer-Apartment Mannheim mit offener Küche – stylisch, zen",
       "first_seen": "2026-08-12T08:21:37.882651+00:00",
-      "last_seen": "2026-08-12T13:24:11.171128+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
       "boni": [],
       "kurz_bewertung": "Dieses 1-Zimmer-Apartment bietet auf 18,31 m² eine stylische Wohnlösung in zentraler Lage, im dritten Obergeschoss eines Mehrfamilienhauses.",
       "zimmeranzahl": 1.0,
@@ -36821,6 +36821,98 @@
       "deal_deviation_pct": -22.5,
       "deal_score": "gut",
       "_hash": "795e20b3d43e"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-in-mannheim-innenstadt-nachmieter-gesucht/3483130026-203-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1 Zimmer Wohnung in Mannheim Innenstadt Nachmieter gesucht",
+      "first_seen": "2026-08-12T19:03:23.598069+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
+      "boni": [
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Ideal für Singles oder zentrale Wohnlage",
+      "zimmeranzahl": 1.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68161 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Singles, Berufstätige",
+        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-12T19:03:23.598069+00:00",
+          "price": 370.0
+        }
+      ],
+      "etage": "4. Stock",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 18.0,
+      "kaltmiete": 370.0,
+      "nebenkosten": 100,
+      "warmmiete": 470,
+      "kaltmiete_qm": 20.56,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": 37.1,
+      "deal_score": "teuer",
+      "_hash": "f5192e084daf"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliches-helles-wg-zimmer-in-mannheim-voll-ausgestattet-490-warmmiete-/3459692609-203-7978",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Gemütliches, helles WG-Zimmer in Mannheim | voll ausgestattet | 490 € Warmmiete!!!",
+      "first_seen": "2026-08-12T19:03:23.598069+00:00",
+      "last_seen": "2026-08-12T19:03:23.598069+00:00",
+      "boni": [],
+      "kurz_bewertung": "Gemütliches, helles WG-Zimmer in Mannheim | voll ausgestattet | 490 € Warmmiete!!!",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Rheinau",
+      "adresse": "68219 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Familien, Pendler",
+        "vibe_sicherheit": "ruhige Wohnlage, gute Verkehrsanbindung",
+        "einschaetzung_student": "sehr geeignet",
+        "einschaetzung_investor": "nicht geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-12T19:03:23.598069+00:00",
+          "price": 120.0
+        }
+      ],
+      "etage": "1. EG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": "Fernwärme",
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 17.0,
+      "kaltmiete": 120.0,
+      "nebenkosten": 120,
+      "warmmiete": 490,
+      "kaltmiete_qm": 7.06,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -51.3,
+      "deal_score": "gut",
+      "_hash": "5e126a69446a"
     }
   ]
 }
