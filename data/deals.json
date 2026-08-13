@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-13T08:25:59.163314+00:00",
+  "last_updated": "2026-08-13T13:26:35.751391+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -32351,7 +32351,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Sanierung: helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
       "first_seen": "2026-07-29T14:34:54.576760+00:00",
-      "last_seen": "2026-08-13T08:25:12.173943+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -33183,7 +33183,7 @@
       "listing_type": "miete",
       "title": "Exklusiv für Studenten/Azubis: Möbliertes Männer-WG-Zimmer in der Mannheimer Innenstadt",
       "first_seen": "2026-08-01T09:10:30.937666+00:00",
-      "last_seen": "2026-08-13T08:25:12.173943+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
       "boni": [
         "moebliert"
       ],
@@ -34366,7 +34366,7 @@
       "listing_type": "miete",
       "title": "Sanierte Altbauwohnung 90m2 in der Mannheimer Oststadt",
       "first_seen": "2026-08-05T14:24:19.279753+00:00",
-      "last_seen": "2026-08-13T08:25:12.173943+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
       "boni": [
         "renoviert"
       ],
@@ -36195,7 +36195,7 @@
       "listing_type": "miete",
       "title": "Seltenheit direkt an der Uni Mannheim: Design-Apartment",
       "first_seen": "2026-08-12T08:21:37.882651+00:00",
-      "last_seen": "2026-08-13T08:25:12.173943+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
       "boni": [
         "renoviert",
         "moebliert"
@@ -36616,6 +36616,231 @@
       "deal_deviation_pct": -66.4,
       "deal_score": "gut",
       "_hash": "91447c6dffcb"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mannheim-innenstadt/3483619720-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnung Mannheim Innenstadt",
+      "first_seen": "2026-08-13T13:25:41.419963+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
+      "boni": [],
+      "kurz_bewertung": "Charmante 2-Zimmer-Altbauwohnung mit Stuck, hohen Decken und wunderschöner separater Küche in bester Innenstadtlage",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4889,
+      "longitude": 8.4694,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": "68159 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
+        "vibe_sicherheit": "Gut, aber bei Nacht etwas dunkel",
+        "einschaetzung_student": "Sehr geeignet",
+        "einschaetzung_investor": "Mäßig geeignet"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-13T13:25:41.419963+00:00",
+          "price": 200.0
+        }
+      ],
+      "etage": "1. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 62.0,
+      "kaltmiete": 200.0,
+      "nebenkosten": 200,
+      "warmmiete": 1150,
+      "quadrat": "Quadrate",
+      "kaltmiete_qm": 3.23,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -77.7,
+      "deal_score": "gut",
+      "_hash": "5f6e90b08111"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-kuechen-bad-in-mannheim-neckerstadt/3483573213-203-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2 Zimmer , Küchen, Bad in Mannheim Neckerstadt",
+      "first_seen": "2026-08-13T13:25:41.419963+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
+      "boni": [],
+      "kurz_bewertung": "2 Zimmer Wohnung in 3 Obergeschoss, neu gestrichen und neu Laminat Boden, ab sofort zur vermieten.",
+      "zimmeranzahl": 2.0,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Neckerstadt",
+      "adresse": "Neckerstadt",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "Gut",
+        "einschaetzung_student": "Gut",
+        "einschaetzung_investor": "Mittel"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-13T13:25:41.419963+00:00",
+          "price": 130.0
+        }
+      ],
+      "etage": "3. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 70.0,
+      "kaltmiete": 130.0,
+      "nebenkosten": 130,
+      "warmmiete": 930,
+      "kaltmiete_qm": 1.86,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -87.2,
+      "deal_score": "gut",
+      "_hash": "aa46d1a83a58"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmmerwohnung-mannheim-friedrichsfeld/3483559677-203-7977",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "2- Zimmmerwohnung Mannheim- Friedrichsfeld",
+      "first_seen": "2026-08-13T13:25:41.419963+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
+      "boni": [],
+      "kurz_bewertung": "helle und gepflegte Wohnung mit großzügigem Wohnzimmer und freundlicher Atmosphäre",
+      "zimmeranzahl": 2,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": "Mannheim Friedrichsfeld",
+      "adresse": "68229 Baden-Württemberg - Mannheim",
+      "umfeld_analyse": {
+        "demografie": "Familien und junge Erwachsene",
+        "vibe_sicherheit": "ruhig und sicher",
+        "einschaetzung_student": "gut geeignet für Studenten",
+        "einschaetzung_investor": "keine gute Kapitalanlage"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-13T13:25:41.419963+00:00",
+          "price": 3000
+        }
+      ],
+      "etage": "EG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 60.0,
+      "kaltmiete": 200.0,
+      "nebenkosten": 200,
+      "warmmiete": 1100,
+      "kaufpreis": 3000,
+      "kaltmiete_qm": 3.33,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -77.0,
+      "deal_score": "gut",
+      "_hash": "2461f4d0aa77"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-in-mannheim-neckarpromenade/3483539465-203-7979",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Wohnung in Mannheim Neckarpromenade",
+      "first_seen": "2026-08-13T13:25:41.419963+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 1.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-13T13:25:41.419963+00:00",
+          "price": 900.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 35.0,
+      "kaltmiete": 900.0,
+      "kaltmiete_qm": 25.71,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": 71.4,
+      "deal_score": "teuer",
+      "_hash": "c4584991bc19"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2er-wg-fuer-studenten-moebiliert-super-lage-naehe-uni-mannheim/3483530144-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Helle 2er WG für Studenten möbiliert, super Lage nähe Uni Mannheim",
+      "first_seen": "2026-08-13T13:25:41.419963+00:00",
+      "last_seen": "2026-08-13T13:25:41.419963+00:00",
+      "boni": [
+        "moebliert",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "Helle 2er-WG in zentraler Lage – ideal für Studenten in Mannheim",
+      "zimmeranzahl": 1,
+      "latitude": 49.4836,
+      "longitude": 8.4631,
+      "stadtteil": null,
+      "adresse": "Mollstraße 27",
+      "umfeld_analyse": {
+        "demografie": "Studenten, junge Erwachsene, Familien mit Kindern",
+        "vibe_sicherheit": "Gut, da die Wohnung in einem gepflegten Wohnhaus liegt und die Mollstraße eine zentrale und belebte Straße ist",
+        "einschaetzung_student": "Sehr gut, da die Wohnung in der Nähe der Universität liegt und eine gute Verbindung zu den Universitätsgebäuden bietet",
+        "einschaetzung_investor": "Mittel, da die Wohnung in einem alten Gebäude liegt und möglicherweise hohe Instandhaltungskosten hat"
+      },
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-13T13:25:41.419963+00:00",
+          "price": 120.0
+        }
+      ],
+      "etage": "6. OG",
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 64.0,
+      "kaltmiete": 120.0,
+      "nebenkosten": 120,
+      "warmmiete": 700,
+      "kaltmiete_qm": 1.88,
+      "expected_market_qm": 18.0,
+      "deal_deviation_pct": -89.6,
+      "deal_score": "gut",
+      "_hash": "7f09d0ebddbc"
     }
   ]
 }
