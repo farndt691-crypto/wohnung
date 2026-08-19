@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-19T12:59:39.978686+00:00",
+  "last_updated": "2026-08-19T18:37:14.418181+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1492,7 +1492,7 @@
       "listing_type": "miete",
       "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
       "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Aufzug",
         "Balkon"
@@ -1620,7 +1620,7 @@
       "listing_type": "miete",
       "title": "Helle, frisch sanierte 2-Zimmer-Wohnung in Top-Lage Mannheims",
       "first_seen": "2026-05-25T21:58:51.371562+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -8820,47 +8820,6 @@
       "_hash": "df44a9bd0b58"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/168635065",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Helle 1-Zimmer-Wohnung in der Mannheimer Schwetzingerstadt Rheinhäuser Str. 4. OG mit Balkon",
-      "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-06-20T14:17:37.844289+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 1-Zimmer-Wohnung in der Mannheimer Schwetzingerstadt",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Rheinhäuser Str. 4. OG",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
-        "vibe_sicherheit": "Gut, aber einige Straßen können nachts dunkel sein",
-        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig, einige Wohnungen sind renovierungsbedürftig"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-20T14:17:37.844289+00:00",
-          "price": 490.0
-        }
-      ],
-      "etage": "4. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 490.0,
-      "warmmiete": 490,
-      "deal_score": "okay",
-      "_hash": "a24a27ff140c"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zkb-68305-mannheim/3440091816-203-7972",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -10090,7 +10049,7 @@
       "listing_type": "miete",
       "title": "3-Zimmer-Wohnung in Mannheim Neckarstadt-West",
       "first_seen": "2026-06-23T10:39:18.287415+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert"
       ],
@@ -26235,7 +26194,7 @@
       "listing_type": "miete",
       "title": "3 Zimmer Wohnung in Mannheim Nekerau",
       "first_seen": "2026-07-16T19:11:34.986384+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert"
       ],
@@ -26880,7 +26839,7 @@
       "listing_type": "miete",
       "title": "1,5 Zimmer in Mannheim Jungbusch",
       "first_seen": "2026-07-19T19:08:05.194929+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon",
         "Aufzug"
@@ -27027,7 +26986,7 @@
       "listing_type": "miete",
       "title": "TAUSCHWOHNUNG 90 m² Wohnung in Mannheim, Innenstadt",
       "first_seen": "2026-07-20T10:15:29.978365+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -27169,7 +27128,7 @@
       "listing_type": "miete",
       "title": "***Möbliertes City-Apartment im Zentrum Mannheim Quadrate***",
       "first_seen": "2026-07-20T14:22:27.857182+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert",
         "moebliert"
@@ -30448,7 +30407,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Sanierung: helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
       "first_seen": "2026-07-29T14:34:54.576760+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -32463,7 +32422,7 @@
       "listing_type": "miete",
       "title": "Sanierte Altbauwohnung 90m2 in der Mannheimer Oststadt",
       "first_seen": "2026-08-05T14:24:19.279753+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert"
       ],
@@ -33171,7 +33130,7 @@
       "listing_type": "miete",
       "title": "2-ZimmerWohnung in den Quadraten von Mannheim",
       "first_seen": "2026-08-07T08:18:36.232104+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [],
       "kurz_bewertung": "Helle 2-Zimmer-Wohnung mit Einbauküche in zentraler Lage",
       "zimmeranzahl": 2.0,
@@ -35595,7 +35554,7 @@
       "listing_type": "miete",
       "title": "1 Zimmer Wohnung Mannheim",
       "first_seen": "2026-08-17T07:57:22.762706+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Aufzug"
       ],
@@ -35641,7 +35600,7 @@
       "listing_type": "miete",
       "title": "Modernisierte 2-Zimmer-Wohnung mit Balkon & Garage in Mannheim",
       "first_seen": "2026-08-17T07:57:22.762706+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert",
         "Garage",
@@ -35833,7 +35792,7 @@
       "listing_type": "miete",
       "title": "3er WG Neugründung, ruhige Wohnung in zentraler Lage Mannheim",
       "first_seen": "2026-08-17T12:57:07.018541+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon"
       ],
@@ -35877,7 +35836,7 @@
       "listing_type": "miete",
       "title": "2 Zimmer Wohnung Mannheim Waldhof-Ost",
       "first_seen": "2026-08-17T12:57:07.018541+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon"
       ],
@@ -35917,7 +35876,7 @@
       "listing_type": "miete",
       "title": "1 Zimmerwohnung am HBF in Mannheim",
       "first_seen": "2026-08-17T12:57:07.018541+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": 1.0,
@@ -35955,7 +35914,7 @@
       "listing_type": "miete",
       "title": "2-Zimmer-Wohnung in Mannheim-Rheinau",
       "first_seen": "2026-08-17T12:57:07.018541+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": 2.0,
@@ -35997,7 +35956,7 @@
       "listing_type": "miete",
       "title": "1 ZKBB Mannheim Käfertal",
       "first_seen": "2026-08-17T18:40:48.508318+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon"
       ],
@@ -36037,7 +35996,7 @@
       "listing_type": "miete",
       "title": "2 Zimmer Wohnung in Mannheim Neckarstadt-Ost inkl. Einbauküche",
       "first_seen": "2026-08-17T18:40:48.508318+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -36082,7 +36041,7 @@
       "listing_type": "miete",
       "title": "3 Zimmer Wohnung im Herzen von Mannheim",
       "first_seen": "2026-08-18T12:58:32.766896+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert"
       ],
@@ -36242,7 +36201,7 @@
       "listing_type": "miete",
       "title": "Schöne 3-Zimmer-Wohnung mit Balkon und Aufzug in Mannheim",
       "first_seen": "2026-08-18T12:58:32.766896+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon",
         "Aufzug"
@@ -36287,7 +36246,7 @@
       "listing_type": "miete",
       "title": "2 Zimmer Wohnung in Mannheim Neckarau zur Miete",
       "first_seen": "2026-08-18T18:46:23.713724+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": 2.0,
@@ -36301,6 +36260,10 @@
         {
           "date": "2026-08-18T18:46:23.713724+00:00",
           "price": 220.0
+        },
+        {
+          "date": "2026-08-19T18:37:13.268186+00:00",
+          "price": 720.0
         }
       ],
       "etage": null,
@@ -36312,11 +36275,11 @@
       "preis_verdacht": false,
       "stadt": "Mannheim",
       "quadratmeter": 53.0,
-      "kaltmiete": 220.0,
-      "kaltmiete_qm": 4.15,
+      "kaltmiete": 720.0,
+      "kaltmiete_qm": 13.58,
       "expected_market_qm": 14.5,
-      "deal_deviation_pct": -71.4,
-      "deal_score": "gut",
+      "deal_deviation_pct": -6.3,
+      "deal_score": "okay",
       "_hash": "a7480b038f91"
     },
     {
@@ -36325,7 +36288,7 @@
       "listing_type": "miete",
       "title": "2,5 Zimmer Wohnung in der Mannheimer Oststadt",
       "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Aufzug"
       ],
@@ -36341,6 +36304,10 @@
         {
           "date": "2026-08-19T12:59:38.912226+00:00",
           "price": 150.0
+        },
+        {
+          "date": "2026-08-19T18:37:13.268186+00:00",
+          "price": 1650.0
         }
       ],
       "etage": null,
@@ -36352,11 +36319,11 @@
       "preis_verdacht": false,
       "stadt": "Mannheim",
       "quadratmeter": 90.0,
-      "kaltmiete": 150.0,
-      "kaltmiete_qm": 1.67,
+      "kaltmiete": 1650.0,
+      "kaltmiete_qm": 18.33,
       "expected_market_qm": 15.0,
-      "deal_deviation_pct": -88.9,
-      "deal_score": "gut",
+      "deal_deviation_pct": 22.2,
+      "deal_score": "teuer",
       "_hash": "3076596c708e"
     },
     {
@@ -36365,7 +36332,7 @@
       "listing_type": "miete",
       "title": "Gemütliche Wohlfühl-Oase in hellen frisch renovierten 2 Zimmern im Zentrum von Mannheim",
       "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "Balkon",
         "renoviert",
@@ -36407,7 +36374,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Renovierung! 1-Zi-Wohnung mit neuer moderner Küche | 740 € warm in Mannheim West",
       "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [
         "renoviert"
       ],
@@ -36423,6 +36390,10 @@
         {
           "date": "2026-08-19T12:59:38.912226+00:00",
           "price": 140.0
+        },
+        {
+          "date": "2026-08-19T18:37:13.268186+00:00",
+          "price": 600.0
         }
       ],
       "etage": null,
@@ -36434,11 +36405,11 @@
       "preis_verdacht": false,
       "stadt": "Mannheim",
       "quadratmeter": 30.0,
-      "kaltmiete": 140.0,
-      "kaltmiete_qm": 4.67,
+      "kaltmiete": 600.0,
+      "kaltmiete_qm": 20.0,
       "expected_market_qm": 15.5,
-      "deal_deviation_pct": -69.9,
-      "deal_score": "gut",
+      "deal_deviation_pct": 29.0,
+      "deal_score": "teuer",
       "_hash": "dbc34b10498e"
     },
     {
@@ -36447,7 +36418,7 @@
       "listing_type": "miete",
       "title": "2 Zimmer Wohnung Mannheim",
       "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-19T12:59:38.912226+00:00",
+      "last_seen": "2026-08-19T18:37:13.268186+00:00",
       "boni": [],
       "kurz_bewertung": "",
       "zimmeranzahl": 2.0,
