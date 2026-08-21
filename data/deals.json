@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-21T13:00:28.839979+00:00",
+  "last_updated": "2026-08-21T18:38:24.900634+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -291,7 +291,7 @@
       "listing_type": "kauf",
       "title": "Helle 2-Zimmerwohnung mit Balkon – fußläufig zum Wasserturm in Mannheim!",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Balkon"
       ],
@@ -869,7 +869,7 @@
       "listing_type": "kauf",
       "title": "Stilvolle Altbauperle in Bestlage – Großzügige 4-Zimmer-Wohnung in der Mannheimer Oststadt",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -4113,7 +4113,7 @@
       "listing_type": "kauf",
       "title": "Attraktive 2-Zimmer-Wohnung mit zwei Balkonen und Garage in Mannheim",
       "first_seen": "2026-06-14T17:04:15.609381+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Garage",
         "Balkon"
@@ -6003,52 +6003,6 @@
       "deal_deviation_pct": 21.0,
       "deal_score": "teuer",
       "_hash": "147c28d5b140"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/34qm-vollrenovierte-wohnung-mannheim/3441468951-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "34qm Vollrenovierte Wohnung Mannheim",
-      "first_seen": "2026-06-22T12:52:55.445212+00:00",
-      "last_seen": "2026-06-22T17:07:58.685639+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Vollrenovierte Wohnung in der Neckarstadt-West",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "Langstraße, 68169 Mannheim Neckarstadt-West",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber einige Straßen können nachts dunkel sein",
-        "einschaetzung_student": "Sehr geeignet, gute Verkehrsanbindung",
-        "einschaetzung_investor": "Mittlere Eignung, aber Preise können je nach Lage variieren"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-22T12:52:55.445212+00:00",
-          "price": 595.0
-        }
-      ],
-      "etage": "3. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 34.0,
-      "kaltmiete": 595.0,
-      "nebenkosten": 60,
-      "warmmiete": 595,
-      "kaltmiete_qm": 17.5,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 12.9,
-      "deal_score": "teuer",
-      "_hash": "5a52ef4e21c2"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/ruhige-2-zkb-wohnung-mannheim-neckarstadt-west/3441450693-203-7980",
@@ -33085,7 +33039,7 @@
       "listing_type": "kauf",
       "title": "Stilvolle Beletage mit Altbaucharme und Balkon im Herzen Mannheims",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Balkon"
       ],
@@ -33126,7 +33080,7 @@
       "listing_type": "kauf",
       "title": "Vermietete 1-Zimmerwohnung in Mannheim",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -33207,7 +33161,7 @@
       "listing_type": "kauf",
       "title": "Lichtdurchflutetes Wohnglück in Waldnähe – Mannheim Gartenstadt - ***Erbbaurecht***nur bei realunis",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Balkon"
       ],
@@ -33248,7 +33202,7 @@
       "listing_type": "kauf",
       "title": "Erstbezug nach Sanierung: Ein-Zimmer-Wohnung mit Balkon in Mannheim",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
       "boni": [
         "Balkon"
       ],
@@ -33483,6 +33437,192 @@
       "deal_deviation_pct": -82.3,
       "deal_score": "gut",
       "_hash": "b99be7ef7693"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/traumwohnung-in-mannheim-feudenheim-mit-loggia-und-garage/3490612489-196-7975",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Traumwohnung in Mannheim Feudenheim mit Loggia und Garage",
+      "first_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "boni": [
+        "Garage"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Feudenheim",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T18:38:23.014624+00:00",
+          "price": 299000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "kaufpreis": 299000.0,
+      "deal_score": "skip",
+      "_hash": "a19964be8e88"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/renovierungsbeduerftiges-1-zimmer-appartement-im-2-og-27qm-mit-pantry-kueche-in-super-lage-von-mannheim-zu-verkaufen/3331257264-196-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Renovierungsbedürftiges 1 Zimmer Appartement im 2.OG, 27qm mit Pantry-Küche, in super Lage von Mannheim zu Verkaufen",
+      "first_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 1.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-21T18:38:23.014624+00:00",
+          "price": 109000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "kaufpreis": 109000.0,
+      "deal_score": "skip",
+      "_hash": "da20357f1610"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-2-zimmer-eigentumswohnung-in-mannheim-waldhof-ca-80-qm-kapitalanlage-mit-perspektive/3488864537-196-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Vermietete 2-Zimmer-Eigentumswohnung in Mannheim-Waldhof - ca.80 qm - Kapitalanlage mit Perspektive",
+      "first_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 2.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Waldhof",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-21T18:38:23.014624+00:00",
+          "price": 219000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 1911.0,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 80.0,
+      "kaufpreis": 219000.0,
+      "kaltmiete": 1160.0,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 1003.75,
+      "cashflow_monat": -512.75,
+      "deal_score": "skip",
+      "_hash": "21c19e8a8402"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/68309-mannheim-vogelstang-3-5-zimmer-wohnung/3488488500-196-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "68309 Mannheim-Vogelstang 3,5 Zimmer Wohnung",
+      "first_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.5,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T18:38:23.014624+00:00",
+          "price": 220000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "kaufpreis": 220000.0,
+      "deal_score": "skip",
+      "_hash": "880520f125ce"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/gepflegtes-loft-in-mannheimer-innenstadt-zu-verkaufen/3488220292-196-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Gepflegtes Loft in Mannheimer Innenstadt zu verkaufen",
+      "first_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "boni": [
+        "Terrasse",
+        "Garage"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Innenstadt",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T18:38:23.014624+00:00",
+          "price": 427999.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 92.0,
+      "kaufpreis": 427999.0,
+      "kaltmiete": 370.0,
+      "bankrate_monat": 1961.66,
+      "cashflow_monat": -1641.66,
+      "deal_score": "skip",
+      "_hash": "43e34aa3ac3f"
     }
   ]
 }
