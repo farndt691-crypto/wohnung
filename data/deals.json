@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20T18:40:33.404898+00:00",
+  "last_updated": "2026-08-21T07:46:32.567338+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -291,7 +291,7 @@
       "listing_type": "kauf",
       "title": "Helle 2-Zimmerwohnung mit Balkon – fußläufig zum Wasserturm in Mannheim!",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-07-02T10:15:06.705286+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
       "boni": [
         "Balkon"
       ],
@@ -308,16 +308,20 @@
         "einschaetzung_investor": "Hoher Mietnomaden-Risiko, hoher Leerstand, geringes Aufwertungspotenzial, schlechte Mieterzuverlässigkeit"
       },
       "quadratmeter": 64.0,
-      "kaufpreis": 275000.0,
+      "kaufpreis": 249000.0,
       "kaltmiete": 768.0,
       "miete_geschaetzt": true,
-      "bankrate_monat": 1260.42,
-      "cashflow_monat": -542.42,
+      "bankrate_monat": 1141.25,
+      "cashflow_monat": -423.25,
       "deal_score": "skip",
       "price_history": [
         {
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 275000.0
+        },
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 249000.0
         }
       ],
       "preis_verdacht": false
@@ -393,79 +397,6 @@
         {
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 285000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/drei-zimmer-wohnung-in-mannheim-kaefertal-mit-balkon/3363865866-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Drei-Zimmer-Wohnung in Mannheim Käfertal mit Balkon",
-      "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Charme Drei-Zimmer-Wohnung in ruhigem Haus mit klarer Ertragssituation",
-      "zimmeranzahl": 3,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Arbeiterklasse, Familien",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Lernruhe, aber keine direkte Anbindung an Uni Mannheim",
-        "einschaetzung_investor": "Mietnomaden-Risiko, aber hohe Mieterzuverlässigkeit"
-      },
-      "quadratmeter": 80.0,
-      "kaufpreis": 199000.0,
-      "kaltmiete": 903.0,
-      "bankrate_monat": 912.08,
-      "cashflow_monat": -59.08,
-      "deal_score": "watch",
-      "price_history": [
-        {
-          "date": "2026-05-22T11:09:02.563569+00:00",
-          "price": 199000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/renovierungsbeduerftiges-1-zimmer-appartement-im-2-og-27qm-mit-pantry-kueche-in-super-lage-von-mannheim-zu-verkaufen/3331257264-196-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Renovierungsbedürftiges 1 Zimmer Appartement im 2.OG, 27qm mit Pantry-Küche, in super Lage von Mannheim zu Verkaufen",
-      "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Garage"
-      ],
-      "kurz_bewertung": "Renovierungsbedürftige 1-Zimmer-Wohnung in super Lage von Mannheim",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Arbeiterklasse, Studentenviertel",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Anbindung Uni Mannheim, ruhige Lage, aber keine direkte Nähe",
-        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial"
-      },
-      "quadratmeter": 27.0,
-      "kaufpreis": 109000.0,
-      "kaltmiete": 300.0,
-      "nebenkosten": 132,
-      "bankrate_monat": 499.58,
-      "cashflow_monat": -249.58,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T11:09:02.563569+00:00",
-          "price": 109000.0
         }
       ],
       "preis_verdacht": false
@@ -549,44 +480,6 @@
       "preis_verdacht": false
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/rendite-highlight-3-zimmer-wohnung-mit-balkon-ueber-6-rendite-perfekt-fuer-wg-nutzung-in-mannheim-oststadt-/3413256811-196-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Rendite-Highlight: 3-Zimmer-Wohnung mit Balkon – über 6 % Rendite & perfekt für WG-Nutzung in Mannheim-Oststadt!",
-      "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Rendite-Highlight: 3-Zimmer-Wohnung mit Balkon – über 6 % Rendite & perfekt für WG-Nutzung in Mannheim-Oststadt!",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Oststadt",
-      "adresse": "68165 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studentenviertel",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Lernruhe, gute Anbindung Uni Mannheim, gute ÖPNV-Anbindung",
-        "einschaetzung_investor": "Hoher Mietnomaden-Risiko, hoher Leerstand, geringes Aufwertungspotenzial, geringe Mieterzuverlässigkeit"
-      },
-      "quadratmeter": 79.54,
-      "kaufpreis": 329000.0,
-      "kaltmiete": 862.0,
-      "nebenkosten": 180.0,
-      "warmmiete": 1100.0,
-      "bankrate_monat": 1507.92,
-      "cashflow_monat": -695.92,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T11:09:02.563569+00:00",
-          "price": 329000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-wohnung-mit-grosser-terrasse-saniertes-wohnen-im-herzen-von-mannheim-sandhofen/3388017305-196-7974",
       "source": "kleinanzeigen",
       "listing_type": "kauf",
@@ -622,82 +515,6 @@
         {
           "date": "2026-05-22T11:09:02.563569+00:00",
           "price": 398000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/geniessen-sie-den-unverbaubaren-blick-ueber-mannheim-aus-einer-liebevoll-renovierten-eigentumswohnung/3383290137-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Genießen Sie den unverbaubaren Blick über Mannheim aus einer liebevoll renovierten Eigentumswohnung",
-      "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Aufzug",
-        "Garage",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Die sehr helle und gut geschnittene, sofort bezugsfähige, Drei-Zimmer-Wohnung bietet einen unverbaubaren Blick ins Grüne.",
-      "zimmeranzahl": 3,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Aufwertungsviertel",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Anbindung Uni Mannheim, ruhige Lage, aber etwas abgelegen",
-        "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial durch Nähe zum Kurpfalz-Center"
-      },
-      "quadratmeter": 75.0,
-      "kaufpreis": 225000.0,
-      "kaltmiete": 900.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1031.25,
-      "cashflow_monat": -181.25,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T11:09:02.563569+00:00",
-          "price": 225000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/gepflegte-3-zimmer-wohnung-mit-loggia-und-stellplatz-in-mannheim-neckarau-/3165342636-196-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Gepflegte 3-Zimmer-Wohnung mit Loggia und Stellplatz in Mannheim-Neckarau!",
-      "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Garage"
-      ],
-      "kurz_bewertung": "Gepflegte 3-Zimmer-Wohnung mit Loggia und Stellplatz in Mannheim-Neckarau!",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Arbeiterklasse",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Lernruhe, aber keine direkte Anbindung an Uni Mannheim/Heidelberg",
-        "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial"
-      },
-      "quadratmeter": 85.0,
-      "kaufpreis": 299000.0,
-      "kaltmiete": 1020.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1370.42,
-      "cashflow_monat": -400.42,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T11:09:02.563569+00:00",
-          "price": 299000.0
         }
       ],
       "preis_verdacht": false
@@ -859,225 +676,6 @@
           "price": 1100.0
         }
       ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/kapitalanlage-in-mannheim-vermietete-3-zimmer-wohnung-mit-erbbaurecht/3407570188-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Kapitalanlage in Mannheim: Vermietete 3-Zimmer- Wohnung mit Erbbaurecht",
-      "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 3.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "quadratmeter": 80.0,
-      "kaufpreis": 199000.0,
-      "kaltmiete": 199.0,
-      "bankrate_monat": 912.08,
-      "cashflow_monat": -763.08,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T16:09:38.424863+00:00",
-          "price": 199000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/4-zimmer-wohnung-in-mannheim/3322095160-196-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "4 Zimmer Wohnung in Mannheim",
-      "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Schöne, vollsanierte Wohnung in Mannheim-Jungbusch",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studentenviertel",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Lernruhe, gute Anbindung Uni Mannheim, gute ÖPNV-Anbindung",
-        "einschaetzung_investor": "Hoher Mietnomaden-Risiko, geringes Aufwertungspotenzial, geringe Mieterzuverlässigkeit"
-      },
-      "quadratmeter": 100.0,
-      "kaufpreis": 369000.0,
-      "kaltmiete": 1200.0,
-      "nebenkosten": 50,
-      "bankrate_monat": 1691.25,
-      "cashflow_monat": -541.25,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T16:09:38.424863+00:00",
-          "price": 369000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-bester-lage-von-mannheim-niederfeld-/3402846810-196-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "3-Zimmer-Wohnung in bester Lage von Mannheim Niederfeld!",
-      "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon",
-        "Terrasse"
-      ],
-      "kurz_bewertung": "Charmante 3-Zimmer-Wohnung mit Balkon und durchdachtem Grundriss",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Niederfeld",
-      "adresse": "68163 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien und Singles, aber eher ruhig und bürgerlich",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Lernruhe, aber etwas weit von der Uni Mannheim entfernt",
-        "einschaetzung_investor": "Mietnomaden-Risiko, aber Aufwertungspotenzial"
-      },
-      "quadratmeter": 126.3,
-      "kaufpreis": 735000.0,
-      "kaltmiete": 1515.6,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 3368.75,
-      "cashflow_monat": -1903.15,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T16:09:38.424863+00:00",
-          "price": 735000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/betreutes-wohnen-als-kapitalanlage-in-mannheim/3375792292-196-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Betreutes Wohnen als Kapitalanlage in Mannheim",
-      "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [],
-      "kurz_bewertung": "Betreutes Wohnen als Kapitalanlage in Mannheim",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Alteres Publikum, möglicherweise Pflegebedürftige",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Nicht geeignet für Informatikstudenten, keine Lernruhe, keine gute Anbindung an die Uni Mannheim/Heidelberg",
-        "einschaetzung_investor": "Geringes Aufwertungspotenzial, hoher Leerstandsrisiko, möglicherweise unzuverlässige Mieter"
-      },
-      "quadratmeter": 50.0,
-      "kaufpreis": 200000.0,
-      "kaltmiete": 600.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 916.67,
-      "cashflow_monat": -366.67,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T16:09:38.424863+00:00",
-          "price": 200000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/freies-1-zimmer-apartment-23m-in-guter-lage-von-mannheim-zu-verkaufen/3402058058-196-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Freies 1 Zimmer Apartment, 23m² in guter Lage von Mannheim zu verkaufen",
-      "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon",
-        "Terrasse",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Helle 1-Zimmer-Wohnung in ruhiger Lage mit Balkon und gepflegtem Zustand.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familienfreundliche Umgebung mit guter Infrastruktur",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Lernruhe, aber keine direkte Anbindung an Uni Mannheim/Heidelberg",
-        "einschaetzung_investor": "Mietnomaden-Risiko, aber potenzielles Aufwertungspotenzial"
-      },
-      "quadratmeter": 23.0,
-      "kaufpreis": 83000.0,
-      "kaltmiete": 140,
-      "bankrate_monat": 380.42,
-      "cashflow_monat": -290.42,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T16:09:38.424863+00:00",
-          "price": 83000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/kapitalanlage-in-mannheim-q7-vermietete-2-zimmer-dg-wohnung-mit-balkon-tg-stellplatz-/3400212853-196-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Kapitalanlage in Mannheim Q7: Vermietete 2-Zimmer-DG-Wohnung mit Balkon & TG-Stellplatz!",
-      "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon",
-        "Garage",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Charme 2-Zimmer-Dachgeschosswohnung mit Balkon und Tiefgaragenstellplatz",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Arbeiterklasse",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Anbindung Uni Mannheim, ruhige Wohngegend, aber keine direkte Nähe",
-        "einschaetzung_investor": "Hoher Mietnomaden-Risiko, aber gute Mieterzuverlässigkeit und Aufwertungspotenzial"
-      },
-      "quadratmeter": 39.39,
-      "kaufpreis": 155000.0,
-      "kaltmiete": 205.0,
-      "nebenkosten": 205,
-      "warmmiete": 463,
-      "bankrate_monat": 710.42,
-      "cashflow_monat": -555.42,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-22T16:09:38.424863+00:00",
-          "price": 155000.0
-        }
-      ],
-      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-1-zimmer-wohnung-in-mannheim-kaefertal-ideale-investitionsmoeglichkeit/3340741312-196-7973",
@@ -1271,7 +869,7 @@
       "listing_type": "kauf",
       "title": "Stilvolle Altbauperle in Bestlage – Großzügige 4-Zimmer-Wohnung in der Mannheimer Oststadt",
       "first_seen": "2026-05-22T16:09:38.424863+00:00",
-      "last_seen": "2026-07-02T10:15:06.705286+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
       "boni": [
         "Balkon",
         "renoviert"
@@ -1299,45 +897,6 @@
         {
           "date": "2026-05-22T16:09:38.424863+00:00",
           "price": 570000.0
-        }
-      ],
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/modernisierte-2-zimmer-wohnung-in-mannheim-neckarstadt/3299537005-196-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Modernisierte 2 ½ Zimmer-Wohnung in Mannheim-Neckarstadt",
-      "first_seen": "2026-05-23T15:49:53.847902+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Moderne 2,5-Zimmer-Wohnung in gutem Zustand, 63 m² Wohnfläche, Balkon und separater Kellerraum.",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Arbeiterklasse, Aufwertungsviertel",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Lernruhe, gute Anbindung an Uni Mannheim, aber kein direkter ÖPNV-Anschluss.",
-        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit ist gut."
-      },
-      "quadratmeter": 63.0,
-      "kaufpreis": 199000.0,
-      "nebenkosten": 173.97,
-      "kaltmiete": 756.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 912.08,
-      "cashflow_monat": -206.08,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-23T15:49:53.847902+00:00",
-          "price": 199000.0
         }
       ],
       "preis_verdacht": false
@@ -1531,46 +1090,6 @@
           "price": 1213.0
         }
       ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/preissenkung-eigentumswohnung-in-mannheim-wallstadt-zu-verkaufe/3412679773-196-7975",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Preissenkung ! Eigentumswohnung in Mannheim Wallstadt zu verkaufe",
-      "first_seen": "2026-05-25T18:13:45.498306+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Aufzug",
-        "Garage",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Großzügig geschnittene Wohnung mit 4,5 Zimmer, einen großen Balkon und 100,5 qm Wohnfläche in Mannheim Wallstadt.",
-      "zimmeranzahl": 4.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Wallstadt",
-      "adresse": "68259 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Arbeiterklasse",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Lernruhe, gute Anbindung Uni Mannheim, aber kein direkter ÖPNV-Verbindung zur Uni Heidelberg.",
-        "einschaetzung_investor": "Mietnomaden-Risiko, Leerstand, Aufwertungspotenzial, Mieterzuverlässigkeit ist nicht sicher."
-      },
-      "quadratmeter": 100.5,
-      "kaufpreis": 329000.0,
-      "nebenkosten": 350,
-      "kaltmiete": 1206.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1507.92,
-      "cashflow_monat": -351.92,
-      "deal_score": "skip",
-      "price_history": [
-        {
-          "date": "2026-05-25T18:13:45.498306+00:00",
-          "price": 329000.0
-        }
-      ],
-      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-frisch-sanierte-2-zimmer-wohnung-in-top-lage-mannheims/3418154794-203-7982",
@@ -1808,82 +1327,6 @@
       "deal_deviation_pct": 76.3,
       "deal_score": "teuer",
       "_hash": "2a583965967e"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/eine-schoene-4-zimmer-wohnung-naehe-franklin-mannheim-kaefertal/3212569412-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Eine schöne 4-Zimmer-Wohnung nähe Franklin | Mannheim-Käfertal",
-      "first_seen": "2026-05-30T11:58:14.721214+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [],
-      "kurz_bewertung": "Charme und Potenzial in einer gepflegten Wohnanlage",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene, möglicherweise einige Studenten",
-        "vibe_sicherheit": "Gepflegte Wohnanlage, aber möglicherweise nicht die sicherste Gegend in Mannheim",
-        "einschaetzung_student": "Gut geeignet, aber möglicherweise nicht die beste Wahl für Informatikstudenten",
-        "einschaetzung_investor": "Mittelmäßig geeignet, da die Gegend nicht besonders attraktiv ist"
-      },
-      "price_history": [
-        {
-          "date": "2026-05-30T11:58:14.721214+00:00",
-          "price": 259000.0
-        }
-      ],
-      "quadratmeter": 86.0,
-      "kaufpreis": 259000.0,
-      "nebenkosten": 350,
-      "kaltmiete": 1032.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1187.08,
-      "cashflow_monat": -205.08,
-      "deal_score": "skip",
-      "_hash": "0ad481858280",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/eigentumswohnung-mit-grandioser-aussicht-in-mannheims-bester-lage/3421449641-196-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Eigentumswohnung mit grandioser Aussicht in Mannheims bester Lage",
-      "first_seen": "2026-05-30T15:57:04.176946+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "renoviert",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Die 2015 renovierte Wohnung bietet eine grandiose Aussicht und liegt in der besten Lage von Mannheim.",
-      "zimmeranzahl": 3,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Niederfeld",
-      "adresse": "68163 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene, viele Studenten der Uni Mannheim",
-        "vibe_sicherheit": "Gut, da die Wohnung in einem Mehrfamilienhaus liegt und die Umgebung sehr frequentiert ist",
-        "einschaetzung_student": "Sehr gut, da die Uni Mannheim in der Nähe liegt und viele Studentenwohnungen vorhanden sind",
-        "einschaetzung_investor": "Gut, da die Wohnung in einer guten Lage liegt und eine hohe Nachfrage nach Immobilien in Mannheim besteht"
-      },
-      "price_history": [
-        {
-          "date": "2026-05-30T15:57:04.176946+00:00",
-          "price": 500000.0
-        }
-      ],
-      "quadratmeter": 90.0,
-      "kaufpreis": 500000.0,
-      "kaltmiete": 1080.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 2291.67,
-      "cashflow_monat": -1261.67,
-      "deal_score": "skip",
-      "_hash": "9f31a26729b7",
-      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-1-zimmer-apartment-21qm-in-guter-lage-von-mannheim-rheinau-zu-vermieten/3395876130-203-7978",
@@ -2166,51 +1609,6 @@
       "_hash": "b0859f0bf719"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-sandhofen-2-5-zkb/3425584355-196-7974",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Mannheim Sandhofen 2,5 Zkb",
-      "first_seen": "2026-06-04T17:39:51.048570+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Garage",
-        "renoviert"
-      ],
-      "kurz_bewertung": "2,5 Zimmer Erdgeschoss Wohnung mit Extra-Garage in Sandhofen",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Sandhofen",
-      "adresse": "68307 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
-        "einschaetzung_student": "möglich, aber nicht ideal",
-        "einschaetzung_investor": "keine gute Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-04T17:39:51.048570+00:00",
-          "price": 205000.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 2007,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 68.0,
-      "kaufpreis": 205000.0,
-      "nebenkosten": 200,
-      "kaltmiete": 816.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 939.58,
-      "cashflow_monat": -173.58,
-      "deal_score": "skip",
-      "_hash": "1ca75e48204b",
-      "preis_verdacht": false
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/renovierte-3-5-zimmer-wohnung-mit-altbaucharme-in-mannheimer-toplage/3427328548-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -2256,185 +1654,6 @@
       "deal_deviation_pct": -10.1,
       "deal_score": "gut",
       "_hash": "cae37070e9db"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-eigentumswohnung-mit-tiefgaragenstellplatz-und-sofort-beziehbar-in-mannheim-kaefertal/3426963191-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "2-Zimmer-Eigentumswohnung mit Tiefgaragenstellplatz und sofort beziehbar in Mannheim-Käfertal",
-      "first_seen": "2026-06-05T16:39:34.932979+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "renoviert",
-        "Garage"
-      ],
-      "kurz_bewertung": "Zentrale Lage, moderne Ausstattung: 2-Zimmerwohnung mit Tiefgarage in Mannheim-Käfertal, frisch renoviert, kann direkt übernommen werden.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Gut"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-05T16:39:34.932979+00:00",
-          "price": 220000.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 2004,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 41.31,
-      "kaufpreis": 220000.0,
-      "nebenkosten": 204,
-      "kaltmiete": 495.72,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1008.33,
-      "cashflow_monat": -562.61,
-      "deal_score": "skip",
-      "_hash": "c255830c530f",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-3-zimmer-terrassenwohnung-mit-tiefgarage-in-mannheim-kaefertal/3426955636-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Moderne 3-Zimmer-Terrassenwohnung mit Tiefgarage in Mannheim-Käfertal",
-      "first_seen": "2026-06-05T16:39:34.932979+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Terrasse",
-        "Garage"
-      ],
-      "kurz_bewertung": "Moderne 3-Zimmer-Terrassenwohnung mit Tiefgarage in zentraler Lage",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "möglich, aber nicht ideal",
-        "einschaetzung_investor": "möglich, aber nicht sehr lukrativ"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-05T16:39:34.932979+00:00",
-          "price": 380000.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 2004,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 72.02,
-      "kaufpreis": 380000.0,
-      "nebenkosten": 390,
-      "kaltmiete": 864.24,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1741.67,
-      "cashflow_monat": -927.43,
-      "deal_score": "skip",
-      "_hash": "a44c16ed3662",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-erdgeschosswohnung-2024-saniert-in-ruhiger-zentraler-lage-von-mannheim/3426950543-196-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Moderne Erdgeschosswohnung – 2024 saniert in ruhiger, zentraler Lage von Mannheim",
-      "first_seen": "2026-06-05T16:39:34.932979+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Moderne Erdgeschosswohnung in ruhiger, zentraler Lage von Mannheim",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Herzogenried",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien, Singles, Paare",
-        "vibe_sicherheit": "ruhig, aber zentral",
-        "einschaetzung_student": "möglich, aber nicht ideal",
-        "einschaetzung_investor": "möglich, aber nicht sehr lukrativ"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-05T16:39:34.932979+00:00",
-          "price": 299000.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 1970,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 77.0,
-      "kaufpreis": 299000.0,
-      "nebenkosten": 310,
-      "kaltmiete": 924.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1370.42,
-      "cashflow_monat": -496.42,
-      "deal_score": "skip",
-      "_hash": "495d9f4361bc",
-      "preis_verdacht": false
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-waldhof-zu-verkaufen/3427410767-196-7977",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "2-Zimmer-Wohnung in Mannheim-Waldhof zu verkaufen",
-      "first_seen": "2026-06-05T22:42:07.445658+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Zwei-Zimmer-Wohnung direkt am Bahnhof Mannheim-Waldhof zu verkaufen",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "68229 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Waldhof ist ein beliebter Stadtteil für Studenten und junge Erwachsene, da er nahe der Uni Mannheim liegt und eine gute Verkehrsanbindung hat.",
-        "vibe_sicherheit": "Waldhof hat eine gemütliche Atmosphäre, aber es gibt auch einige Probleme mit Kriminalität und Lärm",
-        "einschaetzung_student": "Sehr geeignet für Informatikstudenten, da die Uni Mannheim in der Nähe liegt und es viele Studentenwohnheime gibt.",
-        "einschaetzung_investor": "Nicht sehr geeignet als Kapitalanlage, da der Preis relativ hoch ist und die Lage nicht sehr attraktiv ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-05T22:42:07.445658+00:00",
-          "price": 129000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": 1930,
-      "energieklasse": null,
-      "heizungsart": "Etagenheizung",
-      "quadratmeter": 43.0,
-      "kaufpreis": 129000.0,
-      "nebenkosten": 150,
-      "kaltmiete": 516.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 591.25,
-      "cashflow_monat": -125.25,
-      "deal_score": "watch",
-      "_hash": "ec13c7039af3",
-      "preis_verdacht": false
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-tausche-magdeburg-gegen-mannheim-wohnung/3292763321-203-2235",
@@ -3518,101 +2737,6 @@
       "kaltmiete": 1340.0,
       "deal_score": "okay",
       "_hash": "9314cc373bdd"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-eigentumswohnung-in-top-lage-in-mannheim/3433040964-196-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Attraktive Eigentumswohnung in Top-Lage in Mannheim",
-      "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "renoviert",
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Charmante 2-Zimmer-Wohnung in denkmalgeschütztem Altbau – komplett möbliert in bester Lage von Mannheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "68165 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Gut geeignet"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-12T17:30:38.859659+00:00",
-          "price": 270000.0
-        }
-      ],
-      "etage": "3. OG",
-      "baujahr": 2014,
-      "energieklasse": null,
-      "heizungsart": "Infrarotheizung",
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 61.37,
-      "kaufpreis": 270000.0,
-      "nebenkosten": 152,
-      "kaltmiete": 1166.03,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1237.5,
-      "cashflow_monat": -121.47,
-      "deal_score": "watch",
-      "_hash": "c50f19406a22"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/68309-mannheim-vogelstang-3-5-zimmer-wohnung/3433037141-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "68309 Mannheim-Vogelstang 3,5 Zimmer Wohnung",
-      "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Aufzug",
-        "Balkon"
-      ],
-      "kurz_bewertung": "helle und gepflegte 3,5-Zimmer-Eigentumswohnung",
-      "zimmeranzahl": 3.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "gut geeignet",
-        "einschaetzung_investor": "mittelgut geeignet"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-12T17:30:38.859659+00:00",
-          "price": 249000.0
-        }
-      ],
-      "etage": "5. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": 233.0,
-      "provisionsfrei": true,
-      "preis_verdacht": false,
-      "quadratmeter": 79.0,
-      "kaufpreis": 249000.0,
-      "nebenkosten": 233,
-      "kaltmiete": 1224.5,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1141.25,
-      "cashflow_monat": 1.25,
-      "deal_score": "strong_buy",
-      "_hash": "880520f125ce"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/168112357",
@@ -5077,55 +4201,12 @@
       "_hash": "1bcd65c3737b"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-3-zimmer-dachgeschosswohnung-in-mannheim-waldhof-solide-kapitalanlage/3435520510-196-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Vermietete 3-Zimmer-Dachgeschosswohnung in Mannheim-Waldhof – solide Kapitalanlage",
-      "first_seen": "2026-06-14T17:04:15.609381+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [],
-      "kurz_bewertung": "Die Wohnung bietet eine durchdachte und funktionale Raumaufteilung und ist eine attraktive Kapitalanlage mit bestehender Mieteinnahme.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "In Waldhof wohnen vor allem Familien und ältere Menschen. Die Atmosphäre ist ruhig und familiär.",
-        "vibe_sicherheit": "Die Sicherheitslage in Waldhof ist gut, da es viele Familien und ältere Menschen gibt. Die Straßen sind jedoch nicht sehr belebt.",
-        "einschaetzung_student": "Waldhof ist nicht ideal für Informatikstudenten, da es keine Studentenwohnheime gibt und die Atmosphäre nicht sehr lebendig ist.",
-        "einschaetzung_investor": "Waldhof ist eine gute Wahl für Investoren, da die Immobilienpreise relativ niedrig sind und die Mieteinnahmen stabil sind."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-14T17:04:15.609381+00:00",
-          "price": 209000.0
-        }
-      ],
-      "etage": "Dachgeschoss",
-      "baujahr": 1967,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 77.1,
-      "kaufpreis": 209000.0,
-      "kaltmiete": 1117.95,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 957.92,
-      "cashflow_monat": 110.03,
-      "deal_score": "strong_buy",
-      "_hash": "4712c813c53d"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-2-zimmer-wohnung-mit-zwei-balkonen-und-garage-in-mannheim/3434722928-196-7973",
       "source": "kleinanzeigen",
       "listing_type": "kauf",
       "title": "Attraktive 2-Zimmer-Wohnung mit zwei Balkonen und Garage in Mannheim",
       "first_seen": "2026-06-14T17:04:15.609381+00:00",
-      "last_seen": "2026-07-02T10:15:06.705286+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
       "boni": [
         "Garage",
         "Balkon"
@@ -5147,6 +4228,10 @@
         {
           "date": "2026-06-14T17:04:15.609381+00:00",
           "price": 225000.0
+        },
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 198000.0
         }
       ],
       "etage": "Etagenwohnung",
@@ -5157,12 +4242,12 @@
       "provisionsfrei": false,
       "preis_verdacht": false,
       "quadratmeter": 70.13,
-      "kaufpreis": 225000.0,
+      "kaufpreis": 198000.0,
       "kaltmiete": 1072.99,
       "miete_geschaetzt": true,
-      "bankrate_monat": 1031.25,
-      "cashflow_monat": -8.26,
-      "deal_score": "watch",
+      "bankrate_monat": 907.5,
+      "cashflow_monat": 115.49,
+      "deal_score": "strong_buy",
       "_hash": "7eb0406f193a"
     },
     {
@@ -5255,149 +4340,6 @@
       "deal_deviation_pct": 3.3,
       "deal_score": "okay",
       "_hash": "f0f8005d630e"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/solide-3-zimmer-mit-neuem-balkon-in-mannheim-rheinau-bald-bezugsfrei/3435883920-196-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Solide 3-Zimmer mit neuem Balkon in Mannheim-Rheinau – bald bezugsfrei",
-      "first_seen": "2026-06-15T22:01:38.326604+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Solide 3-Zimmer-Wohnung in einem gepflegten Mehrfamilienhaus mit neuem Balkon.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien, Singles und älteren Menschen, eher ruhig und familiär.",
-        "vibe_sicherheit": "Gut, da Rheinau ein ruhiger Stadtteil ist, aber nicht zu abgelegen.",
-        "einschaetzung_student": "Mittel, da es einige Studentenwohnheime gibt, aber keine direkte Nähe zur Uni.",
-        "einschaetzung_investor": "Gut, da die Immobilie in einem guten Zustand ist und die Mieteinnahmen stabil sind."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-15T22:01:38.326604+00:00",
-          "price": 197000.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": 1920,
-      "energieklasse": null,
-      "heizungsart": "Gas",
-      "hausgeld": 1920.0,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 75.0,
-      "kaufpreis": 197000.0,
-      "nebenkosten": 190,
-      "kaltmiete": 1125.0,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 902.92,
-      "cashflow_monat": -449.92,
-      "deal_score": "skip",
-      "_hash": "d21f46410517"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/ihr-neues-zuhause-tolle-5-zkb-etw-126m-im-erdgeschoss-zzgl-2x-garagen-terrasse-xl-keller-privater-einfahrt-in-ruhiger-lage-von-mannheim/3436943196-196-7975",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Ihr neues Zuhause: Tolle 5 ZKB ETW, 126m² im Erdgeschoss, zzgl. 2x Garagen, Terrasse, XL-Keller & privater Einfahrt, in ruhiger Lage von Mannheim",
-      "first_seen": "2026-06-16T19:59:21.370841+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "XL-Keller",
-        "Terrasse",
-        "Garage",
-        "privater Einfahrt"
-      ],
-      "kurz_bewertung": "Tolle 5-Zimmer-Eigentumswohnung in ruhiger Lage von Mannheim-Freudenheim",
-      "zimmeranzahl": 5.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Freudenheim",
-      "adresse": "68259 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und ältere Menschen",
-        "vibe_sicherheit": "Sehr sicher, ruhige Seitenstraße",
-        "einschaetzung_student": "Nicht ideal für Studenten, zu weit vom Uni-Campus entfernt",
-        "einschaetzung_investor": "Gute Eignung als Kapitalanlage, aber Preise sind relativ hoch"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-16T19:59:21.370841+00:00",
-          "price": 549000.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 2000,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": 2000.0,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 126.0,
-      "kaufpreis": 549000.0,
-      "nebenkosten": 425,
-      "kaltmiete": 1696.46,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 2516.25,
-      "cashflow_monat": -1519.79,
-      "deal_score": "skip",
-      "_hash": "f5a4dcf425d5"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/exklusives-wohnen-ueber-den-daechern-mannheims-mit-sonniger-terrasse/3436173361-196-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Exklusives Wohnen über den Dächern Mannheims mit sonniger Terrasse",
-      "first_seen": "2026-06-16T19:59:21.370841+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Aufzug",
-        "Terrasse",
-        "renoviert",
-        "Loggia"
-      ],
-      "kurz_bewertung": "Exklusives Wohnen in einem prachtvollen Jugendstilgebäude mit historischer Eleganz und modernem Wohnkomfort.",
-      "zimmeranzahl": 4.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, aber abends kann es ruhiger werden",
-        "einschaetzung_student": "Sehr geeignet, da nahe der Uni Mannheim",
-        "einschaetzung_investor": "Gut geeignet, da in einem guten Zustand und mit hohem Wert"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-16T19:59:21.370841+00:00",
-          "price": 970000.0
-        }
-      ],
-      "etage": "Etagenwohnung",
-      "baujahr": 1905,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 147.0,
-      "kaufpreis": 970000.0,
-      "kaltmiete": 2134.44,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 4445.83,
-      "cashflow_monat": -2361.39,
-      "deal_score": "skip",
-      "_hash": "311f00b7837c"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/renovierte-moeblierte-1-zimmer-wohnung-mit-balkon-in-mannheimer-bestlage/3437916405-203-7981",
@@ -5581,50 +4523,6 @@
       "kaufpreis": 1700000.0,
       "deal_score": "skip",
       "_hash": "f2e4934e7d61"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-mit-balkon-in-mannheim-wohlgelegen/3438215273-196-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "2-Zimmer-Wohnung mit Balkon in Mannheim-Wohlgelegen",
-      "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Praktische Raumaufteilung und Balkon in zentraler Lage",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Wohlgelegen",
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Junges Paar, Familien mit Kindern, Studenten",
-        "vibe_sicherheit": "Gut, aber einige Straßen können nachts dunkel sein",
-        "einschaetzung_student": "Gut, viele Studenten wohnen in der Nähe",
-        "einschaetzung_investor": "Gut, hohe Mieteinnahmen durch zentrale Lage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-18T18:17:41.734311+00:00",
-          "price": 170000.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": 1959,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 60.55,
-      "kaufpreis": 170000.0,
-      "kaltmiete": 600.0,
-      "bankrate_monat": 779.17,
-      "cashflow_monat": -229.17,
-      "deal_score": "skip",
-      "_hash": "d34284c97c2c"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/164125826",
@@ -5956,54 +4854,6 @@
       "deal_deviation_pct": 3.5,
       "deal_score": "okay",
       "_hash": "ee45b736a6e8"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-gepflegte1-5-zimmer-eigentumswohnung-im-4-og-mit-aufzug-und-stellplatz/3438834484-196-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "MANNHEIM: Gepflegte1,5-Zimmer-Eigentumswohnung im 4. OG mit Aufzug und Stellplatz",
-      "first_seen": "2026-06-18T20:47:28.717378+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Aufzug",
-        "Balkon",
-        "Garage"
-      ],
-      "kurz_bewertung": "Diese helle 1,5-Zimmer-Eigentumswohnung befindet sich im 4. Obergeschoss eines gepflegten Mehrfamilienhauses in Mannheim-Lindenhof.",
-      "zimmeranzahl": 1.5,
-      "latitude": 49.4728,
-      "longitude": 8.4682,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": "68163 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "In Lindenhof wohnen vor allem Familien und junge Erwachsene, die einen ruhigen und sicheren Lebensstil bevorzugen.",
-        "vibe_sicherheit": "Lindenhof gilt als sehr sicher und ruhig, ideal für Familien und Senioren.",
-        "einschaetzung_student": "Lindenhof ist nicht ideal für Informatikstudenten, da es keine Studentenwohnheime oder eine lebendige Nachtleben-Szene gibt.",
-        "einschaetzung_investor": "Lindenhof ist eine gute Wahl für Investoren, da die Immobilienpreise relativ niedrig sind und die Mieten stabil sind."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-18T20:47:28.717378+00:00",
-          "price": 199850.0
-        }
-      ],
-      "etage": "4. OG",
-      "baujahr": 1988,
-      "energieklasse": "D",
-      "heizungsart": "Fernwärme",
-      "hausgeld": 1988.0,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 40.5,
-      "kaufpreis": 199850.0,
-      "nebenkosten": 273,
-      "kaltmiete": 639.9,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 915.98,
-      "cashflow_monat": -972.08,
-      "deal_score": "skip",
-      "_hash": "a364d1333cd5"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/162820919",
@@ -6859,54 +5709,6 @@
       "_hash": "f6268c11caac"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnen-ueber-den-daechern-ihr-neues-zuhause-mit-panoramablick-auf-mannheim-nur-bei-realunis/3439449946-196-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "kauf",
-      "title": "Wohnen über den Dächern – Ihr neues Zuhause mit Panoramablick auf Mannheim - nur bei realunis",
-      "first_seen": "2026-06-19T21:56:38.784426+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "Aufzug",
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Eine gepflegte 3-Zimmer-Eigentumswohnung im 6. Obergeschoss eines gut geführten Mehrfamilienhauses mit Panoramablick auf Mannheim.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "In Mannheims Stadtteil ist eine Mischung aus Studenten, Berufstätigen und Familien anzutreffen.",
-        "vibe_sicherheit": "Der Stadtteil ist als ruhig und sicher beschrieben, aber es gibt auch einige Lärmbelästigungen durch den Verkehr.",
-        "einschaetzung_student": "Für Informatikstudenten ist der Stadtteil gut geeignet, da es in der Nähe der Uni Mannheim liegt.",
-        "einschaetzung_investor": "Als Kapitalanlage ist der Stadtteil nicht sehr geeignet, da die Immobilienpreise relativ hoch sind."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-19T21:56:38.784426+00:00",
-          "price": 285000.0
-        }
-      ],
-      "etage": "6. OG",
-      "baujahr": 1960,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": 1960.0,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "quadratmeter": 92.0,
-      "kaufpreis": 285000.0,
-      "nebenkosten": 524,
-      "kaltmiete": 1426.92,
-      "miete_geschaetzt": true,
-      "bankrate_monat": 1306.25,
-      "cashflow_monat": -565.33,
-      "deal_score": "skip",
-      "_hash": "a6d99cb272c4"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/166863853",
       "source": "immoscout24",
       "listing_type": "kauf",
@@ -7103,49 +5905,6 @@
       "_hash": "df44a9bd0b58"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zkb-68305-mannheim/3440091816-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3 ZKB 68305 Mannheim",
-      "first_seen": "2026-06-20T19:27:55.213359+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [],
-      "kurz_bewertung": "Schöne 3-Zimmer-Küche-Bad-Wohnung zu vermieten.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68305 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mannheim ist eine Stadt mit einer Vielzahl von Altersgruppen und Berufen.",
-        "vibe_sicherheit": "Mannheim hat eine gute Sicherheitslage, aber es gibt auch einige Problemviertel.",
-        "einschaetzung_student": "Mannheim ist eine gute Wahl für Informatikstudenten, da es eine gute Verbindung zur Uni gibt.",
-        "einschaetzung_investor": "Mannheim ist eine gute Wahl für Investoren, da es eine gute Wirtschaftslage und eine hohe Nachfrage nach Immobilien gibt."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-20T19:27:55.213359+00:00",
-          "price": 840.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 70.0,
-      "kaltmiete": 840.0,
-      "warmmiete": 1060,
-      "kaltmiete_qm": 12.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -17.2,
-      "deal_score": "gut",
-      "_hash": "71c3a5110e38"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zur-vermietung-neubauwohnung-in-mannheim-kaefertal/3440582320-203-7980",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -7198,54 +5957,6 @@
       "_hash": "7b08961d1fef"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zkb-62qm-in-mannheim-waldhof-sucht-neuen-mieter/3440739078-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2 ZKB (62qm) in Mannheim Waldhof – sucht neuen Mieter",
-      "first_seen": "2026-06-21T14:24:12.853747+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [],
-      "kurz_bewertung": "Stilvolle 2-Zimmer-Wohnung in einem gepflegten Altbauhaus",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "Stolbergerstraße 13",
-      "umfeld_analyse": {
-        "demografie": "Familien und Singles, möglicherweise ältere Bevölkerungsgruppen",
-        "vibe_sicherheit": "Ruhig und sicher, aber möglicherweise nicht sehr lebendig",
-        "einschaetzung_student": "Nicht ideal für Informatikstudenten, da keine direkte Nähe zur Uni",
-        "einschaetzung_investor": "Keine gute Kapitalanlage, da die Miete relativ niedrig ist"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-21T14:24:12.853747+00:00",
-          "price": 220.0
-        },
-        {
-          "date": "2026-06-21T19:30:50.400838+00:00",
-          "price": 650.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 62.0,
-      "kaltmiete": 650.0,
-      "nebenkosten": 220,
-      "warmmiete": 870,
-      "kaltmiete_qm": 10.48,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -27.7,
-      "deal_score": "gut",
-      "_hash": "e539e4f2cb0c"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-2-zimmer-wohnung-mit-ausblick-in-mannheim-kaefertal/3440692481-203-7973",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -7287,51 +5998,6 @@
       "deal_deviation_pct": -34.4,
       "deal_score": "gut",
       "_hash": "3e159912d94b"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wg-zimmer-zur-untermiete-mannheim/3441085479-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "WG Zimmer zur Untermiete / Mannheim",
-      "first_seen": "2026-06-21T19:30:50.400838+00:00",
-      "last_seen": "2026-06-21T19:30:50.400838+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Voll möbliertes WG-Zimmer in Waldhof, Mannheim",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "Waldhof, Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-21T19:30:50.400838+00:00",
-          "price": 550.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 40.0,
-      "kaltmiete": 550.0,
-      "warmmiete": 550,
-      "kaltmiete_qm": 13.75,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": -21.4,
-      "deal_score": "gut",
-      "_hash": "127faabb3ae3"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-3-zimmer-wohnung-in-mannheim-e3-zur-untermiete/3441070706-203-7984",
@@ -34505,6 +33171,210 @@
       "deal_deviation_pct": 106.9,
       "deal_score": "teuer",
       "_hash": "bf7247b77b01"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-beletage-mit-altbaucharme-und-balkon-im-herzen-mannheims/3470825706-196-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Stilvolle Beletage mit Altbaucharme und Balkon im Herzen Mannheims",
+      "first_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 365000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 1910.0,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 91.0,
+      "kaufpreis": 365000.0,
+      "kaltmiete": 1283.1,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 1672.92,
+      "cashflow_monat": -1057.82,
+      "deal_score": "skip",
+      "_hash": "999f6214e3c3"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-1-zimmerwohnung-in-mannheim/3476869762-196-7986",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Vermietete 1-Zimmerwohnung in Mannheim",
+      "first_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "boni": [
+        "Terrasse"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 1.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 69000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 1938.0,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 21.0,
+      "kaufpreis": 69000.0,
+      "kaltmiete": 2020.0,
+      "bankrate_monat": 316.25,
+      "cashflow_monat": 1025.75,
+      "deal_score": "strong_buy",
+      "_hash": "749a09313847"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/provisionsfrei-ruhige-3-5-zimmer-wohnung-mit-suedbalkon-gruenblick-parkseite-direkt-unterm-dach-in-mannheim-vogelstang/3486344798-196-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Provisionsfrei* Ruhige 3,5-Zimmer-Wohnung mit Südbalkon & Grünblick - Parkseite direkt unterm Dach in Mannheim-Vogelstang",
+      "first_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.5,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 199900.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 1969.0,
+      "provisionsfrei": true,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 78.0,
+      "kaufpreis": 199900.0,
+      "kaltmiete": 1170.0,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 916.21,
+      "cashflow_monat": -435.21,
+      "deal_score": "skip",
+      "_hash": "3645ca7cf234"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/lichtdurchflutetes-wohnglueck-in-waldnaehe-mannheim-gartenstadt-erbbaurecht-nur-bei-realunis/3461273204-196-7972",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Lichtdurchflutetes Wohnglück in Waldnähe – Mannheim Gartenstadt - ***Erbbaurecht***nur bei realunis",
+      "first_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Gartenstadt",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 199000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 1965.0,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 72.0,
+      "kaufpreis": 199000.0,
+      "kaltmiete": 1080.0,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 912.08,
+      "cashflow_monat": -520.08,
+      "deal_score": "skip",
+      "_hash": "5fee010567a1"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-sanierung-ein-zimmer-wohnung-mit-balkon-in-mannheim/3419465085-196-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Erstbezug nach Sanierung: Ein-Zimmer-Wohnung mit Balkon in Mannheim",
+      "first_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": null,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-21T07:46:30.863337+00:00",
+          "price": 189000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 43.0,
+      "kaufpreis": 189000.0,
+      "kaltmiete": 645.0,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 866.25,
+      "cashflow_monat": -271.25,
+      "deal_score": "skip",
+      "_hash": "0a809e96d1ca"
     }
   ]
 }
