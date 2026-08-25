@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25T07:46:56.076429+00:00",
+  "last_updated": "2026-08-25T12:58:56.126245+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -20913,7 +20913,7 @@
       "listing_type": "miete",
       "title": "Zentrale 120 m² Wohnung in Mannheim Quadraten mit Balkon – ideal für WG oder Familie",
       "first_seen": "2026-07-13T10:30:48.653985+00:00",
-      "last_seen": "2026-08-25T07:46:54.843134+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
       "boni": [
         "Balkon"
       ],
@@ -26142,7 +26142,7 @@
       "listing_type": "miete",
       "title": "Erstbezug nach Sanierung: helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
       "first_seen": "2026-07-29T14:34:54.576760+00:00",
-      "last_seen": "2026-08-25T07:46:54.843134+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
       "boni": [
         "Aufzug",
         "Balkon",
@@ -28157,7 +28157,7 @@
       "listing_type": "miete",
       "title": "Sanierte Altbauwohnung 90m2 in der Mannheimer Oststadt",
       "first_seen": "2026-08-05T14:24:19.279753+00:00",
-      "last_seen": "2026-08-25T07:46:54.843134+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
       "boni": [
         "renoviert"
       ],
@@ -32067,7 +32067,7 @@
       "listing_type": "miete",
       "title": "Gemütliche Wohlfühl-Oase in hellen frisch renovierten 2 Zimmern im Zentrum von Mannheim",
       "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-25T07:46:54.843134+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
       "boni": [
         "Balkon",
         "renoviert",
@@ -32311,7 +32311,7 @@
       "listing_type": "miete",
       "title": "Mitten in Mannheim: 4-Zimmer-Wohnung mit tollem Ausblick",
       "first_seen": "2026-08-20T13:01:42.581817+00:00",
-      "last_seen": "2026-08-25T07:46:54.843134+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
       "boni": [
         "Balkon",
         "Aufzug"
@@ -33574,6 +33574,166 @@
       "deal_deviation_pct": 29.3,
       "deal_score": "teuer",
       "_hash": "babeb756e5d3"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-quadrate-2-5-zimmer-wohnung-58m2/3494471505-203-7984",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Mannheim Quadrate 2.5 Zimmer Wohnung 58m2",
+      "first_seen": "2026-08-25T12:58:54.400736+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 2.5,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-25T12:58:54.400736+00:00",
+          "price": 265.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 58.0,
+      "kaltmiete": 265.0,
+      "kaltmiete_qm": 4.57,
+      "expected_market_qm": 14.5,
+      "deal_deviation_pct": -68.5,
+      "deal_score": "gut",
+      "_hash": "6de665434b08"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-3-zkb-wohnung-im-3-og-mit-balkon-aufzug-mannheim-oststadt/3494403119-203-7981",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "Helle 3-ZKB-Wohnung im 3. OG mit Balkon & Aufzug – Mannheim Oststadt",
+      "first_seen": "2026-08-25T12:58:54.400736+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
+      "boni": [
+        "Balkon",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Oststadt",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-25T12:58:54.400736+00:00",
+          "price": 195.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 94.83,
+      "kaltmiete": 195.0,
+      "kaltmiete_qm": 2.06,
+      "expected_market_qm": 15.5,
+      "deal_deviation_pct": -86.7,
+      "deal_score": "gut",
+      "_hash": "945290bbbe5d"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zkb-mannheim-vogelstang/3494282772-203-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "3 ZKB Mannheim Vogelstang",
+      "first_seen": "2026-08-25T12:58:54.400736+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
+      "boni": [
+        "Balkon",
+        "renoviert"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Vogelstang",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-25T12:58:54.400736+00:00",
+          "price": 110.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 79.0,
+      "kaltmiete": 110.0,
+      "kaltmiete_qm": 1.39,
+      "expected_market_qm": 16.0,
+      "deal_deviation_pct": -91.3,
+      "deal_score": "gut",
+      "_hash": "0c09da256f8f"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim-lindenhof-nachmieter/3494225310-203-7982",
+      "source": "kleinanzeigen",
+      "listing_type": "miete",
+      "title": "1-Zimmer Wohnung Mannheim Lindenhof Nachmieter",
+      "first_seen": "2026-08-25T12:58:54.400736+00:00",
+      "last_seen": "2026-08-25T12:58:54.400736+00:00",
+      "boni": [
+        "Balkon"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 1.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Lindenhof",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-25T12:58:54.400736+00:00",
+          "price": 347.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 26.5,
+      "kaltmiete": 347.0,
+      "kaltmiete_qm": 13.09,
+      "expected_market_qm": 15.0,
+      "deal_deviation_pct": -12.7,
+      "deal_score": "gut",
+      "_hash": "cde535518aa1"
     }
   ]
 }
