@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25T18:41:00.996036+00:00",
+  "last_updated": "2026-08-26T07:49:50.338508+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -249,7 +249,7 @@
       "listing_type": "kauf",
       "title": "Helle 2-Zimmerwohnung mit Balkon – fußläufig zum Wasserturm in Mannheim!",
       "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
       "boni": [
         "Balkon"
       ],
@@ -6401,57 +6401,6 @@
       "deal_deviation_pct": -51.4,
       "deal_score": "gut",
       "_hash": "6f2462853eb7"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/voll-moeblierte-1-5-zimmer-wohnung-in-mannheim-zur-untermiete/3443914907-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Voll möblierte 1,5-Zimmer-Wohnung in Mannheim zur Untermiete",
-      "first_seen": "2026-06-25T20:01:47.571365+00:00",
-      "last_seen": "2026-06-26T19:47:50.816969+00:00",
-      "boni": [
-        "moebliert",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Geeignet für eine ruhige Einzelperson, die sorgfältig und respektvoll mit der Wohnung umgeht.",
-      "zimmeranzahl": 1.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien, Berufstätigen und Studenten, aber eher ruhig und nicht sehr studentisch",
-        "vibe_sicherheit": "Gut, da es viele Familien und Berufstätige gibt, aber auch einige Läden und Restaurants in der Nähe",
-        "einschaetzung_student": "2/5, da es nicht sehr studentisch ist, aber einige Läden und Restaurants in der Nähe",
-        "einschaetzung_investor": "3/5, da es eine mittlere Einkommensgruppe hat, aber auch einige Läden und Restaurants in der Nähe"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-25T20:01:47.571365+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-06-26T10:25:37.603797+00:00",
-          "price": 1300.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 56.0,
-      "kaltmiete": 1300.0,
-      "nebenkosten": 150,
-      "warmmiete": 1300,
-      "kaltmiete_qm": 23.21,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": 28.9,
-      "deal_score": "teuer",
-      "_hash": "bec7c9e10435"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/geschmackvolle-wohnung-mit-4-zimmern-in-mannheim/3443899358-203-7972",
@@ -32435,7 +32384,7 @@
       "listing_type": "kauf",
       "title": "Stilvolle Beletage mit Altbaucharme und Balkon im Herzen Mannheims",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
       "boni": [
         "Balkon"
       ],
@@ -32476,7 +32425,7 @@
       "listing_type": "kauf",
       "title": "Vermietete 1-Zimmerwohnung in Mannheim",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T18:38:23.014624+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
       "boni": [
         "Terrasse"
       ],
@@ -32516,7 +32465,7 @@
       "listing_type": "kauf",
       "title": "Provisionsfrei* Ruhige 3,5-Zimmer-Wohnung mit Südbalkon & Grünblick - Parkseite direkt unterm Dach in Mannheim-Vogelstang",
       "first_seen": "2026-08-21T07:46:30.863337+00:00",
-      "last_seen": "2026-08-21T07:46:30.863337+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
       "boni": [
         "Balkon"
       ],
@@ -33794,6 +33743,209 @@
       "deal_deviation_pct": -74.0,
       "deal_score": "gut",
       "_hash": "4cb472bd4c84"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/neubau-erstbezug-in-mannheim-feudenheim-hochwertige-erdgeschosswohnung-mit-gr-terrasse-und-garten/3493689030-196-7975",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Neubau-Erstbezug in Mannheim-Feudenheim: Hochwertige Erdgeschosswohnung mit gr. Terrasse und Garten",
+      "first_seen": "2026-08-26T07:49:48.769610+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
+      "boni": [
+        "Terrasse",
+        "Neubau"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 3.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Feudenheim",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-26T07:49:48.769610+00:00",
+          "price": 489000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 75.0,
+      "kaufpreis": 489000.0,
+      "kaltmiete": 1275.0,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 2241.25,
+      "cashflow_monat": -1016.25,
+      "deal_score": "skip",
+      "_hash": "9bada5a10d3b"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/kompakte-2-zimmer-dachgeschosswohnung-in-mannheim-sandhofen-fuer-eigennutzer-oder-kapitalanleger/3493391623-196-7974",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Kompakte 2-Zimmer-Dachgeschosswohnung in Mannheim-Sandhofen – für Eigennutzer oder Kapitalanleger",
+      "first_seen": "2026-08-26T07:49:48.769610+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 2.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Sandhofen",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-26T07:49:48.769610+00:00",
+          "price": 79000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 41.19,
+      "kaufpreis": 79000.0,
+      "kaltmiete": 597.25,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 362.08,
+      "cashflow_monat": 185.17,
+      "deal_score": "strong_buy",
+      "_hash": "fed2ffaabf1d"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/vermietete-2-zimmer-dachgeschosswohnung-kapitalanlage-in-mannheim-sandhofen/3493387011-196-7974",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Vermietete 2-Zimmer-Dachgeschosswohnung – Kapitalanlage in Mannheim-Sandhofen",
+      "first_seen": "2026-08-26T07:49:48.769610+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
+      "boni": [],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 2.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Sandhofen",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": false,
+      "price_history": [
+        {
+          "date": "2026-08-26T07:49:48.769610+00:00",
+          "price": 79000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 41.19,
+      "kaufpreis": 79000.0,
+      "kaltmiete": 335.0,
+      "bankrate_monat": 362.08,
+      "cashflow_monat": -77.08,
+      "deal_score": "watch",
+      "_hash": "f521bb324a52"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mit-eigenem-gartenanteil-ruhig-wohnen-und-mannheim-direkt-vor-der-tuer/3487167003-196-7973",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "Wohnung mit eigenem Gartenanteil: Ruhig wohnen und Mannheim direkt vor der Tür",
+      "first_seen": "2026-08-26T07:49:48.769610+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
+      "boni": [
+        "Terrasse",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 2.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Mannheim Käfertal",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-26T07:49:48.769610+00:00",
+          "price": 289000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": 2015.0,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 55.0,
+      "kaufpreis": 289000.0,
+      "kaltmiete": 852.5,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 1324.58,
+      "cashflow_monat": -1177.08,
+      "deal_score": "skip",
+      "_hash": "a5049078f781"
+    },
+    {
+      "url": "https://www.kleinanzeigen.de/s-anzeige/neuer-preis-exklusives-wohnen-ueber-den-daechern-mannheims-mit-sonniger-terrasse/3448702864-196-7983",
+      "source": "kleinanzeigen",
+      "listing_type": "kauf",
+      "title": "NEUER PREIS: Exklusives Wohnen über den Dächern Mannheims mit sonniger Terrasse",
+      "first_seen": "2026-08-26T07:49:48.769610+00:00",
+      "last_seen": "2026-08-26T07:49:48.769610+00:00",
+      "boni": [
+        "Terrasse",
+        "Aufzug"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 4.5,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": null,
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [
+        {
+          "date": "2026-08-26T07:49:48.769610+00:00",
+          "price": 870000.0
+        }
+      ],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": false,
+      "preis_verdacht": false,
+      "stadt": "Mannheim",
+      "quadratmeter": 147.0,
+      "kaufpreis": 870000.0,
+      "kaltmiete": 2005.08,
+      "miete_geschaetzt": true,
+      "bankrate_monat": 3987.5,
+      "cashflow_monat": -2032.42,
+      "deal_score": "skip",
+      "_hash": "280c661df1b4"
     }
   ]
 }
