@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-03T12:02:03.262918+00:00",
+  "last_updated": "2026-09-03T16:13:35.500612+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -4170,57 +4170,6 @@
       "deal_deviation_pct": -6.0,
       "deal_score": "okay",
       "_hash": "34713b8976a2"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/renovierte-2-5-zimmer-wohnung-eg-in-mannheim-zu-vermieten/3447855028-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Renovierte 2,5-Zimmer-Wohnung (EG) in Mannheim zu vermieten",
-      "first_seen": "2026-07-01T10:47:52.597625+00:00",
-      "last_seen": "2026-07-05T13:55:03.949155+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Ideale Stadtwohnung nahe der Mannheimer Innenstadt.",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, ruhige und zentrale Lage",
-        "einschaetzung_student": "Sehr geeignet, nahe der Uni und Innenstadt",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-01T10:47:52.597625+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-01T14:52:01.585592+00:00",
-          "price": 950.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 60.0,
-      "kaltmiete": 950.0,
-      "nebenkosten": 150,
-      "warmmiete": 1100,
-      "kaltmiete_qm": 15.83,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 2.1,
-      "deal_score": "okay",
-      "_hash": "7a37b36ac1de"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim-schwetzingerstadt/3447684156-203-7979",
