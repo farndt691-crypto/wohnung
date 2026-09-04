@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04T16:08:08.670975+00:00",
+  "last_updated": "2026-09-04T20:22:10.235349+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -2928,46 +2928,6 @@
       "_hash": "315c227d856d"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/165617061",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 243.000 €",
-      "first_seen": "2026-06-18T18:17:41.734311+00:00",
-      "last_seen": "2026-07-06T20:00:01.222039+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 3-ZKB-ETW mit Balkon in Mannheim-Rheinau.",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Familien und Pendler",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "nicht geeignet",
-        "einschaetzung_investor": "möglich"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-18T18:17:41.734311+00:00",
-          "price": 243000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaufpreis": 243000.0,
-      "deal_score": "skip",
-      "_hash": "d06a2c52fee2"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/168628239",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -5210,98 +5170,6 @@
       "deal_deviation_pct": -15.0,
       "deal_score": "gut",
       "_hash": "e3e7b0f4a540"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-2-5-zkb-mannheim/3449577228-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter gesucht – 2,5-ZKB Mannheim",
-      "first_seen": "2026-07-03T14:24:13.486137+00:00",
-      "last_seen": "2026-07-06T20:00:01.222039+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "2,5-Zimmer-Wohnung in Mannheim Neckarstadt-West - Nachmieter gesucht",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien, Studenten und Berufstätigen",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Gut, viele Studenten in der Nähe",
-        "einschaetzung_investor": "Mäßig, keine besonders guten Chancen auf Wertsteigerung"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-03T14:24:13.486137+00:00",
-          "price": 1020.0
-        }
-      ],
-      "etage": "5. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 65.0,
-      "kaltmiete": 1020.0,
-      "nebenkosten": 1755,
-      "warmmiete": 1020,
-      "kaltmiete_qm": 15.69,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 4.6,
-      "deal_score": "okay",
-      "_hash": "0cb8fbc25189"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-in-der-mannheimer-innenstadt-/3449484210-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1 Zimmer Wohnung in der Mannheimer Innenstadt.",
-      "first_seen": "2026-07-03T14:24:13.486137+00:00",
-      "last_seen": "2026-07-06T20:00:01.222039+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ich ziehe aktuell um und suche deshalb schnellstmöglich einen Nachmieter für diese schöne Wohnung.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Gut, viele Studenten in der Nähe",
-        "einschaetzung_investor": "Mittelmäßig, keine hohe Rendite"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-03T14:24:13.486137+00:00",
-          "price": 664.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 41.0,
-      "kaltmiete": 664.0,
-      "nebenkosten": 65,
-      "warmmiete": 664,
-      "kaltmiete_qm": 16.2,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 11.7,
-      "deal_score": "teuer",
-      "_hash": "f34203a98967"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2zimmer-wohnung-in-buerstadt-n-der-naehe-von-mannheim/3449920479-203-4757",
