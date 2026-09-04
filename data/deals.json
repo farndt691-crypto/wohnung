@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04T12:03:59.854347+00:00",
+  "last_updated": "2026-09-04T16:08:08.670975+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -5160,53 +5160,6 @@
       "_hash": "6c829cec5b46"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/ideal-fuer-studenten-moebliertes-appartement-mit-duschbad-pantry-kueche-in-68161-mannheim/3424070077-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Ideal für Studenten! Möbliertes Appartement mit Duschbad, Pantry-Küche in 68161 Mannheim",
-      "first_seen": "2026-07-02T19:27:08.123038+00:00",
-      "last_seen": "2026-07-06T15:47:50.067045+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Ideal für Studenten!",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mittelmäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-02T19:27:08.123038+00:00",
-          "price": 570.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 23.0,
-      "kaltmiete": 570.0,
-      "nebenkosten": 100,
-      "warmmiete": 670,
-      "kaltmiete_qm": 24.78,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 41.6,
-      "deal_score": "teuer",
-      "_hash": "750df8178d8c"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-penthouse-mannheim-oststadt/3350364883-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -5257,101 +5210,6 @@
       "deal_deviation_pct": -15.0,
       "deal_score": "gut",
       "_hash": "e3e7b0f4a540"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-mannheim/3449398971-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter Mannheim",
-      "first_seen": "2026-07-03T10:09:32.582841+00:00",
-      "last_seen": "2026-07-06T15:47:50.067045+00:00",
-      "boni": [],
-      "kurz_bewertung": "Hell Wohnung in Mannheim Gartenstadt",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Gartenstadt",
-      "adresse": "68305 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-03T10:09:32.582841+00:00",
-          "price": 860.0
-        }
-      ],
-      "etage": "1. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 45.0,
-      "kaltmiete": 860.0,
-      "warmmiete": 860,
-      "kaltmiete_qm": 19.11,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 31.8,
-      "deal_score": "teuer",
-      "_hash": "35135f85ffe1"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-mit-balkon-mannheim-sofort-frei/3449179429-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3- Zimmer-Wohnung mit Balkon Mannheim |Sofort frei",
-      "first_seen": "2026-07-03T10:09:32.582841+00:00",
-      "last_seen": "2026-07-06T15:47:50.067045+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "helle und gut geschnittene 3-Zimmer-Wohnung in zentraler Lage von Mannheim",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien, Paare, Berufstätige",
-        "vibe_sicherheit": "gut",
-        "einschaetzung_student": "möglich",
-        "einschaetzung_investor": "möglich"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-03T10:09:32.582841+00:00",
-          "price": 300.0
-        },
-        {
-          "date": "2026-07-03T14:24:13.486137+00:00",
-          "price": 1350.0
-        }
-      ],
-      "etage": "4. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 79.0,
-      "kaltmiete": 1350.0,
-      "nebenkosten": 300,
-      "warmmiete": 1350,
-      "kaltmiete_qm": 17.09,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 13.9,
-      "deal_score": "teuer",
-      "_hash": "acf53128c73e"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-2-5-zkb-mannheim/3449577228-203-7980",
