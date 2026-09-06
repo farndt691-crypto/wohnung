@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T11:36:17.546225+00:00",
+  "last_updated": "2026-09-06T15:18:29.269192+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -5625,53 +5625,6 @@
       "deal_deviation_pct": -18.2,
       "deal_score": "gut",
       "_hash": "a8e41cbbb139"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-zur-miete-in-mannheim/3453925147-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3 Zimmer Wohnung zur Miete in Mannheim",
-      "first_seen": "2026-07-08T14:30:26.695715+00:00",
-      "last_seen": "2026-07-08T14:30:26.695715+00:00",
-      "boni": [
-        "Garage"
-      ],
-      "kurz_bewertung": "Diese 3-Zimmer-Wohnung bietet eine funktionale Raumaufteilung und liegt in einer ruhigen Gegend.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "Käfertal, Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Berufstätige",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "möglich, aber nicht ideal",
-        "einschaetzung_investor": "möglich, aber nicht sehr lukrativ"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-08T14:30:26.695715+00:00",
-          "price": 300.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 84.0,
-      "kaltmiete": 300.0,
-      "nebenkosten": 300,
-      "warmmiete": 1428,
-      "kaltmiete_qm": 3.57,
-      "expected_market_qm": 14.8,
-      "deal_deviation_pct": -75.9,
-      "deal_score": "gut",
-      "_hash": "f8c64853193c"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/kleine-mietwohnung-in-mannheim-gesucht/3454143620-203-7979",
