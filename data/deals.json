@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-07T13:22:51.116128+00:00",
+  "last_updated": "2026-09-07T17:39:39.489901+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -5497,54 +5497,6 @@
       "kaltmiete": 390.0,
       "deal_score": "okay",
       "_hash": "41ac39548ffd"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/zwei-zimmerwohnung-mannheim-zurzwischen-1-august-bis-30-oktober/3454145184-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Zwei Zimmerwohnung, Mannheim zurzwischen 1. August bis 30 Oktober",
-      "first_seen": "2026-07-08T19:27:25.260488+00:00",
-      "last_seen": "2026-07-09T15:25:00.774380+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Gute Lage, direkt gegenüber der Straßenbahn und mit sehr guter Verbindung.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "Neckarauer Straße 185",
-      "umfeld_analyse": {
-        "demografie": "Familien, Singles, Studenten",
-        "vibe_sicherheit": "Gut, da es sich um einen belebten Stadtteil handelt.",
-        "einschaetzung_student": "Sehr geeignet, da es sich um einen zentralen Stadtteil handelt.",
-        "einschaetzung_investor": "Mäßig geeignet, da der Preis relativ hoch ist."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-08T19:27:25.260488+00:00",
-          "price": 700.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 42.0,
-      "kaltmiete": 700.0,
-      "nebenkosten": 90,
-      "warmmiete": 700,
-      "kaltmiete_qm": 16.67,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": -7.4,
-      "deal_score": "okay",
-      "_hash": "0287378e2c7a"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-1-zimmer-etagenwohnung-mit-27qm-und-pantry-kueche-in-top-lage-mannheim/3454030563-203-7984",
