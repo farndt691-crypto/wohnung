@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-07T17:39:39.489901+00:00",
+  "last_updated": "2026-09-07T21:12:21.097172+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -3586,57 +3586,6 @@
       "_hash": "eb7bd1a1de9f"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zi-wohnung-in-mannheim-rheinau/3442424449-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zi-Wohnung in Mannheim Rheinau",
-      "first_seen": "2026-07-01T10:47:52.597625+00:00",
-      "last_seen": "2026-07-09T19:48:34.118564+00:00",
-      "boni": [
-        "Garage"
-      ],
-      "kurz_bewertung": "Diese 2-Zimmer-Wohnung in Mannheim-Rheinau bietet auf ca. 64 m² ein angenehmes Wohnambiente für Singles oder Paare.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "In Mannheim-Rheinau wohnen vor allem Familien und ältere Menschen. Die Wohnlage ist ruhig und geprägt von Einfamilienhäusern.",
-        "vibe_sicherheit": "Die Wohnlage ist sehr sicher und ruhig. Die Straßen sind gut beleuchtet und es gibt viele Familien mit Kindern.",
-        "einschaetzung_student": "Für Informatikstudenten ist die Lage nicht ideal, da sie sich nicht in der Nähe der Uni befindet.",
-        "einschaetzung_investor": "Die Lage ist nicht ideal für Investoren, da die Mieten relativ niedrig sind und die Wohnlage nicht sehr attraktiv ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-01T10:47:52.597625+00:00",
-          "price": 210.0
-        },
-        {
-          "date": "2026-07-01T14:52:01.585592+00:00",
-          "price": 890.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 64.0,
-      "kaltmiete": 890.0,
-      "nebenkosten": 210,
-      "warmmiete": 1100,
-      "kaltmiete_qm": 13.91,
-      "expected_market_qm": 14.8,
-      "deal_deviation_pct": -6.0,
-      "deal_score": "okay",
-      "_hash": "34713b8976a2"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/161950787",
       "source": "immoscout24",
       "listing_type": "kauf",
@@ -5113,57 +5062,6 @@
       "_hash": "61f900b4b2f9"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-5-zimmer-wohnung-zu-vermieten-in-mannheim-vogelstang/3453256899-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3,5 Zimmer Wohnung zu vermieten in Mannheim - Vogelstang",
-      "first_seen": "2026-07-07T14:52:22.048335+00:00",
-      "last_seen": "2026-07-09T19:48:34.118564+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Dieses einladende Apartment bietet auf einer Wohnfläche von 89 Quadratmetern viel Raum zur persönlichen Entfaltung.",
-      "zimmeranzahl": 3.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Vogelstang ist ein Wohngebiet in Mannheim, das sich in der Nähe der Uni Mannheim befindet. Hier wohnen hauptsächlich Studenten und junge Erwachsene.",
-        "vibe_sicherheit": "Vogelstang hat eine gute Sicherheitslage, da es sich in einem Wohngebiet befindet, das von der Polizei gut überwacht wird.",
-        "einschaetzung_student": "Vogelstang ist ideal für Studenten, da es in der Nähe der Uni Mannheim liegt und eine gute Verbindung zur Innenstadt hat.",
-        "einschaetzung_investor": "Vogelstang ist nicht ideal für Investoren, da es sich um ein Wohngebiet handelt und keine großen Gewinne zu erwarten sind."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-07T14:52:22.048335+00:00",
-          "price": 200.0
-        },
-        {
-          "date": "2026-07-07T19:58:33.795374+00:00",
-          "price": 1300.0
-        }
-      ],
-      "etage": "Etagenwohnung",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 89.0,
-      "kaltmiete": 1300.0,
-      "nebenkosten": 200,
-      "warmmiete": 1300,
-      "kaltmiete_qm": 14.61,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -2.6,
-      "deal_score": "okay",
-      "_hash": "c6e5042b26aa"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tolle-1-zimmer-wohnung-23qm-in-mannheim-naehe-innenstadt-zu-vermieten/3453231270-203-7984",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -5211,102 +5109,6 @@
       "deal_deviation_pct": 35.0,
       "deal_score": "teuer",
       "_hash": "a11ff0750b98"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/sofort-frei-1-zimmer-wohnung-moebliert-35-qm-mannheim-rheinau-sued/3453111426-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Sofort frei 1 Zimmer Wohnung möbliert 35 qm Mannheim Rheinau Süd",
-      "first_seen": "2026-07-07T14:52:22.048335+00:00",
-      "last_seen": "2026-07-09T19:48:34.118564+00:00",
-      "boni": [
-        "moebliert",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Optimal geschnittenes 1-Zimmer-Apartment in gepflegtem Zustand.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber ruhige Atmosphäre",
-        "einschaetzung_student": "Gut, nahe Uni Mannheim",
-        "einschaetzung_investor": "Mäßig, hohe Mieten"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-07T14:52:22.048335+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-07T19:58:33.795374+00:00",
-          "price": 700.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": 1992,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 35.0,
-      "kaltmiete": 700.0,
-      "nebenkosten": 150,
-      "warmmiete": 700,
-      "kaltmiete_qm": 20.0,
-      "expected_market_qm": 18.5,
-      "deal_deviation_pct": 8.1,
-      "deal_score": "okay",
-      "_hash": "1e27a2ee9ce6"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-helle-wohnung-in-mannheim-neckarstadt-west-ab-01-08-2026/3453377855-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2 Zimmer Helle Wohnung in Mannheim-Neckarstadt West ab 01.08.2026",
-      "first_seen": "2026-07-07T19:58:33.795374+00:00",
-      "last_seen": "2026-07-09T19:48:34.118564+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ideal für Singles oder Paare, die eine gut angebundene und helle Wohnung in Mannheim suchen.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien, mit einem hohen Anteil von Einzelpersonen und Paaren.",
-        "vibe_sicherheit": "Gut, da die Gegend zentral und belebt ist, aber auch ruhige Wohngebiete in der Nähe.",
-        "einschaetzung_student": "Sehr geeignet, da die Wohnung in der Nähe der Uni Mannheim liegt und gute Anbindung an die Stadt hat.",
-        "einschaetzung_investor": "Mäßig geeignet, da die Miete relativ hoch ist und die Wohnung nicht besonders groß ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-07T19:58:33.795374+00:00",
-          "price": 1010.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 76.0,
-      "kaltmiete": 1010.0,
-      "warmmiete": 1010,
-      "kaltmiete_qm": 13.29,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -8.3,
-      "deal_score": "okay",
-      "_hash": "99f5e404859f"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-kernsanierung-moderne-wg-zimmer-in-mannheim/3454037257-203-7972",
