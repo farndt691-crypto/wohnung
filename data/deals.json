@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T20:05:15.987578+00:00",
+  "last_updated": "2026-09-07T13:22:51.116128+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1160,48 +1160,6 @@
       "_hash": "bb1e4cb871fb"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/167451682",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Wohnung in Toplage - New7 - 4-Zimmer Neubauwohnung",
-      "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Neubau"
-      ],
-      "kurz_bewertung": "Wohnung in Toplage - New7 - 4-Zimmer Neubauwohnung",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": "N 7 2a-c,4",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Gut, aber Preise sind nicht besonders niedrig"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-11T20:44:01.454793+00:00",
-          "price": 1780.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 1780.0,
-      "warmmiete": 1780,
-      "quadrat": "C3",
-      "deal_score": "okay",
-      "_hash": "1598f7514a76"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/166091840",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -2020,47 +1978,6 @@
       "_hash": "54a16c35eb97"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/168434129",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Helle 3-Zimmer-Wohnung mit Balkon & moderner Einbauküche",
-      "first_seen": "2026-06-13T17:05:17.578471+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 3-Zimmer-Wohnung mit moderner Einbauküche",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "Thomas-Jefferson-Straße 38a",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Gut"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-13T17:05:17.578471+00:00",
-          "price": 1215.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 1215.0,
-      "warmmiete": 1215,
-      "deal_score": "okay",
-      "_hash": "3a6cd909c0ce"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/148959641",
       "source": "immoscout24",
       "listing_type": "kauf",
@@ -2296,47 +2213,6 @@
       "_hash": "231cdf5a2a05"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/168396857",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "3-Zimmer-Wohnung mit EBK und viel Licht",
-      "first_seen": "2026-06-13T21:56:54.570581+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "EBK"
-      ],
-      "kurz_bewertung": "3-Zimmer-Wohnung mit EBK und viel Licht",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "Thomas-Jefferson-Straße 38a",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "gut",
-        "einschaetzung_investor": "mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-13T21:56:54.570581+00:00",
-          "price": 1160.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 1160.0,
-      "warmmiete": 1160,
-      "deal_score": "okay",
-      "_hash": "9ff1d15128b2"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/167213392",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -2545,49 +2421,6 @@
       "cashflow_monat": 115.49,
       "deal_score": "strong_buy",
       "_hash": "7eb0406f193a"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/166928986",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 990.000 €",
-      "first_seen": "2026-06-14T22:23:48.456601+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Balkon",
-        "Barrierefrei",
-        "Südbalkon",
-        "Stellplatz"
-      ],
-      "kurz_bewertung": "Barrierefreies Penthouse mit Südbalkon und Stellplatz",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "In der Schwetzingerstadt/Oststadt wohnen vor allem Familien und junge Erwachsene, es gibt jedoch auch einige Studenten und Rentner.",
-        "vibe_sicherheit": "Die Atmosphäre in der Schwetzingerstadt/Oststadt ist ruhig und sicher, es gibt jedoch einige Lärmbelästigungen durch die nahegelegene Autobahn.",
-        "einschaetzung_student": "Die Schwetzingerstadt/Oststadt ist für Studenten nicht ideal, da es keine direkte Nähe zu Universitäten oder Hochschulen gibt.",
-        "einschaetzung_investor": "Die Schwetzingerstadt/Oststadt ist für Investoren interessant, da es sich um einen wachsenden Stadtteil mit einer guten Infrastruktur handelt."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-14T22:23:48.456601+00:00",
-          "price": 990000.0
-        }
-      ],
-      "etage": "Penthouse",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaufpreis": 990000.0,
-      "deal_score": "skip",
-      "_hash": "1b80ec9badae"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/maisonette-wohnung-ueber-den-daechern-von-mannheim/3437485776-203-7983",
@@ -5904,87 +5737,6 @@
       "_hash": "fe13290d39f3"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/169004264",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 170.000 €",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [],
-      "kurz_bewertung": "Seltene Gelegenheit in der Mannheimer Oststadt - neue Fenster, elektr. Rollladen, ready to rent",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Schwetzingerstadt/Oststadt, 68165 Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien und jungen Erwachsenen, möglicherweise einige Studenten",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken und wenig Fußgängerverkehr",
-        "einschaetzung_student": "Mittel, da die Oststadt nicht direkt am Uni-Campus liegt",
-        "einschaetzung_investor": "Gut, da die Oststadt eine wachsende Wohngegend ist"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 170000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaufpreis": 170000.0,
-      "deal_score": "skip",
-      "_hash": "182b85296196"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169148377",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 400.000 €",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Balkon",
-        "Garage"
-      ],
-      "kurz_bewertung": "Großzügige 4 Zimmer Wohnung mit Balkon und Garage",
-      "zimmeranzahl": 4.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Neckarau",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
-        "einschaetzung_student": "mäßig geeignet, da es nicht sehr zentral liegt",
-        "einschaetzung_investor": "mäßig geeignet, da es nicht sehr lukrativ ist"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 400000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaufpreis": 400000.0,
-      "deal_score": "skip",
-      "_hash": "118905dd96d1"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/168183468",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -6067,133 +5819,6 @@
       "_hash": "2edb7adc5b1a"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/169106131",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Komplett möblierte 60 m² Wohnung – bezugsfertig inkl. Küche & Möbel",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [],
-      "kurz_bewertung": "Komplett möblierte 60 m² Wohnung in der Innenstadt/Jungbusch",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": "G7 35",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Junges Paar",
-        "vibe_sicherheit": "Gut, aber Abendstunden können laut sein",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Geringe Eignung, hohe Mieten, wenig Kapitalanlagepotenzial"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 705.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 60.0,
-      "kaltmiete": 705.0,
-      "warmmiete": 705,
-      "kaltmiete_qm": 11.75,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -19.0,
-      "deal_score": "gut",
-      "_hash": "2b43bcddd7f9"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169105245",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Helle 2-Zimmer-Wohnung mit zwei Balkonen in Mannheim",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 2-Zimmer-Wohnung mit zwei Balkonen in Mannheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "Käfertal",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Mittelmäßig"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 600.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 600.0,
-      "warmmiete": 600,
-      "deal_score": "okay",
-      "_hash": "e88f0fc24caf"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169081267",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Stilvoll modernisiert: 2-Zimmer-Wohnung in der Schwetzingerstadt",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [],
-      "kurz_bewertung": "Stilvoll modernisiert: 2-Zimmer-Wohnung in der Schwetzingerstadt",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Q 2,6, Schwetzingerstadt/Oststadt, 68165 Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Die Schwetzingerstadt ist ein beliebter Stadtteil für Familien und junge Erwachsene. Hier wohnen viele Studenten und Berufstätige.",
-        "vibe_sicherheit": "Die Schwetzingerstadt ist ein sicheres Viertel mit einer guten Atmosphäre. Hier gibt es viele Grünflächen und öffentliche Einrichtungen.",
-        "einschaetzung_student": "Die Schwetzingerstadt ist eine gute Wahl für Studenten, da es hier viele Studentenwohnheime und -gemeinschaften gibt.",
-        "einschaetzung_investor": "Die Schwetzingerstadt ist eine gute Wahl für Investoren, da es hier eine hohe Nachfrage nach Wohnraum gibt und die Preise relativ moderat sind."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 700.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 700.0,
-      "warmmiete": 700,
-      "quadrat": "C3",
-      "deal_score": "okay",
-      "_hash": "3488d0cb032a"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/169104736",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -6272,87 +5897,6 @@
       "warmmiete": 640,
       "deal_score": "okay",
       "_hash": "3c483c12452e"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/168843242",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Schöne 3-Zimmer-Wohnung in Mannheim Lindenhof",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [],
-      "kurz_bewertung": "Schöne 3-Zimmer-Wohnung in Mannheim Lindenhof",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4728,
-      "longitude": 8.4682,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": "Lindenhof",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 765.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 765.0,
-      "warmmiete": 765,
-      "deal_score": "okay",
-      "_hash": "e658215da306"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/151691994",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 1.050.000 €",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Terrasse"
-      ],
-      "kurz_bewertung": "Exklusive Terrassenwohnung in traumhafter Lage mit einzigartigem Blick",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Heidelberg Altstadt",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Die Altstadt ist ein beliebter Touristenort, daher ist die Demografie eher von Touristen und Geschäftsleuten geprägt.",
-        "vibe_sicherheit": "Die Altstadt ist bekannt für ihre lebendige Atmosphäre, aber auch für ihre hohe Kriminalitätsrate.",
-        "einschaetzung_student": "Die Altstadt ist nicht ideal für Informatikstudenten, da es dort keine Studentenwohnheime oder günstige Wohnungen gibt.",
-        "einschaetzung_investor": "Die Altstadt ist eine gute Kapitalanlage, da es dort viele Touristen und Geschäftsleute gibt, die bereit sind, viel Geld auszugeben."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 1050000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Heidelberg",
-      "kaufpreis": 1050000.0,
-      "deal_score": "skip",
-      "_hash": "4fecc2f08de4"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/169085080",
@@ -6519,48 +6063,6 @@
       "warmmiete": 370,
       "deal_score": "okay",
       "_hash": "aad8df103642"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/167594654",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "2 Zimmer Wohnung mit 2 Balkonen",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-09T10:30:42.303724+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "2 Zimmer Wohnung mit 2 Balkonen in Kirchheim",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Heidelberg Kirchheim",
-      "adresse": "Kirchheim, 69124 Heidelberg",
-      "umfeld_analyse": {
-        "demografie": "Kirchheim ist ein Stadtteil von Heidelberg, nicht Mannheim, daher ist die Demografie wahrscheinlich eher studentisch und akademisch geprägt.",
-        "vibe_sicherheit": "Kirchheim ist ein ruhiger Stadtteil, aber die Sicherheitslage ist nicht bekannt.",
-        "einschaetzung_student": "Für Informatikstudenten könnte Kirchheim eine gute Wahl sein, da es in der Nähe von Heidelberg liegt und eine gute Verkehrsanbindung hat.",
-        "einschaetzung_investor": "Als Kapitalanlage könnte Kirchheim nicht die beste Wahl sein, da es nicht in Mannheim liegt und die Immobilienpreise in Heidelberg tendenziell höher sind."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 760.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Heidelberg",
-      "kaltmiete": 760.0,
-      "warmmiete": 760,
-      "deal_score": "okay",
-      "_hash": "886bf6d4715e"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/168064228",
