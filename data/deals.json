@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-08T16:26:29.354417+00:00",
+  "last_updated": "2026-09-08T20:49:03.153108+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -625,49 +625,6 @@
       "deal_deviation_pct": -19.9,
       "deal_score": "gut",
       "_hash": "6e55bbe8a75d"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/exklusive-zimmer-in-moderner-6er-wg-in-mannheim-voll-moebliert-sofort-verfuegbar-/3430057997-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Exklusive Zimmer in moderner 6er-WG in Mannheim – Voll möbliert & sofort verfügbar!",
-      "first_seen": "2026-06-08T18:11:11.261422+00:00",
-      "last_seen": "2026-07-10T19:29:45.656811+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Ideal für Studierende, Azubis oder junge Berufstätige, die zentral und in angenehmer Gemeinschaft wohnen möchten.",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "Culinistraße 5",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Azubis, junge Berufstätige",
-        "vibe_sicherheit": "Gute Atmosphäre, aber möglicherweise laut durch WG-Atmosphäre",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Nicht geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-08T18:11:11.261422+00:00",
-          "price": 460.0
-        }
-      ],
-      "etage": "11. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 21.0,
-      "kaltmiete": 460.0,
-      "nebenkosten": 60,
-      "warmmiete": 545,
-      "kaltmiete_qm": 21.9,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 25.1,
-      "deal_score": "teuer",
-      "_hash": "a6c3852a2d7f"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/500-wunschgutschein-zum-einzug-schicke-2-zimmer-wohnung-im-zentrum-von-mannheim-vogelstang/3430748208-203-7973",
@@ -5983,44 +5940,6 @@
       "deal_deviation_pct": -2.7,
       "deal_score": "okay",
       "_hash": "04b085c94d6c"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/einzimmerwohnung-zu-vermieten-mannheim-zentrum-s3-11-/3453864621-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Einzimmerwohnung zu vermieten - Mannheim Zentrum (S3 11)",
-      "first_seen": "2026-07-09T15:25:00.774380+00:00",
-      "last_seen": "2026-07-10T19:29:45.656811+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T15:25:00.774380+00:00",
-          "price": 450.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 20.0,
-      "kaltmiete": 450.0,
-      "kaltmiete_qm": 22.5,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 55.2,
-      "deal_score": "teuer",
-      "_hash": "54c04f02af1a"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-mannheim-schwetzinger-stadt/3455329736-203-7981",
