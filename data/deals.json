@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-09T12:15:10.546988+00:00",
+  "last_updated": "2026-09-09T16:21:26.985213+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -5030,54 +5030,6 @@
       "_hash": "a11ff0750b98"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-kernsanierung-moderne-wg-zimmer-in-mannheim/3454037257-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Erstbezug nach Kernsanierung – Moderne WG-Zimmer in Mannheim",
-      "first_seen": "2026-07-08T14:30:26.695715+00:00",
-      "last_seen": "2026-07-11T13:43:05.947780+00:00",
-      "boni": [
-        "renoviert",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Moderne WG-Zimmer in verkehrsgünstiger Lage",
-      "zimmeranzahl": 6,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "Stationsstraße 7, 68309 Mannheim-Waldhof",
-      "umfeld_analyse": {
-        "demografie": "Studierende, Berufseinsteiger und Pendler",
-        "vibe_sicherheit": "Gute Verkehrsanbindung, aber möglicherweise laut",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mittelmäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-08T14:30:26.695715+00:00",
-          "price": 450.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 130.0,
-      "kaltmiete": 450.0,
-      "nebenkosten": 90,
-      "warmmiete": 540,
-      "kaltmiete_qm": 3.46,
-      "expected_market_qm": 18.5,
-      "deal_deviation_pct": -81.3,
-      "deal_score": "gut",
-      "_hash": "043d2ec3cca7"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/gepflegte-1-raum-wohnung-moebiliert-direkt-an-der-uni-mannheim-mit-balkon/3453973211-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -5130,94 +5082,6 @@
       "deal_deviation_pct": 23.9,
       "deal_score": "teuer",
       "_hash": "14bd97a53a3d"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/einzug-nach-renovierung-1-5-zimmer-wohnung-im-zentrum-von-mannheim-/3453939876-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Einzug nach Renovierung! 1,5-Zimmer-Wohnung im Zentrum von Mannheim!",
-      "first_seen": "2026-07-08T14:30:26.695715+00:00",
-      "last_seen": "2026-07-11T13:43:05.947780+00:00",
-      "boni": [
-        "Balkon",
-        "Aufzug",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Einzigartige 1,5-Zimmer-Wohnung im Zentrum von Mannheim!",
-      "zimmeranzahl": 1.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim",
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-08T14:30:26.695715+00:00",
-          "price": 538.0
-        }
-      ],
-      "etage": "11. Etage",
-      "baujahr": 1977,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 39.87,
-      "kaltmiete": 538.0,
-      "nebenkosten": 80,
-      "warmmiete": 686,
-      "kaltmiete_qm": 13.49,
-      "expected_market_qm": 16.5,
-      "deal_deviation_pct": -18.2,
-      "deal_score": "gut",
-      "_hash": "a8e41cbbb139"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/kleine-mietwohnung-in-mannheim-gesucht/3454143620-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "kleine Mietwohnung in Mannheim gesucht",
-      "first_seen": "2026-07-08T19:27:25.260488+00:00",
-      "last_seen": "2026-07-11T13:43:05.947780+00:00",
-      "boni": [],
-      "kurz_bewertung": "kleine Mietwohnung in Mannheim gesucht",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Familien, Einzelpersonen",
-        "vibe_sicherheit": "Mittelprächtig, aber einige dunkle Ecken",
-        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mittel, keine besonders guten Renditen"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-08T19:27:25.260488+00:00",
-          "price": 390.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 390.0,
-      "deal_score": "okay",
-      "_hash": "41ac39548ffd"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-1-zimmer-etagenwohnung-mit-27qm-und-pantry-kueche-in-top-lage-mannheim/3454030563-203-7984",
@@ -5490,86 +5354,6 @@
       "warmmiete": 850,
       "deal_score": "okay",
       "_hash": "2edb7adc5b1a"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169104736",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Alltagstaugliche 3-Zimmer-Wohnung in Mannheim-Waldhof",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-11T13:43:05.947780+00:00",
-      "boni": [],
-      "kurz_bewertung": "Alltagstaugliche 3-Zimmer-Wohnung in Mannheim-Waldhof",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "Waldhof",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut, aber einige Straßen können dunkel sein",
-        "einschaetzung_student": "Gut, aber keine direkte Nähe zur Uni",
-        "einschaetzung_investor": "Mittel, aber keine hohe Rendite"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 880.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 880.0,
-      "warmmiete": 880,
-      "deal_score": "okay",
-      "_hash": "5b375637fd56"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169071544",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Helle 1-Zimmer-Wohnung mit großem Tageslichtbad und Einbauküche in der Schwetzingerstadt",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-11T13:43:05.947780+00:00",
-      "boni": [],
-      "kurz_bewertung": "Helle 1-Zimmer-Wohnung mit großem Tageslichtbad und Einbauküche",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Krappmühlstraße 12",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Sehr gut, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig, hohe Mieten, aber gute Infrastruktur"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 640.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 640.0,
-      "warmmiete": 640,
-      "deal_score": "okay",
-      "_hash": "3c483c12452e"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/169085080",
@@ -6663,46 +6447,6 @@
       "warmmiete": 1890,
       "deal_score": "okay",
       "_hash": "b273094904c8"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169213675",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Ziegelhausen: 2-Zimmer-Wohnung in Mannheim",
-      "first_seen": "2026-07-11T13:43:05.947780+00:00",
-      "last_seen": "2026-07-11T13:43:05.947780+00:00",
-      "boni": [],
-      "kurz_bewertung": "2-Zimmer-Wohnung in Mannheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Heidelberg Ziegelhausen",
-      "adresse": "Peterstaler Straße 20",
-      "umfeld_analyse": {
-        "demografie": "Familien und Pendler",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "nicht ideal für Studenten",
-        "einschaetzung_investor": "keine gute Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-11T13:43:05.947780+00:00",
-          "price": 500.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Heidelberg",
-      "kaltmiete": 500.0,
-      "warmmiete": 500,
-      "deal_score": "okay",
-      "_hash": "42654ba36379"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/169183782",
