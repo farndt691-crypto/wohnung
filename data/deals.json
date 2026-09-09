@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-08T20:49:03.153108+00:00",
+  "last_updated": "2026-09-09T12:15:10.546988+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -2852,44 +2852,6 @@
       "deal_deviation_pct": -29.0,
       "deal_score": "gut",
       "_hash": "c9a245f93a78"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/168610630",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 385.000 €",
-      "first_seen": "2026-06-19T18:23:55.192728+00:00",
-      "last_seen": "2026-07-11T08:52:43.206880+00:00",
-      "boni": [],
-      "kurz_bewertung": "Urbanes Wohnen mit Komfort – Moderne Wohnung in Mannheim",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Junges, urbanes Publikum, viele Studenten und Berufstätige",
-        "vibe_sicherheit": "Gut, aber bei Nacht etwas dunkel",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Gut, aber Preise sind etwas hoch"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-19T18:23:55.192728+00:00",
-          "price": 385000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaufpreis": 385000.0,
-      "deal_score": "skip",
-      "_hash": "4de60fca7092"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/166627449",
@@ -5849,46 +5811,6 @@
       "warmmiete": 1590,
       "deal_score": "okay",
       "_hash": "563bf5b080ab"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169119597",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "3-Zimmer-Wohnung in Heidelberg-Handschuhsheim",
-      "first_seen": "2026-07-09T10:30:42.303724+00:00",
-      "last_seen": "2026-07-11T08:52:43.206880+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 3.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Heidelberg Handschuhsheim",
-      "adresse": "Handschuhsheim, 69121 Heidelberg",
-      "umfeld_analyse": {
-        "demografie": "Handschuhsheim ist ein beliebter Stadtteil in Heidelberg, bekannt für seine gute Infrastruktur, seine Nähe zum Zentrum und seine vielfältige Bevölkerung. Hier wohnen Studenten, Familien und Berufstätige.",
-        "vibe_sicherheit": "Handschuhsheim gilt als sicherer Stadtteil, mit einer guten Polizeipräsenz und einer aktiven Gemeinschaft.",
-        "einschaetzung_student": "Handschuhsheim ist ideal für Studenten, da es in der Nähe der Universität liegt und eine gute Auswahl an Wohnungen und Studentenwohnheimen bietet.",
-        "einschaetzung_investor": "Handschuhsheim ist ein beliebter Stadtteil für Investoren, da es eine gute Rendite bietet und eine stabile Immobilienmarktentwicklung aufweist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-09T10:30:42.303724+00:00",
-          "price": 830.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Heidelberg",
-      "kaltmiete": 830.0,
-      "warmmiete": 830,
-      "deal_score": "okay",
-      "_hash": "9c9973a62636"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-sandhofen-2-zkb-63m2-wohnung/3454704112-203-7974",
