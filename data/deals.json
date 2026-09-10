@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-09T20:31:02.975627+00:00",
+  "last_updated": "2026-09-10T12:08:53.573795+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -5714,53 +5714,6 @@
       "deal_deviation_pct": -25.9,
       "deal_score": "gut",
       "_hash": "e00103cb0f75"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-frisch-renovierte-2-zimmer-wohnung-in-mannheim/3456798870-203-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Helle, frisch renovierte 2-Zimmer-Wohnung in mannheim",
-      "first_seen": "2026-07-12T09:06:21.503597+00:00",
-      "last_seen": "2026-07-12T09:06:21.503597+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Frisch renovierte und helle Wohnung in Mannheim für Singles oder Paare",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68165 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Singles, Paare",
-        "vibe_sicherheit": "Gut, aber keine spezifischen Informationen",
-        "einschaetzung_student": "Gut, da in der Nähe der Uni Mannheim",
-        "einschaetzung_investor": "Mäßig, da keine spezifischen Informationen über die Rendite"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-12T09:06:21.503597+00:00",
-          "price": 150.0
-        }
-      ],
-      "etage": "5. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 26.0,
-      "kaltmiete": 150.0,
-      "nebenkosten": 150,
-      "warmmiete": 600,
-      "kaltmiete_qm": 5.77,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -62.8,
-      "deal_score": "gut",
-      "_hash": "f59a513dc34c"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-helle-wohnung-in-mannheim-ab-01-09-2026/3456612990-203-7980",
