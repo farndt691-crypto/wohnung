@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-11T16:15:56.315509+00:00",
+  "last_updated": "2026-09-11T20:32:53.924148+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -2897,57 +2897,6 @@
       "_hash": "147c28d5b140"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/modernes-1-zimmer-apartment-im-beliebten-mannheimer-jungbusch/3439949713-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Modernes 1 Zimmer Apartment im beliebten Mannheimer Jungbusch",
-      "first_seen": "2026-06-22T17:07:58.685639+00:00",
-      "last_seen": "2026-07-13T19:25:44.745064+00:00",
-      "boni": [
-        "Balkon",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Moderne 1-Zimmer-Wohnung in zentraler Lage mit schönem Balkon.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studierende, junge Berufstätige und Kreative",
-        "vibe_sicherheit": "Gut, da es sich um einen beliebten Stadtteil handelt.",
-        "einschaetzung_student": "Sehr geeignet, da die Universität Mannheim in der Nähe liegt.",
-        "einschaetzung_investor": "Mäßig geeignet, da der Preis relativ hoch ist."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-22T17:07:58.685639+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-06-22T20:49:28.766161+00:00",
-          "price": 900.0
-        }
-      ],
-      "etage": "5. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 24.0,
-      "kaltmiete": 900.0,
-      "nebenkosten": 150,
-      "warmmiete": 900,
-      "kaltmiete_qm": 37.5,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 141.9,
-      "deal_score": "teuer",
-      "_hash": "6a074d8907c8"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-neckarstadt-west/3442160009-203-7980",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -5147,51 +5096,6 @@
       "deal_deviation_pct": 22.6,
       "deal_score": "teuer",
       "_hash": "2f6e399eebb3"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-3-zimmer-wohnung-sofort-zum-vermieten-in-mannheim-neckarau/3457426795-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Helle 3 Zimmer Wohnung sofort zum vermieten in Mannheim Neckarau",
-      "first_seen": "2026-07-12T19:08:04.012572+00:00",
-      "last_seen": "2026-07-13T19:25:44.745064+00:00",
-      "boni": [],
-      "kurz_bewertung": "Die Wohnung bietet eine gute Grundlage für ein gemütliches Zuhause.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Berufstätige",
-        "vibe_sicherheit": "sicher",
-        "einschaetzung_student": "gut",
-        "einschaetzung_investor": "mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-12T19:08:04.012572+00:00",
-          "price": 1100.0
-        }
-      ],
-      "etage": "3. Etage",
-      "baujahr": 2019,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 80.0,
-      "kaltmiete": 1100.0,
-      "nebenkosten": 100,
-      "warmmiete": 1100,
-      "kaltmiete_qm": 13.75,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -5.2,
-      "deal_score": "okay",
-      "_hash": "e777deefacf6"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-84-qm-mannheim-hafenstr-/3457761320-203-7984",
