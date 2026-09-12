@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-11T20:32:53.924148+00:00",
+  "last_updated": "2026-09-12T11:33:58.943791+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -945,47 +945,6 @@
       "_hash": "bb1e4cb871fb"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/166091840",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "MA-City - New7 - Neubauwohnung in Toplage",
-      "first_seen": "2026-06-11T20:44:01.454793+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "Neubau"
-      ],
-      "kurz_bewertung": "Neubauwohnung in Toplage",
-      "zimmeranzahl": null,
-      "latitude": 49.4889,
-      "longitude": 8.4694,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": "N 7, 2a-c, 4",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Gut, aber Preise sind nicht besonders niedrig"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-11T20:44:01.454793+00:00",
-          "price": 1600.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 1600.0,
-      "quadrat": "C3",
-      "deal_score": "okay",
-      "_hash": "045868512640"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/158579970",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -1416,45 +1375,6 @@
       "_hash": "b44a0bccd1e7"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/166361176",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Schöne 2-Zimmer-Wohnung in Vogelstang Zentrum",
-      "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [],
-      "kurz_bewertung": "Schöne 2-Zimmer-Wohnung in Vogelstang Zentrum",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.5,
-      "longitude": 8.5,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "Geraer Ring 10",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-12T17:30:38.859659+00:00",
-          "price": 690.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 690.0,
-      "warmmiete": 690,
-      "deal_score": "okay",
-      "_hash": "8b0472ed74f4"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/161519925",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -1492,44 +1412,6 @@
       "warmmiete": 960,
       "deal_score": "okay",
       "_hash": "66377c993f5b"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/158623208",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "1000 € Wunschgutschein zum Einzug ! Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
-      "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [],
-      "kurz_bewertung": "Familienfreundliche 4-Zimmer-Wohnung in Mannheim Vogelstang",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.5,
-      "longitude": 8.5,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "Geraer Ring 2",
-      "umfeld_analyse": {
-        "demografie": "Familien mit Kindern, ältere Menschen",
-        "vibe_sicherheit": "ruhig, aber nicht sehr sicher",
-        "einschaetzung_student": "nicht geeignet für Informatikstudenten, da keine Nähe zur Uni",
-        "einschaetzung_investor": "nicht geeignet als Kapitalanlage, da keine hohe Nachfrage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-12T17:30:38.859659+00:00",
-          "price": 1000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 1000.0,
-      "deal_score": "okay",
-      "_hash": "c901dd42cb85"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/166559534",
@@ -2509,48 +2391,6 @@
       "_hash": "ee45b736a6e8"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/168204678",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Preis: 1.392,81 €",
-      "first_seen": "2026-06-19T00:15:40.513434+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "Penthouse",
-        "Neubau"
-      ],
-      "kurz_bewertung": "Penthouse-Wohnung mit Aussicht in Neubau in Käfertal",
-      "zimmeranzahl": null,
-      "latitude": 49.5,
-      "longitude": 8.5,
-      "stadtteil": "Käfertal",
-      "adresse": "George-Washington-Str. 168",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut, aber einige Lärmquellen",
-        "einschaetzung_student": "Gut, aber einige Lärmquellen",
-        "einschaetzung_investor": "Gut, aber einige Lärmquellen"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-19T00:15:40.513434+00:00",
-          "price": 1392.81
-        }
-      ],
-      "etage": "Penthouse",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaltmiete": 1392.81,
-      "warmmiete": 139281,
-      "deal_score": "okay",
-      "_hash": "6285f8ffa133"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/166958351",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -2983,57 +2823,6 @@
       "kaufpreis": 244400.0,
       "deal_score": "skip",
       "_hash": "bb5395276efb"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/erleben-sie-eine-einzigartige-traumwohnung-mit-eigenem-whirlpool-und-klimatisiert-in-mannheim/3435790475-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Erleben Sie eine einzigartige Traumwohnung mit eigenem Whirlpool und Klimatisiert in Mannheim",
-      "first_seen": "2026-06-29T12:04:27.008023+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Eine helle 4,5-Zimmer-Erdgeschosswohnung mit luxuriösem Komfort und intelligentem Grundriss.",
-      "zimmeranzahl": 4.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige und Familien",
-        "vibe_sicherheit": "Gut, da die Wohnung in einem sicheren Stadtteil liegt.",
-        "einschaetzung_student": "Sehr geeignet, da die Wohnung in der Nähe der Uni liegt.",
-        "einschaetzung_investor": "Gut geeignet, da die Wohnung in einem sicheren Stadtteil liegt und eine hohe Nachfrage nach Mietwohnungen besteht."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-29T12:04:27.008023+00:00",
-          "price": 110.0
-        },
-        {
-          "date": "2026-06-29T15:59:40.606387+00:00",
-          "price": 1035.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 82.0,
-      "kaltmiete": 1035.0,
-      "nebenkosten": 110,
-      "warmmiete": 1255,
-      "kaltmiete_qm": 12.62,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -18.6,
-      "deal_score": "gut",
-      "_hash": "a87155040f02"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zimmer-frei-in-4er-wg-in-mannheim-rheinlandvorstrasse-10/3446919205-203-7984",
@@ -3728,187 +3517,6 @@
       "_hash": "06024ba2351e"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/134765318",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "32m² - Vollmöbliertes Apartment in Uninähe",
-      "first_seen": "2026-07-02T14:17:31.667924+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Vollmöbliertes Apartment in Uninähe",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Seckenheimer Straße 68a",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, nahe an der Uni",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-02T14:17:31.667924+00:00",
-          "price": 650.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 32.0,
-      "kaltmiete": 650.0,
-      "warmmiete": 650,
-      "kaltmiete_qm": 20.31,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 16.1,
-      "deal_score": "teuer",
-      "_hash": "61fa2154c274"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/140838951",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "32m² - Vollmöbliertes Apartment in Uninähe mit Dachterrasse",
-      "first_seen": "2026-07-02T14:17:31.667924+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "Dachterrasse",
-        "moebliert",
-        "Terrasse"
-      ],
-      "kurz_bewertung": "Vollmöbliertes Apartment in Uninähe mit Dachterrasse",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Seckenheimer Straße 68a",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, nahe an Uni",
-        "einschaetzung_investor": "Mittlere Eignung, aber Preise können hoch sein"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-02T14:17:31.667924+00:00",
-          "price": 720.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 32.0,
-      "kaltmiete": 720.0,
-      "kaltmiete_qm": 22.5,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": 25.0,
-      "deal_score": "teuer",
-      "_hash": "3e3a7c72f924"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/150963438",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "24m² - Vollmöbliertes Apartment in Uninähe - Wohnung",
-      "first_seen": "2026-07-02T14:17:31.667924+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Vollmöbliertes Apartment in Uninähe",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Seckenheimerstraße 68a",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, nahe an der Uni",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-02T14:17:31.667924+00:00",
-          "price": 600.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 24.0,
-      "kaltmiete": 600.0,
-      "warmmiete": 600,
-      "kaltmiete_qm": 25.0,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 42.9,
-      "deal_score": "teuer",
-      "_hash": "827931d858cf"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/165538492",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Ankommen. Wohlfühlen. Zuhause sein. Vollmöbliertes Zimmer in einer 2er-WG",
-      "first_seen": "2026-07-02T14:17:31.667924+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Vollmöbliertes Zimmer in einer 2er-WG",
-      "zimmeranzahl": 1,
-      "latitude": 49.5,
-      "longitude": 8.5,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "Birkenauer Str. 51",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "möglich, aber nicht ideal",
-        "einschaetzung_investor": "nicht empfehlenswert"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-02T14:17:31.667924+00:00",
-          "price": 470.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 470.0,
-      "warmmiete": 470,
-      "deal_score": "okay",
-      "_hash": "90809ecc65f4"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/160489158",
       "source": "immoscout24",
       "listing_type": "kauf",
@@ -4023,46 +3631,6 @@
       "_hash": "fcdefd08e869"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/168965886",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Ab 15.08. Sehr zentrale und ruhig gelegene 1-Zimmer-Wohnung in Heidelberg-Rohrbach",
-      "first_seen": "2026-07-02T14:17:31.667924+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [],
-      "kurz_bewertung": "Sehr zentrale und ruhig gelegene 1-Zimmer-Wohnung",
-      "zimmeranzahl": 1.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Heidelberg Rohrbach",
-      "adresse": "Rohrbach, 69126 Heidelberg",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Familien, Pendler",
-        "vibe_sicherheit": "Gut, ruhig und zentral",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-02T14:17:31.667924+00:00",
-          "price": 550.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Heidelberg",
-      "kaltmiete": 550.0,
-      "warmmiete": 550,
-      "deal_score": "okay",
-      "_hash": "59bd3383d83e"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/168945560",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -4101,53 +3669,6 @@
       "warmmiete": 540,
       "deal_score": "okay",
       "_hash": "74b551211688"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/168737267",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Möblierte 1Z-ETW mit Balkon + Pantryküche, 28m2 im 3.OG, in bester Lage von Heidelberg",
-      "first_seen": "2026-07-02T14:17:31.667924+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Möblierte 1-Zimmer-ETW mit Balkon in bester Lage von Heidelberg",
-      "zimmeranzahl": 1,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Heidelberg Handschuhsheim",
-      "adresse": "Handschuhsheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Jungberufliche, Familien",
-        "vibe_sicherheit": "Gut, aber teuer",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Nicht geeignet"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-02T14:17:31.667924+00:00",
-          "price": 650.0
-        }
-      ],
-      "etage": "3.OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Heidelberg",
-      "quadratmeter": 28.0,
-      "kaltmiete": 650.0,
-      "warmmiete": 650,
-      "kaltmiete_qm": 23.21,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": 28.9,
-      "deal_score": "teuer",
-      "_hash": "6c829cec5b46"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-penthouse-mannheim-oststadt/3350364883-203-7981",
@@ -4427,54 +3948,6 @@
       "deal_deviation_pct": 58.0,
       "deal_score": "teuer",
       "_hash": "80a779172ab2"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-kaefertal-3-zkbb/3453081595-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Mannheim Käfertal, 3 ZKBB",
-      "first_seen": "2026-07-07T14:52:22.048335+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Im 1ten OG dieses ruhigen und sanierten 3 Familienhauses können Sie über ca. 94m² verfügen.",
-      "zimmeranzahl": 3,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und ältere Menschen",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "nicht geeignet",
-        "einschaetzung_investor": "möglicherweise geeignet"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-07T14:52:22.048335+00:00",
-          "price": 850.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": 2023,
-      "energieklasse": null,
-      "heizungsart": "Gas",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 94.0,
-      "kaltmiete": 850.0,
-      "nebenkosten": 100,
-      "warmmiete": 950,
-      "kaltmiete_qm": 9.04,
-      "expected_market_qm": 16.0,
-      "deal_deviation_pct": -43.5,
-      "deal_score": "gut",
-      "_hash": "61f900b4b2f9"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tolle-1-zimmer-wohnung-23qm-in-mannheim-naehe-innenstadt-zu-vermieten/3453231270-203-7984",
@@ -4850,85 +4323,6 @@
       "_hash": "3e0bf17e1d21"
     },
     {
-      "url": "https://www.immobilienscout24.de/expose/169210440",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Wohnen mit Charakter: 3,5-Zimmer-Wohnung in Mannheim",
-      "first_seen": "2026-07-11T13:43:05.947780+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [],
-      "kurz_bewertung": "Wohnen mit Charakter",
-      "zimmeranzahl": 3.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "Apoldaer Weg 5",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-11T13:43:05.947780+00:00",
-          "price": 1100.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 1100.0,
-      "warmmiete": 1100,
-      "deal_score": "okay",
-      "_hash": "d80af3a80ee6"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/169182593",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Penthouseflair am Wasserturm - Exklusive Arkadenetage mit grandiosem Panoramablick!",
-      "first_seen": "2026-07-11T13:43:05.947780+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [],
-      "kurz_bewertung": "Exklusive Arkadenetage mit grandiosem Panoramablick!",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Schwetzingerstadt/Oststadt, 68165 Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Gut, aber Preise sind nicht besonders niedrig"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-11T13:43:05.947780+00:00",
-          "price": 3400.0
-        }
-      ],
-      "etage": "Penthouse",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 3400.0,
-      "deal_score": "okay",
-      "_hash": "ba2333b02b8a"
-    },
-    {
       "url": "https://www.immobilienscout24.de/expose/166557657",
       "source": "immoscout24",
       "listing_type": "miete",
@@ -4967,49 +4361,6 @@
       "warmmiete": 1070,
       "deal_score": "okay",
       "_hash": "82524992dc6e"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/167128829",
-      "source": "immoscout24",
-      "listing_type": "miete",
-      "title": "Familienglück auf 132 Quadratmetern: 4-Zimmer-Penthousewohnung",
-      "first_seen": "2026-07-11T13:43:05.947780+00:00",
-      "last_seen": "2026-07-14T09:09:54.613479+00:00",
-      "boni": [],
-      "kurz_bewertung": "Familienglück auf 132 Quadratmetern: 4-Zimmer-Penthousewohnung",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "George-Sullivan-Ring 50",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut, aber einige Lärmbelästigungen durch den George-Sullivan-Ring",
-        "einschaetzung_student": "Gut, aber einige Lärmbelästigungen und keine direkte Nähe zur Uni",
-        "einschaetzung_investor": "Gut, aber einige Lärmbelästigungen und keine direkte Nähe zum Stadtzentrum"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-11T13:43:05.947780+00:00",
-          "price": 1960.0
-        }
-      ],
-      "etage": "Penthouse",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 1960.0,
-      "quadratmeter": 132,
-      "kaltmiete_qm": 14.85,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 2.4,
-      "deal_score": "okay",
-      "_hash": "42936dcb747e"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/168455042",
