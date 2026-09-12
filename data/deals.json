@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12T15:23:08.783895+00:00",
+  "last_updated": "2026-09-12T20:16:22.014217+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -4773,57 +4773,6 @@
       "deal_deviation_pct": 37.9,
       "deal_score": "teuer",
       "_hash": "ed9f0713fb28"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moeblierte-wohnung-in-zentrum-mannheim-zuvermiten/3458821827-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Möblierte Wohnung in Zentrum Mannheim zuvermiten",
-      "first_seen": "2026-07-14T14:00:03.127478+00:00",
-      "last_seen": "2026-07-14T19:21:50.690500+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Möblierte Wohnung in Zentrum Mannheim neben Abendakademie zu vermieten ab sofort",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendakademie kann laut sein",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mittelmäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-14T14:00:03.127478+00:00",
-          "price": 110.0
-        },
-        {
-          "date": "2026-07-14T19:21:50.690500+00:00",
-          "price": 600.0
-        }
-      ],
-      "etage": "1. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 40.0,
-      "kaltmiete": 600.0,
-      "nebenkosten": 240,
-      "warmmiete": 900,
-      "kaltmiete_qm": 15.0,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": -14.3,
-      "deal_score": "gut",
-      "_hash": "41a9d2f9bcfc"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-2-zimmer-wohnung-in-mannheim-seckenheim/3458784845-203-7976",
