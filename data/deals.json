@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12T20:16:22.014217+00:00",
+  "last_updated": "2026-09-13T12:38:10.898780+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -4773,55 +4773,6 @@
       "deal_deviation_pct": 37.9,
       "deal_score": "teuer",
       "_hash": "ed9f0713fb28"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-2-zimmer-wohnung-in-mannheim-seckenheim/3458784845-203-7976",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schöne 2-Zimmer-Wohnung in Mannheim-Seckenheim",
-      "first_seen": "2026-07-14T14:00:03.127478+00:00",
-      "last_seen": "2026-07-15T09:13:48.080966+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gepflegte 2-Zimmer-Wohnung im beliebten Mannheimer Stadtteil Seckenheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Seckenheim",
-      "adresse": "68239 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Singles",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-14T14:00:03.127478+00:00",
-          "price": 200.0
-        },
-        {
-          "date": "2026-07-14T19:21:50.690500+00:00",
-          "price": 850.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 50.0,
-      "kaltmiete": 850.0,
-      "nebenkosten": 200,
-      "warmmiete": 850,
-      "kaltmiete_qm": 17.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 17.2,
-      "deal_score": "teuer",
-      "_hash": "768ed4931694"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mietwohnung-in-mannheim/3458750702-203-7984",
