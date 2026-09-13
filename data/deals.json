@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-13T12:38:10.898780+00:00",
+  "last_updated": "2026-09-13T16:00:10.862192+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1180,47 +1180,6 @@
       "kaufpreis": 777100.0,
       "deal_score": "skip",
       "_hash": "a9fda64c3e6a"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/167973192",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 890.000 €",
-      "first_seen": "2026-06-12T17:30:38.859659+00:00",
-      "last_seen": "2026-07-15T13:57:57.983336+00:00",
-      "boni": [
-        "4 TG-Plätzen",
-        "7-Zimmer-Townhouse"
-      ],
-      "kurz_bewertung": "Besonderes 7-Zimmer-Townhouse mit 4 TG-Plätzen!",
-      "zimmeranzahl": 7.0,
-      "latitude": 49.4728,
-      "longitude": 8.4682,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Gut"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-12T17:30:38.859659+00:00",
-          "price": 890000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaufpreis": 890000.0,
-      "deal_score": "skip",
-      "_hash": "62647cac65a5"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/155316713",
@@ -2603,47 +2562,6 @@
       "warmmiete": 1578.92,
       "deal_score": "okay",
       "_hash": "f6268c11caac"
-    },
-    {
-      "url": "https://www.immobilienscout24.de/expose/166863853",
-      "source": "immoscout24",
-      "listing_type": "kauf",
-      "title": "Preis: 449.000 €",
-      "first_seen": "2026-06-20T14:17:37.844289+00:00",
-      "last_seen": "2026-07-15T13:57:57.983336+00:00",
-      "boni": [
-        "E-PKW-SP",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Komfortables Familiendomizil im prosperierenden FRANKLIN",
-      "zimmeranzahl": null,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Käfertal",
-      "adresse": "Käfertal",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Gut"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-20T14:17:37.844289+00:00",
-          "price": 449000.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "kaufpreis": 449000.0,
-      "deal_score": "skip",
-      "_hash": "6f42f8355f59"
     },
     {
       "url": "https://www.immobilienscout24.de/expose/167121229",
