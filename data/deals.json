@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-13T20:25:17.036618+00:00",
+  "last_updated": "2026-09-14T13:45:45.030464+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1868,52 +1868,6 @@
       "deal_deviation_pct": -2.0,
       "deal_score": "okay",
       "_hash": "067e56e3dd74"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-gartenstadt-ab-01-08-2026/3459069702-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer-Wohnung in Mannheim-Gartenstadt ab 01.08.2026",
-      "first_seen": "2026-07-14T19:21:50.690500+00:00",
-      "last_seen": "2026-07-16T09:18:02.430698+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 2-ZW mit Balkon, Einbauküche, modernem Bad und Keller.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Gartenstadt",
-      "adresse": "1. OG, ruhige Lage.",
-      "umfeld_analyse": {
-        "demografie": "Familien, Studenten, Pendler",
-        "vibe_sicherheit": "ruhig, aber nicht sehr lebendig",
-        "einschaetzung_student": "geeignet, aber nicht sehr zentral",
-        "einschaetzung_investor": "nicht sehr attraktiv"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-14T19:21:50.690500+00:00",
-          "price": 870.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 57.0,
-      "kaltmiete": 870.0,
-      "warmmiete": 870,
-      "kaltmiete_qm": 15.26,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 1.7,
-      "deal_score": "okay",
-      "_hash": "7b9ee0db810a"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-zu-vermieten-mannheim-quadrate/3458926867-203-7984",
