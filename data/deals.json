@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T18:01:15.152323+00:00",
+  "last_updated": "2026-09-14T21:34:42.227242+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -689,58 +689,6 @@
       "cashflow_monat": 115.49,
       "deal_score": "strong_buy",
       "_hash": "7eb0406f193a"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/maisonette-wohnung-ueber-den-daechern-von-mannheim/3437485776-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Maisonette Wohnung über den Dächern von Mannheim",
-      "first_seen": "2026-06-17T17:54:08.384703+00:00",
-      "last_seen": "2026-07-16T19:11:34.986384+00:00",
-      "boni": [
-        "Terrasse",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Einzigartige Maisonette-Wohnung mit exklusiver Wohnausstattung und Blick auf Süden.",
-      "zimmeranzahl": 2,
-      "latitude": 49.4889,
-      "longitude": 8.4694,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-17T17:54:08.384703+00:00",
-          "price": 170.0
-        },
-        {
-          "date": "2026-06-17T19:53:52.875578+00:00",
-          "price": 1500.0
-        }
-      ],
-      "etage": "4. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 92.0,
-      "kaltmiete": 1500.0,
-      "nebenkosten": 80,
-      "warmmiete": 1750,
-      "quadrat": "Mannheimer Quadraten",
-      "kaltmiete_qm": 16.3,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 5.2,
-      "deal_score": "okay",
-      "_hash": "2fb9a5f87502"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-mit-balkon-mannheim-waldhof/3438858043-203-7980",
@@ -2117,55 +2065,6 @@
       "deal_deviation_pct": -35.5,
       "deal_score": "gut",
       "_hash": "e0e1eb26c947"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-5-zkb-zu-vermieten-in-68309-mannheim/3459987494-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3,5 ZKB zu Vermieten in 68309 Mannheim",
-      "first_seen": "2026-07-16T09:18:02.430698+00:00",
-      "last_seen": "2026-07-16T19:11:34.986384+00:00",
-      "boni": [],
-      "kurz_bewertung": "3,5-Zimmer-Etagenwohnung in Mannheim zu vermieten",
-      "zimmeranzahl": 3.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Gut, nahe der Uni Mannheim",
-        "einschaetzung_investor": "Mittel, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-16T09:18:02.430698+00:00",
-          "price": 200.0
-        },
-        {
-          "date": "2026-07-16T14:08:24.339130+00:00",
-          "price": 1300.0
-        }
-      ],
-      "etage": "3. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 87.0,
-      "kaltmiete": 1300.0,
-      "nebenkosten": 200,
-      "warmmiete": 1300,
-      "kaltmiete_qm": 14.94,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 3.0,
-      "deal_score": "okay",
-      "_hash": "ccf5dc579807"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-31-m-apartment-in-mannheim-neckarau/3459937389-203-7986",
