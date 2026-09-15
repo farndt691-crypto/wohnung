@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-15T12:33:35.549355+00:00",
+  "last_updated": "2026-09-15T16:42:49.478639+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1484,55 +1484,6 @@
       "deal_deviation_pct": 106.9,
       "deal_score": "teuer",
       "_hash": "850d6db96c05"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zw-mietwohnung-in-mannheim-neckarau/3458416096-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1 ZW Mietwohnung in Mannheim Neckarau",
-      "first_seen": "2026-07-14T09:09:54.613479+00:00",
-      "last_seen": "2026-07-17T13:52:47.924954+00:00",
-      "boni": [],
-      "kurz_bewertung": "Helle 1-Zimmer-Wohnung in 1. OG mit Bad und Küchenzeile",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "Herrlachstr. 1",
-      "umfeld_analyse": {
-        "demografie": "Familien und Studenten",
-        "vibe_sicherheit": "Gut, da Straßenbahnlinie 1 in der Nähe ist und viele Geschäfte",
-        "einschaetzung_student": "Gut, da Uni und Stadtmitte in 12 Minuten erreichbar sind",
-        "einschaetzung_investor": "Mittel, da Miete relativ hoch ist"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-14T09:09:54.613479+00:00",
-          "price": 160.0
-        },
-        {
-          "date": "2026-07-14T14:00:03.127478+00:00",
-          "price": 420.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 21.0,
-      "kaltmiete": 420.0,
-      "nebenkosten": 160,
-      "warmmiete": 580,
-      "kaltmiete_qm": 20.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 37.9,
-      "deal_score": "teuer",
-      "_hash": "ed9f0713fb28"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mietwohnung-in-mannheim/3458750702-203-7984",
