@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-16T16:36:43.666948+00:00",
+  "last_updated": "2026-09-16T20:58:00.951369+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1355,51 +1355,6 @@
       "deal_deviation_pct": -33.3,
       "deal_score": "gut",
       "_hash": "983f89be68fc"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-zu-vermieten-mannheim-quadrate/3458926867-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1. Zimmer Wohnung zu vermieten – Mannheim-Quadrate",
-      "first_seen": "2026-07-14T19:21:50.690500+00:00",
-      "last_seen": "2026-07-18T19:06:10.240745+00:00",
-      "boni": [],
-      "kurz_bewertung": "Geeignet für eine Person",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4889,
-      "longitude": 8.4694,
-      "stadtteil": "Mannheim-Quadrate",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Sehr sicher, zentral gelegen",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Anbindung an öffentliche Verkehrsmittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-14T19:21:50.690500+00:00",
-          "price": 700.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 28.0,
-      "kaltmiete": 700.0,
-      "nebenkosten": 100,
-      "warmmiete": 700,
-      "kaltmiete_qm": 25.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 72.4,
-      "deal_score": "teuer",
-      "_hash": "108eb62fad41"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-5-zi-wohnung-in-mannheim-zu-vermieten/3459226340-203-7981",
