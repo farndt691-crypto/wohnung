@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17T12:30:54.195053+00:00",
+  "last_updated": "2026-09-17T16:41:18.512538+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1460,55 +1460,6 @@
       "_hash": "cb4ad4b66546"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-2-5-zimmer-wohnung-eg-in-mannheim-zu-vermieten/3459588353-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schöne 2,5-Zimmer-Wohnung (EG) in Mannheim zu vermieten",
-      "first_seen": "2026-07-15T13:57:57.983336+00:00",
-      "last_seen": "2026-07-19T13:31:50.524818+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ideale Stadtwohnung nahe der Mannheimer Innenstadt.",
-      "zimmeranzahl": 2.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, ruhig und zentral gelegen",
-        "einschaetzung_student": "Sehr geeignet für Informatikstudenten",
-        "einschaetzung_investor": "Gut geeignet als Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-15T13:57:57.983336+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-15T19:14:12.939034+00:00",
-          "price": 900.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 60.0,
-      "kaltmiete": 900.0,
-      "nebenkosten": 150,
-      "warmmiete": 1050,
-      "kaltmiete_qm": 15.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 3.4,
-      "deal_score": "okay",
-      "_hash": "2e7ac4d91992"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moebilierte-wohnung-mannheim-innenstadt/3459584074-203-7983",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1558,58 +1509,6 @@
       "deal_deviation_pct": 8.2,
       "deal_score": "okay",
       "_hash": "53479009af19"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/grosszuegige-4-zimmer-wohnung-mit-balkon-in-mannheim-wohlgelegen/3459511533-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Großzügige 4-Zimmer-Wohnung mit Balkon in Mannheim-Wohlgelegen",
-      "first_seen": "2026-07-15T13:57:57.983336+00:00",
-      "last_seen": "2026-07-19T13:31:50.524818+00:00",
-      "boni": [
-        "Balkon",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Großzügige 4-Zimmer-Wohnung im 4. Obergeschoss eines gepflegten Mehrfamilienhauses ohne Aufzug.",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Wohlgelegen",
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien, Paare und Singles, aber auch Studenten, die Wert auf Ruhe und Erholung legen.",
-        "vibe_sicherheit": "Gut, da der Stadtteil Wohlgelegen relativ ruhig und sicher ist.",
-        "einschaetzung_student": "Gut, da die Wohnung großzügig ist und viel Platz für Bücher und Arbeitsmaterial bietet.",
-        "einschaetzung_investor": "Gut, da die Wohnung in einem gepflegten Mehrfamilienhaus liegt und eine hohe Nachfrage nach Mietwohnungen in Mannheim besteht."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-15T13:57:57.983336+00:00",
-          "price": 220.0
-        },
-        {
-          "date": "2026-07-15T19:14:12.939034+00:00",
-          "price": 1100.0
-        }
-      ],
-      "etage": "4. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 110.0,
-      "kaltmiete": 1100.0,
-      "nebenkosten": 220,
-      "warmmiete": 1320,
-      "kaltmiete_qm": 10.0,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -35.5,
-      "deal_score": "gut",
-      "_hash": "e0e1eb26c947"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-31-m-apartment-in-mannheim-neckarau/3459937389-203-7986",
