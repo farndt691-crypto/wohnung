@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17T16:41:18.512538+00:00",
+  "last_updated": "2026-09-17T21:01:51.655911+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -1409,57 +1409,6 @@
       "_hash": "f3eb909e5f10"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zkb-wohnung-mannheim-gartenstad/3459641666-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3 ZKB Wohnung Mannheim Gartenstad",
-      "first_seen": "2026-07-15T13:57:57.983336+00:00",
-      "last_seen": "2026-07-19T19:08:05.194929+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 3-Zimmer-Wohnung in zentraler/Ruhiger Lage zuvermieten.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68305 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "ruhig, aber zentral gelegen",
-        "einschaetzung_student": "gut geeignet für Studenten",
-        "einschaetzung_investor": "keine gute Kapitalanlage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-15T13:57:57.983336+00:00",
-          "price": 220.0
-        },
-        {
-          "date": "2026-07-15T19:14:12.939034+00:00",
-          "price": 840.0
-        }
-      ],
-      "etage": "1. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 70.0,
-      "kaltmiete": 840.0,
-      "nebenkosten": 220,
-      "warmmiete": 1060,
-      "kaltmiete_qm": 12.0,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -20.0,
-      "deal_score": "gut",
-      "_hash": "cb4ad4b66546"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moebilierte-wohnung-mannheim-innenstadt/3459584074-203-7983",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1509,57 +1458,6 @@
       "deal_deviation_pct": 8.2,
       "deal_score": "okay",
       "_hash": "53479009af19"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-31-m-apartment-in-mannheim-neckarau/3459937389-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter gesucht: 31 m² Apartment in Mannheim-Neckarau",
-      "first_seen": "2026-07-16T09:18:02.430698+00:00",
-      "last_seen": "2026-07-19T19:08:05.194929+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Praktische Lage, aber möglicherweise laut durch Lidl.",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Familien mit Kindern, Pendler",
-        "vibe_sicherheit": "Gut, aber möglicherweise laut durch Lidl.",
-        "einschaetzung_student": "Gut, nahe zur Hochschule Mannheim.",
-        "einschaetzung_investor": "Mittel, hohe Nebenkosten."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-16T09:18:02.430698+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-16T14:08:24.339130+00:00",
-          "price": 655.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 31.0,
-      "kaltmiete": 655.0,
-      "nebenkosten": 165,
-      "warmmiete": 655,
-      "kaltmiete_qm": 21.13,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 40.9,
-      "deal_score": "teuer",
-      "_hash": "2b09b2373bd3"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-2-zimmer-wohnung-in-bester-innenstadtlage-mannheim/3460600092-203-7984",
@@ -1760,58 +1658,6 @@
       "deal_deviation_pct": -33.3,
       "deal_score": "gut",
       "_hash": "7067da70d1bd"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zkb-wohnung-mannheim-k-quadrat-ab-sofort/3460775910-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2 ZKB Wohnung Mannheim K Quadrat ab sofort",
-      "first_seen": "2026-07-17T09:14:19.505885+00:00",
-      "last_seen": "2026-07-19T19:08:05.194929+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Die helle 2-Zimmer-Wohnung befindet sich im 3. Obergeschoss eines Mehrfamilienhauses und bietet auf ca. 51 m² einen sehr gut geschnittenen Grundriss.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Singles und Paare",
-        "vibe_sicherheit": "ruhig, aber zentral gelegen",
-        "einschaetzung_student": "sehr geeignet",
-        "einschaetzung_investor": "mittel geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-17T09:14:19.505885+00:00",
-          "price": 140.0
-        },
-        {
-          "date": "2026-07-17T13:52:47.924954+00:00",
-          "price": 810.0
-        }
-      ],
-      "etage": "3. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 51.0,
-      "kaltmiete": 810.0,
-      "nebenkosten": 140,
-      "warmmiete": 950,
-      "quadrat": "K3",
-      "kaltmiete_qm": 15.88,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": -9.3,
-      "deal_score": "okay",
-      "_hash": "2459e8e97c03"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-zentrale-mietwohnung-mannheim/3461077824-203-7983",
@@ -2064,52 +1910,6 @@
       "deal_deviation_pct": -15.0,
       "deal_score": "gut",
       "_hash": "5a3c2f667200"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-geraeumige-2-zimmer-wohnung-in-mannheim-sandhofen/3462461935-203-7974",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schöne geräumige 2 Zimmer Wohnung in Mannheim Sandhofen",
-      "first_seen": "2026-07-19T09:09:08.559227+00:00",
-      "last_seen": "2026-07-19T19:08:05.194929+00:00",
-      "boni": [
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Schöne geräumige 2 Zimmer Wohnung in Mannheim Sandhofen mit Balkon und 61qm Wohnfläche.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Sandhofen",
-      "adresse": "68307 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-19T09:09:08.559227+00:00",
-          "price": 620.0
-        }
-      ],
-      "etage": "3. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 61.0,
-      "kaltmiete": 620.0,
-      "kaltmiete_qm": 10.16,
-      "expected_market_qm": 16.0,
-      "deal_deviation_pct": -36.5,
-      "deal_score": "gut",
-      "_hash": "381b38c39353"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zkb-nichtraucherwohnung-in-mannheim-neckarau/3462382571-203-7986",
