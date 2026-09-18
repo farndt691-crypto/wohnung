@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18T12:09:44.084765+00:00",
+  "last_updated": "2026-09-18T16:12:58.629992+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -2051,51 +2051,6 @@
       "deal_deviation_pct": 20.0,
       "deal_score": "teuer",
       "_hash": "62e6112449bf"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-mannheim-neckarau/3463836741-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3 Zimmer Wohnung Mannheim Neckarau",
-      "first_seen": "2026-07-20T14:22:27.857182+00:00",
-      "last_seen": "2026-07-20T14:22:27.857182+00:00",
-      "boni": [],
-      "kurz_bewertung": "Zentrale Lage, direkt an der Haltestelle, alle Geschäfte im Umkreis von 3 min. Fußweg.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien, Pendler, Studenten",
-        "vibe_sicherheit": "Gut, zentrale Lage, aber möglicherweise laut",
-        "einschaetzung_student": "Gut, zentrale Lage, viele Geschäfte und Verkehrsmittel in der Nähe",
-        "einschaetzung_investor": "Mäßig, zentrale Lage, aber möglicherweise hohe Nebenkosten"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-20T14:22:27.857182+00:00",
-          "price": 300.0
-        }
-      ],
-      "etage": "4. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 80.0,
-      "kaltmiete": 300.0,
-      "nebenkosten": 300,
-      "warmmiete": 1250,
-      "kaltmiete_qm": 3.75,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -74.1,
-      "deal_score": "gut",
-      "_hash": "7ace4a3df70b"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/-moebliertes-city-apartment-im-zentrum-mannheim-quadrate-/3463766509-203-7983",
