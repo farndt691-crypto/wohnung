@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-20T15:51:05.342624+00:00",
+  "last_updated": "2026-09-20T20:25:29.485656+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
@@ -2056,42 +2056,6 @@
       "deal_deviation_pct": 85.7,
       "deal_score": "teuer",
       "_hash": "7e0dffae648e"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/grosse-6-zimmer-maisonette-in-mannheim-naehe-uni-hbf/3464293198-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Große 6-Zimmer Maisonette in Mannheim Nähe Uni & HBF",
-      "first_seen": "2026-07-21T19:24:00.152625+00:00",
-      "last_seen": "2026-07-22T19:20:10.588045+00:00",
-      "boni": [],
-      "kurz_bewertung": "Große 6-Zimmer Maisonette in Mannheim Nähe Uni & HBF",
-      "zimmeranzahl": 6.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Sehr sicher, zentrale Lage",
-        "einschaetzung_student": "Sehr geeignet, nahe Universität",
-        "einschaetzung_investor": "Geringe Eignung, hohe Miete"
-      },
-      "hat_balkon": false,
-      "price_history": [],
-      "etage": "Maisonette",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 130.0,
-      "warmmiete": 1,
-      "quadrat": "H3",
-      "deal_score": "okay",
-      "_hash": "ed9afbea759d"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-waldhornstr-23-1zkb-balk-wohnfl-41-29-qm-1-og/3465507200-203-7986",
