@@ -1,47 +1,6 @@
 {
-  "last_updated": "2026-09-21T18:08:53.983706+00:00",
+  "last_updated": "2026-09-21T21:47:13.147703+00:00",
   "deals": [
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1zimmer-wohnung-20qm-im-1-og-in-zentraler-lage-in-mannheim-zu-vermieten-/3415155591-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schöne möblierte 1Zimmer Wohnung, 20qm, im 1. OG in zentraler Lage in Mannheim zu vermieten.",
-      "first_seen": "2026-05-22T11:09:02.563569+00:00",
-      "last_seen": "2026-07-23T19:18:40.838835+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Schöne möblierte 1-Zimmer-Wohnung in zentraler Lage in Mannheim",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Anbindung an die Uni Mannheim, ruhige Umgebung, aber einige Lärmquellen durch Straßenverkehr",
-        "einschaetzung_investor": "Mietnomaden-Risiko, aber gute Anbindung an öffentliche Verkehrsmittel und Einkaufsmöglichkeiten"
-      },
-      "quadratmeter": 20.0,
-      "kaltmiete": 550.0,
-      "nebenkosten": 180,
-      "warmmiete": 730,
-      "kaltmiete_qm": 27.5,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 57.1,
-      "deal_score": "teuer",
-      "price_history": [
-        {
-          "date": "2026-05-22T11:09:02.563569+00:00",
-          "price": 180.0
-        },
-        {
-          "date": "2026-05-27T18:10:19.479733+00:00",
-          "price": 550.0
-        }
-      ]
-    },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
       "source": "kleinanzeigen",
@@ -1662,55 +1621,6 @@
       "deal_deviation_pct": 37.9,
       "deal_score": "teuer",
       "_hash": "5203aa0c5e15"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/mietwohnung-mannheim-neckarstadt-west-ab-september/3464424881-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Mietwohnung Mannheim Neckarstadt-West ab September",
-      "first_seen": "2026-07-21T09:31:37.778316+00:00",
-      "last_seen": "2026-07-23T19:18:40.838835+00:00",
-      "boni": [],
-      "kurz_bewertung": "Charme Altbauwohnung in zentraler Lage",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber abends etwas ruhiger",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-21T09:31:37.778316+00:00",
-          "price": 180.0
-        },
-        {
-          "date": "2026-07-21T14:08:34.642720+00:00",
-          "price": 830.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 51.0,
-      "kaltmiete": 830.0,
-      "nebenkosten": 180,
-      "warmmiete": 830,
-      "kaltmiete_qm": 16.27,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 12.2,
-      "deal_score": "teuer",
-      "_hash": "862323c24345"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/move-in-ready-studio-prime-downtown-mannheim-location/3464640672-203-7984",
