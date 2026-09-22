@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-21T21:47:13.147703+00:00",
+  "last_updated": "2026-09-22T12:27:54.986119+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1623,54 +1623,6 @@
       "_hash": "5203aa0c5e15"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/move-in-ready-studio-prime-downtown-mannheim-location/3464640672-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Move-In Ready Studio, Prime Downtown Mannheim Location",
-      "first_seen": "2026-07-21T14:08:34.642720+00:00",
-      "last_seen": "2026-07-24T09:26:06.515513+00:00",
-      "boni": [
-        "moebliert",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Ideal für internationale Studenten, Universitätsmitarbeiter oder Geschäftsleute, die in Mannheim leben möchten.",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Universitätsmitarbeiter, Geschäftsleute, internationale Community",
-        "vibe_sicherheit": "Gut, da es sich um einen zentralen Stadtteil handelt, aber auch viel Verkehr und Menschenmassen gibt.",
-        "einschaetzung_student": "Sehr geeignet, da es sich um einen zentralen Stadtteil handelt und viele Studentenwohnheime in der Nähe sind.",
-        "einschaetzung_investor": "Gut geeignet, da es sich um einen zentralen Stadtteil handelt und viel Verkehr gibt, aber auch die Miete ist relativ hoch."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-21T14:08:34.642720+00:00",
-          "price": 950.0
-        }
-      ],
-      "etage": "5. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 23.0,
-      "kaltmiete": 950.0,
-      "warmmiete": 950,
-      "quadrat": "B7",
-      "kaltmiete_qm": 41.3,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": 129.4,
-      "deal_score": "teuer",
-      "_hash": "fd638fc67048"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/viel-platz-bietende-2-zimmer-wohnung-in-guter-lage-von-mannheim-vogelstang/3464606580-203-7973",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1773,55 +1725,6 @@
       "deal_deviation_pct": -27.5,
       "deal_score": "gut",
       "_hash": "ad2e95996a7f"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliche-1-zkb-wohnung-in-mannheim-neckarstadt-ost/3464841092-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Gemütliche 1 ZKB Wohnung in Mannheim Neckarstadt-Ost",
-      "first_seen": "2026-07-21T19:24:00.152625+00:00",
-      "last_seen": "2026-07-24T09:26:06.515513+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gemütliche 1-Zimmer-Wohnung in ruhiger Lage mit Einbauküche und Kellerraum.",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "Schimperstr.",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien, Studenten und älteren Erwachsenen.",
-        "vibe_sicherheit": "Ruhige und sichere Atmosphäre.",
-        "einschaetzung_student": "Gut geeignet für Studenten, da Einkaufsmöglichkeiten und Straßenbahn in fußläufiger Nähe sind.",
-        "einschaetzung_investor": "Keine gute Kapitalanlage, da die Miete relativ niedrig ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-21T19:24:00.152625+00:00",
-          "price": 115.0
-        },
-        {
-          "date": "2026-07-22T09:30:28.498909+00:00",
-          "price": 310.0
-        }
-      ],
-      "etage": "Hochparterre",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 27.0,
-      "kaltmiete": 310.0,
-      "nebenkosten": 115,
-      "warmmiete": 425,
-      "kaltmiete_qm": 11.48,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -20.8,
-      "deal_score": "gut",
-      "_hash": "cc0775b818fc"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-frauen-wg-in-mannheim/3464758219-203-7986",
