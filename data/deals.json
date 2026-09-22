@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22T16:43:26.833471+00:00",
+  "last_updated": "2026-09-22T20:58:40.738316+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1906,51 +1906,6 @@
       "deal_deviation_pct": 24.1,
       "deal_score": "teuer",
       "_hash": "97cdd904aa22"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-fuer-1-zimmer-wohnung-in-mannheim-gesucht-ab-01-08-/3465687492-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter für 1-Zimmer-Wohnung in Mannheim gesucht (ab 01.08.)",
-      "first_seen": "2026-07-22T19:20:10.588045+00:00",
-      "last_seen": "2026-07-24T19:27:21.546979+00:00",
-      "boni": [],
-      "kurz_bewertung": "Die Wohnung befindet sich in einer zentralen Lage mit guter Anbindung an den öffentlichen Nahverkehr.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "Gärtnerstraße 87, 68169 Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, aber es gibt auch einige Probleme mit Lärm und Vandalismus",
-        "einschaetzung_student": "Sehr geeignet, da es viele Studentenwohnheime in der Nähe gibt",
-        "einschaetzung_investor": "Mäßig geeignet, da die Mieten relativ hoch sind und die Lage nicht besonders attraktiv ist"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-22T19:20:10.588045+00:00",
-          "price": 620.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 620.0,
-      "nebenkosten": 60,
-      "warmmiete": 620,
-      "kaltmiete_qm": 20.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 42.6,
-      "deal_score": "teuer",
-      "_hash": "d27e0a906a89"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moeblierte-1-zimmer-wohnung-mit-balkon-in-mannheim/3465613400-203-7984",
