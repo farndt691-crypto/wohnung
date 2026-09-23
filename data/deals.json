@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22T20:58:40.738316+00:00",
+  "last_updated": "2026-09-23T12:39:54.470657+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1623,57 +1623,6 @@
       "_hash": "5203aa0c5e15"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-frauen-wg-in-mannheim/3464758219-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schönes Frauen-WG in Mannheim",
-      "first_seen": "2026-07-21T19:24:00.152625+00:00",
-      "last_seen": "2026-07-25T09:07:17.313735+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Das Zimmer ist hell, gemütlich und gut geschnitten.",
-      "zimmeranzahl": 5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Nicht geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-21T19:24:00.152625+00:00",
-          "price": 180.0
-        },
-        {
-          "date": "2026-07-22T09:30:28.498909+00:00",
-          "price": 390.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 12.0,
-      "kaltmiete": 390.0,
-      "nebenkosten": 180,
-      "warmmiete": 390,
-      "kaltmiete_qm": 32.5,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 85.7,
-      "deal_score": "teuer",
-      "_hash": "7e0dffae648e"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-waldhornstr-23-1zkb-balk-wohnfl-41-29-qm-1-og/3465507200-203-7986",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1862,50 +1811,6 @@
       "deal_deviation_pct": 24.9,
       "deal_score": "teuer",
       "_hash": "5d1432778b77"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-fuer-1-zimmer-wohnung-in-mannheim-lindenhof-gesucht/3464823709-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter für 1-Zimmer-Wohnung in Mannheim-Lindenhof gesucht",
-      "first_seen": "2026-07-22T14:11:35.599886+00:00",
-      "last_seen": "2026-07-25T09:07:17.313735+00:00",
-      "boni": [],
-      "kurz_bewertung": "Eine 1-Zimmer-Wohnung in Mannheim-Lindenhof für eine Einzelperson",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4728,
-      "longitude": 8.4682,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": "68163 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Singles, Familien mit Kindern",
-        "vibe_sicherheit": "Mittelprächtig, aber nicht übermäßig sicher",
-        "einschaetzung_student": "Gut geeignet für Studenten, da in der Nähe der Uni",
-        "einschaetzung_investor": "Keine gute Kapitalanlage, da die Miete relativ niedrig ist"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-22T14:11:35.599886+00:00",
-          "price": 702.0
-        }
-      ],
-      "etage": "4. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 39.0,
-      "kaltmiete": 702.0,
-      "warmmiete": 702,
-      "kaltmiete_qm": 18.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 24.1,
-      "deal_score": "teuer",
-      "_hash": "97cdd904aa22"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moeblierte-1-zimmer-wohnung-mit-balkon-in-mannheim/3465613400-203-7984",
