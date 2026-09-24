@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24T12:38:16.885568+00:00",
+  "last_updated": "2026-09-24T16:56:03.211916+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2357,51 +2357,6 @@
       "deal_deviation_pct": -46.6,
       "deal_score": "gut",
       "_hash": "45d497d60fda"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/apartement-im-studentenwohnheim-n6-in-mannheim/3468159394-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Apartement im Studentenwohnheim N6 in Mannheim",
-      "first_seen": "2026-07-25T19:09:35.914347+00:00",
-      "last_seen": "2026-07-26T13:43:44.379326+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ideal für Studierende, zentrale Lage, eigenes Bad und Küchenzeile.",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, da die Universität Mannheim in der Nähe liegt und das Wohnheim gut besucht ist.",
-        "einschaetzung_student": "Sehr geeignet, da die Universität Mannheim in der Nähe liegt und das Wohnheim ideal für Studierende ist.",
-        "einschaetzung_investor": "Nicht geeignet, da es sich um ein Studentenwohnheim handelt und die Miete relativ hoch ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-25T19:09:35.914347+00:00",
-          "price": 450.0
-        }
-      ],
-      "etage": "5. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 25.0,
-      "kaltmiete": 450.0,
-      "nebenkosten": 0,
-      "warmmiete": 450,
-      "kaltmiete_qm": 18.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 24.1,
-      "deal_score": "teuer",
-      "_hash": "2e331c86aeae"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-4-zimmer-wohnung-naehe-kaefertaler-wald-in-mannheim/3468517717-203-7972",
