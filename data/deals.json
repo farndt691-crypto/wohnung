@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-23T21:10:22.880638+00:00",
+  "last_updated": "2026-09-24T12:38:16.885568+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2402,50 +2402,6 @@
       "deal_deviation_pct": 24.1,
       "deal_score": "teuer",
       "_hash": "2e331c86aeae"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-in-mannheim/3468064583-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Wohnung in Mannheim",
-      "first_seen": "2026-07-25T19:09:35.914347+00:00",
-      "last_seen": "2026-07-26T09:17:06.773192+00:00",
-      "boni": [],
-      "kurz_bewertung": "Wohnung in Mannheim",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mannheim ist eine Stadt mit einer Vielzahl von Altersgruppen und Berufsgruppen.",
-        "vibe_sicherheit": "Mannheim hat eine gute Sicherheitslage, aber es gibt auch einige Problemviertel.",
-        "einschaetzung_student": "Mannheim ist eine gute Wahl für Informatikstudenten, da es eine gute Universität und viele Studentenwohnheime gibt.",
-        "einschaetzung_investor": "Mannheim ist eine gute Wahl für Investoren, da es eine wachsende Wirtschaft und eine gute Infrastruktur gibt."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-25T19:09:35.914347+00:00",
-          "price": 630.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 60.0,
-      "kaltmiete": 630.0,
-      "warmmiete": 630,
-      "kaltmiete_qm": 10.5,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -27.6,
-      "deal_score": "gut",
-      "_hash": "b5305eed6d34"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-4-zimmer-wohnung-naehe-kaefertaler-wald-in-mannheim/3468517717-203-7972",
