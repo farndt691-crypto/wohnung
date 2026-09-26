@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-26T12:09:00.578303+00:00",
+  "last_updated": "2026-09-26T16:11:23.138108+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2075,50 +2075,6 @@
       "deal_deviation_pct": -12.6,
       "deal_score": "gut",
       "_hash": "1bc8e1c6a0ee"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zmmer-wohnung-in-mannheim-seckenheim/3470405145-203-7976",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zmmer Wohnung in Mannheim Seckenheim",
-      "first_seen": "2026-07-28T09:40:46.572673+00:00",
-      "last_seen": "2026-07-28T14:25:02.836844+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gemütliche und vollständig eingerichtete 2-Zimmer-Wohnung in Seckenheim",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Seckenheim",
-      "adresse": "68239 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Pendler",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T09:40:46.572673+00:00",
-          "price": 1050.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 61.0,
-      "kaltmiete": 1050.0,
-      "warmmiete": 1050,
-      "kaltmiete_qm": 17.21,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 18.7,
-      "deal_score": "teuer",
-      "_hash": "cf70bcd6d6e8"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-kaefertal/3470345298-203-7973",
