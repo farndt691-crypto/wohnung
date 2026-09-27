@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27T16:47:16.588967+00:00",
+  "last_updated": "2026-09-27T20:59:31.521451+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1513,58 +1513,6 @@
       "_hash": "2e9397c0f99f"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-zu-vermieten-68167-mannheim-/3469658323-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Wohnung zu vermieten (68167 Mannheim)",
-      "first_seen": "2026-07-27T10:47:16.436010+00:00",
-      "last_seen": "2026-07-29T19:18:02.753666+00:00",
-      "boni": [
-        "renoviert",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Teil-möblierte Etagenwohnung in Mannheim",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68167 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Gut, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig, hohe Mietpreise, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-27T10:47:16.436010+00:00",
-          "price": 153.0
-        },
-        {
-          "date": "2026-07-27T14:51:01.297376+00:00",
-          "price": 767.0
-        }
-      ],
-      "etage": "3. Etage",
-      "baujahr": 2025,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 45.0,
-      "kaltmiete": 767.0,
-      "nebenkosten": 153,
-      "warmmiete": 767,
-      "kaltmiete_qm": 17.04,
-      "expected_market_qm": 18.5,
-      "deal_deviation_pct": -7.9,
-      "deal_score": "okay",
-      "_hash": "ccf5a9dde682"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/41-04-schoene-4-zkb-wohnung-rhenaniastr-166-68219-mannheim-/2993430013-203-7984",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -2354,51 +2302,6 @@
       "deal_deviation_pct": 7.5,
       "deal_score": "okay",
       "_hash": "be87b82fa7ee"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliches-helles-wg-zimmer-in-mannheim-voll-ausgestattet-480-warmmiete-/3459692609-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Gemütliches, helles WG-Zimmer in Mannheim | voll ausgestattet | 480 € Warmmiete!!!",
-      "first_seen": "2026-07-29T19:18:02.753666+00:00",
-      "last_seen": "2026-07-29T19:18:02.753666+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gemütliches, helles WG-Zimmer in Mannheim | voll ausgestattet | 480 € Warmmiete!!!",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien mit Kindern",
-        "vibe_sicherheit": "ruhige Wohnlage, gute Verkehrsanbindung, aber auch einige Läden und Restaurants in der Nähe",
-        "einschaetzung_student": "sehr geeignet für Studenten, da es in der Nähe der DHBW und FH Mannheim liegt",
-        "einschaetzung_investor": "nicht geeignet als Kapitalanlage, da die Miete relativ niedrig ist"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-29T19:18:02.753666+00:00",
-          "price": 120.0
-        }
-      ],
-      "etage": "1. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 23.0,
-      "kaltmiete": 120.0,
-      "nebenkosten": 120,
-      "warmmiete": 480,
-      "kaltmiete_qm": 5.22,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -64.0,
-      "deal_score": "gut",
-      "_hash": "5c7e16273005"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/studentin-sucht-wohnung-in-mannheim/3471516259-203-7984",
