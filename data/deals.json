@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27T12:52:54.651654+00:00",
+  "last_updated": "2026-09-27T16:47:16.588967+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1612,52 +1612,6 @@
       "deal_deviation_pct": -27.2,
       "deal_score": "gut",
       "_hash": "ed4c3c0e1b90"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim-innenstadt/3469537069-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1-Zimmer-Wohnung Mannheim Innenstadt",
-      "first_seen": "2026-07-27T10:47:16.436010+00:00",
-      "last_seen": "2026-07-29T14:34:54.576760+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Die Wohnung ist hell, gepflegt und komplett eingerichtet.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien mit Kindern",
-        "vibe_sicherheit": "Sehr sicher, viele Menschen, gute Beleuchtung",
-        "einschaetzung_student": "Sehr geeignet, nahe an der Uni, viele Cafes und Einkaufsmöglichkeiten",
-        "einschaetzung_investor": "Nicht geeignet, zu teuer, keine langfristige Miete"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-27T10:47:16.436010+00:00",
-          "price": 660.0
-        }
-      ],
-      "etage": "3. Stock",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 660.0,
-      "warmmiete": 660,
-      "kaltmiete_qm": 22.0,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": 25.7,
-      "deal_score": "teuer",
-      "_hash": "f287a1386859"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-apartment-im-beliebten-mannheimer-jungbusch/3470125264-203-7984",
