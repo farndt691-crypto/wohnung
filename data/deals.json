@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27T20:59:31.521451+00:00",
+  "last_updated": "2026-09-28T15:04:04.447588+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1715,107 +1715,6 @@
       "_hash": "fd38c2ed9fcf"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-wohnung-mit-ebk-in-mannheim-nachmieter-gesucht/3470340449-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Helle 2-Zimmer Wohnung mit EBK in Mannheim - Nachmieter gesucht",
-      "first_seen": "2026-07-28T09:40:46.572673+00:00",
-      "last_seen": "2026-07-30T14:17:28.054677+00:00",
-      "boni": [
-        "EBK"
-      ],
-      "kurz_bewertung": "Helle 2-Zimmer Wohnung mit EBK in Mannheim - Nachmieter gesucht",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Luzenberg",
-      "adresse": "Luzenberg Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien und Einzelpersonen, einige Studenten",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Gut, aber keine direkte Nähe zur Uni",
-        "einschaetzung_investor": "Mittel, aber keine hohe Rendite"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T09:40:46.572673+00:00",
-          "price": 135.0
-        },
-        {
-          "date": "2026-07-28T14:25:02.836844+00:00",
-          "price": 830.0
-        }
-      ],
-      "etage": "2. Stock",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 65.0,
-      "kaltmiete": 830.0,
-      "nebenkosten": 135,
-      "warmmiete": 965,
-      "kaltmiete_qm": 12.77,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -17.6,
-      "deal_score": "gut",
-      "_hash": "832003432258"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-zentrale-lage-in-den-mannheimer-quadraten/3470240345-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer Wohnung zentrale Lage in den Mannheimer Quadraten",
-      "first_seen": "2026-07-28T09:40:46.572673+00:00",
-      "last_seen": "2026-07-30T14:17:28.054677+00:00",
-      "boni": [],
-      "kurz_bewertung": "Die Wohnung liegt in der Mannheimer Innenstadt in der Nähe des Schlosses.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, da die Wohnung in der Innenstadt liegt und die Universität in der Nähe ist.",
-        "einschaetzung_student": "Sehr geeignet, da die Universität in der Nähe ist und die Wohnung in der Innenstadt liegt.",
-        "einschaetzung_investor": "Gut geeignet, da die Wohnung in der Innenstadt liegt und die Universität in der Nähe ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T09:40:46.572673+00:00",
-          "price": 190.0
-        },
-        {
-          "date": "2026-07-28T14:25:02.836844+00:00",
-          "price": 927.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": 2022,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 61.0,
-      "kaltmiete": 927.0,
-      "nebenkosten": 190,
-      "warmmiete": 1117,
-      "quadrat": "Quadraten",
-      "kaltmiete_qm": 15.2,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 4.8,
-      "deal_score": "okay",
-      "_hash": "615fcaf8868e"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/voll-moeblierte-2-zimmer-wohnung-in-mannheim-zu-vermieten-64-m-/3470661878-203-7973",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1861,54 +1760,6 @@
       "deal_deviation_pct": -0.2,
       "deal_score": "okay",
       "_hash": "bd32a98ec64c"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zi-all-in-app-in-mannheim-mit-rd-34-qm-sucht-nachmieter/3469925356-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1 Zi.- All-In-App. in Mannheim mit rd. 34 qm - sucht Nachmieter",
-      "first_seen": "2026-07-28T14:25:02.836844+00:00",
-      "last_seen": "2026-07-30T09:34:45.562822+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ideal für Studierende, Young Professionals, Pendler oder Singles",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "Carl-Benz-Straße 128",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Young Professionals, Pendler, Singles",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Sehr gut",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T14:25:02.836844+00:00",
-          "price": 250.0
-        },
-        {
-          "date": "2026-07-28T19:25:19.704220+00:00",
-          "price": 864.7
-        }
-      ],
-      "etage": "2. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 34.0,
-      "kaltmiete": 864.7,
-      "warmmiete": 864.7,
-      "kaltmiete_qm": 25.43,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 75.4,
-      "deal_score": "teuer",
-      "_hash": "5fcfb34e2ff5"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-seckenheim/3470405145-203-7976",
@@ -2482,54 +2333,6 @@
       "deal_deviation_pct": 13.9,
       "deal_score": "teuer",
       "_hash": "193e49272f32"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-1-zi-apartment-in-mannheim-naehe-universitaetsklin/3472149612-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Möbliertes 1-Zi-Apartment in Mannheim – Nähe Universitätsklin",
-      "first_seen": "2026-07-30T14:17:28.054677+00:00",
-      "last_seen": "2026-07-30T14:17:28.054677+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Ideal für Berufspendler, Studierende, Praktikanten, Expats und Berufseinsteiger.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "Käfertaler Straße 133",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien.",
-        "vibe_sicherheit": "Gute Anbindung an öffentlichen Nahverkehr, aber auch einige Lärmquellen.",
-        "einschaetzung_student": "Sehr geeignet für Studenten, da nahe an der Universität.",
-        "einschaetzung_investor": "Mittlere Eignung als Kapitalanlage, da Preis-Leistungs-Verhältnis nicht besonders günstig."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-30T14:17:28.054677+00:00",
-          "price": 130.0
-        }
-      ],
-      "etage": "3. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 22.0,
-      "kaltmiete": 130.0,
-      "nebenkosten": 130,
-      "warmmiete": 700,
-      "kaltmiete_qm": 5.91,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": -67.2,
-      "deal_score": "gut",
-      "_hash": "0452db29c97f"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-dachgeschosswohnung-in-mannheim-neckarstadt-ost/3472054624-203-7979",
