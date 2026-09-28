@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-28T15:04:04.447588+00:00",
+  "last_updated": "2026-09-28T19:32:26.453951+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -316,44 +316,6 @@
           "price": 1070.0
         }
       ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/zimmer-frei-in-4er-wg-in-mannheim-dornheimer-ring-7/3395947482-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Zimmer frei in 4er-WG in Mannheim – Dornheimer Ring 7",
-      "first_seen": "2026-05-30T11:58:14.721214+00:00",
-      "last_seen": "2026-07-30T19:27:59.082909+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Ideal für Studierende, Berufseinsteiger:innen oder junge Berufstätige.",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "Dornheimer Ring 7",
-      "umfeld_analyse": {
-        "demografie": "Studierende, Berufseinsteiger:innen und junge Berufstätige",
-        "vibe_sicherheit": "Gute Anbindung an öffentliche Verkehrsmittel, Einkaufsmöglichkeiten und Grünflächen",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "price_history": [
-        {
-          "date": "2026-05-30T11:58:14.721214+00:00",
-          "price": 410.0
-        }
-      ],
-      "quadratmeter": 15.0,
-      "kaltmiete": 410.0,
-      "nebenkosten": 80,
-      "warmmiete": 490,
-      "kaltmiete_qm": 27.33,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 76.3,
-      "deal_score": "teuer",
-      "_hash": "2a583965967e"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mannheim-neckarstadt-west/3424731077-203-7980",
@@ -1760,50 +1722,6 @@
       "deal_deviation_pct": -0.2,
       "deal_score": "okay",
       "_hash": "bd32a98ec64c"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-seckenheim/3470405145-203-7976",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer Wohnung in Mannheim Seckenheim",
-      "first_seen": "2026-07-28T19:25:19.704220+00:00",
-      "last_seen": "2026-07-30T19:27:59.082909+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gemütliche und vollständig eingerichtete Wohnung in Seckenheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Seckenheim",
-      "adresse": "68239 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Pendler",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Mittel",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T19:25:19.704220+00:00",
-          "price": 1050.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 61.0,
-      "kaltmiete": 1050.0,
-      "warmmiete": 1050,
-      "kaltmiete_qm": 17.21,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 18.7,
-      "deal_score": "teuer",
-      "_hash": "8951aaa06171"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zimmer-in-einer-5er-wg-im-studentenwohnheim-mannheim/3471150529-203-7979",
