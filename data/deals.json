@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-29T13:50:54.819565+00:00",
+  "last_updated": "2026-09-29T17:59:16.528661+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2351,57 +2351,6 @@
       "deal_deviation_pct": -11.4,
       "deal_score": "gut",
       "_hash": "dd7f0accd4eb"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zkb-wohnung-mannheim-gartenstadt/3459641666-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3 ZKB Wohnung Mannheim Gartenstadt",
-      "first_seen": "2026-07-30T19:27:59.082909+00:00",
-      "last_seen": "2026-07-31T14:23:53.937501+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Helle 3-Zimmer-Wohnung in zentraler/Ruhiger Lage zuvermieten.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Gartenstadt",
-      "adresse": "68305 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "gut geeignet für Studenten",
-        "einschaetzung_investor": "keine gute Kapitalanlage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-30T19:27:59.082909+00:00",
-          "price": 220.0
-        },
-        {
-          "date": "2026-07-31T09:49:23.181475+00:00",
-          "price": 840.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 70.0,
-      "kaltmiete": 840.0,
-      "nebenkosten": 220,
-      "warmmiete": 1060,
-      "kaltmiete_qm": 12.0,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -20.0,
-      "deal_score": "gut",
-      "_hash": "76e5c0962223"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-1-zi-apartment-in-mannheim-naehe-uni-klinikum/3472149612-203-7979",
