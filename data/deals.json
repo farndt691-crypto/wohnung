@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-29T17:59:16.528661+00:00",
+  "last_updated": "2026-09-29T21:57:52.111105+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1773,59 +1773,6 @@
       "_hash": "aa65b98b973a"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/gepflegte-1-zimmer-wohnung-moebliert-in-den-mannheimer-quadraten/3471104160-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Gepflegte 1-Zimmer-Wohnung, möbliert in den Mannheimer Quadraten",
-      "first_seen": "2026-07-29T09:42:12.271035+00:00",
-      "last_seen": "2026-07-31T19:26:56.824006+00:00",
-      "boni": [
-        "moebliert",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Stilvoll möblierte 1-Zimmer-Wohnung in zentraler und ruhiger Lage.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4889,
-      "longitude": 8.4694,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Azubis und junge Erwachsene",
-        "vibe_sicherheit": "Gut, da es sich um einen zentralen Stadtteil handelt, aber auch ruhig ist.",
-        "einschaetzung_student": "Sehr geeignet, da es sich um einen zentralen Stadtteil handelt und viele Studenten leben hier.",
-        "einschaetzung_investor": "Mäßig geeignet, da es sich um eine Mietwohnung handelt und die Mietpreise nicht sehr hoch sind."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-29T09:42:12.271035+00:00",
-          "price": 130.0
-        },
-        {
-          "date": "2026-07-29T14:34:54.576760+00:00",
-          "price": 590.0
-        }
-      ],
-      "etage": "5. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 25.15,
-      "kaltmiete": 590.0,
-      "nebenkosten": 130,
-      "warmmiete": 720,
-      "quadrat": "Mannheimer Quadraten",
-      "kaltmiete_qm": 23.46,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": 30.3,
-      "deal_score": "teuer",
-      "_hash": "3795b4ca3601"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/sanierte-wohnung-mit-neuer-einbaukueche-in-mannheim-friedrichsfeld/3471005784-203-7977",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -2351,58 +2298,6 @@
       "deal_deviation_pct": -11.4,
       "deal_score": "gut",
       "_hash": "dd7f0accd4eb"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-1-zi-apartment-in-mannheim-naehe-uni-klinikum/3472149612-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Möbliertes 1-Zi-Apartment in Mannheim – Nähe Uni Klinikum",
-      "first_seen": "2026-07-30T19:27:59.082909+00:00",
-      "last_seen": "2026-07-31T19:26:56.824006+00:00",
-      "boni": [
-        "moebliert",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Ideal für Berufspendler, Studierende, Praktikanten, Expats und Berufseinsteiger.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "Käfertaler Straße 133",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien, mit einer starken Präsenz von Universitätsangehörigen.",
-        "vibe_sicherheit": "Gute Sicherheitslage, aber wie in vielen Stadtteilen auch einige Probleme mit Jugendkriminalität.",
-        "einschaetzung_student": "Sehr geeignet für Studenten, da nahe an der Universität und mit guter Infrastruktur.",
-        "einschaetzung_investor": "Mittlere Eignung als Kapitalanlage, da die Mieteinnahmen durch die Nähe zur Uni und die gute Infrastruktur gesteigert werden, aber die Preise für Immobilien in Mannheim tendenziell hoch sind."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-30T19:27:59.082909+00:00",
-          "price": 130.0
-        },
-        {
-          "date": "2026-07-31T09:49:23.181475+00:00",
-          "price": 700.0
-        }
-      ],
-      "etage": "3. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 22.0,
-      "kaltmiete": 700.0,
-      "nebenkosten": 130,
-      "warmmiete": 700,
-      "kaltmiete_qm": 31.82,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": 76.8,
-      "deal_score": "teuer",
-      "_hash": "fd3a497c4d36"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-waldhof-zu-vermieten/3472685574-203-7972",
