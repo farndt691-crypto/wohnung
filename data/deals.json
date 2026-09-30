@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30T17:54:34.106347+00:00",
+  "last_updated": "2026-09-30T21:57:42.339864+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1676,53 +1676,6 @@
       "_hash": "aa65b98b973a"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/sanierte-wohnung-mit-neuer-einbaukueche-in-mannheim-friedrichsfeld/3471005784-203-7977",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Sanierte Wohnung mit neuer Einbauküche in Mannheim Friedrichsfeld",
-      "first_seen": "2026-07-29T09:42:12.271035+00:00",
-      "last_seen": "2026-08-01T19:09:59.026179+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Gemütliche Wohnung im 2. Obergeschoss eines gepflegten 3-Familienhauses.",
-      "zimmeranzahl": 3,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Friedrichsfeld",
-      "adresse": "68229 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Singles, möglicherweise ältere Bevölkerung",
-        "vibe_sicherheit": "ruhig, aber möglicherweise nicht sehr lebendig",
-        "einschaetzung_student": "nicht ideal für Studenten, da keine Nähe zur Uni",
-        "einschaetzung_investor": "möglicherweise nicht sehr rentabel, da niedriger Mietpreis"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-29T09:42:12.271035+00:00",
-          "price": 1050.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Gas",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 70.0,
-      "kaltmiete": 1050.0,
-      "nebenkosten": 100,
-      "warmmiete": 1050,
-      "kaltmiete_qm": 15.0,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -3.2,
-      "deal_score": "okay",
-      "_hash": "ecd079a009dc"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-apartment-in-mannheim-neckarau-zu-vermieten-/3471418178-203-7986",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -2253,50 +2206,6 @@
       "deal_deviation_pct": -0.5,
       "deal_score": "okay",
       "_hash": "c3e157c478ba"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-gesucht-in-mannheim-ruhiger-mieter-mit-huendin/3472590103-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Wohnung gesucht in Mannheim – ruhiger Mieter mit Hündin",
-      "first_seen": "2026-07-31T09:49:23.181475+00:00",
-      "last_seen": "2026-08-01T19:09:59.026179+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ruhiger Mieter mit Hündin sucht bezahlbare Wohnung in Mannheim",
-      "zimmeranzahl": 1,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Keine Informationen über die Demografie des Stadtteils verfügbar",
-        "vibe_sicherheit": "Keine Informationen über die Atmosphäre und Sicherheitsgefühl des Stadtteils verfügbar",
-        "einschaetzung_student": "Keine Informationen über die Eignung für Informatikstudenten verfügbar",
-        "einschaetzung_investor": "Keine Informationen über die Eignung als Kapitalanlage verfügbar"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-31T09:49:23.181475+00:00",
-          "price": 550.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 550.0,
-      "warmmiete": 550,
-      "kaltmiete_qm": 18.33,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 26.4,
-      "deal_score": "teuer",
-      "_hash": "be146ebfd353"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-wohnung-in-top-citylage-mannheim-q7/3472518385-203-7983",
