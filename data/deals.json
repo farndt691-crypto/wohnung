@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-29T21:57:52.111105+00:00",
+  "last_updated": "2026-09-30T13:26:11.346330+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1576,56 +1576,6 @@
       "_hash": "3ce8e409b184"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/grosse-wohnung-in-mannheim-quadrate-n4-teilmoebliert-/3470451904-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Große Wohnung in Mannheim Quadrate N4 (teilmöbliert)",
-      "first_seen": "2026-07-28T09:40:46.572673+00:00",
-      "last_seen": "2026-08-01T09:10:30.937666+00:00",
-      "boni": [],
-      "kurz_bewertung": "Hohe Decken, viele Fenster, lichtdurchflutete Wohnung",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Angestellte, Paare, Singles",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mittelmäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T09:40:46.572673+00:00",
-          "price": 175.0
-        },
-        {
-          "date": "2026-07-28T14:25:02.836844+00:00",
-          "price": 925.0
-        }
-      ],
-      "etage": "4. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 73.0,
-      "kaltmiete": 925.0,
-      "nebenkosten": 175,
-      "warmmiete": 925,
-      "quadrat": "N4",
-      "kaltmiete_qm": 12.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -12.6,
-      "deal_score": "gut",
-      "_hash": "1bc8e1c6a0ee"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-kaefertal/3470345298-203-7973",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1675,53 +1625,6 @@
       "deal_deviation_pct": -12.4,
       "deal_score": "gut",
       "_hash": "fd38c2ed9fcf"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/voll-moeblierte-2-zimmer-wohnung-in-mannheim-zu-vermieten-64-m-/3470661878-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Voll möblierte 2-Zimmer-Wohnung in Mannheim zu vermieten/64 m²",
-      "first_seen": "2026-07-28T14:25:02.836844+00:00",
-      "last_seen": "2026-08-01T09:10:30.937666+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Die Wohnung ist sofort bezugsfertig und eignet sich ideal für Berufstätige, Pendler oder Paare.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Der Stadtteil ist wahrscheinlich ein beliebter Wohnort für Berufstätige und Familien.",
-        "vibe_sicherheit": "Der Stadtteil ist wahrscheinlich sicher und ruhig.",
-        "einschaetzung_student": "Die Wohnung ist wahrscheinlich nicht ideal für Informatikstudenten, da sie nicht in der Nähe der Uni liegt.",
-        "einschaetzung_investor": "Die Wohnung ist wahrscheinlich keine gute Kapitalanlage, da sie nicht in einem guten Zustand ist und keine besonderen Merkmale hat."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-28T14:25:02.836844+00:00",
-          "price": 1150.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 64.0,
-      "kaltmiete": 1150.0,
-      "warmmiete": 1150,
-      "kaltmiete_qm": 17.97,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": -0.2,
-      "deal_score": "okay",
-      "_hash": "bd32a98ec64c"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zimmer-in-einer-5er-wg-im-studentenwohnheim-mannheim/3471150529-203-7979",
