@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-01T18:20:16.399282+00:00",
+  "last_updated": "2026-10-01T22:25:58.849511+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2136,51 +2136,6 @@
       "deal_deviation_pct": -9.8,
       "deal_score": "okay",
       "_hash": "00ef257d1eb8"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-altbau-mannheim-schwetzingerstadt-54-m-ruhig-ab-1-1/3474912771-203-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer-Altbau Mannheim Schwetzingerstadt — 54 m², ruhig, ab 1.1",
-      "first_seen": "2026-08-02T19:11:48.964600+00:00",
-      "last_seen": "2026-08-02T19:11:48.964600+00:00",
-      "boni": [],
-      "kurz_bewertung": "Ruhige 2-Zimmer-Wohnung in der Schwetzingerstadt mit großzügiger Küche und Tageslichtbad.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Schwetzingerstadt",
-      "adresse": "Augartenstraße, 68165 Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien, Studenten und Berufstätigen, aber auch ältere Menschen.",
-        "vibe_sicherheit": "Gut, da die Wohnung im Hinterhof eines Mehrfamilienhauses liegt und keine Straßenlärm vorhanden ist.",
-        "einschaetzung_student": "Gut, da die Wohnung in der Nähe der Uni Mannheim liegt und die Straßenbahnlinien 1 und 6 in 5 Minuten zu Fuß erreichbar sind.",
-        "einschaetzung_investor": "Mittel, da die Wohnung in einem Altbau liegt und möglicherweise hohe Instandhaltungskosten haben könnte."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-02T19:11:48.964600+00:00",
-          "price": 200.0
-        }
-      ],
-      "etage": "1. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 54.0,
-      "kaltmiete": 200.0,
-      "nebenkosten": 200,
-      "warmmiete": 50,
-      "kaltmiete_qm": 3.7,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -74.5,
-      "deal_score": "gut",
-      "_hash": "7082a2d72253"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-wg-geeignet/3474787135-203-7972",
