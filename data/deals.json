@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-01T22:25:58.849511+00:00",
+  "last_updated": "2026-10-02T13:42:14.411015+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2339,53 +2339,6 @@
       "deal_deviation_pct": 8.2,
       "deal_score": "okay",
       "_hash": "0e2909b9f571"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-fuer-2-zimmer-wohnung-in-mannheim-neckarau/3475252524-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter gesucht für 2 Zimmer Wohnung in Mannheim-Neckarau",
-      "first_seen": "2026-08-03T10:46:39.127905+00:00",
-      "last_seen": "2026-08-03T10:46:39.127905+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Schöne 2-Zimmer Wohnung in zentraler Lage in Mannheim-Neckarau",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut, aber einige Lärmbelästigungen durch den Bahnhof",
-        "einschaetzung_student": "Gut, aber einige Lärmbelästigungen",
-        "einschaetzung_investor": "Gut, aber keine hohe Rendite"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-03T10:46:39.127905+00:00",
-          "price": 550.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 55.0,
-      "kaltmiete": 550.0,
-      "nebenkosten": 1100,
-      "warmmiete": 550,
-      "kaltmiete_qm": 10.0,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -33.3,
-      "deal_score": "gut",
-      "_hash": "ea771d3ca033"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/apartment-in-mannheim/3475233810-203-7986",
