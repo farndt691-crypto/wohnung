@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-02T13:42:14.411015+00:00",
+  "last_updated": "2026-10-02T17:45:57.260144+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1786,58 +1786,6 @@
       "deal_deviation_pct": 32.8,
       "deal_score": "teuer",
       "_hash": "50ecd3455ed4"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zkb-in-s6-18-29-33-in-68161-mannheim/3472810273-203-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2 ZKB in S6,18 (29-33) in 68161 Mannheim",
-      "first_seen": "2026-07-31T14:23:53.937501+00:00",
-      "last_seen": "2026-08-03T14:53:51.118101+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "Mietwohnung in Mannheim-Stadtmitte mit 51 m² und 2 Zimmern",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim-Stadtmitte",
-      "adresse": "68165 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Gut, viele Studenten in der Nähe",
-        "einschaetzung_investor": "Mäßig, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-31T14:23:53.937501+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-31T19:26:56.824006+00:00",
-          "price": 730.0
-        }
-      ],
-      "etage": "3. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 51.58,
-      "kaltmiete": 730.0,
-      "nebenkosten": 150,
-      "warmmiete": 880,
-      "quadrat": "S6,18",
-      "kaltmiete_qm": 14.15,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -5.7,
-      "deal_score": "okay",
-      "_hash": "4eac6494d778"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/exklusiv-fuer-studenten-azubis-moebliertes-maenner-wg-zimmer-in-der-mannheimer-innenstadt/3472108554-203-7984",
