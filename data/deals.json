@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-03T12:20:05.158370+00:00",
+  "last_updated": "2026-10-03T16:04:18.483018+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -773,58 +773,6 @@
       "deal_deviation_pct": -15.0,
       "deal_score": "gut",
       "_hash": "e3e7b0f4a540"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/geschmackvolle-altbauwohnung-komplett-moebliert-in-mannheim/3450974441-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Geschmackvolle Altbauwohnung Komplett Möbliert in Mannheim",
-      "first_seen": "2026-07-05T09:48:03.439328+00:00",
-      "last_seen": "2026-08-04T14:31:04.525508+00:00",
-      "boni": [
-        "EBK",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Geschmackvolle Altbauwohnung in Neckarau",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Familien und jungen Erwachsenen",
-        "vibe_sicherheit": "Gut, aber einige dunkle Ecken",
-        "einschaetzung_student": "Gut, viele Studenten in der Nähe",
-        "einschaetzung_investor": "Mäßig, keine besonders guten Chancen"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-05T09:48:03.439328+00:00",
-          "price": 250.0
-        },
-        {
-          "date": "2026-07-05T13:55:03.949155+00:00",
-          "price": 1550.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 75.0,
-      "kaltmiete": 1550.0,
-      "nebenkosten": 250,
-      "warmmiete": 1550,
-      "kaltmiete_qm": 20.67,
-      "expected_market_qm": 18.5,
-      "deal_deviation_pct": 11.7,
-      "deal_score": "teuer",
-      "_hash": "ea5427830536"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-neue-moeblierte-5er-wg-wg-zimmer-ab-460-warm-mannheim-muehlauhafen/3452248807-203-7984",
@@ -2535,53 +2483,6 @@
       "deal_deviation_pct": 0.4,
       "deal_score": "okay",
       "_hash": "1db9503f376c"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-apartment-mit-balkon-53-m-mannheim/3475725900-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1-Zimmer-Apartment mit Balkon, 53 m² – Mannheim",
-      "first_seen": "2026-08-03T19:32:02.112530+00:00",
-      "last_seen": "2026-08-04T14:31:04.525508+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Modernes, voll möbliertes 1-Zimmer-Apartment mit Balkon im Herzen von Mannheim.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Berufstätige, Studierende oder Personen mit längeren Aufenthalten",
-        "vibe_sicherheit": "Zentrale und ruhige Lage, aber möglicherweise laut durch den Bahnhof",
-        "einschaetzung_student": "Sehr geeignet für Informatikstudenten, da nahe der Uni",
-        "einschaetzung_investor": "Mittlere Eignung als Kapitalanlage, da die Lage nicht besonders attraktiv ist"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-03T19:32:02.112530+00:00",
-          "price": 565.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 53.0,
-      "kaltmiete": 565.0,
-      "warmmiete": 565,
-      "kaltmiete_qm": 10.66,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": -40.8,
-      "deal_score": "gut",
-      "_hash": "07905e5d69ca"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/modernes-1-zimmer-apartment-in-der-mannheimer-innenstadt/3475686154-203-7983",
