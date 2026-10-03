@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-02T21:54:40.836083+00:00",
+  "last_updated": "2026-10-03T12:20:05.158370+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -2629,55 +2629,6 @@
       "deal_deviation_pct": 55.8,
       "deal_score": "teuer",
       "_hash": "239f423e0414"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/45qm-dachgeschosswohnung-in-mannheim-direkt-am-schloss/3475999042-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "45qm Dachgeschosswohnung in Mannheim direkt am Schloss",
-      "first_seen": "2026-08-04T09:42:51.935512+00:00",
-      "last_seen": "2026-08-04T09:42:51.935512+00:00",
-      "boni": [
-        "Aufzug",
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Die 45qm große 1,5 Zimmer Dachgeschosswohnung ist sehr zentral gelegen.",
-      "zimmeranzahl": 1.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, da die Wohnung in der Nähe des Hauptbahnhofs liegt und viele Menschen unterwegs sind.",
-        "einschaetzung_student": "Sehr geeignet, da die Universität in der Nähe liegt und viele Studentenwohnungen in der Umgebung sind.",
-        "einschaetzung_investor": "Gut geeignet, da die Wohnung in einer zentralen Lage liegt und eine hohe Nachfrage nach Wohnraum in der Stadt besteht."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-04T09:42:51.935512+00:00",
-          "price": 578.0
-        }
-      ],
-      "etage": "Dachgeschoss",
-      "baujahr": 2005,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 45.0,
-      "kaltmiete": 578.0,
-      "nebenkosten": 90,
-      "warmmiete": 758,
-      "kaltmiete_qm": 12.84,
-      "expected_market_qm": 16.5,
-      "deal_deviation_pct": -22.2,
-      "deal_score": "gut",
-      "_hash": "85380eaac358"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mietwohnung-in-mannheim-am-schloss/3475888644-203-7983",
