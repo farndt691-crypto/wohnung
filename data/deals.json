@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-03T20:40:56.980870+00:00",
+  "last_updated": "2026-10-04T13:07:56.009626+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1579,58 +1579,6 @@
       "_hash": "dd7f0accd4eb"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-waldhof-zu-vermieten/3472685574-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3-ZIMMER-WOHNUNG in Mannheim Waldhof zu vermieten",
-      "first_seen": "2026-07-31T09:49:23.181475+00:00",
-      "last_seen": "2026-08-05T09:41:15.849006+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Ruhige teils möblierte 3-Zimmer-Wohnung in Mannheim - Waldhof ideal für Mieter ab 40 Jahren.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "68305 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Wohnen hier ältere, berufstätige Menschen ohne Kinder und Haustiere.",
-        "vibe_sicherheit": "Sehr ruhig und sicher.",
-        "einschaetzung_student": "Nicht geeignet für Studenten, da keine Studentenwohnheime und keine Nähe zur Uni.",
-        "einschaetzung_investor": "Kann als Kapitalanlage geeignet sein, da die Miete relativ hoch ist."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-31T09:49:23.181475+00:00",
-          "price": 250.0
-        },
-        {
-          "date": "2026-07-31T14:23:53.937501+00:00",
-          "price": 1200.0
-        }
-      ],
-      "etage": "1. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 67.0,
-      "kaltmiete": 1200.0,
-      "nebenkosten": 250,
-      "warmmiete": 1200,
-      "kaltmiete_qm": 17.91,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": -0.5,
-      "deal_score": "okay",
-      "_hash": "c3e157c478ba"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/exklusiv-fuer-studenten-azubis-moebliertes-maenner-wg-zimmer-in-der-mannheimer-innenstadt/3472108554-203-7984",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1978,55 +1926,6 @@
       "deal_deviation_pct": 3.8,
       "deal_score": "okay",
       "_hash": "5961c95db624"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/grosszuegige-4-zimmer-dachgeschosswohnung-in-mannheim/3474741575-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Großzügige 4-Zimmer-Dachgeschosswohnung in Mannheim",
-      "first_seen": "2026-08-02T19:11:48.964600+00:00",
-      "last_seen": "2026-08-05T09:41:15.849006+00:00",
-      "boni": [],
-      "kurz_bewertung": "Diese großzügige 4-Zimmer-Dachgeschosswohnung bietet auf ca. 117 m² viel Platz für Familien oder Wohngemeinschaften.",
-      "zimmeranzahl": 4.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Wohngemeinschaften",
-        "vibe_sicherheit": "Gute Infrastruktur, aber keine spezifischen Angaben zur Sicherheit",
-        "einschaetzung_student": "Möglich, aber keine spezifischen Annehmlichkeiten für Studenten",
-        "einschaetzung_investor": "Möglich, aber keine spezifischen Annehmlichkeiten für Investoren"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-02T19:11:48.964600+00:00",
-          "price": 200.0
-        },
-        {
-          "date": "2026-08-03T14:53:51.118101+00:00",
-          "price": 1400.0
-        }
-      ],
-      "etage": "3",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 117.0,
-      "kaltmiete": 1400.0,
-      "nebenkosten": 200,
-      "warmmiete": 1400,
-      "kaltmiete_qm": 11.97,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -17.4,
-      "deal_score": "gut",
-      "_hash": "ea12a8309345"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-viernheim-helle-und-geraeumige-2-zimmer-wohnung/3474689751-203-7973",
