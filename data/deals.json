@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-04T16:45:41.724738+00:00",
+  "last_updated": "2026-10-04T20:57:31.600020+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1677,57 +1677,6 @@
       "_hash": "3ea33289870f"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/renovierte-2-zimmer-wohnung-zu-vermieten-mannheim-neckarstadt-/3474219581-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Renovierte 2-Zimmer-Wohnung zu vermieten (Mannheim / Neckarstadt)",
-      "first_seen": "2026-08-02T09:13:17.199347+00:00",
-      "last_seen": "2026-08-05T19:31:33.294129+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "Ideale Stadtwohnung nahe der Mannheimer Innenstadt.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Gut, ruhig und zentral gelegen",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-02T09:13:17.199347+00:00",
-          "price": 140.0
-        },
-        {
-          "date": "2026-08-02T13:42:49.793742+00:00",
-          "price": 850.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 60.0,
-      "kaltmiete": 850.0,
-      "nebenkosten": 140,
-      "warmmiete": 990,
-      "kaltmiete_qm": 14.17,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -8.6,
-      "deal_score": "okay",
-      "_hash": "e5df4f5922d2"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-wg-geeignet/3474787135-203-7972",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -2322,54 +2271,6 @@
       "deal_deviation_pct": -10.4,
       "deal_score": "gut",
       "_hash": "d3a52e0d8e6f"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-2-zimmer-wohnung-79qm-mannheim-neuhermsheim/3477228727-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter gesucht – 2-Zimmer-Wohnung 79Qm Mannheim-Neuhermsheim",
-      "first_seen": "2026-08-05T19:31:33.294129+00:00",
-      "last_seen": "2026-08-05T19:31:33.294129+00:00",
-      "boni": [
-        "Garage",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Wir suchen schnellstmöglich einen geeigneten Nachmieter für eine schöne 2-Zimmer-Wohnung in 68163 Mannheim-Neuhermsheim",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neuhermsheim",
-      "adresse": "68163 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und Studenten",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "gut geeignet",
-        "einschaetzung_investor": "mäßig geeignet"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-05T19:31:33.294129+00:00",
-          "price": 687.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 79.0,
-      "kaltmiete": 687.0,
-      "nebenkosten": 336,
-      "warmmiete": 1023,
-      "kaltmiete_qm": 8.7,
-      "expected_market_qm": 15.3,
-      "deal_deviation_pct": -43.1,
-      "deal_score": "gut",
-      "_hash": "8d676f82ac5b"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/grosse-wohnung-in-mannheim-quadrate-n4-frei-schon-ab-mitte-august/3470451904-203-7983",
