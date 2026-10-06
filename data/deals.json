@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T18:13:22.812637+00:00",
+  "last_updated": "2026-10-06T22:25:33.081003+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1623,56 +1623,6 @@
       "deal_deviation_pct": -10.4,
       "deal_score": "gut",
       "_hash": "d3a52e0d8e6f"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/grosse-wohnung-in-mannheim-quadrate-n4-frei-schon-ab-mitte-august/3470451904-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Große Wohnung in Mannheim Quadrate N4 FREI SCHON AB MITTE AUGUST",
-      "first_seen": "2026-08-05T19:31:33.294129+00:00",
-      "last_seen": "2026-08-07T18:58:14.359606+00:00",
-      "boni": [],
-      "kurz_bewertung": "Hohe Decken, viele Fenster, lichtdurchflutete Wohnung",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Angestellten und Familien",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-05T19:31:33.294129+00:00",
-          "price": 175.0
-        },
-        {
-          "date": "2026-08-06T09:44:05.757747+00:00",
-          "price": 925.0
-        }
-      ],
-      "etage": "Dachgeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 73.0,
-      "kaltmiete": 925.0,
-      "nebenkosten": 175,
-      "warmmiete": 925,
-      "quadrat": "N4",
-      "kaltmiete_qm": 12.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -12.6,
-      "deal_score": "gut",
-      "_hash": "8f72bc397004"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/vollmoeblierte-2-z-wohnung-in-mannheim-wallstadt/3477185317-203-7975",
