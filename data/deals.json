@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T22:25:33.081003+00:00",
+  "last_updated": "2026-10-07T14:18:49.035515+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -358,46 +358,6 @@
       "deal_deviation_pct": -9.8,
       "deal_score": "okay",
       "_hash": "165ce5d750ad"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-tausche-magdeburg-gegen-mannheim-wohnung/3292763321-203-2235",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "TAUSCHWOHNUNG Tausche Magdeburg gegen Mannheim-Wohnung",
-      "first_seen": "2026-06-07T12:17:15.927906+00:00",
-      "last_seen": "2026-08-08T07:54:10.332093+00:00",
-      "boni": [],
-      "kurz_bewertung": "gemütliche 2-Zimmer-Wohnung in Magdeburg",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": {
-        "demografie": "Keine Informationen über den Stadtteil Mannheim",
-        "vibe_sicherheit": "Keine Informationen über die Atmosphäre und Sicherheitsgefühl",
-        "einschaetzung_student": "Keine Informationen über die Eignung für Informatikstudenten",
-        "einschaetzung_investor": "Keine Informationen über die Eignung als Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-06-07T12:17:15.927906+00:00",
-          "price": 296.95
-        }
-      ],
-      "etage": "10",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "quadratmeter": 49.0,
-      "kaltmiete": 296.95,
-      "nebenkosten": 85,
-      "kaltmiete_qm": 6.06,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -58.2,
-      "deal_score": "gut",
-      "_hash": "3a9d770ac800"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-54qm-gegen-wohnung-ab-60qm-in-mannheim-und-umgebung/3428476159-203-7981",
@@ -1623,57 +1583,6 @@
       "deal_deviation_pct": -10.4,
       "deal_score": "gut",
       "_hash": "d3a52e0d8e6f"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/vollmoeblierte-2-z-wohnung-in-mannheim-wallstadt/3477185317-203-7975",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Vollmöblierte 2-Z-Wohnung in Mannheim-Wallstadt",
-      "first_seen": "2026-08-05T19:31:33.294129+00:00",
-      "last_seen": "2026-08-08T07:54:10.332093+00:00",
-      "boni": [
-        "Balkon",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Schöne, helle und voll möblierte Wohnung in Mannheim-Wallstadt.",
-      "zimmeranzahl": 2,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Wallstadt",
-      "adresse": "68259 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Schlecht"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-05T19:31:33.294129+00:00",
-          "price": 185.0
-        },
-        {
-          "date": "2026-08-06T09:44:05.757747+00:00",
-          "price": 865.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 65.0,
-      "kaltmiete": 865.0,
-      "nebenkosten": 185,
-      "kaltmiete_qm": 13.31,
-      "expected_market_qm": 18.0,
-      "deal_deviation_pct": -26.1,
-      "deal_score": "gut",
-      "_hash": "68221782b89c"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/4-zimmer-neubau-wohnung-mannheim-schwetzingerstadt/3477857326-203-7981",
