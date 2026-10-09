@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08T22:59:33.133098+00:00",
+  "last_updated": "2026-10-09T14:13:58.301955+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1843,53 +1843,6 @@
       "deal_deviation_pct": -12.1,
       "deal_score": "gut",
       "_hash": "34a5f663f48c"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/neubau-2-zi-wohnung-in-mannheim-feudenheim/3481009942-203-7975",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Neubau - 2-Zi. Wohnung in Mannheim-Feudenheim",
-      "first_seen": "2026-08-10T08:30:49.569792+00:00",
-      "last_seen": "2026-08-10T08:30:49.569792+00:00",
-      "boni": [
-        "Neubau"
-      ],
-      "kurz_bewertung": "2-Zi. Wohnung in Neubauhaus zu vermieten",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Feudenheim",
-      "adresse": "68259 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "ruhig und sicher",
-        "einschaetzung_student": "möglich, aber nicht ideal",
-        "einschaetzung_investor": "keine gute Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-10T08:30:49.569792+00:00",
-          "price": 230.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 2024,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 65.0,
-      "kaltmiete": 230.0,
-      "nebenkosten": 230,
-      "warmmiete": 1130,
-      "kaltmiete_qm": 3.54,
-      "expected_market_qm": 16.5,
-      "deal_deviation_pct": -78.5,
-      "deal_score": "gut",
-      "_hash": "d9866264e4f5"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wg-zimmer-in-mannheimer-quadraten/3480980866-203-7984",
