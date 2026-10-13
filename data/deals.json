@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-13T00:13:58.558109+00:00",
+  "last_updated": "2026-10-13T14:53:38.838978+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -887,57 +887,6 @@
       "_hash": "3ce8e409b184"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-kaefertal/3470345298-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3-Zimmer-Wohnung in Mannheim Käfertal",
-      "first_seen": "2026-07-28T09:40:46.572673+00:00",
-      "last_seen": "2026-08-14T08:19:56.641352+00:00",
-      "boni": [
-        "Garage"
-      ],
-      "kurz_bewertung": "Diese 3-Zimmer-Wohnung bietet eine funktionale Raumaufteilung und liegt in Mannheim Käfertal an einer Hauptverkehrsstraße.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Der Stadtteil Käfertal ist eine Mischung aus Wohn- und Gewerbegebieten, wodurch es eine vielfältige Bevölkerung gibt.",
-        "vibe_sicherheit": "Die Atmosphäre in Käfertal ist durch die Nähe zur Hauptverkehrsstraße geprägt, was zu einem hohen Verkehrslärm führt. Die Sicherheitsgefühle sind durch die Anwesenheit von Gewerbegebieten und der Nähe zum Stadtzentrum beeinflusst.",
-        "einschaetzung_student": "Käfertal ist für Informatikstudenten nicht ideal, da es keine direkte Nähe zu Universitäten oder Forschungseinrichtungen gibt.",
-        "einschaetzung_investor": "Käfertal bietet keine gute Eignung als Kapitalanlage, da es keine starken Wachstumschancen oder einzigartige Merkmale bietet."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-28T09:40:46.572673+00:00",
-          "price": 300.0
-        },
-        {
-          "date": "2026-07-28T14:25:02.836844+00:00",
-          "price": 1128.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 87.0,
-      "kaltmiete": 1128.0,
-      "nebenkosten": 300,
-      "warmmiete": 1428,
-      "kaltmiete_qm": 12.97,
-      "expected_market_qm": 14.8,
-      "deal_deviation_pct": -12.4,
-      "deal_score": "gut",
-      "_hash": "fd38c2ed9fcf"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-sanierung-helle-3-zkb-wohnung-im-3-og-mit-balkon-aufzug-mannheim-oststadt/3471315748-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1529,55 +1478,6 @@
       "deal_deviation_pct": 77.8,
       "deal_score": "teuer",
       "_hash": "f5192e084daf"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliches-helles-wg-zimmer-in-mannheim-voll-ausgestattet-490-warmmiete-/3459692609-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Gemütliches, helles WG-Zimmer in Mannheim | voll ausgestattet | 490 € Warmmiete!!!",
-      "first_seen": "2026-08-12T19:03:23.598069+00:00",
-      "last_seen": "2026-08-14T13:20:40.397994+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gemütliches, helles WG-Zimmer in Mannheim | voll ausgestattet | 490 € Warmmiete!!!",
-      "zimmeranzahl": 1,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Familien, Pendler",
-        "vibe_sicherheit": "ruhige Wohnlage, gute Verkehrsanbindung",
-        "einschaetzung_student": "sehr geeignet",
-        "einschaetzung_investor": "nicht geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-12T19:03:23.598069+00:00",
-          "price": 120.0
-        },
-        {
-          "date": "2026-08-13T08:25:12.173943+00:00",
-          "price": 370.0
-        }
-      ],
-      "etage": "1. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 17.0,
-      "kaltmiete": 370.0,
-      "nebenkosten": 120,
-      "warmmiete": 490,
-      "kaltmiete_qm": 21.76,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 50.1,
-      "deal_score": "teuer",
-      "_hash": "5e126a69446a"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-helle-stylische-73m-2-5-zkb-in-mannheim-lindenhof-am-rhein/3164622929-203-7982",
