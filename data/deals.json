@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-13T14:53:38.838978+00:00",
+  "last_updated": "2026-10-13T19:09:39.196933+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -242,48 +242,6 @@
           "price": 1070.0
         }
       ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mannheim-neckarstadt-west/3424731077-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Wohnung Mannheim Neckarstadt-West",
-      "first_seen": "2026-06-02T19:59:48.791321+00:00",
-      "last_seen": "2026-08-14T18:55:53.252987+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "75m2 Wohnung ab 1.8.26 zu vermieten.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": "68169 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, junge Erwachsene, Familien",
-        "vibe_sicherheit": "Gut, aber abends kann es ruhig werden",
-        "einschaetzung_student": "Sehr geeignet, gute Verkehrsanbindung",
-        "einschaetzung_investor": "Mittelmäßig, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-02T19:59:48.791321+00:00",
-          "price": 950.0
-        },
-        {
-          "date": "2026-07-25T13:49:30.936992+00:00",
-          "price": 1150.0
-        }
-      ],
-      "quadratmeter": 85.0,
-      "kaltmiete": 1150.0,
-      "warmmiete": 950,
-      "kaltmiete_qm": 13.53,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -9.8,
-      "deal_score": "okay",
-      "_hash": "165ce5d750ad"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/attraktive-2-zimmer-wohnung-mit-zwei-balkonen-und-garage-in-mannheim/3434722928-196-7973",
