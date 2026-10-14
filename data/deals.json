@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-14T16:57:28.877759+00:00",
+  "last_updated": "2026-10-14T21:22:09.442931+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1385,57 +1385,6 @@
       "deal_deviation_pct": 78.4,
       "deal_score": "teuer",
       "_hash": "84334e006e7f"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-in-mannheim-innenstadt-nachmieter-gesucht/3483130026-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1 Zimmer Wohnung in Mannheim Innenstadt Nachmieter gesucht",
-      "first_seen": "2026-08-12T19:03:23.598069+00:00",
-      "last_seen": "2026-08-15T18:30:43.759673+00:00",
-      "boni": [
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Ideal für Singles oder zentrale Wohnlage",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Singles, Berufstätige",
-        "vibe_sicherheit": "Gut, aber Abendstunden können ruhig sein",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-12T19:03:23.598069+00:00",
-          "price": 370.0
-        },
-        {
-          "date": "2026-08-13T19:04:45.273020+00:00",
-          "price": 480.0
-        }
-      ],
-      "etage": "4. Stock",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 18.0,
-      "kaltmiete": 480.0,
-      "nebenkosten": 100,
-      "warmmiete": 470,
-      "kaltmiete_qm": 26.67,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 77.8,
-      "deal_score": "teuer",
-      "_hash": "f5192e084daf"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-helle-stylische-73m-2-5-zkb-in-mannheim-lindenhof-am-rhein/3164622929-203-7982",
