@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-14T21:22:09.442931+00:00",
+  "last_updated": "2026-10-15T12:33:01.101611+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1524,58 +1524,6 @@
       "deal_deviation_pct": 70.1,
       "deal_score": "teuer",
       "_hash": "bb4c0d3ce2db"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-1-zimmer-dachgeschosswohnung-in-mannheim-neckarau-mit-einba/3483259109-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Helle 1-Zimmer-Dachgeschosswohnung in Mannheim-Neckarau mit Einba",
-      "first_seen": "2026-08-13T08:25:12.173943+00:00",
-      "last_seen": "2026-08-16T07:34:48.996732+00:00",
-      "boni": [
-        "Garage",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Eine kompakte 1-Zimmer-Wohnung mit guter Verkehrsanbindung und freundlichem Wohnraum.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckarau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studierende, Berufseinsteiger, Singles und Pendler",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-13T08:25:12.173943+00:00",
-          "price": 180.0
-        },
-        {
-          "date": "2026-08-13T19:04:45.273020+00:00",
-          "price": 590.0
-        }
-      ],
-      "etage": "6. Obergeschoss",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 35.0,
-      "kaltmiete": 590.0,
-      "nebenkosten": 180,
-      "warmmiete": 770,
-      "kaltmiete_qm": 16.86,
-      "expected_market_qm": 15.3,
-      "deal_deviation_pct": 10.2,
-      "deal_score": "teuer",
-      "_hash": "91447c6dffcb"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-mannheim-innenstadt/3483619720-203-7984",
