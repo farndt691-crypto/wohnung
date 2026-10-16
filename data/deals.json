@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-16T12:11:13.112932+00:00",
+  "last_updated": "2026-10-16T16:26:58.674329+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1250,58 +1250,6 @@
       "_hash": "bd0351c41f3a"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/seltenheit-direkt-an-der-uni-mannheim-design-apartment-/3482506479-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Seltenheit direkt an der Uni Mannheim: Design-Apartment",
-      "first_seen": "2026-08-12T08:21:37.882651+00:00",
-      "last_seen": "2026-08-17T12:57:07.018541+00:00",
-      "boni": [
-        "renoviert",
-        "moebliert"
-      ],
-      "kurz_bewertung": "Einziehen, wohlfühlen, keine Kompromisse machen – dieses exklusive 1-Zimmer-Apartment ist ein durchdachtes Wohnkonzept für Menschen mit Stil.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studierende, Pendler und Wochenendheimfahrer",
-        "vibe_sicherheit": "ruhig gelegen, trotz zentraler Lage",
-        "einschaetzung_student": "sehr geeignet",
-        "einschaetzung_investor": "mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-12T08:21:37.882651+00:00",
-          "price": 130.0
-        },
-        {
-          "date": "2026-08-12T13:24:11.171128+00:00",
-          "price": 660.0
-        }
-      ],
-      "etage": "1",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 20.0,
-      "kaltmiete": 660.0,
-      "nebenkosten": 130,
-      "warmmiete": 790,
-      "kaltmiete_qm": 33.0,
-      "expected_market_qm": 18.5,
-      "deal_deviation_pct": 78.4,
-      "deal_score": "teuer",
-      "_hash": "84334e006e7f"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2er-wg-fuer-studenten-moebiliert-super-lage-naehe-uni-mannheim/3483530144-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1799,46 +1747,6 @@
       "deal_deviation_pct": 71.4,
       "deal_score": "teuer",
       "_hash": "8381b387f93e"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/neubau-erstbezug-modernes-studio-ca-45-m-in-mannheim/3487097581-203-7976",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Neubau-Erstbezug – modernes Studio ca. 45 m² in Mannheim",
-      "first_seen": "2026-08-17T12:57:07.018541+00:00",
-      "last_seen": "2026-08-17T12:57:07.018541+00:00",
-      "boni": [
-        "Neubau"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-17T12:57:07.018541+00:00",
-          "price": 950.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 45.0,
-      "kaltmiete": 950.0,
-      "kaltmiete_qm": 21.11,
-      "expected_market_qm": 16.5,
-      "deal_deviation_pct": 27.9,
-      "deal_score": "teuer",
-      "_hash": "92aee466f779"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3er-wg-neugruendung-ruhige-wohnung-in-zentraler-lage-mannheim/3487094556-203-7981",
