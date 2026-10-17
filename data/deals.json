@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-17T15:21:26.230400+00:00",
+  "last_updated": "2026-10-17T20:13:12.800406+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -915,53 +915,6 @@
       "_hash": "dd7f0accd4eb"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/exklusiv-fuer-studenten-azubis-moebliertes-maenner-wg-zimmer-in-der-mannheimer-innenstadt/3472108554-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Exklusiv für Studenten/Azubis: Möbliertes Männer-WG-Zimmer in der Mannheimer Innenstadt",
-      "first_seen": "2026-08-01T09:10:30.937666+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
-      "boni": [
-        "moebliert"
-      ],
-      "kurz_bewertung": "Exklusives Männer-WG-Zimmer in zentraler Lage Mannheims.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten und Young Professionals",
-        "vibe_sicherheit": "Gute Sicherheitsgefühle, aber möglicherweise laut und unruhig",
-        "einschaetzung_student": "Sehr geeignet für Studenten",
-        "einschaetzung_investor": "Nicht geeignet als Kapitalanlage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-01T09:10:30.937666+00:00",
-          "price": 375.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 25.55,
-      "kaltmiete": 375.0,
-      "nebenkosten": 100,
-      "warmmiete": 475,
-      "kaltmiete_qm": 14.68,
-      "expected_market_qm": 17.5,
-      "deal_deviation_pct": -16.1,
-      "deal_score": "gut",
-      "_hash": "16f23a3b744a"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zi-dg-wohnung-in-toplage-5-min-fussweg-zum-mannheim-hbf/3476793355-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1350,59 +1303,6 @@
       "_hash": "ca0f86dbb226"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim/3486688149-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer-Wohnung in Mannheim",
-      "first_seen": "2026-08-17T07:57:22.762706+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
-      "boni": [
-        "barrierefrei",
-        "Garage",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Barrierefreie 2-Zimmer-Wohnung in Mannheim-Vogelstang zu vermieten",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Vogelstang ist ein Stadtteil mit einer gemischten Bevölkerung, es gibt viele Familien und ältere Menschen, aber auch einige junge Erwachsene.",
-        "vibe_sicherheit": "Vogelstang hat eine ruhige und sichere Atmosphäre, es gibt jedoch einige dunkle Ecken und Straßen, die nachts nicht beleuchtet sind.",
-        "einschaetzung_student": "Vogelstang ist nicht ideal für Informatikstudenten, da es keine direkte Nähe zur Uni Mannheim hat und die Verkehrsanbindung nicht sehr gut ist.",
-        "einschaetzung_investor": "Vogelstang ist nicht sehr attraktiv für Investoren, da die Immobilienpreise nicht sehr hoch sind und die Rendite nicht sehr gut ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-17T07:57:22.762706+00:00",
-          "price": 120.0
-        },
-        {
-          "date": "2026-08-17T18:40:48.508318+00:00",
-          "price": 770.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 36.0,
-      "kaltmiete": 770.0,
-      "nebenkosten": 70,
-      "warmmiete": 770,
-      "kaltmiete_qm": 21.39,
-      "expected_market_qm": 15.3,
-      "deal_deviation_pct": 39.8,
-      "deal_score": "teuer",
-      "_hash": "3415806ea092"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3er-wg-neugruendung-ruhige-wohnung-in-zentraler-lage-mannheim/3487094556-203-7981",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1694,122 +1594,6 @@
       "deal_deviation_pct": -17.2,
       "deal_score": "gut",
       "_hash": "d108b7424cce"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-wg-zimmer-c-in-mannheim-lindenhof/3487733642-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Möbliertes WG-Zimmer (C) in Mannheim-Lindenhof",
-      "first_seen": "2026-08-18T12:58:32.766896+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-18T12:58:32.766896+00:00",
-          "price": 449.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 25.0,
-      "kaltmiete": 449.0,
-      "kaltmiete_qm": 17.96,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 23.9,
-      "deal_score": "teuer",
-      "_hash": "8c0c1a34df3a"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-wg-zimmer-b-mit-eigenem-balkon-in-mannheim-lindenhof/3487732710-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Möbliertes WG-Zimmer (B) mit eigenem Balkon in Mannheim-Lindenhof",
-      "first_seen": "2026-08-18T12:58:32.766896+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-18T12:58:32.766896+00:00",
-          "price": 499.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 25.0,
-      "kaltmiete": 499.0,
-      "kaltmiete_qm": 19.96,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 33.1,
-      "deal_score": "teuer",
-      "_hash": "55dc06acbd44"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-wg-zimmer-a-in-mannheim-lindenhof/3487731592-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Möbliertes WG-Zimmer (A) in Mannheim-Lindenhof",
-      "first_seen": "2026-08-18T12:58:32.766896+00:00",
-      "last_seen": "2026-08-18T18:46:23.713724+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-18T12:58:32.766896+00:00",
-          "price": 449.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 25.0,
-      "kaltmiete": 449.0,
-      "kaltmiete_qm": 17.96,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 23.9,
-      "deal_score": "teuer",
-      "_hash": "c960a808418a"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-3-zimmer-wohnung-mit-balkon-und-aufzug-in-mannheim/3487707736-203-7979",
