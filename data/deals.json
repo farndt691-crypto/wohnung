@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-18T15:43:08.913670+00:00",
+  "last_updated": "2026-10-18T20:11:40.837248+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1202,105 +1202,6 @@
       "deal_deviation_pct": -49.7,
       "deal_score": "gut",
       "_hash": "7f09d0ebddbc"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-mannheim/3486746465-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1 Zimmer Wohnung Mannheim",
-      "first_seen": "2026-08-17T07:57:22.762706+00:00",
-      "last_seen": "2026-08-19T18:37:13.268186+00:00",
-      "boni": [
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Gepflegte 1-Zimmer-Wohnung in der Mannheimer Innenstadt.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien mit Kindern",
-        "vibe_sicherheit": "Gut, da die Wohnung in der Innenstadt liegt und viele Menschen in der Nähe leben.",
-        "einschaetzung_student": "Sehr geeignet, da die Universität in der Nähe liegt und viele Studentenwohnungen in der Umgebung sind.",
-        "einschaetzung_investor": "Mäßig geeignet, da die Miete relativ hoch ist und die Wohnung nicht sehr groß ist."
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-17T07:57:22.762706+00:00",
-          "price": 640.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": 1980,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 18.0,
-      "kaltmiete": 640.0,
-      "warmmiete": 640,
-      "kaltmiete_qm": 35.56,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 137.1,
-      "deal_score": "teuer",
-      "_hash": "03a7c1863810"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/modernisierte-2-zimmer-wohnung-mit-balkon-garage-in-mannheim/3486698257-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Modernisierte 2-Zimmer-Wohnung mit Balkon & Garage in Mannheim",
-      "first_seen": "2026-08-17T07:57:22.762706+00:00",
-      "last_seen": "2026-08-19T18:37:13.268186+00:00",
-      "boni": [
-        "renoviert",
-        "Garage",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Schöne und helle 2-Zimmer-Wohnung in guter Lage",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Vogelstang",
-      "adresse": "68309 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Gut",
-        "einschaetzung_investor": "Mittel"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-17T07:57:22.762706+00:00",
-          "price": 270.0
-        },
-        {
-          "date": "2026-08-17T18:40:48.508318+00:00",
-          "price": 750.0
-        }
-      ],
-      "etage": "2. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 59.0,
-      "kaltmiete": 750.0,
-      "nebenkosten": 270,
-      "warmmiete": 1020,
-      "kaltmiete_qm": 12.71,
-      "expected_market_qm": 16.3,
-      "deal_deviation_pct": -22.0,
-      "deal_score": "gut",
-      "_hash": "ca0f86dbb226"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3er-wg-neugruendung-ruhige-wohnung-in-zentraler-lage-mannheim/3487094556-203-7981",
