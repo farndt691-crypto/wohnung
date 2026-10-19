@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-18T20:11:40.837248+00:00",
+  "last_updated": "2026-10-19T14:27:13.672828+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -165,48 +165,6 @@
         {
           "date": "2026-06-09T23:06:41.845923+00:00",
           "price": 1580.0
-        }
-      ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-frisch-sanierte-2-zimmer-wohnung-in-top-lage-mannheims/3418154794-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Helle, frisch sanierte 2-Zimmer-Wohnung in Top-Lage Mannheims",
-      "first_seen": "2026-05-25T21:58:51.371562+00:00",
-      "last_seen": "2026-08-20T07:44:46.636322+00:00",
-      "boni": [
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Helle, gut geschnittene 2-Zimmer-Wohnung im 3. Obergeschoss, vollständig saniert und in einem frischen, bezugsfertigen Zustand.",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68163 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mischung aus Studenten, Berufstätigen und Familien, aber auch einige Sozialwohnungen und Mietshäuser.",
-        "vibe_sicherheit": "Ruhig und bürgerlich, aber auch einige Lärmbelästigungen durch den nahen Verkehr.",
-        "einschaetzung_student": "Gute Lernruhe, aber keine direkte Anbindung an die Uni Mannheim. ÖPNV ist jedoch gut entwickelt.",
-        "einschaetzung_investor": "Mietnomaden-Risiko ist relativ hoch, aber auch einige Aufwertungspotenziale durch die Nähe zum Stadtzentrum."
-      },
-      "quadratmeter": 62.0,
-      "kaltmiete": 1070.0,
-      "nebenkosten": 90,
-      "warmmiete": 1320,
-      "kaltmiete_qm": 17.26,
-      "expected_market_qm": 16.0,
-      "deal_deviation_pct": 7.9,
-      "deal_score": "okay",
-      "price_history": [
-        {
-          "date": "2026-05-25T21:58:51.371562+00:00",
-          "price": 160.0
-        },
-        {
-          "date": "2026-06-09T23:06:41.845923+00:00",
-          "price": 1070.0
         }
       ]
     },
@@ -1013,51 +971,6 @@
       "_hash": "d3a52e0d8e6f"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/sanierte-1-zimmer-wohnung-in-mannheim-waldhof/3477965938-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Sanierte 1-Zimmer Wohnung in Mannheim-Waldhof",
-      "first_seen": "2026-08-07T00:01:16.730755+00:00",
-      "last_seen": "2026-08-20T13:01:42.581817+00:00",
-      "boni": [],
-      "kurz_bewertung": "Gepflegte 1-Zimmer-Wohnung mit gutem Grundriss und angenehmer Wohnatmosphäre.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": "Stolberger Straße 6",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Singles und Berufspendler",
-        "vibe_sicherheit": "Gut",
-        "einschaetzung_student": "Sehr geeignet",
-        "einschaetzung_investor": "Mäßig geeignet"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-07T00:01:16.730755+00:00",
-          "price": 575.0
-        }
-      ],
-      "etage": "0",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 36.0,
-      "kaltmiete": 575.0,
-      "nebenkosten": 75,
-      "warmmiete": 650,
-      "kaltmiete_qm": 15.97,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 10.1,
-      "deal_score": "teuer",
-      "_hash": "c31076d4c468"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmerwohnung-in-den-quadraten-von-mannheim/3478284042-203-7984",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1326,48 +1239,6 @@
       "_hash": "f11289e0b6d0"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-rheinau/3486830040-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer-Wohnung in Mannheim-Rheinau",
-      "first_seen": "2026-08-17T12:57:07.018541+00:00",
-      "last_seen": "2026-08-20T07:44:46.636322+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-17T12:57:07.018541+00:00",
-          "price": 250.0
-        },
-        {
-          "date": "2026-08-17T18:40:48.508318+00:00",
-          "price": 630.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 57.0,
-      "kaltmiete": 630.0,
-      "kaltmiete_qm": 11.05,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -23.8,
-      "deal_score": "gut",
-      "_hash": "48c4c747f8c7"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/1-zkbb-mannheim-kaefertal/3487416875-203-7973",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1540,48 +1411,6 @@
       "deal_deviation_pct": -21.4,
       "deal_score": "gut",
       "_hash": "1bc28b85d72e"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-neckarau-zur-miete/3486826473-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2 Zimmer Wohnung in Mannheim Neckarau zur Miete",
-      "first_seen": "2026-08-18T18:46:23.713724+00:00",
-      "last_seen": "2026-08-20T07:44:46.636322+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-18T18:46:23.713724+00:00",
-          "price": 220.0
-        },
-        {
-          "date": "2026-08-19T18:37:13.268186+00:00",
-          "price": 720.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 53.0,
-      "kaltmiete": 720.0,
-      "kaltmiete_qm": 13.58,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -6.3,
-      "deal_score": "okay",
-      "_hash": "a7480b038f91"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/2-5-zimmer-wohnung-in-der-mannheimer-oststadt/3488617944-203-7981",
