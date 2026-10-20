@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-20T12:37:35.917679+00:00",
+  "last_updated": "2026-10-20T16:41:18.915158+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -1760,46 +1760,6 @@
       "_hash": "8a15cf163950"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-wohnung-in-mannheim/3490503650-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1-Zimmer-Wohnung in Mannheim",
-      "first_seen": "2026-08-21T13:00:27.545146+00:00",
-      "last_seen": "2026-08-21T13:00:27.545146+00:00",
-      "boni": [
-        "Aufzug"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 1.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-21T13:00:27.545146+00:00",
-          "price": 480.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 36.0,
-      "kaltmiete": 480.0,
-      "kaltmiete_qm": 13.33,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -11.1,
-      "deal_score": "gut",
-      "_hash": "7e4426c89e84"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-zimmer-mit-balkon-in-moderner-2er-wg-collinistrasse-5-mannheim-/3490464660-203-7983",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1839,44 +1799,6 @@
       "deal_deviation_pct": 112.5,
       "deal_score": "teuer",
       "_hash": "3dd14e02a1e4"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-gesucht-3-zimmer-wohnung-mannheim-mallau/3490324963-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Nachmieter gesucht 3 Zimmer Wohnung Mannheim Mallau",
-      "first_seen": "2026-08-21T13:00:27.545146+00:00",
-      "last_seen": "2026-08-21T13:00:27.545146+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 3.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-21T13:00:27.545146+00:00",
-          "price": 179.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 70.0,
-      "kaltmiete": 179.0,
-      "kaltmiete_qm": 2.56,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -82.3,
-      "deal_score": "gut",
-      "_hash": "b99be7ef7693"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/traumwohnung-in-mannheim-feudenheim-mit-loggia-und-garage/3490612489-196-7975",
