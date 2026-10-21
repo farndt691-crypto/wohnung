@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-21T12:48:32.302257+00:00",
+  "last_updated": "2026-10-21T16:59:38.684668+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -284,58 +284,6 @@
       "deal_deviation_pct": 19.1,
       "deal_score": "teuer",
       "_hash": "a1bcf7191b61"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-5-zimmer-in-mannheim-jungbusch/3463213152-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1,5 Zimmer in Mannheim Jungbusch",
-      "first_seen": "2026-07-19T19:08:05.194929+00:00",
-      "last_seen": "2026-08-22T12:52:13.739787+00:00",
-      "boni": [
-        "Balkon",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "Die Wohnung bietet einen hohen Komfort und eine gute Lage für Studierende und junge Berufstätige.",
-      "zimmeranzahl": 1.5,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Der Jungbusch ist ein beliebter Stadtteil für Studierende, junge Berufstätige und Kreative.",
-        "vibe_sicherheit": "Der Jungbusch hat eine gute Atmosphäre und ein gutes Sicherheitsgefühl, aber es gibt auch einige Probleme mit Lärm und Verkehr.",
-        "einschaetzung_student": "Die Wohnung ist sehr geeignet für Informatikstudenten, da sie zentral und preisgünstig ist.",
-        "einschaetzung_investor": "Die Wohnung ist nicht sehr geeignet als Kapitalanlage, da sie nicht sehr wertsteigernd ist und es viele andere Möglichkeiten gibt, Geld zu investieren."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-19T19:08:05.194929+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-20T10:15:29.978365+00:00",
-          "price": 800.0
-        }
-      ],
-      "etage": "5. Etage",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 24.0,
-      "kaltmiete": 800.0,
-      "nebenkosten": 150,
-      "warmmiete": 800,
-      "kaltmiete_qm": 33.33,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 115.0,
-      "deal_score": "teuer",
-      "_hash": "2ac4695af135"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-90-m-wohnung-in-mannheim-innenstadt/3463513280-203-7983",
@@ -1054,88 +1002,6 @@
       "deal_deviation_pct": -30.0,
       "deal_score": "gut",
       "_hash": "bc54f0c73369"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-renovierung-1-zi-wohnung-mit-neuer-moderner-kueche-740-warm-in-mannheim-west/3488564222-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Erstbezug nach Renovierung! 1-Zi-Wohnung mit neuer moderner Küche | 740 € warm in Mannheim West",
-      "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-22T12:52:13.739787+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 1.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-19T12:59:38.912226+00:00",
-          "price": 140.0
-        },
-        {
-          "date": "2026-08-19T18:37:13.268186+00:00",
-          "price": 600.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 600.0,
-      "kaltmiete_qm": 20.0,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 29.0,
-      "deal_score": "teuer",
-      "_hash": "dbc34b10498e"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-mannheim/3488404222-203-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2 Zimmer Wohnung Mannheim",
-      "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-22T12:52:13.739787+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-19T12:59:38.912226+00:00",
-          "price": 810.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 64.0,
-      "kaltmiete": 810.0,
-      "kaltmiete_qm": 12.66,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -12.7,
-      "deal_score": "gut",
-      "_hash": "cb4baebc1bc2"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1-zimmer-wohnung-21-m-mit-pantrykueche-in-mannheim-zu-vermieten-/3489429942-203-7978",
