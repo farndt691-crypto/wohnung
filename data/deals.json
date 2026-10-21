@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-21T16:59:38.684668+00:00",
+  "last_updated": "2026-10-21T21:20:21.642577+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -916,50 +916,6 @@
       "deal_deviation_pct": -17.2,
       "deal_score": "gut",
       "_hash": "d108b7424cce"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-5-zimmer-wohnung-in-der-mannheimer-oststadt/3488617944-203-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2,5 Zimmer Wohnung in der Mannheimer Oststadt",
-      "first_seen": "2026-08-19T12:59:38.912226+00:00",
-      "last_seen": "2026-08-22T18:31:52.228545+00:00",
-      "boni": [
-        "Aufzug"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.5,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Oststadt",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-19T12:59:38.912226+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-08-19T18:37:13.268186+00:00",
-          "price": 1650.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 90.0,
-      "kaltmiete": 1650.0,
-      "kaltmiete_qm": 18.33,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": 22.2,
-      "deal_score": "teuer",
-      "_hash": "3076596c708e"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliche-wohlfuehl-oase-in-hellen-frisch-renovierten-2-zimmern-im-zentrum-von-mannheim/3488616003-203-7979",
