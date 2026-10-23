@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-23T12:30:31.095587+00:00",
+  "last_updated": "2026-10-23T17:02:25.834682+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -233,57 +233,6 @@
       "deal_deviation_pct": -33.3,
       "deal_score": "gut",
       "_hash": "983f89be68fc"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-in-mannheim-nekerau/3449966263-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "3 Zimmer Wohnung in Mannheim Nekerau",
-      "first_seen": "2026-07-16T19:11:34.986384+00:00",
-      "last_seen": "2026-08-24T13:03:00.651000+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "3-Zimmer-Wohnung in Mannheim Neckerau, renoviert und mit vielen Einkaufsmöglichkeiten in der Nähe.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Neckerau",
-      "adresse": "68199 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Familien und junge Erwachsene, viele Studenten der Universität Mannheim",
-        "vibe_sicherheit": "Gut, viele Menschen auf der Straße, aber auch einige dunkle Ecken",
-        "einschaetzung_student": "Sehr geeignet, viele Einkaufsmöglichkeiten und gute Verkehrsanbindung",
-        "einschaetzung_investor": "Mittelmäßig, hohe Mieten, aber auch gute Chancen auf Wertsteigerung"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-16T19:11:34.986384+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-07-17T09:14:19.505885+00:00",
-          "price": 1200.0
-        }
-      ],
-      "etage": "2",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 65.0,
-      "kaltmiete": 1200.0,
-      "nebenkosten": 150,
-      "warmmiete": 1200,
-      "kaltmiete_qm": 18.46,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 19.1,
-      "deal_score": "teuer",
-      "_hash": "a1bcf7191b61"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-gemuetliches-18-m-zimmer-in-mannheim/3465999077-203-7984",
@@ -909,48 +858,6 @@
       "_hash": "bc54f0c73369"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1-zimmer-wohnung-21-m-mit-pantrykueche-in-mannheim-zu-vermieten-/3489429942-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schöne, möblierte 1-Zimmer-Wohnung 21 m² mit Pantryküche in Mannheim zu vermieten.",
-      "first_seen": "2026-08-20T07:44:46.636322+00:00",
-      "last_seen": "2026-08-24T13:03:00.651000+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 1.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Rheinau",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-20T07:44:46.636322+00:00",
-          "price": 115.0
-        },
-        {
-          "date": "2026-08-20T13:01:42.581817+00:00",
-          "price": 500.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 21.0,
-      "kaltmiete": 500.0,
-      "kaltmiete_qm": 23.81,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 64.2,
-      "deal_score": "teuer",
-      "_hash": "e54901bc98f8"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-erdgeschosswohnung-65-qm-in-mannheim-waldhof-n/3489720194-203-7972",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1515,44 +1422,6 @@
       "_hash": "03f1cb31c0eb"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-gesucht-im-raum-mannheim-bis-650-warm/3492691191-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Wohnung gesucht im Raum Mannheim – bis 650 € warm",
-      "first_seen": "2026-08-23T18:30:44.634907+00:00",
-      "last_seen": "2026-08-24T13:03:00.651000+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-23T18:30:44.634907+00:00",
-          "price": 650.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 650.0,
-      "kaltmiete_qm": 21.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 49.4,
-      "deal_score": "teuer",
-      "_hash": "bb27e6b27248"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-4-zimmer-mit-2x-balkone-in-mannheim/3493173039-203-7983",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1595,44 +1464,6 @@
       "deal_deviation_pct": -38.6,
       "deal_score": "gut",
       "_hash": "d8fd31c106ae"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wg-in-mannheim-neckarstadt/3491592359-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "WG in Mannheim Neckarstadt",
-      "first_seen": "2026-08-24T13:03:00.651000+00:00",
-      "last_seen": "2026-08-24T13:03:00.651000+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-24T13:03:00.651000+00:00",
-          "price": 560.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 120.0,
-      "kaltmiete": 560.0,
-      "kaltmiete_qm": 4.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -67.8,
-      "deal_score": "gut",
-      "_hash": "27c68f9de84a"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/einzelapartement-mannheim-kaefertal-untermiete-campo-novo/3493698848-203-7973",
