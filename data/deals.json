@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-22T21:16:47.798770+00:00",
+  "last_updated": "2026-10-23T12:30:31.095587+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -284,57 +284,6 @@
       "deal_deviation_pct": 19.1,
       "deal_score": "teuer",
       "_hash": "a1bcf7191b61"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-90-m-wohnung-in-mannheim-innenstadt/3463513280-203-7983",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "TAUSCHWOHNUNG 90 m² Wohnung in Mannheim, Innenstadt",
-      "first_seen": "2026-07-20T10:15:29.978365+00:00",
-      "last_seen": "2026-08-24T08:02:12.039615+00:00",
-      "boni": [
-        "Balkon",
-        "renoviert"
-      ],
-      "kurz_bewertung": "Zentrale Lage in der Innenstadt von Mannheim",
-      "zimmeranzahl": 3,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68161 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Berufstätige, Familien",
-        "vibe_sicherheit": "Sehr sicher, aber laut aufgrund der belebten Straße",
-        "einschaetzung_student": "Sehr geeignet, viele Studentenwohnheime in der Nähe",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-07-20T10:15:29.978365+00:00",
-          "price": 300.0
-        },
-        {
-          "date": "2026-07-20T19:46:31.528315+00:00",
-          "price": 990.0
-        }
-      ],
-      "etage": "6. OG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 90.0,
-      "kaltmiete": 990.0,
-      "nebenkosten": 300,
-      "kaltmiete_qm": 11.0,
-      "expected_market_qm": 16.0,
-      "deal_deviation_pct": -31.2,
-      "deal_score": "gut",
-      "_hash": "8c9bf4a34093"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/tauschwohnung-gemuetliches-18-m-zimmer-in-mannheim/3465999077-203-7984",
@@ -1002,50 +951,6 @@
       "_hash": "e54901bc98f8"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/neugruendung-5er-wg-in-mannheim-neckarau/3489319538-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Neugründung 5er WG in Mannheim-Neckarau",
-      "first_seen": "2026-08-20T07:44:46.636322+00:00",
-      "last_seen": "2026-08-24T08:02:12.039615+00:00",
-      "boni": [
-        "renoviert"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-20T07:44:46.636322+00:00",
-          "price": 200.0
-        },
-        {
-          "date": "2026-08-20T13:01:42.581817+00:00",
-          "price": 510.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 168.0,
-      "kaltmiete": 510.0,
-      "kaltmiete_qm": 3.04,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -80.4,
-      "deal_score": "gut",
-      "_hash": "cef7cc0b5a96"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-erdgeschosswohnung-65-qm-in-mannheim-waldhof-n/3489720194-203-7972",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1572,44 +1477,6 @@
       "deal_deviation_pct": -12.8,
       "deal_score": "gut",
       "_hash": "dd6665821878"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-in-mannheim-neckarstadt/3491592359-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Wohnung in Mannheim Neckarstadt",
-      "first_seen": "2026-08-22T18:31:52.228545+00:00",
-      "last_seen": "2026-08-24T08:02:12.039615+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-22T18:31:52.228545+00:00",
-          "price": 560.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 120.0,
-      "kaltmiete": 560.0,
-      "kaltmiete_qm": 4.67,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -67.8,
-      "deal_score": "gut",
-      "_hash": "c80e2b82a0e0"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-wohnung-in-mannheim-lindenhof-mit-loggia-u-aufzug/3492080291-203-7982",
