@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-23T17:02:25.834682+00:00",
+  "last_updated": "2026-10-23T21:04:29.560874+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmerwohnung-mit-balkon-fusslaeufig-zum-wasserturm-in-mannheim-/3330525318-196-7983",
@@ -83,104 +83,6 @@
           "price": 1100.0
         }
       ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/ihr-neues-zuhause-in-mannheim-naehe-wasserturm-hochwertige-3-zimmer-wohnung-mit-balkon-/3402935331-203-7981",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "IHR NEUES ZUHAUSE IN MANNHEIM NÄHE WASSERTURM: HOCHWERTIGE 3-ZIMMER-WOHNUNG MIT BALKON!",
-      "first_seen": "2026-05-24T21:16:36.548232+00:00",
-      "last_seen": "2026-08-24T18:41:51.685192+00:00",
-      "boni": [
-        "Aufzug",
-        "Balkon"
-      ],
-      "kurz_bewertung": "Diese attraktive Wohnung befindet sich in zentraler Lage, nur wenige Schritte vom Wasserturm entfernt und in fußläufiger Nähe zur Mannheimer Innenstadt sowie zum Hauptbahnhof.",
-      "zimmeranzahl": 3.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": "Mannheim Innenstadt",
-      "adresse": "68165 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studentenviertel",
-        "vibe_sicherheit": "Ruhig und bürgerlich",
-        "einschaetzung_student": "Gute Anbindung an die Uni Mannheim, ruhige Lage, aber möglicherweise hohe Mietpreise.",
-        "einschaetzung_investor": "Hohe Mietpreise, gute Anbindung an die Innenstadt, aber möglicherweise hoher Leerstandsrisiko."
-      },
-      "quadratmeter": 90.0,
-      "kaltmiete": 1580.0,
-      "nebenkosten": 250,
-      "warmmiete": 1830,
-      "kaltmiete_qm": 17.56,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": 13.3,
-      "deal_score": "teuer",
-      "price_history": [
-        {
-          "date": "2026-05-24T21:16:36.548232+00:00",
-          "price": 250.0
-        },
-        {
-          "date": "2026-06-07T12:17:15.927906+00:00",
-          "price": 580.0
-        },
-        {
-          "date": "2026-06-09T23:06:41.845923+00:00",
-          "price": 1580.0
-        }
-      ]
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-1-zimmer-apartment-im-eg-21qm-mit-terrasse-in-mannheim-zu-vermieten-/3441494967-203-7978",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schönes 1 Zimmer Apartment im EG 21qm mit Terrasse in Mannheim zu vermieten.",
-      "first_seen": "2026-06-22T12:52:55.445212+00:00",
-      "last_seen": "2026-08-24T18:41:51.685192+00:00",
-      "boni": [
-        "moebliert",
-        "Balkon",
-        "Terrasse"
-      ],
-      "kurz_bewertung": "Schönes 1-Zimmer-Appartment im EG mit Terrasse in Mannheim zu vermieten.",
-      "zimmeranzahl": 1.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68219 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mannheim ist eine Stadt mit einer Vielzahl von Altersgruppen, von Studenten bis zu Familien.",
-        "vibe_sicherheit": "Die Lage ist ruhig, aber die Nähe zur Uni und den öffentlichen Verkehrsmitteln macht sie auch für Studenten attraktiv.",
-        "einschaetzung_student": "Sehr geeignet für Informatikstudenten, da die Uni in der Nähe liegt und die öffentlichen Verkehrsmittel gut funktionieren.",
-        "einschaetzung_investor": "Mittlere Eignung als Kapitalanlage, da die Miete relativ hoch ist, aber die Lage und die Ausstattung gut sind."
-      },
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-06-22T12:52:55.445212+00:00",
-          "price": 160.0
-        },
-        {
-          "date": "2026-06-22T17:07:58.685639+00:00",
-          "price": 470.0
-        }
-      ],
-      "etage": "EG",
-      "baujahr": 1993,
-      "energieklasse": "E",
-      "heizungsart": "Fernwärme",
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "quadratmeter": 21.0,
-      "kaltmiete": 470.0,
-      "nebenkosten": 160,
-      "warmmiete": 720,
-      "kaltmiete_qm": 22.38,
-      "expected_market_qm": 18.5,
-      "deal_deviation_pct": 21.0,
-      "deal_score": "teuer",
-      "_hash": "147c28d5b140"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-120-m-wohnung-in-mannheim-quadraten-mit-balkon-ideal-fuer-wg-oder-familie/3457736523-203-7984",
@@ -626,55 +528,6 @@
       "_hash": "d3a52e0d8e6f"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmerwohnung-in-den-quadraten-von-mannheim/3478284042-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-ZimmerWohnung in den Quadraten von Mannheim",
-      "first_seen": "2026-08-07T08:18:36.232104+00:00",
-      "last_seen": "2026-08-24T18:41:51.685192+00:00",
-      "boni": [],
-      "kurz_bewertung": "Helle 2-Zimmer-Wohnung mit Einbauküche in zentraler Lage",
-      "zimmeranzahl": 2.0,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "68159 Baden-Württemberg - Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Studenten, Singles und Paare",
-        "vibe_sicherheit": "Gut, zentral gelegen, aber laut",
-        "einschaetzung_student": "Sehr geeignet, viele Studenten in der Nähe",
-        "einschaetzung_investor": "Mäßig geeignet, hohe Mieten, aber gute Lage"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-07T08:18:36.232104+00:00",
-          "price": 345.0
-        },
-        {
-          "date": "2026-08-07T13:18:32.189457+00:00",
-          "price": 820.0
-        }
-      ],
-      "etage": "2",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 71.0,
-      "kaltmiete": 820.0,
-      "nebenkosten": 345,
-      "warmmiete": 1165,
-      "kaltmiete_qm": 11.55,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -20.3,
-      "deal_score": "gut",
-      "_hash": "fda8ea4373f4"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/wg-taugliche-2-5-zimmer-wohnung-mannheim-universitaet/3480697739-203-7984",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -858,40 +711,6 @@
       "_hash": "bc54f0c73369"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/helle-2-zimmer-erdgeschosswohnung-65-qm-in-mannheim-waldhof-n/3489720194-203-7972",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Helle 2-Zimmer-Erdgeschosswohnung (65 qm) in Mannheim-Waldhof – N",
-      "first_seen": "2026-08-20T13:01:42.581817+00:00",
-      "last_seen": "2026-08-24T18:41:51.685192+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Waldhof",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-20T13:01:42.581817+00:00",
-          "price": 830.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "kaltmiete": 830.0,
-      "deal_score": "okay",
-      "_hash": "84f1d64f10c9"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mitten-in-mannheim-4-zimmer-wohnung-mit-tollem-ausblick/3489681922-203-7979",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -935,85 +754,6 @@
       "deal_deviation_pct": -29.0,
       "deal_score": "gut",
       "_hash": "bab83d9c4c8c"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/modernes-moebliertes-wg-zimmer-in-mannheim-kaefertal/3489586645-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Modernes möbliertes WG-Zimmer in Mannheim-Käfertal",
-      "first_seen": "2026-08-20T13:01:42.581817+00:00",
-      "last_seen": "2026-08-24T18:41:51.685192+00:00",
-      "boni": [
-        "Balkon",
-        "Garage"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-20T13:01:42.581817+00:00",
-          "price": 500.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": false,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 80.0,
-      "kaltmiete": 500.0,
-      "kaltmiete_qm": 6.25,
-      "expected_market_qm": 15.3,
-      "deal_deviation_pct": -59.2,
-      "deal_score": "gut",
-      "_hash": "463d0e4a7dd1"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/apartment-mannheim-neckerau/3490017987-203-7986",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Apartment Mannheim Neckerau",
-      "first_seen": "2026-08-20T18:40:32.141044+00:00",
-      "last_seen": "2026-08-24T18:41:51.685192+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-20T18:40:32.141044+00:00",
-          "price": 900.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 900.0,
-      "kaltmiete_qm": 30.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 106.9,
-      "deal_score": "teuer",
-      "_hash": "bf7247b77b01"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-beletage-mit-altbaucharme-und-balkon-im-herzen-mannheims/3470825706-196-7983",
