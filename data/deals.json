@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-27T21:54:19.751677+00:00",
+  "last_updated": "2026-10-28T13:54:57.956189+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-120-m-wohnung-in-mannheim-quadraten-mit-balkon-ideal-fuer-wg-oder-familie/3457736523-203-7984",
@@ -52,55 +52,6 @@
       "deal_deviation_pct": -33.3,
       "deal_score": "gut",
       "_hash": "983f89be68fc"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/41-04-schoene-4-zkb-wohnung-rhenaniastr-166-68219-mannheim-/2993430013-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "41.04 Schöne 4 ZKB Wohnung Rhenaniastr. 166 68219 Mannheim",
-      "first_seen": "2026-07-27T10:47:16.436010+00:00",
-      "last_seen": "2026-08-29T01:32:55.767981+00:00",
-      "boni": [],
-      "kurz_bewertung": "Schöne Zweizimmerwohnung im Sechsfamilienhaus zu vermieten.",
-      "zimmeranzahl": 4,
-      "latitude": 49.4836,
-      "longitude": 8.4631,
-      "stadtteil": null,
-      "adresse": "Rhenaniastr. 166, 68219 Mannheim",
-      "umfeld_analyse": {
-        "demografie": "Mittelaltere Wohnbevölkerung, Familien und Singles",
-        "vibe_sicherheit": "Gut, aber ruhige und nicht sehr belebte Gegend",
-        "einschaetzung_student": "Gut, aber keine direkte Nähe zur Uni",
-        "einschaetzung_investor": "Gut, aber keine direkte Nähe zum Zentrum"
-      },
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-07-27T10:47:16.436010+00:00",
-          "price": 300.0
-        },
-        {
-          "date": "2026-07-27T14:51:01.297376+00:00",
-          "price": 950.0
-        }
-      ],
-      "etage": "1. EG",
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 90.0,
-      "kaltmiete": 950.0,
-      "nebenkosten": 300,
-      "warmmiete": 1250,
-      "kaltmiete_qm": 10.56,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -27.2,
-      "deal_score": "gut",
-      "_hash": "ed4c3c0e1b90"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/erstbezug-nach-sanierung-helle-3-zkb-wohnung-im-3-og-mit-balkon-aufzug-mannheim-oststadt/3471315748-203-7981",
@@ -495,51 +446,6 @@
       "_hash": "bc54f0c73369"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/mitten-in-mannheim-4-zimmer-wohnung-mit-tollem-ausblick/3489681922-203-7979",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Mitten in Mannheim: 4-Zimmer-Wohnung mit tollem Ausblick",
-      "first_seen": "2026-08-20T13:01:42.581817+00:00",
-      "last_seen": "2026-08-29T01:32:55.767981+00:00",
-      "boni": [
-        "Balkon",
-        "Aufzug"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 4.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-20T13:01:42.581817+00:00",
-          "price": 172.0
-        },
-        {
-          "date": "2026-08-20T18:40:32.141044+00:00",
-          "price": 1115.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 101.34,
-      "kaltmiete": 1115.0,
-      "kaltmiete_qm": 11.0,
-      "expected_market_qm": 15.5,
-      "deal_deviation_pct": -29.0,
-      "deal_score": "gut",
-      "_hash": "bab83d9c4c8c"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/hochwertig-sanierte-maisonette-in-bester-mannheimer-innenstadtlag/3495235188-203-7983",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -629,48 +535,6 @@
       "deal_deviation_pct": 23.7,
       "deal_score": "teuer",
       "_hash": "0a5f5e3c5dd6"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/suche-nachmieter-fuer-ein-einzelzimmer-einer-2-er-wg-in-mannheim/3494954892-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Suche Nachmieter für ein Einzelzimmer einer 2-er WG in Mannheim",
-      "first_seen": "2026-08-26T13:05:20.290279+00:00",
-      "last_seen": "2026-08-29T01:32:55.767981+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": null,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": null,
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-26T13:05:20.290279+00:00",
-          "price": 105.0
-        },
-        {
-          "date": "2026-08-26T19:50:37.216651+00:00",
-          "price": 550.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 21.0,
-      "kaltmiete": 550.0,
-      "kaltmiete_qm": 26.19,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 80.6,
-      "deal_score": "teuer",
-      "_hash": "8aee05fb4cc6"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/lage-uni-mannheim-moebliertes-city-apartment-mit-balkon-/3495443232-203-7983",
