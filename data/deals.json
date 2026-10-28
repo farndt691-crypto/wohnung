@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-28T13:54:57.956189+00:00",
+  "last_updated": "2026-10-28T18:13:58.243016+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-120-m-wohnung-in-mannheim-quadraten-mit-balkon-ideal-fuer-wg-oder-familie/3457736523-203-7984",
@@ -492,51 +492,6 @@
       "_hash": "0d782c418480"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/zwischenmiete-2-zimmer-wohnung-in-mannheim-lindenhof-mit-garage/3495095505-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Zwischenmiete, 2-Zimmer Wohnung in Mannheim Lindenhof mit Garage",
-      "first_seen": "2026-08-26T13:05:20.290279+00:00",
-      "last_seen": "2026-08-29T16:34:33.061812+00:00",
-      "boni": [
-        "Balkon",
-        "Garage"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-26T13:05:20.290279+00:00",
-          "price": 150.0
-        },
-        {
-          "date": "2026-08-26T19:50:37.216651+00:00",
-          "price": 1400.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 74.0,
-      "kaltmiete": 1400.0,
-      "kaltmiete_qm": 18.92,
-      "expected_market_qm": 15.3,
-      "deal_deviation_pct": 23.7,
-      "deal_score": "teuer",
-      "_hash": "0a5f5e3c5dd6"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/lage-uni-mannheim-moebliertes-city-apartment-mit-balkon-/3495443232-203-7983",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -793,48 +748,6 @@
       "_hash": "467a37734354"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/kernsanierte-3-zi-whng-in-mannheim-neckarstadt-west-760-/3495712635-203-7980",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Kernsanierte 3 Zi. Whng. +++ in Mannheim Neckarstadt-West 760 €",
-      "first_seen": "2026-08-27T18:11:14.280781+00:00",
-      "last_seen": "2026-08-29T16:34:33.061812+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 3.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Neckarstadt",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-27T18:11:14.280781+00:00",
-          "price": 350.0
-        },
-        {
-          "date": "2026-08-27T22:08:06.681825+00:00",
-          "price": 760.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 65.0,
-      "kaltmiete": 760.0,
-      "kaltmiete_qm": 11.69,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -19.4,
-      "deal_score": "gut",
-      "_hash": "98ebb8ba104b"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/moeblierte-2-zimmer-wohnung-zur-zwischenmiete-in-mannheim-neckarst/3496448778-203-7980",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -1035,50 +948,6 @@
       "deal_deviation_pct": 20.2,
       "deal_score": "teuer",
       "_hash": "b1668caf719a"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-1-zimmer-wohnung-kueche-bad-top-lage-in-mannheim-oststadt/3497416051-203-4224",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "Schöne 1-Zimmer Wohnung +Küche +Bad Top-Lage in Mannheim Oststadt",
-      "first_seen": "2026-08-29T13:03:13.558915+00:00",
-      "last_seen": "2026-08-29T16:34:33.061812+00:00",
-      "boni": [
-        "Garage"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 1.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Oststadt",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-29T13:03:13.558915+00:00",
-          "price": 120.0
-        },
-        {
-          "date": "2026-08-29T16:34:33.061812+00:00",
-          "price": 565.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 39.0,
-      "kaltmiete": 565.0,
-      "kaltmiete_qm": 14.49,
-      "expected_market_qm": 14.8,
-      "deal_deviation_pct": -2.1,
-      "deal_score": "okay",
-      "_hash": "bb124a309ed5"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/exklusive-helle-2-zimmer-wohnung-mit-2-terrassen-mannheim/3498145884-203-7984",
