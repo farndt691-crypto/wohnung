@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-29T18:20:43.807846+00:00",
+  "last_updated": "2026-10-29T22:31:09.207863+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-120-m-wohnung-in-mannheim-quadraten-mit-balkon-ideal-fuer-wg-oder-familie/3457736523-203-7984",
@@ -490,44 +490,6 @@
       "_hash": "ab9de02a4f63"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-im-beliebten-mannheim-lindenhof-nachmieter-/3495950038-203-7982",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer-Wohnung im beliebten Mannheim-Lindenhof (Nachmieter)",
-      "first_seen": "2026-08-27T18:11:14.280781+00:00",
-      "last_seen": "2026-08-30T20:40:00.830860+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Lindenhof",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-27T18:11:14.280781+00:00",
-          "price": 480.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 40.0,
-      "kaltmiete": 480.0,
-      "kaltmiete_qm": 12.0,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": -17.2,
-      "deal_score": "gut",
-      "_hash": "3b5c16a07374"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/3-zimmerwohnung-mannheim-waldhof-/3495922946-203-7972",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -775,48 +737,6 @@
       "_hash": "3f8a3fe89c85"
     },
     {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/wohnung-all-inclusive-perfekte-1-5-zimmer-wohnung-in-mannheim/3498590212-203-7975",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "WOHNUNG - ALL INCLUSIVE / perfekte 1,5 Zimmer-Wohnung in Mannheim",
-      "first_seen": "2026-08-30T12:41:58.543387+00:00",
-      "last_seen": "2026-08-30T20:40:00.830860+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 1.5,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Feudenheim",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-30T12:41:58.543387+00:00",
-          "price": 250.0
-        },
-        {
-          "date": "2026-08-30T16:28:16.037011+00:00",
-          "price": 499.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 30.0,
-      "kaltmiete": 499.0,
-      "kaltmiete_qm": 16.63,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 14.7,
-      "deal_score": "teuer",
-      "_hash": "7ac7baf43596"
-    },
-    {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-luzenberg-1-zimmer-ab-sofort-zu-vermieten/3498584433-203-7972",
       "source": "kleinanzeigen",
       "listing_type": "miete",
@@ -931,46 +851,6 @@
       "deal_deviation_pct": 113.3,
       "deal_score": "teuer",
       "_hash": "fd80995264f9"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/2-zimmer-wohnung-in-mannheim-kaefertal-kueche-zur-uebernahme-/3498297382-203-7973",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "2-Zimmer-Wohnung in Mannheim Käfertal - (Küche zur Übernahme)",
-      "first_seen": "2026-08-30T12:41:58.543387+00:00",
-      "last_seen": "2026-08-30T20:40:00.830860+00:00",
-      "boni": [
-        "Balkon"
-      ],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 2.0,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Käfertal",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": true,
-      "price_history": [
-        {
-          "date": "2026-08-30T12:41:58.543387+00:00",
-          "price": 575.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 55.0,
-      "kaltmiete": 575.0,
-      "kaltmiete_qm": 10.45,
-      "expected_market_qm": 15.0,
-      "deal_deviation_pct": -30.3,
-      "deal_score": "gut",
-      "_hash": "77515671cdee"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/frisch-sanierte-moeblierte-1-zimmer-wohnung-in-top-lage-mannheim/3499156397-203-7983",
