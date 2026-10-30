@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-30T17:56:57.036446+00:00",
+  "last_updated": "2026-10-30T22:00:54.212768+00:00",
   "deals": [
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-120-m-wohnung-in-mannheim-quadraten-mit-balkon-ideal-fuer-wg-oder-familie/3457736523-203-7984",
@@ -453,44 +453,6 @@
       "deal_deviation_pct": 121.9,
       "deal_score": "teuer",
       "_hash": "b14a264e670a"
-    },
-    {
-      "url": "https://www.kleinanzeigen.de/s-anzeige/1-5-zimmer-mannheim-jungbusch/3498555545-203-7984",
-      "source": "kleinanzeigen",
-      "listing_type": "miete",
-      "title": "1,5 Zimmer Mannheim Jungbusch",
-      "first_seen": "2026-08-30T12:41:58.543387+00:00",
-      "last_seen": "2026-08-31T19:03:25.313429+00:00",
-      "boni": [],
-      "kurz_bewertung": "",
-      "zimmeranzahl": 1.5,
-      "latitude": null,
-      "longitude": null,
-      "stadtteil": "Mannheim Jungbusch",
-      "adresse": null,
-      "umfeld_analyse": null,
-      "hat_balkon": false,
-      "price_history": [
-        {
-          "date": "2026-08-30T12:41:58.543387+00:00",
-          "price": 800.0
-        }
-      ],
-      "etage": null,
-      "baujahr": null,
-      "energieklasse": null,
-      "heizungsart": null,
-      "hausgeld": null,
-      "provisionsfrei": null,
-      "preis_verdacht": false,
-      "stadt": "Mannheim",
-      "quadratmeter": 24.0,
-      "kaltmiete": 800.0,
-      "kaltmiete_qm": 33.33,
-      "expected_market_qm": 14.5,
-      "deal_deviation_pct": 129.9,
-      "deal_score": "teuer",
-      "_hash": "47978ac8878f"
     },
     {
       "url": "https://www.kleinanzeigen.de/s-anzeige/mannheim-1-zimmer-apartement-neckarstadt-west/3498447170-203-7980",
