@@ -1,4 +1,37 @@
 {
-  "last_updated": "2026-11-25T01:59:17.411395+00:00",
-  "deals": []
+  "last_updated": "2026-11-25T17:54:28.092302+00:00",
+  "deals": [
+    {
+      "url": "https://www.immobilienscout24.de/expose/165246273",
+      "source": "immoscout24",
+      "listing_type": "kauf",
+      "title": "Preis: Auf Anfrage",
+      "first_seen": "2026-11-25T17:54:27.995911+00:00",
+      "last_seen": "2026-11-25T17:54:27.995911+00:00",
+      "boni": [
+        "Balkon",
+        "Neubau"
+      ],
+      "kurz_bewertung": "",
+      "zimmeranzahl": 4.0,
+      "latitude": null,
+      "longitude": null,
+      "stadtteil": "Heidelberg Ziegelhausen",
+      "adresse": null,
+      "umfeld_analyse": null,
+      "hat_balkon": true,
+      "price_history": [],
+      "etage": null,
+      "baujahr": null,
+      "energieklasse": null,
+      "heizungsart": null,
+      "hausgeld": null,
+      "provisionsfrei": null,
+      "preis_verdacht": false,
+      "stadt": "Heidelberg",
+      "quadratmeter": 129.61,
+      "deal_score": "skip",
+      "_hash": "411fe8318a73"
+    }
+  ]
 }
